@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.12">
+  <diagram name="Page-1" id="FhgJ-_R8KhlmjoX-uo1n">
+    <mxGraphModel dx="537" dy="742" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NwZUlHr3seJaM3zpnE59-1" value="Entrada" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="50" y="200" width="165" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="NwZUlHr3seJaM3zpnE59-2" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;* Datos cliente&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* Datos del Bien&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* Plan seleccionado&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* Datos de pago&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;labelBackgroundColor=none;fontColor=#393C56;" vertex="1" parent="NwZUlHr3seJaM3zpnE59-1">
+          <mxGeometry x="5" y="40" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="NwZUlHr3seJaM3zpnE59-4" value="Procesamiento" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="250" y="200" width="220" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="NwZUlHr3seJaM3zpnE59-5" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Registrar/Buscar Cliente&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;Registrar objeto&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;Generar cotización&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;Validar banco&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;labelBackgroundColor=none;fontColor=#393C56;" vertex="1" parent="NwZUlHr3seJaM3zpnE59-4">
+          <mxGeometry x="10" y="40" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="NwZUlHr3seJaM3zpnE59-6" value="Salida" style="swimlane;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
+          <mxGeometry x="520" y="200" width="230" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="NwZUlHr3seJaM3zpnE59-8" value="&lt;div&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;Cliente encontrado/creado&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;OfertaPlanes&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;Confirmación&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;Poliza&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;labelBackgroundColor=none;fontColor=#393C56;" vertex="1" parent="NwZUlHr3seJaM3zpnE59-6">
+          <mxGeometry x="10" y="40" width="220" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
