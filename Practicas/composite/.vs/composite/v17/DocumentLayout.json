@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ProyectosDana\\Proyects\\Practicas\\composite\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4D630C23-8449-4BAC-B630-1A62708D398E}|composite\\composite.csproj|d:\\proyectosdana\\proyects\\practicas\\composite\\composite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D630C23-8449-4BAC-B630-1A62708D398E}|composite\\composite.csproj|solutionrelative:composite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D630C23-8449-4BAC-B630-1A62708D398E}|composite\\composite.csproj|D:\\ProyectosDana\\Proyects\\Practicas\\composite\\composite\\subdivisi\u00F3n\u2192compuesto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D630C23-8449-4BAC-B630-1A62708D398E}|composite\\composite.csproj|solutionrelative:composite\\subdivisi\u00F3n\u2192compuesto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D630C23-8449-4BAC-B630-1A62708D398E}|composite\\composite.csproj|D:\\ProyectosDana\\Proyects\\Practicas\\composite\\composite\\superficie\u2192composite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D630C23-8449-4BAC-B630-1A62708D398E}|composite\\composite.csproj|solutionrelative:composite\\superficie\u2192composite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D630C23-8449-4BAC-B630-1A62708D398E}|composite\\composite.csproj|D:\\ProyectosDana\\Proyects\\Practicas\\composite\\composite\\cuadrante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D630C23-8449-4BAC-B630-1A62708D398E}|composite\\composite.csproj|solutionrelative:composite\\cuadrante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Cuadrante.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Practicas\\composite\\composite\\Cuadrante.cs",
+              "RelativeDocumentMoniker": "composite\\Cuadrante.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Practicas\\composite\\composite\\Cuadrante.cs",
+              "RelativeToolTip": "composite\\Cuadrante.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T14:39:37.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Subdivisi\u00F3n\u2192Compuesto.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Practicas\\composite\\composite\\Subdivisi\u00F3n\u2192Compuesto.cs",
+              "RelativeDocumentMoniker": "composite\\Subdivisi\u00F3n\u2192Compuesto.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Practicas\\composite\\composite\\Subdivisi\u00F3n\u2192Compuesto.cs",
+              "RelativeToolTip": "composite\\Subdivisi\u00F3n\u2192Compuesto.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA1wDMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T14:31:27.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Superficie\u2192Composite.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Practicas\\composite\\composite\\Superficie\u2192Composite.cs",
+              "RelativeDocumentMoniker": "composite\\Superficie\u2192Composite.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Practicas\\composite\\composite\\Superficie\u2192Composite.cs",
+              "RelativeToolTip": "composite\\Superficie\u2192Composite.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T14:22:13.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Practicas\\composite\\composite\\Program.cs",
+              "RelativeDocumentMoniker": "composite\\Program.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Practicas\\composite\\composite\\Program.cs",
+              "RelativeToolTip": "composite\\Program.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwCEAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T14:21:37.18Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
