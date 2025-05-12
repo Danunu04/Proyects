@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ProyectosDana\\Proyects\\Practicas\\composite2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C575BE-3CD1-4D0C-9426-03C2F22DD30A}|composite2\\composite2.csproj|d:\\proyectosdana\\proyects\\practicas\\composite2\\composite2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C575BE-3CD1-4D0C-9426-03C2F22DD30A}|composite2\\composite2.csproj|solutionrelative:composite2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C575BE-3CD1-4D0C-9426-03C2F22DD30A}|composite2\\composite2.csproj|d:\\proyectosdana\\proyects\\practicas\\composite2\\composite2\\alimentocompuesto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C575BE-3CD1-4D0C-9426-03C2F22DD30A}|composite2\\composite2.csproj|solutionrelative:composite2\\alimentocompuesto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C575BE-3CD1-4D0C-9426-03C2F22DD30A}|composite2\\composite2.csproj|d:\\proyectosdana\\proyects\\practicas\\composite2\\composite2\\alimentosimple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C575BE-3CD1-4D0C-9426-03C2F22DD30A}|composite2\\composite2.csproj|solutionrelative:composite2\\alimentosimple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C575BE-3CD1-4D0C-9426-03C2F22DD30A}|composite2\\composite2.csproj|d:\\proyectosdana\\proyects\\practicas\\composite2\\composite2\\comida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C575BE-3CD1-4D0C-9426-03C2F22DD30A}|composite2\\composite2.csproj|solutionrelative:composite2\\comida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AlimentoCompuesto.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Practicas\\composite2\\composite2\\AlimentoCompuesto.cs",
+              "RelativeDocumentMoniker": "composite2\\AlimentoCompuesto.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Practicas\\composite2\\composite2\\AlimentoCompuesto.cs",
+              "RelativeToolTip": "composite2\\AlimentoCompuesto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T18:23:43.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AlimentoSimple.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Practicas\\composite2\\composite2\\AlimentoSimple.cs",
+              "RelativeDocumentMoniker": "composite2\\AlimentoSimple.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Practicas\\composite2\\composite2\\AlimentoSimple.cs",
+              "RelativeToolTip": "composite2\\AlimentoSimple.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T18:20:48.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Comida.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Practicas\\composite2\\composite2\\Comida.cs",
+              "RelativeDocumentMoniker": "composite2\\Comida.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Practicas\\composite2\\composite2\\Comida.cs",
+              "RelativeToolTip": "composite2\\Comida.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T18:15:57.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Practicas\\composite2\\composite2\\Program.cs",
+              "RelativeDocumentMoniker": "composite2\\Program.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Practicas\\composite2\\composite2\\Program.cs",
+              "RelativeToolTip": "composite2\\Program.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwGkAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T18:09:06.882Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

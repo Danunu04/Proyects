@@ -1,0 +1,7 @@
+D:\ProyectosDana\Proyects\Practicas\composite2\composite2\bin\Debug\composite2.exe.config
+D:\ProyectosDana\Proyects\Practicas\composite2\composite2\bin\Debug\composite2.exe
+D:\ProyectosDana\Proyects\Practicas\composite2\composite2\bin\Debug\composite2.pdb
+D:\ProyectosDana\Proyects\Practicas\composite2\composite2\obj\Debug\composite2.csproj.AssemblyReference.cache
+D:\ProyectosDana\Proyects\Practicas\composite2\composite2\obj\Debug\composite2.csproj.CoreCompileInputs.cache
+D:\ProyectosDana\Proyects\Practicas\composite2\composite2\obj\Debug\composite2.exe
+D:\ProyectosDana\Proyects\Practicas\composite2\composite2\obj\Debug\composite2.pdb

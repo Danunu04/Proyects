@@ -1,0 +1,7 @@
+D:\ProyectosDana\Proyects\Practicas\Factory_method\Factory_method\bin\Debug\Factory_method.exe.config
+D:\ProyectosDana\Proyects\Practicas\Factory_method\Factory_method\bin\Debug\Factory_method.exe
+D:\ProyectosDana\Proyects\Practicas\Factory_method\Factory_method\bin\Debug\Factory_method.pdb
+D:\ProyectosDana\Proyects\Practicas\Factory_method\Factory_method\obj\Debug\Factory_method.csproj.AssemblyReference.cache
+D:\ProyectosDana\Proyects\Practicas\Factory_method\Factory_method\obj\Debug\Factory_method.csproj.CoreCompileInputs.cache
+D:\ProyectosDana\Proyects\Practicas\Factory_method\Factory_method\obj\Debug\Factory_method.exe
+D:\ProyectosDana\Proyects\Practicas\Factory_method\Factory_method\obj\Debug\Factory_method.pdb

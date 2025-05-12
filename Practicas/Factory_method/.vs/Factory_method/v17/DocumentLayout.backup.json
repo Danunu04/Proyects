@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ProyectosDana\\Proyects\\Practicas\\Factory_method\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0CFF8E-1B21-4150-AB68-6F5AB3B12E2D}|Factory_method\\Factory_method.csproj|d:\\proyectosdana\\proyects\\practicas\\factory_method\\factory_method\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0CFF8E-1B21-4150-AB68-6F5AB3B12E2D}|Factory_method\\Factory_method.csproj|solutionrelative:factory_method\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0CFF8E-1B21-4150-AB68-6F5AB3B12E2D}|Factory_method\\Factory_method.csproj|d:\\proyectosdana\\proyects\\practicas\\factory_method\\factory_method\\dvdfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0CFF8E-1B21-4150-AB68-6F5AB3B12E2D}|Factory_method\\Factory_method.csproj|solutionrelative:factory_method\\dvdfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0CFF8E-1B21-4150-AB68-6F5AB3B12E2D}|Factory_method\\Factory_method.csproj|d:\\proyectosdana\\proyects\\practicas\\factory_method\\factory_method\\blurayfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0CFF8E-1B21-4150-AB68-6F5AB3B12E2D}|Factory_method\\Factory_method.csproj|solutionrelative:factory_method\\blurayfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0CFF8E-1B21-4150-AB68-6F5AB3B12E2D}|Factory_method\\Factory_method.csproj|d:\\proyectosdana\\proyects\\practicas\\factory_method\\factory_method\\discodvd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0CFF8E-1B21-4150-AB68-6F5AB3B12E2D}|Factory_method\\Factory_method.csproj|solutionrelative:factory_method\\discodvd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0CFF8E-1B21-4150-AB68-6F5AB3B12E2D}|Factory_method\\Factory_method.csproj|d:\\proyectosdana\\proyects\\practicas\\factory_method\\factory_method\\discobluray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0CFF8E-1B21-4150-AB68-6F5AB3B12E2D}|Factory_method\\Factory_method.csproj|solutionrelative:factory_method\\discobluray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0CFF8E-1B21-4150-AB68-6F5AB3B12E2D}|Factory_method\\Factory_method.csproj|d:\\proyectosdana\\proyects\\practicas\\factory_method\\factory_method\\disqueria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0CFF8E-1B21-4150-AB68-6F5AB3B12E2D}|Factory_method\\Factory_method.csproj|solutionrelative:factory_method\\disqueria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0CFF8E-1B21-4150-AB68-6F5AB3B12E2D}|Factory_method\\Factory_method.csproj|d:\\proyectosdana\\proyects\\practicas\\factory_method\\factory_method\\disco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0CFF8E-1B21-4150-AB68-6F5AB3B12E2D}|Factory_method\\Factory_method.csproj|solutionrelative:factory_method\\disco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DVDFactory.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Practicas\\Factory_method\\Factory_method\\DVDFactory.cs",
+              "RelativeDocumentMoniker": "Factory_method\\DVDFactory.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Practicas\\Factory_method\\Factory_method\\DVDFactory.cs",
+              "RelativeToolTip": "Factory_method\\DVDFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T13:42:56.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DiscoBluRay.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Practicas\\Factory_method\\Factory_method\\DiscoBluRay.cs",
+              "RelativeDocumentMoniker": "Factory_method\\DiscoBluRay.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Practicas\\Factory_method\\Factory_method\\DiscoBluRay.cs",
+              "RelativeToolTip": "Factory_method\\DiscoBluRay.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T13:39:45.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DiscoDVD.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Practicas\\Factory_method\\Factory_method\\DiscoDVD.cs",
+              "RelativeDocumentMoniker": "Factory_method\\DiscoDVD.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Practicas\\Factory_method\\Factory_method\\DiscoDVD.cs",
+              "RelativeToolTip": "Factory_method\\DiscoDVD.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T13:33:44.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BluRayFactory.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Practicas\\Factory_method\\Factory_method\\BluRayFactory.cs",
+              "RelativeDocumentMoniker": "Factory_method\\BluRayFactory.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Practicas\\Factory_method\\Factory_method\\BluRayFactory.cs",
+              "RelativeToolTip": "Factory_method\\BluRayFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T13:31:24.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Disqueria.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Practicas\\Factory_method\\Factory_method\\Disqueria.cs",
+              "RelativeDocumentMoniker": "Factory_method\\Disqueria.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Practicas\\Factory_method\\Factory_method\\Disqueria.cs",
+              "RelativeToolTip": "Factory_method\\Disqueria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T12:50:52.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Disco.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Practicas\\Factory_method\\Factory_method\\Disco.cs",
+              "RelativeDocumentMoniker": "Factory_method\\Disco.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Practicas\\Factory_method\\Factory_method\\Disco.cs",
+              "RelativeToolTip": "Factory_method\\Disco.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T12:51:26.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Practicas\\Factory_method\\Factory_method\\Program.cs",
+              "RelativeDocumentMoniker": "Factory_method\\Program.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Practicas\\Factory_method\\Factory_method\\Program.cs",
+              "RelativeToolTip": "Factory_method\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T12:50:29.328Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
