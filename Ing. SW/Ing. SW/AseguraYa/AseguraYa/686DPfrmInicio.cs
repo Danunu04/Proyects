@@ -28,7 +28,8 @@ namespace AseguraYa
             DP_Admin.Enabled = false;
             DP_Contratacion.Enabled = false;
             Dp_Siniestros.Enabled = false;
-
+            mestroToolStripMenuItem.Enabled = false;
+            DP_CambiarContraseña.Enabled = false;
         }
 
         private void DP_IniciarSesion_Click(object sender, EventArgs e)
@@ -57,18 +58,30 @@ namespace AseguraYa
             DP_Admin.Enabled = true;
             DP_Contratacion.Enabled = true;
             Dp_Siniestros.Enabled = true;
+            
         }
 
         private void DP_CerrarSesion_Click(object sender, EventArgs e)
         {
-            if (_686DP_Singleton.Instancia._686DPIsLogged())
+            DialogResult resultado = MessageBox.Show(
+                "¿Estás seguro de que querés cerrar sesión?",
+                "Confirmar cierre de sesión",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (resultado == DialogResult.Yes)
             {
-                _686DP_Singleton.Instancia._686DPLogOut();
-                MessageBox.Show("Sesión cerrada correctamente.", "Cerrar sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("No hay una sesión activa para cerrar.", "Cerrar sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (_686DP_Singleton.Instancia._686DPIsLogged())
+                {
+                    _686DP_Singleton.Instancia._686DPLogOut();
+                    MessageBox.Show("Sesión cerrada correctamente.", "Cerrar sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _686DP_Desactivar();
+                }
+                else
+                {
+                    MessageBox.Show("No hay una sesión activa para cerrar.", "Cerrar sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
@@ -102,6 +115,11 @@ namespace AseguraYa
             _686DPfrmVerPolizas Polizas = new _686DPfrmVerPolizas();
             Polizas.MdiParent = this;
             Polizas.Show();
+        }
+
+        internal void DesactivarTodo()
+        {
+            throw new NotImplementedException();
         }
     }
 }

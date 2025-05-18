@@ -57,6 +57,7 @@
             this.DP_BTNFiltrar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DP_Datagrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +73,7 @@
             // 
             // DP_BTNCrear
             // 
-            this.DP_BTNCrear.Location = new System.Drawing.Point(1046, 80);
+            this.DP_BTNCrear.Location = new System.Drawing.Point(1058, 74);
             this.DP_BTNCrear.Name = "DP_BTNCrear";
             this.DP_BTNCrear.Size = new System.Drawing.Size(75, 37);
             this.DP_BTNCrear.TabIndex = 1;
@@ -82,7 +83,7 @@
             // 
             // DP_BTNDesbloquear
             // 
-            this.DP_BTNDesbloquear.Location = new System.Drawing.Point(1046, 123);
+            this.DP_BTNDesbloquear.Location = new System.Drawing.Point(1058, 123);
             this.DP_BTNDesbloquear.Name = "DP_BTNDesbloquear";
             this.DP_BTNDesbloquear.Size = new System.Drawing.Size(75, 37);
             this.DP_BTNDesbloquear.TabIndex = 2;
@@ -92,7 +93,7 @@
             // 
             // BTNModificar
             // 
-            this.BTNModificar.Location = new System.Drawing.Point(1046, 166);
+            this.BTNModificar.Location = new System.Drawing.Point(1058, 166);
             this.BTNModificar.Name = "BTNModificar";
             this.BTNModificar.Size = new System.Drawing.Size(75, 37);
             this.BTNModificar.TabIndex = 3;
@@ -102,7 +103,7 @@
             // 
             // DP_BTNActivarEliminar
             // 
-            this.DP_BTNActivarEliminar.Location = new System.Drawing.Point(1046, 209);
+            this.DP_BTNActivarEliminar.Location = new System.Drawing.Point(1058, 209);
             this.DP_BTNActivarEliminar.Name = "DP_BTNActivarEliminar";
             this.DP_BTNActivarEliminar.Size = new System.Drawing.Size(75, 37);
             this.DP_BTNActivarEliminar.TabIndex = 4;
@@ -112,7 +113,7 @@
             // 
             // DP_BTNAplicar
             // 
-            this.DP_BTNAplicar.Location = new System.Drawing.Point(1046, 252);
+            this.DP_BTNAplicar.Location = new System.Drawing.Point(1058, 252);
             this.DP_BTNAplicar.Name = "DP_BTNAplicar";
             this.DP_BTNAplicar.Size = new System.Drawing.Size(75, 37);
             this.DP_BTNAplicar.TabIndex = 5;
@@ -122,7 +123,7 @@
             // 
             // DP_BTNCancelar
             // 
-            this.DP_BTNCancelar.Location = new System.Drawing.Point(1046, 295);
+            this.DP_BTNCancelar.Location = new System.Drawing.Point(1058, 295);
             this.DP_BTNCancelar.Name = "DP_BTNCancelar";
             this.DP_BTNCancelar.Size = new System.Drawing.Size(75, 37);
             this.DP_BTNCancelar.TabIndex = 6;
@@ -132,7 +133,7 @@
             // 
             // DP_BTNSalir
             // 
-            this.DP_BTNSalir.Location = new System.Drawing.Point(1046, 338);
+            this.DP_BTNSalir.Location = new System.Drawing.Point(1058, 338);
             this.DP_BTNSalir.Name = "DP_BTNSalir";
             this.DP_BTNSalir.Size = new System.Drawing.Size(75, 37);
             this.DP_BTNSalir.TabIndex = 7;
@@ -313,7 +314,7 @@
             // 
             // DP_BTNFiltrar
             // 
-            this.DP_BTNFiltrar.Location = new System.Drawing.Point(746, 25);
+            this.DP_BTNFiltrar.Location = new System.Drawing.Point(724, 25);
             this.DP_BTNFiltrar.Name = "DP_BTNFiltrar";
             this.DP_BTNFiltrar.Size = new System.Drawing.Size(135, 21);
             this.DP_BTNFiltrar.TabIndex = 27;
@@ -324,7 +325,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(887, 28);
+            this.label11.Location = new System.Drawing.Point(874, 28);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(0, 13);
             this.label11.TabIndex = 29;
@@ -337,11 +338,20 @@
             "Modo edicion",
             "Modo Desbloquear",
             "Modo Activar o eliminar"});
-            this.comboBox1.Location = new System.Drawing.Point(1000, 26);
+            this.comboBox1.Location = new System.Drawing.Point(1012, 47);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 30;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(1100, 31);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "modo";
             // 
             // _686DPfrmGestionUsuarios
             // 
@@ -349,6 +359,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
             this.ClientSize = new System.Drawing.Size(1145, 565);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.DP_BTNFiltrar);
@@ -418,5 +429,6 @@
         private System.Windows.Forms.Button DP_BTNFiltrar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label10;
     }
 }

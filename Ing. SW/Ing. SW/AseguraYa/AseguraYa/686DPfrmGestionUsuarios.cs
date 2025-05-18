@@ -18,7 +18,7 @@ namespace AseguraYa
     public partial class _686DPfrmGestionUsuarios : Form
     {
         _686DP_BLLUsuario _686DP_BLLUsuario;
-        _686DP_ExpresionesRegulares Regex;
+        _686DP_ExpresionesRegulares _686DP_ExpresionesRegulares;
         private bool esModoCrear = false;
         //entorno conectado
         string dni = "";
@@ -34,7 +34,7 @@ namespace AseguraYa
         {
             InitializeComponent();
             _686DP_BLLUsuario = new _686DP_BLLUsuario();
-            Regex = new _686DP_ExpresionesRegulares();
+            _686DP_ExpresionesRegulares = new _686DP_ExpresionesRegulares();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -45,14 +45,25 @@ namespace AseguraYa
         private void DP_BTNCrear_Click(object sender, EventArgs e)
         {
             esModoCrear = true;
-
             if (esModoCrear)
             {
                 try
                 {
                     int dni = int.Parse(DP_TXTDni.Text);
-                    string usuario = DP_TXTNombre.Text +"."+ DP_TXTApellido.Text ;
-                    string contra = DP_TXTDni.Text+"."+DP_TXTApellido.Text;
+
+
+                    bool dniExiste = _686DP_BLLUsuario.ListaDeEmpleados.Any(emp => emp.DP686_DNI == dni);
+                    if (dniExiste)
+                    {
+                        MessageBox.Show("Ya existe un empleado con ese DNI.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    _686DPCriptoManager cm = new _686DPCriptoManager();
+                    string usuario = DP_TXTNombre.Text + "." + DP_TXTApellido.Text;
+                    string contra = DP_TXTDni.Text + "." + DP_TXTApellido.Text;
+                    string contraHash = cm._686DPGetSHA256(contra);
+
                     _686DP_Empleados nuevo = new _686DP_Empleados(
                         dni,
                         DP_TXTNombre.Text,
@@ -60,14 +71,14 @@ namespace AseguraYa
                         DP_TXTEmail.Text,
                         DP_CMBRol.SelectedItem.ToString(),
                         usuario,
-                        contra,
+                        contraHash,
                         true,
+                        false,
                         false
                     );
 
                     _686DP_BLLUsuario.ListaDeEmpleados.Add(nuevo);
 
-                    // Refrescar grilla
                     DP_Datagrid.DataSource = null;
                     DP_Datagrid.DataSource = _686DP_BLLUsuario.ListaDeEmpleados;
 
@@ -155,7 +166,9 @@ namespace AseguraYa
 
         private void LLenarCombo()
         {
-            List<string> roles = _686DP_BLLUsuario._686DPtraerRoles();
+            List<string> roles = _686DP_BLLUsuario._686DPtraerRoles()
+                                    .Distinct()
+                                    .ToList();
 
             DP_CMBRolesFiltro.Items.Clear();
             DP_CMBRol.Items.Clear();
@@ -199,8 +212,8 @@ namespace AseguraYa
             string ContraseñaAnterior = filaSeleccionada.Cells["DP686_Contraseña"].Value.ToString();
             
             string apellido = filaSeleccionada.Cells["DP686_Apellido"].Value.ToString();
-            int dni = Convert.ToInt32(filaSeleccionada.Cells["DP686_DNI"].ToString());
-            string nuevaContraseña = apellido + dni;
+            int dni = Convert.ToInt32(filaSeleccionada.Cells["DP686_DNI"].Value);
+            string nuevaContraseña = dni+ "."+ apellido;
             string usuario = filaSeleccionada.Cells["DP686_Usuario"].Value.ToString();
 
             _686DP_BLLUsuario.GuardarContraseña(ContraseñaAnterior, dni);
@@ -210,7 +223,8 @@ namespace AseguraYa
 
             // Actualizar en la grilla
             filaSeleccionada.Cells["DP686_Contraseña"].Value = nuevaContraseñaHash;
-
+            _686DP_BLLUsuario._686DPReestablecerIntentos(dni);
+            _686DP_BLLUsuario._Cambiarcontraobligatorio(dni);
             MessageBox.Show("El usuario fue desbloqueado correctamente y se restableció la contraseña a: " + nuevaContraseña, "Desbloqueo exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
@@ -350,8 +364,11 @@ namespace AseguraYa
         }
 
         private void DP_BTNAplicar_Click(object sender, EventArgs e)
-        {
-            _686DPGuardar();
+        {try
+            {
+                _686DPGuardar();
+            }
+        catch (Exception ex){ MessageBox.Show(ex.Message); }
         }
 
         private void _686DPGuardar()
@@ -386,6 +403,23 @@ namespace AseguraYa
                         // Actualizar en la BD
                         bll._686DPActualizarEmpleadoExistente(emp);
                     }
+                    else
+                    {
+                        _686DP_Empleados nuevo = new _686DP_Empleados(
+                            dni,
+                            fila.Cells["DP686_Nombre"].Value.ToString(),
+                            fila.Cells["DP686_Apellido"].Value.ToString(),
+                            fila.Cells["DP686_Email"].Value.ToString(),
+                            fila.Cells["DP686_Rol"].Value.ToString(),
+                            fila.Cells["DP686_Usuario"].Value.ToString(),
+                            fila.Cells["DP686_Contraseña"].Value.ToString(),
+                            Convert.ToBoolean(fila.Cells["DP686_Activo"].Value),
+                            Convert.ToBoolean(fila.Cells["DP686_Bloqueado"].Value),
+                            Convert.ToBoolean(fila.Cells["DP686_CambiarContraseña"].Value)
+                        );
+
+                        bll._686DPActualizarEmpleadoExistente(nuevo);
+                    }
                 }
 
                 MessageBox.Show("✔ Cambios aplicados correctamente.");
@@ -398,8 +432,22 @@ namespace AseguraYa
 
         private void DP_TXTDni_TextChanged(object sender, EventArgs e)
         {
-            string texto = DP_TXTDni.Text;
-            Regex._686DPEsNumero(texto);
+            if (DP_TXTDni.Text != "")
+            {
+                try
+                {
+
+                    if (!_686DP_ExpresionesRegulares._686DPEsNumero(DP_TXTDni.Text.ToString()))
+                    {
+                        MessageBox.Show("Solo se permiten números", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        DP_TXTDni.Clear();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error de validación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -495,18 +543,68 @@ namespace AseguraYa
 
         private void DP_TXTApellido_TextChanged(object sender, EventArgs e)
         {
-            Regex._686DPEsSoloLetras(DP_TXTApellido.Text);
+            if (DP_TXTApellido.Text != "")
+            {
+                try
+                {
+
+                    if (!_686DP_ExpresionesRegulares._686DPEsSoloLetras(DP_TXTApellido.Text))
+                    {
+                        MessageBox.Show("Solo se permiten caracteres alfabéticos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        DP_TXTApellido.Clear();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error de validación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void DP_TXTNombre_TextChanged(object sender, EventArgs e)
         {
-            Regex._686DPEsSoloLetras(DP_TXTNombre.Text);
-        }
+            if (DP_TXTNombre.Text != "")
+            {
+                try
+                {
 
+                    if (!_686DP_ExpresionesRegulares._686DPEsSoloLetras(DP_TXTNombre.Text))
+                    {
+                        MessageBox.Show("Solo se permiten caracteres alfabéticos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        DP_TXTNombre.Clear();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error de validación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
         private void DP_TXTEmail_TextChanged(object sender, EventArgs e)
         {
-            Regex._686DPEsEmail(DP_TXTEmail.Text);
+            
         }
+        private void DP_TXTEmail_Leave(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(DP_TXTEmail.Text))
+            {
+                try
+                {
+                    if (!_686DP_ExpresionesRegulares._686DPEsEmail(DP_TXTEmail.Text))
+                    {
+                        MessageBox.Show("El campo debe tener una estructura de email válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        DP_TXTEmail.Focus();
+                        DP_TXTEmail.SelectAll();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error de validación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+
 
         private void DP_CMBRol_SelectedIndexChanged(object sender, EventArgs e)
         {

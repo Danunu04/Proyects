@@ -46,6 +46,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(123, 20);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -55,6 +56,7 @@
             this.label1.Size = new System.Drawing.Size(26, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "DNI";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox2
             // 
@@ -62,6 +64,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(465, 20);
             this.textBox2.TabIndex = 2;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 
@@ -71,6 +74,7 @@
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Producto";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dataGridView1
             // 
@@ -80,6 +84,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(465, 102);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label3
             // 
@@ -89,6 +94,7 @@
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Planes";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // listBox1
             // 
@@ -97,6 +103,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(462, 199);
             this.listBox1.TabIndex = 6;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // BTNAceptar
             // 
@@ -106,6 +113,7 @@
             this.BTNAceptar.TabIndex = 7;
             this.BTNAceptar.Text = "Aceptar";
             this.BTNAceptar.UseVisualStyleBackColor = true;
+            this.BTNAceptar.Click += new System.EventHandler(this.BTNAceptar_Click);
             // 
             // BTNCancelar
             // 
@@ -115,6 +123,7 @@
             this.BTNCancelar.TabIndex = 8;
             this.BTNCancelar.Text = "Cancelar";
             this.BTNCancelar.UseVisualStyleBackColor = true;
+            this.BTNCancelar.Click += new System.EventHandler(this.BTNCancelar_Click);
             // 
             // _686DPfrmGenerarContratación
             // 

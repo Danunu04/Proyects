@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,12 +22,7 @@ namespace AseguraYa
         {
             InitializeComponent();
             _686DPCriptoManager = new _686DPCriptoManager();
-            bll= new _686DP_BLLUsuario();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+            bll = new _686DP_BLLUsuario();
         }
 
         private void DP_BTNAplicar_MouseHover(object sender, EventArgs e)
@@ -48,29 +44,61 @@ namespace AseguraYa
             DP_TXTContraseñaNueva.BorderStyle = BorderStyle.None;
         }
 
-        private void DP_TXTContraseñaActual_TextChanged(object sender, EventArgs e)
+        private void _686DPfrmCambiarContraseña_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            int DNI = _686DP_Singleton.Instancia.Usuario._686DPDNI;
+            bool cambiarContraseña = bll._686DPCambiarContraseña(DNI);
+
+            if (cambiarContraseña)
+            {
+                MessageBox.Show("Debe cambiar su contraseña antes de continuar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true;
+            }
+        }
+
+        private void DP_BTNAplicar_Click(object sender, EventArgs e)
         {
             string contraseñaActual = DP_TXTContraseñaActual.Text;
-            string contraseñaActualHash = _686DPCriptoManager._686DPGetSHA256(contraseñaActual); // Deberías usar SHA256 si así se guardó
+            string contraseñaNueva = DP_TXTContraseñaNueva.Text;
+            string confirmacion = DP_TXTConfirmación.Text;
             int DNI = _686DP_Singleton.Instancia.Usuario._686DPDNI;
-            string ContraseñaBD = bll._686DPTraerContraseña(DNI);
-            if (contraseñaActualHash == ContraseñaBD)
+
+            string contraseñaActualHash = _686DPCriptoManager._686DPGetSHA256(contraseñaActual);
+            string contraseñaBD = bll._686DPTraerContraseña(DNI);
+
+            if (contraseñaActualHash != contraseñaBD)
             {
-                if (DP_TXTContraseñaNueva.Text == DP_TXTConfirmación.Text)
-                {
-                    bll._686DPVerificarContraseñas(DNI);
-                    string contraseñaNuevaHash = _686DPCriptoManager._686DPGetSHA256(DP_TXTContraseñaNueva.Text);
-                    bool ok = bll._686DPCompararContraseñas(contraseñaNuevaHash, ContraseñaBD,DNI);
-                }
-                else
-                {
-                    MessageBox.Show("Las contraseñas no coinciden", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show("Contraseña actual incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else 
+
+            if (contraseñaNueva != confirmacion)
             {
-                MessageBox.Show("Contraseña actual incorrecta", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Las contraseñas no coinciden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            string contraseñaNuevaHash = _686DPCriptoManager._686DPGetSHA256(contraseñaNueva);
+            bll._686DPVerificarContraseñas(DNI);
+
+            bool ok = bll._686DPCompararContraseñas(contraseñaNuevaHash, contraseñaBD, DNI);
+
+            if (ok)
+            {
+                bll._686DPNuevaContra(contraseñaNuevaHash, DNI);
+                bll._ReestablecerObligatoriedadeContraseña(DNI);
+                MessageBox.Show("Contraseña cambiada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (_686DP_Singleton.Instancia._686DPIsLogged())
+                {
+                    _686DP_Singleton.Instancia._686DPLogOut();
+                    MessageBox.Show("Sesión cerrada por cuestiones de seguridad.", "Cerrar sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                this.Close();
+            }
+        }
+
+        private void DP_TXTContraseñaActual_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }

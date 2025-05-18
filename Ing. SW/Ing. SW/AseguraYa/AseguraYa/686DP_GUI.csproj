@@ -52,6 +52,12 @@
     <Compile Include="686DPfrmCambiarContraseña.Designer.cs">
       <DependentUpon>686DPfrmCambiarContraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="686DPfrmCancelarSeguro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="686DPfrmCancelarSeguro.Designer.cs">
+      <DependentUpon>686DPfrmCancelarSeguro.cs</DependentUpon>
+    </Compile>
     <Compile Include="686DPfrmGenerarContratación.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,18 @@
     <Compile Include="686DPfrmLogIn.Designer.cs">
       <DependentUpon>686DPfrmLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="686DPfrmModificarSeguro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="686DPfrmModificarSeguro.Designer.cs">
+      <DependentUpon>686DPfrmModificarSeguro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="686DPfrmRegistrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="686DPfrmRegistrarCliente.Designer.cs">
+      <DependentUpon>686DPfrmRegistrarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="686DPfrmVerPolizas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +106,9 @@
     <EmbeddedResource Include="686DPfrmCambiarContraseña.resx">
       <DependentUpon>686DPfrmCambiarContraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="686DPfrmCancelarSeguro.resx">
+      <DependentUpon>686DPfrmCancelarSeguro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="686DPfrmGenerarContratación.resx">
       <DependentUpon>686DPfrmGenerarContratación.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +120,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="686DPfrmLogIn.resx">
       <DependentUpon>686DPfrmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="686DPfrmModificarSeguro.resx">
+      <DependentUpon>686DPfrmModificarSeguro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="686DPfrmRegistrarCliente.resx">
+      <DependentUpon>686DPfrmRegistrarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="686DPfrmVerPolizas.resx">
       <DependentUpon>686DPfrmVerPolizas.cs</DependentUpon>

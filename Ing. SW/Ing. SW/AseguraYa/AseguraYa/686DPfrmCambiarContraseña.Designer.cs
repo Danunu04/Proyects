@@ -64,7 +64,7 @@
             this.label3.Size = new System.Drawing.Size(107, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Confirmar contraseña";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            //this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // DP_BTNAplicar
             // 
@@ -77,6 +77,7 @@
             this.DP_BTNAplicar.TabIndex = 3;
             this.DP_BTNAplicar.Text = "Aplicar";
             this.DP_BTNAplicar.UseVisualStyleBackColor = false;
+            this.DP_BTNAplicar.Click += new System.EventHandler(this.DP_BTNAplicar_Click);
             this.DP_BTNAplicar.MouseLeave += new System.EventHandler(this.DP_BTNAplicar_MouseLeave);
             this.DP_BTNAplicar.MouseHover += new System.EventHandler(this.DP_BTNAplicar_MouseHover);
             // 
@@ -89,6 +90,7 @@
             this.DP_TXTContraseñaActual.Size = new System.Drawing.Size(220, 22);
             this.DP_TXTContraseñaActual.TabIndex = 4;
             this.DP_TXTContraseñaActual.TextChanged += new System.EventHandler(this.DP_TXTContraseñaActual_TextChanged);
+            //this.DP_TXTContraseñaActual.MouseLeave += new System.EventHandler(this.DP_TXTContraseñaActual_MouseLeave);
             // 
             // DP_TXTContraseñaNueva
             // 
