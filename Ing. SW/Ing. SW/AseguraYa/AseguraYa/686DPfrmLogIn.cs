@@ -50,39 +50,60 @@ namespace AseguraYa
                         bool Activo = _686DP_BLLUsuario._686DPTraerEstado(DNI);
                         if(Activo)
                         {
-                            string ContraseñaBD = _686DP_BLLUsuario._686DPTraerContraseña(DNI);
-                            if (ContraseñaHash == ContraseñaBD)
+                            bool Bloqueado = _686DP_BLLUsuario._686DPCuentaBloqueada(DNI);
+                            if(!Bloqueado)
                             {
-                                _686DP_Usuario usuarioCompleto = _686DP_BLLUsuario._686DPGenerarUsuarioSingleton(Usuario, ContraseñaHash,DNI);
-                                _686DP_Singleton.Instancia._686DPLogIN(usuarioCompleto);
-                                MessageBox.Show("La sesión se inició correctamente");
-                                string _686DPRol = _686DP_BLLUsuario.TraerRol(DNI); 
-                                if (_686DPRol=="Amdmin")
+                                string ContraseñaBD = _686DP_BLLUsuario._686DPTraerContraseña(DNI);
+                                if (ContraseñaHash == ContraseñaBD)
                                 {
-                                    (this.MdiParent as Form1)?.ActivarRol();
-                                    this.Close();
+                                    _686DP_Usuario usuarioCompleto = _686DP_BLLUsuario._686DPGenerarUsuarioSingleton(Usuario, ContraseñaHash, DNI);
+                                    _686DP_Singleton.Instancia._686DPLogIN(usuarioCompleto);
+                                    MessageBox.Show("La sesión se inició correctamente");
+                                    _686DP_BLLUsuario._686DPReestablecerIntentos(DNI);
+                                    string _686DPRol = _686DP_BLLUsuario.TraerRol(DNI);
+                                    if (_686DPRol == "Amdmin")
+                                    {
+                                        (this.MdiParent as Form1)?.ActivarRol();
+                                        this.Close();
+                                    }
+                                    else
+                                    {
+                                        (this.MdiParent as Form1)?.Activar();
+                                        this.Close();
+                                    }
+                                    bool cambiarContraseña = _686DP_BLLUsuario._686DPCambiarContraseña(DNI);
+                                    if (cambiarContraseña)
+                                    {
+                                        _686DPfrmCambiarContraseña cambiarcontra = new _686DPfrmCambiarContraseña();
+                                        cambiarcontra.Show();
+                                        (this.MdiParent as Form1)?.DesactivarTodo();
+                                        this.Close();
+                                    }
+
+
                                 }
                                 else
                                 {
-                                    (this.MdiParent as Form1)?.Activar();
-                                    this.Close();
+                                    
+                                    _686DP_BLLUsuario.RegistrarError(DNI);
+                                    int intentos = _686DP_BLLUsuario._686DPTraerIntentos(DNI);
+                                    MessageBox.Show($"Contraseña incorrecta, intentos restantes: {3-intentos}", "Error De inicio de sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    if (intentos >= 3)
+                                    {
+                                        _686DP_BLLUsuario._686DPBloquearUsuario(DNI);
+                                        MessageBox.Show("Su usuario ha sido bloqueado, comunicarse con el administrador", "Error De inicio de sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                    return;
                                 }
-                                
                             }
                             else
                             {
-                                MessageBox.Show("Contraseña incorrecta", "Error De inicio de sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                Intentos++;
-                                if(Intentos == 3)
-                                {
-                                    _686DP_BLLUsuario._686DPBloquearUsuario(DNI);
-                                }
-                                return;
+                                MessageBox.Show("Su cuenta está bloqueada por muchos intentos de acceso fallidos, contactar al administrador para ser debloqueado");
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Usuario Bloqueado", "Error De inicio de sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Usuario desactivado por baja del mismo, solicitar activación", "Error De inicio de sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                     }

@@ -18,10 +18,11 @@ namespace _686DP_BE
         public string DP686_Contraseña { get; set; }
         public bool DP686_Activo { get; set; }
         public bool DP686_Bloqueado { get; set; }
+        public bool DP686_CambiarContraseña { get; set; }
 
 
-        
-        public _686DP_Empleados(int dni, string nombre, string apellido, string email, string rol, string usuario, string contraseña, bool activo, bool bloqueado)
+
+        public _686DP_Empleados(int dni, string nombre, string apellido, string email, string rol, string usuario, string contraseña, bool activo, bool bloqueado, bool cambiarcontra)
         {
             DP686_DNI = dni;
             DP686_Nombre = nombre;
@@ -32,6 +33,7 @@ namespace _686DP_BE
             DP686_Contraseña = contraseña;
             DP686_Activo = activo;
             DP686_Bloqueado = bloqueado;
+            DP686_CambiarContraseña= cambiarcontra;
         }
     }
 }

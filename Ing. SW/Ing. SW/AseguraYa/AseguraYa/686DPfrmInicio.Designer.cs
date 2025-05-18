@@ -39,12 +39,16 @@
             this.DP_BitacoraDeEventos = new System.Windows.Forms.ToolStripMenuItem();
             this.DP_GestionDeRespaldo = new System.Windows.Forms.ToolStripMenuItem();
             this.DP_Contratacion = new System.Windows.Forms.ToolStripMenuItem();
+            this.generarContratacion = new System.Windows.Forms.ToolStripMenuItem();
             this.Dp_Siniestros = new System.Windows.Forms.ToolStripMenuItem();
             this.DP_CerrarSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.DP_CambiarIdioma = new System.Windows.Forms.ToolStripMenuItem();
             this.Dp_Ayuda = new System.Windows.Forms.ToolStripMenuItem();
-            this.generarContratacion = new System.Windows.Forms.ToolStripMenuItem();
-            this.verPolizas = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarSeguroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarSeguroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mestroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +57,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.DP_Usuario,
             this.DP_Admin,
+            this.mestroToolStripMenuItem,
             this.DP_Contratacion,
             this.Dp_Siniestros,
             this.DP_CerrarSesion,
@@ -96,8 +101,8 @@
             this.DP_BitacoraDeEventos,
             this.DP_GestionDeRespaldo});
             this.DP_Admin.Name = "DP_Admin";
-            this.DP_Admin.Size = new System.Drawing.Size(62, 20);
-            this.DP_Admin.Text = "Maestro";
+            this.DP_Admin.Size = new System.Drawing.Size(55, 20);
+            this.DP_Admin.Text = "Admin";
             // 
             // DP_GestionDeUsuarios
             // 
@@ -128,10 +133,18 @@
             // 
             this.DP_Contratacion.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.generarContratacion,
-            this.verPolizas});
+            this.modificarSeguroToolStripMenuItem,
+            this.eliminarSeguroToolStripMenuItem});
             this.DP_Contratacion.Name = "DP_Contratacion";
             this.DP_Contratacion.Size = new System.Drawing.Size(88, 20);
             this.DP_Contratacion.Text = "Contratacion";
+            // 
+            // generarContratacion
+            // 
+            this.generarContratacion.Name = "generarContratacion";
+            this.generarContratacion.Size = new System.Drawing.Size(187, 22);
+            this.generarContratacion.Text = "Generar Contratacion";
+            this.generarContratacion.Click += new System.EventHandler(this.generarContratacion_Click);
             // 
             // Dp_Siniestros
             // 
@@ -161,19 +174,38 @@
             this.Dp_Ayuda.Text = "Ayuda";
             this.Dp_Ayuda.Click += new System.EventHandler(this.Dp_Ayuda_Click);
             // 
-            // generarContratacion
+            // modificarSeguroToolStripMenuItem
             // 
-            this.generarContratacion.Name = "generarContratacion";
-            this.generarContratacion.Size = new System.Drawing.Size(187, 22);
-            this.generarContratacion.Text = "Generar Contratacion";
-            this.generarContratacion.Click += new System.EventHandler(this.generarContratacion_Click);
+            this.modificarSeguroToolStripMenuItem.Name = "modificarSeguroToolStripMenuItem";
+            this.modificarSeguroToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.modificarSeguroToolStripMenuItem.Text = "Modificar seguro";
             // 
-            // verPolizas
+            // eliminarSeguroToolStripMenuItem
             // 
-            this.verPolizas.Name = "verPolizas";
-            this.verPolizas.Size = new System.Drawing.Size(187, 22);
-            this.verPolizas.Text = "Ver Polizas";
-            this.verPolizas.Click += new System.EventHandler(this.verPolizas_Click);
+            this.eliminarSeguroToolStripMenuItem.Name = "eliminarSeguroToolStripMenuItem";
+            this.eliminarSeguroToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.eliminarSeguroToolStripMenuItem.Text = "Eliminar Seguro";
+            // 
+            // mestroToolStripMenuItem
+            // 
+            this.mestroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarClienteToolStripMenuItem,
+            this.gestionDeProductosToolStripMenuItem});
+            this.mestroToolStripMenuItem.Name = "mestroToolStripMenuItem";
+            this.mestroToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.mestroToolStripMenuItem.Text = "Mestro";
+            // 
+            // registrarClienteToolStripMenuItem
+            // 
+            this.registrarClienteToolStripMenuItem.Name = "registrarClienteToolStripMenuItem";
+            this.registrarClienteToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.registrarClienteToolStripMenuItem.Text = "Gestion de clientes";
+            // 
+            // gestionDeProductosToolStripMenuItem
+            // 
+            this.gestionDeProductosToolStripMenuItem.Name = "gestionDeProductosToolStripMenuItem";
+            this.gestionDeProductosToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.gestionDeProductosToolStripMenuItem.Text = "Gestion de productos";
             // 
             // Form1
             // 
@@ -213,7 +245,11 @@
         private System.Windows.Forms.ToolStripMenuItem DP_BitacoraDeEventos;
         private System.Windows.Forms.ToolStripMenuItem DP_GestionDeRespaldo;
         private System.Windows.Forms.ToolStripMenuItem generarContratacion;
-        private System.Windows.Forms.ToolStripMenuItem verPolizas;
+        private System.Windows.Forms.ToolStripMenuItem modificarSeguroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarSeguroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mestroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionDeProductosToolStripMenuItem;
     }
 }
 

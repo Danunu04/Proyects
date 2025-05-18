@@ -24,14 +24,15 @@ namespace AseguraYa
         }
         public bool _686DPEsEmail(string texto)
         {
+            if (string.IsNullOrWhiteSpace(texto)) return false;
+
             try
             {
-                if (string.IsNullOrWhiteSpace(texto)) return false;
-                return Regex.IsMatch(texto, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+                return Regex.IsMatch(texto, @"^[^@\s]+@[^@\s]+\.[^@\s]+$", RegexOptions.IgnoreCase);
             }
-            catch (Exception)
+            catch (RegexMatchTimeoutException)
             {
-                throw new Exception("Ingresar un email válido.");
+                throw new Exception("La validación del email excedió el tiempo permitido.");
             }
         }
 

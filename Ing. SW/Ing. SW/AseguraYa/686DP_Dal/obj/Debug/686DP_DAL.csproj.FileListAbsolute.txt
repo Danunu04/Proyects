@@ -53,3 +53,14 @@ C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_Dal\ob
 C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_Dal\obj\Debug\686DP_DAL.csproj.Up2Date
 C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_Dal\obj\Debug\686DP_Dal.dll
 C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_Dal\obj\Debug\686DP_Dal.pdb
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_Dal\bin\Debug\686DP_Dal.dll
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_Dal\bin\Debug\686DP_Dal.pdb
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_Dal\bin\Debug\686DP_BE.dll
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_Dal\bin\Debug\686DP_SERVICIOS.dll
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_Dal\bin\Debug\686DP_BE.pdb
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_Dal\bin\Debug\686DP_SERVICIOS.pdb
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_Dal\obj\Debug\686DP_DAL.csproj.AssemblyReference.cache
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_Dal\obj\Debug\686DP_DAL.csproj.CoreCompileInputs.cache
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_Dal\obj\Debug\686DP_DAL.csproj.Up2Date
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_Dal\obj\Debug\686DP_Dal.dll
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_Dal\obj\Debug\686DP_Dal.pdb

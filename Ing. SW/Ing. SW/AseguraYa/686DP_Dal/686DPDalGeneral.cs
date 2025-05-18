@@ -11,8 +11,8 @@ namespace _686DP_Dal
 {
     public class _686DPDalGeneral
     {
-        //public SqlConnection conn = new SqlConnection(@"Data Source=DANAPC;Initial Catalog=AseguraYA;Integrated Security=True");
-        public SqlConnection conn = new SqlConnection(@"Data Source=TECBI004\DBPERSONAL;Initial Catalog=AseguraYA;Integrated Security=True");
+        public SqlConnection conn = new SqlConnection(@"Data Source=DANAPC;Initial Catalog=AseguraYA;Integrated Security=True");
+        //public SqlConnection conn = new SqlConnection(@"Data Source=TECBI004\DBPERSONAL;Initial Catalog=AseguraYA;Integrated Security=True");
         public SqlCommand cmd;
         public DataTable _686DPConsultar(string consulta, ArrayList parametros)
         {
@@ -60,29 +60,31 @@ namespace _686DP_Dal
 
         public void _686DPEscribir(string consulta, ArrayList parametros)
         {
-            cmd = new SqlCommand(consulta, conn);
-            cmd.CommandType = CommandType.Text;
-
             try
             {
-                if (parametros != null)
+                using (SqlCommand cmd = new SqlCommand(consulta, conn))
                 {
-                    foreach (SqlParameter dato in parametros)
+                    cmd.CommandType = CommandType.Text;
+
+                    if (parametros != null)
                     {
-                        cmd.Parameters.AddWithValue(dato.ParameterName, dato.Value);
+                        foreach (SqlParameter dato in parametros)
+                        {
+                            cmd.Parameters.AddWithValue(dato.ParameterName, dato.Value ?? DBNull.Value);
+                        }
                     }
-                }
 
-                if (conn.State != ConnectionState.Open)
-                {
-                    conn.Open();
-                }
+                    if (conn.State != ConnectionState.Open)
+                    {
+                        conn.Open();
+                    }
 
-                cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
+                }
             }
             catch (SqlException ex)
             {
-                throw new Exception("⚠️ Se produjo un error al ejecutar una escritura SQL.");
+                throw new Exception("⚠️ Error SQL: " + ex.Message, ex);
             }
             catch (Exception ex)
             {
@@ -96,5 +98,6 @@ namespace _686DP_Dal
                 }
             }
         }
+
     }
 }
