@@ -56,8 +56,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.DP_BTNFiltrar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DP_Datagrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -197,7 +195,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 434);
+            this.label2.Location = new System.Drawing.Point(39, 460);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 15;
@@ -207,7 +205,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(36, 460);
+            this.label3.Location = new System.Drawing.Point(37, 434);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 16);
             this.label3.TabIndex = 16;
@@ -330,37 +328,12 @@
             this.label11.Size = new System.Drawing.Size(0, 13);
             this.label11.TabIndex = 29;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Modo Creador",
-            "Modo edicion",
-            "Modo Desbloquear",
-            "Modo Activar o eliminar"});
-            this.comboBox1.Location = new System.Drawing.Point(1012, 47);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 30;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1100, 31);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 13);
-            this.label10.TabIndex = 31;
-            this.label10.Text = "modo";
-            // 
             // _686DPfrmGestionUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
             this.ClientSize = new System.Drawing.Size(1145, 565);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.DP_BTNFiltrar);
             this.Controls.Add(this.label9);
@@ -428,7 +401,5 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button DP_BTNFiltrar;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label10;
     }
 }

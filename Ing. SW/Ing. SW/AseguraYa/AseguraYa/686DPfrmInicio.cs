@@ -30,6 +30,9 @@ namespace AseguraYa
             Dp_Siniestros.Enabled = false;
             mestroToolStripMenuItem.Enabled = false;
             DP_CambiarContraseña.Enabled = false;
+            DP_CambiarIdioma.Enabled = false;
+            Dp_Ayuda.Enabled = false;
+            DP_CerrarSesion.Enabled = false;
         }
 
         private void DP_IniciarSesion_Click(object sender, EventArgs e)
@@ -58,7 +61,12 @@ namespace AseguraYa
             DP_Admin.Enabled = true;
             DP_Contratacion.Enabled = true;
             Dp_Siniestros.Enabled = true;
-            
+            DP_CambiarContraseña.Enabled = true;
+            mestroToolStripMenuItem.Enabled = false;
+            DP_CambiarContraseña.Enabled = true;
+            DP_CambiarIdioma.Enabled = false;
+            Dp_Ayuda.Enabled = false;
+            DP_CerrarSesion.Enabled = true;
         }
 
         private void DP_CerrarSesion_Click(object sender, EventArgs e)
