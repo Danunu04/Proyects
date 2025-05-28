@@ -1,0 +1,176 @@
+D:\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.exe.config
+D:\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.exe
+D:\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.pdb
+D:\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.AssemblyReference.cache
+D:\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.Form1.resources
+D:\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.Properties.Resources.resources
+D:\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.GenerateResource.cache
+D:\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.CoreCompileInputs.cache
+D:\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.exe
+D:\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.pdb
+D:\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmLogIn.resources
+D:\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmGestionUsuarios.resources
+D:\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmCambiarContraseña.resources
+D:\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BLL.dll
+D:\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_SERVICIOS.dll
+D:\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_Dal.dll
+D:\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BLL.pdb
+D:\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_SERVICIOS.pdb
+D:\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_Dal.pdb
+D:\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.Up2Date
+D:\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BE.dll
+D:\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BE.pdb
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.AssemblyReference.cache
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.exe
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.pdb
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.exe.config
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.exe
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.pdb
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BE.dll
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BLL.dll
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_SERVICIOS.dll
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_Dal.dll
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BE.pdb
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BLL.pdb
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_SERVICIOS.pdb
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_Dal.pdb
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmCambiarContraseña.resources
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmGestionUsuarios.resources
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.Form1.resources
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmLogIn.resources
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.Properties.Resources.resources
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.GenerateResource.cache
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.CoreCompileInputs.cache
+C:\Users\Dana Perelmuter\Desktop\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.Up2Date
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.AssemblyReference.cache
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmCambiarContraseña.resources
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmGestionUsuarios.resources
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.Form1.resources
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmLogIn.resources
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.Properties.Resources.resources
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.GenerateResource.cache
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.CoreCompileInputs.cache
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.exe.config
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.exe
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.pdb
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BE.dll
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BLL.dll
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_SERVICIOS.dll
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_Dal.dll
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BE.pdb
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BLL.pdb
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_SERVICIOS.pdb
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_Dal.pdb
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.Up2Date
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.exe
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.pdb
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.exe.config
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.exe
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.pdb
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BE.dll
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BLL.dll
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_SERVICIOS.dll
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_Dal.dll
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BE.pdb
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BLL.pdb
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_SERVICIOS.pdb
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_Dal.pdb
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.AssemblyReference.cache
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmCambiarContraseña.resources
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmGestionUsuarios.resources
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.Form1.resources
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmLogIn.resources
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.Properties.Resources.resources
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.GenerateResource.cache
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.CoreCompileInputs.cache
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.Up2Date
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.exe
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.pdb
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmGenerarContratación.resources
+E:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmVerPolizas.resources
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmGenerarContratación.resources
+D:\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmVerPolizas.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.exe.config
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.exe
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BE.dll
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BLL.dll
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_SERVICIOS.dll
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_MPP.dll
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_Dal.dll
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BE.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BLL.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_SERVICIOS.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_MPP.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_Dal.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.AssemblyReference.cache
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmCambiarContraseña.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmGenerarContratación.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmGestionUsuarios.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.Form1.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmLogIn.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmVerPolizas.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.Properties.Resources.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.GenerateResource.cache
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.CoreCompileInputs.cache
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.Up2Date
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.exe
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.pdb
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.exe.config
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.exe
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.pdb
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BE.dll
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BLL.dll
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_SERVICIOS.dll
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_MPP.dll
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_Dal.dll
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BE.pdb
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BLL.pdb
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_SERVICIOS.pdb
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_MPP.pdb
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_Dal.pdb
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.AssemblyReference.cache
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmCambiarContraseña.resources
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmGenerarContratación.resources
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmGestionUsuarios.resources
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.Form1.resources
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmLogIn.resources
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmVerPolizas.resources
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.Properties.Resources.resources
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.GenerateResource.cache
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.CoreCompileInputs.cache
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.Up2Date
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.exe
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.pdb
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmCancelarSeguro.resources
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmModificarSeguro.resources
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmRegistrarCliente.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.exe.config
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.exe
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\AseguraYa.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BE.dll
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BLL.dll
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_SERVICIOS.dll
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_MPP.dll
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_Dal.dll
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BE.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_BLL.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_SERVICIOS.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_MPP.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\bin\Debug\686DP_Dal.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.AssemblyReference.cache
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmCambiarContraseña.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmCancelarSeguro.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmGenerarContratación.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmGestionUsuarios.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.Form1.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmLogIn.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmModificarSeguro.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmRegistrarCliente.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmVerPolizas.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.Properties.Resources.resources
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.GenerateResource.cache
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.CoreCompileInputs.cache
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.Up2Date
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.exe
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\AseguraYa\obj\Debug\AseguraYa.pdb
