@@ -7,16 +7,8 @@
       "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BE7379EB-8D9B-4F0F-A0B4-AE3CBA6050F2}|686DP_BLL\\686DP_BLL.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686dp_bll\\686dp_bllusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7379EB-8D9B-4F0F-A0B4-AE3CBA6050F2}|686DP_BLL\\686DP_BLL.csproj|solutionrelative:686dp_bll\\686dp_bllusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\aseguraya\\686dpfrmgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -27,20 +19,32 @@
       "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0370561D-7DF9-4A72-870E-397E65EAA97F}|686DP_BE\\686DP_BE.csproj|d:\\proyectosdana\\proyects\\ing. sw\\ing. sw\\aseguraya\\686dp_be\\686dp_empleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\aseguraya\\686dpfrmregistrarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmregistrarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E424721-9E86-4EE5-A443-7DA7952172C1}|686DP_Dal\\686DP_DAL.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686dp_dal\\686dpdalgeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E424721-9E86-4EE5-A443-7DA7952172C1}|686DP_Dal\\686DP_DAL.csproj|solutionrelative:686dp_dal\\686dpdalgeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0370561D-7DF9-4A72-870E-397E65EAA97F}|686DP_BE\\686DP_BE.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686dp_be\\686dp_empleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0370561D-7DF9-4A72-870E-397E65EAA97F}|686DP_BE\\686DP_BE.csproj|solutionrelative:686dp_be\\686dp_empleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD70163B-4FB8-4693-94DE-144FE11FB574}|686DP_MPP\\686DP_MPP.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686dp_mpp\\686dpmppusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD70163B-4FB8-4693-94DE-144FE11FB574}|686DP_MPP\\686DP_MPP.csproj|solutionrelative:686dp_mpp\\686dpmppusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE7379EB-8D9B-4F0F-A0B4-AE3CBA6050F2}|686DP_BLL\\686DP_BLL.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686dp_bll\\686dp_bllusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE7379EB-8D9B-4F0F-A0B4-AE3CBA6050F2}|686DP_BLL\\686DP_BLL.csproj|solutionrelative:686dp_bll\\686dp_bllusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E424721-9E86-4EE5-A443-7DA7952172C1}|686DP_Dal\\686DP_DAL.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686dp_dal\\686dpdalgeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E424721-9E86-4EE5-A443-7DA7952172C1}|686DP_Dal\\686DP_DAL.csproj|solutionrelative:686dp_dal\\686dpdalgeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\aseguraya\\686dpfrmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,39 +55,31 @@
       "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|d:\\proyectosdana\\proyects\\ing. sw\\ing. sw\\aseguraya\\aseguraya\\686dpfrmcambiarcontrase\u00F1a.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\aseguraya\\686dpfrmcambiarcontrase\u00F1a.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmcambiarcontrase\u00F1a.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2F957F3-0032-4788-915F-F769F8436477}|686DP_SERVICIOS\\686DP_SERVICIOS.csproj|d:\\proyectosdana\\proyects\\ing. sw\\ing. sw\\aseguraya\\686dp_servicios\\686dpcriptomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E2F957F3-0032-4788-915F-F769F8436477}|686DP_SERVICIOS\\686DP_SERVICIOS.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686dp_servicios\\686dpcriptomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E2F957F3-0032-4788-915F-F769F8436477}|686DP_SERVICIOS\\686DP_SERVICIOS.csproj|solutionrelative:686dp_servicios\\686dpcriptomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|d:\\proyectosdana\\proyects\\ing. sw\\ing. sw\\aseguraya\\aseguraya\\686dp_expresionesregulares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\aseguraya\\686dp_expresionesregulares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dp_expresionesregulares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|d:\\proyectosdana\\proyects\\ing. sw\\ing. sw\\aseguraya\\aseguraya\\686dpfrmregistrarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmregistrarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|d:\\proyectosdana\\proyects\\ing. sw\\ing. sw\\aseguraya\\aseguraya\\686dpfrmgenerarcontrataci\u00F3n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\aseguraya\\686dpfrmgenerarcontrataci\u00F3n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmgenerarcontrataci\u00F3n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\aseguraya\\686dpfrmgenerarcontrataci\u00F3n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmgenerarcontrataci\u00F3n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|d:\\proyectosdana\\proyects\\ing. sw\\ing. sw\\aseguraya\\aseguraya\\686dpfrmmodificarseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\aseguraya\\686dpfrmmodificarseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmmodificarseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|d:\\proyectosdana\\proyects\\ing. sw\\ing. sw\\aseguraya\\aseguraya\\686dpfrmmodificarseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\aseguraya\\686dpfrmmodificarseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmmodificarseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|d:\\proyectosdana\\proyects\\ing. sw\\ing. sw\\aseguraya\\aseguraya\\686dpfrmcancelarseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\aseguraya\\686dpfrmcancelarseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmcancelarseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -102,20 +98,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "686DP_BLLUsuario.cs",
               "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686DP_BLL\\686DP_BLLUsuario.cs",
               "RelativeDocumentMoniker": "686DP_BLL\\686DP_BLLUsuario.cs",
               "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686DP_BLL\\686DP_BLLUsuario.cs",
               "RelativeToolTip": "686DP_BLL\\686DP_BLLUsuario.cs",
-              "ViewState": "AgIAACIBAAAAAAAAAAA4wEABAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAACMBAAAAAAAAAAAcwEABAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T19:28:15.326Z",
-              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -128,33 +123,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "686DPfrmGestionUsuarios.cs",
-              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmGestionUsuarios.cs",
-              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmGestionUsuarios.cs",
-              "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmGestionUsuarios.cs",
-              "RelativeToolTip": "AseguraYa\\686DPfrmGestionUsuarios.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAAgwLQAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "686DPfrmInicio.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmInicio.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs",
+              "RelativeToolTip": "AseguraYa\\686DPfrmInicio.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAswEAAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T11:37:52.949Z",
+              "WhenOpened": "2025-04-22T12:04:30.205Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "686DP_Empleados.cs",
-              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686DP_BE\\686DP_Empleados.cs",
-              "RelativeDocumentMoniker": "686DP_BE\\686DP_Empleados.cs",
-              "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686DP_BE\\686DP_Empleados.cs",
-              "RelativeToolTip": "686DP_BE\\686DP_Empleados.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA8wCMAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T21:41:32.778Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "686DPfrmGestionUsuarios.cs [Design]",
               "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmGestionUsuarios.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmGestionUsuarios.cs",
@@ -166,71 +148,58 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "686DPfrmInicio.cs [Design]",
-              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs",
-              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmInicio.cs",
-              "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs [Design]*",
-              "RelativeToolTip": "AseguraYa\\686DPfrmInicio.cs [Design]*",
+              "DocumentIndex": 3,
+              "Title": "686DPfrmGestionUsuarios.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmGestionUsuarios.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmGestionUsuarios.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmGestionUsuarios.cs",
+              "RelativeToolTip": "AseguraYa\\686DPfrmGestionUsuarios.cs",
+              "ViewState": "AgIAAN8AAAAAAAAAAAAswOMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T12:04:27.373Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "686DPfrmInicio.cs",
-              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs",
-              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmInicio.cs",
-              "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs*",
-              "RelativeToolTip": "AseguraYa\\686DPfrmInicio.cs*",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwB8AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T12:04:30.205Z",
+              "WhenOpened": "2025-04-22T11:37:52.949Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
+              "Title": "686DPfrmRegistrarCliente.cs [Design]",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmRegistrarCliente.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmRegistrarCliente.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmRegistrarCliente.cs [Design]",
+              "RelativeToolTip": "AseguraYa\\686DPfrmRegistrarCliente.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T18:16:19.63Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "686DPDalGeneral.cs",
               "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686DP_Dal\\686DPDalGeneral.cs",
               "RelativeDocumentMoniker": "686DP_Dal\\686DPDalGeneral.cs",
               "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686DP_Dal\\686DPDalGeneral.cs",
               "RelativeToolTip": "686DP_Dal\\686DPDalGeneral.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAArwGMAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAD4vxYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T20:46:01.799Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "686DPfrmLogIn.cs",
               "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmLogIn.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmLogIn.cs",
               "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmLogIn.cs",
               "RelativeToolTip": "AseguraYa\\686DPfrmLogIn.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAjwGsAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAADgv0MAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T19:23:47.197Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "686DPMPPUsuarios.cs",
-              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686DP_MPP\\686DPMPPUsuarios.cs",
-              "RelativeDocumentMoniker": "686DP_MPP\\686DPMPPUsuarios.cs",
-              "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686DP_MPP\\686DPMPPUsuarios.cs",
-              "RelativeToolTip": "686DP_MPP\\686DPMPPUsuarios.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAAAIIAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T19:45:31.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "686DPfrmLogIn.cs [Design]",
               "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmLogIn.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmLogIn.cs",
@@ -242,7 +211,43 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "686DPfrmInicio.cs [Design]",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmInicio.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs [Design]",
+              "RelativeToolTip": "AseguraYa\\686DPfrmInicio.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T12:04:27.373Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "686DP_Empleados.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686DP_BE\\686DP_Empleados.cs",
+              "RelativeDocumentMoniker": "686DP_BE\\686DP_Empleados.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686DP_BE\\686DP_Empleados.cs",
+              "RelativeToolTip": "686DP_BE\\686DP_Empleados.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA8wCMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T21:41:32.778Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "686DPMPPUsuarios.cs",
+              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686DP_MPP\\686DPMPPUsuarios.cs",
+              "RelativeDocumentMoniker": "686DP_MPP\\686DPMPPUsuarios.cs",
+              "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686DP_MPP\\686DPMPPUsuarios.cs",
+              "RelativeToolTip": "686DP_MPP\\686DPMPPUsuarios.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAAAIIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T19:45:31.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "686DPfrmCambiarContrase\u00F1a.cs",
               "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmCambiarContrase\u00F1a.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmCambiarContrase\u00F1a.cs",
@@ -250,24 +255,22 @@
               "RelativeToolTip": "AseguraYa\\686DPfrmCambiarContrase\u00F1a.cs",
               "ViewState": "AgIAAEQAAAAAAAAAAAAmwFYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T19:12:33.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T19:12:33.017Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "686DPfrmCambiarContrase\u00F1a.cs [Design]",
               "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmCambiarContrase\u00F1a.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmCambiarContrase\u00F1a.cs",
               "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmCambiarContrase\u00F1a.cs [Design]",
               "RelativeToolTip": "AseguraYa\\686DPfrmCambiarContrase\u00F1a.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T19:12:29.758Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-21T19:12:29.758Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "686DPfrmCambiarContrase\u00F1a.Designer.cs",
               "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmCambiarContrase\u00F1a.Designer.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmCambiarContrase\u00F1a.Designer.cs",
@@ -275,12 +278,11 @@
               "RelativeToolTip": "AseguraYa\\686DPfrmCambiarContrase\u00F1a.Designer.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAAEwFwAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T21:21:26.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T21:21:26.168Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "686DPCriptoManager.cs",
               "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686DP_SERVICIOS\\686DPCriptoManager.cs",
               "RelativeDocumentMoniker": "686DP_SERVICIOS\\686DPCriptoManager.cs",
@@ -288,12 +290,11 @@
               "RelativeToolTip": "686DP_SERVICIOS\\686DPCriptoManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T17:08:51.143Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T17:08:51.143Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "686DP_ExpresionesRegulares.cs",
               "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DP_ExpresionesRegulares.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DP_ExpresionesRegulares.cs",
@@ -301,8 +302,7 @@
               "RelativeToolTip": "AseguraYa\\686DP_ExpresionesRegulares.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwCQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T19:22:14.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T19:22:14.819Z"
             },
             {
               "$type": "Document",
@@ -319,55 +319,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "686DPfrmRegistrarCliente.cs [Design]",
-              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmRegistrarCliente.cs",
-              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmRegistrarCliente.cs",
-              "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmRegistrarCliente.cs [Design]",
-              "RelativeToolTip": "AseguraYa\\686DPfrmRegistrarCliente.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T18:16:19.63Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "686DPfrmGenerarContrataci\u00F3n.cs [Design]",
-              "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmGenerarContrataci\u00F3n.cs",
-              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmGenerarContrataci\u00F3n.cs",
-              "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmGenerarContrataci\u00F3n.cs [Design]",
-              "RelativeToolTip": "AseguraYa\\686DPfrmGenerarContrataci\u00F3n.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T13:51:41.858Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "686DPfrmModificarSeguro.cs [Design]",
               "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmModificarSeguro.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmModificarSeguro.cs",
               "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmModificarSeguro.cs [Design]",
               "RelativeToolTip": "AseguraYa\\686DPfrmModificarSeguro.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T18:09:32.174Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-18T18:09:32.174Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "686DPfrmCancelarSeguro.cs [Design]",
               "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmCancelarSeguro.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmCancelarSeguro.cs",
               "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmCancelarSeguro.cs [Design]",
               "RelativeToolTip": "AseguraYa\\686DPfrmCancelarSeguro.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T18:10:24.67Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-18T18:10:24.67Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "686DPfrmModificarSeguro.cs",
               "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmModificarSeguro.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmModificarSeguro.cs",
@@ -375,24 +349,22 @@
               "RelativeToolTip": "AseguraYa\\686DPfrmModificarSeguro.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAqwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T18:12:09.915Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T18:12:09.915Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "686DPfrmVerPolizas.cs [Design]",
               "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmVerPolizas.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmVerPolizas.cs",
               "ToolTip": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\AseguraYa\\686DPfrmVerPolizas.cs [Design]",
               "RelativeToolTip": "AseguraYa\\686DPfrmVerPolizas.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T13:52:58.993Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-29T13:52:58.993Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "686DP_Usuario.cs",
               "DocumentMoniker": "D:\\ProyectosDana\\Proyects\\Ing. SW\\Ing. SW\\AseguraYa\\686DP_SERVICIOS\\686DP_Usuario.cs",
               "RelativeDocumentMoniker": "686DP_SERVICIOS\\686DP_Usuario.cs",
@@ -400,8 +372,7 @@
               "RelativeToolTip": "686DP_SERVICIOS\\686DP_Usuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T20:06:47.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T20:06:47.534Z"
             }
           ]
         }

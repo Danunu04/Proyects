@@ -17,6 +17,7 @@ namespace AseguraYa
 {
     public partial class _686DPfrmGestionUsuarios : Form
     {
+        string modo = "";
         _686DP_BLLUsuario _686DP_BLLUsuario;
         _686DP_ExpresionesRegulares _686DP_ExpresionesRegulares;
         private bool esModoCrear = false;
@@ -44,58 +45,33 @@ namespace AseguraYa
 
         private void DP_BTNCrear_Click(object sender, EventArgs e)
         {
-            esModoCrear = true;
-            if (esModoCrear)
-            {
-                try
-                {
-                    int dni = int.Parse(DP_TXTDni.Text);
+            DP_TXTMessage.Text = "Modo Creador";
+            BTNModificar.Enabled = false;
+            DP_BTNDesbloquear.Enabled = false;
+            DP_BTNActivarEliminar.Enabled = false;
+            DP_BTNCrear.Enabled = true;
 
+            DP_BTNCancelar.Enabled = true;
+            DP_BTNAplicar.Enabled = true;
+            DP_TXTApellido.Enabled = true;
+            DP_TXTDni.Enabled = true;
+            DP_TXTEmail.Enabled = true;
+            DP_TXTNombre.Enabled = true;
+            DP_CMBRol.Enabled = true;
 
-                    bool dniExiste = _686DP_BLLUsuario.ListaDeEmpleados.Any(emp => emp.DP686_DNI == dni);
-                    if (dniExiste)
-                    {
-                        MessageBox.Show("Ya existe un empleado con ese DNI.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-
-                    _686DPCriptoManager cm = new _686DPCriptoManager();
-                    string usuario = DP_TXTNombre.Text + "." + DP_TXTApellido.Text;
-                    string contra = DP_TXTDni.Text + "." + DP_TXTApellido.Text;
-                    string contraHash = cm._686DPGetSHA256(contra);
-
-                    _686DP_Empleados nuevo = new _686DP_Empleados(
-                        dni,
-                        DP_TXTNombre.Text,
-                        DP_TXTApellido.Text,
-                        DP_TXTEmail.Text,
-                        DP_CMBRol.SelectedItem.ToString(),
-                        usuario,
-                        contraHash,
-                        true,
-                        false,
-                        false
-                    );
-
-                    _686DP_BLLUsuario.ListaDeEmpleados.Add(nuevo);
-
-                    DP_Datagrid.DataSource = null;
-                    DP_Datagrid.DataSource = _686DP_BLLUsuario.ListaDeEmpleados;
-
-                    MessageBox.Show("Empleado creado exitosamente.");
-                    esModoCrear = false;
-                    return;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al crear nuevo empleado: " + ex.Message);
-                    return;
-                }
-            }
+            DP_BTNAplicar.Enabled = true;
+            DP_BTNCancelar.Enabled = true;
+            modo = "Creador";
+            
         }
 
-        private void _686DPfrmGestionUsuarios_Load(object sender, EventArgs e)
+        private void reestart()
         {
+            BTNModificar.Enabled = true;
+            DP_BTNCrear.Enabled= true;
+            DP_BTNActivarEliminar.Enabled = true;
+            DP_BTNDesbloquear.Enabled=true;
+
             DP_BTNCancelar.Enabled = false;
             DP_BTNAplicar.Enabled = false;
             DP_TXTApellido.Enabled = false;
@@ -104,6 +80,18 @@ namespace AseguraYa
             DP_TXTNombre.Enabled = false;
             DP_CMBRol.Enabled = false;
             DP_Datagrid.ReadOnly = true;
+
+            DP_TXTApellido.Text = "";
+            DP_TXTDni.Text = "";
+            DP_TXTEmail.Text = "";
+            DP_TXTNombre.Text = "";
+            DP_CMBRol.SelectedItem = -1;
+        }
+
+        private void _686DPfrmGestionUsuarios_Load(object sender, EventArgs e)
+        {
+
+            reestart();
 
             this.DP_Datagrid.DataSource = null;
             this.DP_Datagrid.DataSource = _686DP_BLLUsuario._686DPTraerTodos();
@@ -116,40 +104,11 @@ namespace AseguraYa
 
             this.FormClosing += new FormClosingEventHandler(_686DPfrmGestionUsuarios_FormClosing);
             DP_TXTMessage.Text = "Seleccionar un modo";
-            DP_BTNCrear.Enabled = false;
-            BTNModificar.Enabled = false;
-            DP_BTNDesbloquear.Enabled = false;
-            DP_BTNActivarEliminar.Enabled = false;
-            DP_BTNAplicar.Enabled = false;
-            DP_BTNCancelar.Enabled = false;
-
-            DP_BTNCancelar.Enabled = false;
-            DP_BTNAplicar.Enabled = false;
-            DP_TXTApellido.Enabled = false;
-            DP_TXTDni.Enabled = false;
-            DP_TXTEmail.Enabled = false;
-            DP_TXTNombre.Enabled = false;
-            DP_CMBRol.Enabled = false;
         }
 
         private void _686DPfrmGestionUsuarios_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var result = MessageBox.Show(
-                "¿Deseás guardar los cambios antes de salir?",
-                "Confirmar salida",
-                MessageBoxButtons.YesNoCancel,
-                MessageBoxIcon.Question
-            );
-
-            if (result == DialogResult.Yes)
-            {
-                _686DPGuardar(); // tu método de guardado
-            }
-            else if (result == DialogResult.Cancel)
-            {
-                e.Cancel = true; // Cancela el cierre
-            }
-            // Si elige No, simplemente se cierra sin guardar
+            MessageBox.Show("Volviendo a la pagina principal...");
         }
 
         private void _686DPActualizarFilaSeleccionada(object sender, EventArgs e)
@@ -182,55 +141,48 @@ namespace AseguraYa
 
         private void DP_BTNDesbloquear_Click(object sender, EventArgs e)
         {
-            if (DP_Datagrid.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Debés seleccionar un usuario para desbloquearlo.", "Seleccionar fila", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            modo = "Bloquear/Desbloquear";
+            DP_TXTMessage.Text = "Modo Desbloquear usuario bloqueado";
+            DP_BTNCrear.Enabled = false;
+            BTNModificar.Enabled = false;
+            DP_BTNDesbloquear.Enabled = true;
+            DP_BTNActivarEliminar.Enabled = false;
 
-            DataGridViewRow filaSeleccionada = DP_Datagrid.SelectedRows[0];
-            object valorBloqueado = filaSeleccionada.Cells["DP686_Bloqueado"].Value;
+            DP_BTNCancelar.Enabled = false;
+            DP_BTNAplicar.Enabled = false;
+            DP_TXTApellido.Enabled = false;
+            DP_TXTDni.Enabled = false;
+            DP_TXTEmail.Enabled = false;
+            DP_TXTNombre.Enabled = false;
+            DP_CMBRol.Enabled = false;
 
-            if (valorBloqueado == null || valorBloqueado == DBNull.Value)
-            {
-                MessageBox.Show("El campo 'Bloqueado' no tiene un valor válido.", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            bool yaEstabaDesbloqueado = !Convert.ToBoolean(valorBloqueado);
-
-            if (yaEstabaDesbloqueado)
-            {
-                MessageBox.Show("El usuario ya estaba desbloqueado. No se realizaron cambios.", "Sin cambios", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            // Desbloquear
-            filaSeleccionada.Cells["DP686_Bloqueado"].Value = false;
-
-            // Restablecer contraseña a Apellido + DNI
-            string ContraseñaAnterior = filaSeleccionada.Cells["DP686_Contraseña"].Value.ToString();
+            DP_BTNAplicar.Enabled = true;
+            DP_BTNCancelar.Enabled = true;
             
-            string apellido = filaSeleccionada.Cells["DP686_Apellido"].Value.ToString();
-            int dni = Convert.ToInt32(filaSeleccionada.Cells["DP686_DNI"].Value);
-            string nuevaContraseña = dni+ "."+ apellido;
-            string usuario = filaSeleccionada.Cells["DP686_Usuario"].Value.ToString();
-
-            _686DP_BLLUsuario.GuardarContraseña(ContraseñaAnterior, dni);
-
-            _686DPCriptoManager cripto = new _686DPCriptoManager();
-            string nuevaContraseñaHash = cripto._686DPGetSHA256(nuevaContraseña);
-
-            // Actualizar en la grilla
-            filaSeleccionada.Cells["DP686_Contraseña"].Value = nuevaContraseñaHash;
-            _686DP_BLLUsuario._686DPReestablecerIntentos(dni);
-            _686DP_BLLUsuario._Cambiarcontraobligatorio(dni);
-            MessageBox.Show("El usuario fue desbloqueado correctamente y se restableció la contraseña a: " + nuevaContraseña, "Desbloqueo exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
         private void BTNModificar_Click(object sender, EventArgs e)
         {
+            DP_TXTMessage.Text = "Modo Edición";
+            DP_BTNCrear.Enabled = false;
+            BTNModificar.Enabled = true;
+            DP_BTNDesbloquear.Enabled = false;
+            DP_BTNActivarEliminar.Enabled = false;
+
+            DP_BTNCancelar.Enabled = true;
+            DP_BTNAplicar.Enabled = true;
+            DP_TXTApellido.Enabled = true;
+            DP_TXTDni.Enabled = false;
+            DP_TXTEmail.Enabled = true;
+            DP_TXTNombre.Enabled = true;
+            DP_CMBRol.Enabled = true;
+
+            DP_BTNAplicar.Enabled = true;
+            DP_BTNCancelar.Enabled = true;
+            modo = "Modificación";
+
+
             if (DP_Datagrid.SelectedRows.Count > 0)
             {
                 DataGridViewRow fila = DP_Datagrid.SelectedRows[0];
@@ -246,48 +198,34 @@ namespace AseguraYa
                 MessageBox.Show("Seleccioná una fila para modificar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 BTNModificar.Enabled = true;
             }
-
-            //Rellenar los txt con los datos del data grid view
-            DP_TXTNombre.TextChanged += _686DPActualizarFilaSeleccionada;
-            DP_TXTApellido.TextChanged += _686DPActualizarFilaSeleccionada;
-            DP_TXTEmail.TextChanged += _686DPActualizarFilaSeleccionada;
-            DP_CMBRol.SelectedIndexChanged += _686DPActualizarFilaSeleccionada;
         }
 
         private void DP_BTNActivarEliminar_Click(object sender, EventArgs e)
         {
+            modo = "Activar";
+            DP_TXTMessage.Text = "Modo Activar o eliminar (Borrado o recontratación lógica)";
+            DP_BTNCrear.Enabled = false;
+            BTNModificar.Enabled = false;
+            DP_BTNDesbloquear.Enabled = false;
+            DP_BTNActivarEliminar.Enabled = true;
 
-            if (DP_Datagrid.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Debés seleccionar un usuario para activar o desactivar.", "Seleccionar fila", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            DP_BTNCancelar.Enabled = false;
+            DP_BTNAplicar.Enabled = false;
+            DP_TXTApellido.Enabled = false;
+            DP_TXTDni.Enabled = false;
+            DP_TXTEmail.Enabled = false;
+            DP_TXTNombre.Enabled = false;
+            DP_CMBRol.Enabled = false;
+            DP_BTNAplicar.Enabled = true;
+            DP_BTNCancelar.Enabled = true;
 
-            DataGridViewRow filaSeleccionada = DP_Datagrid.SelectedRows[0];
-            object valorActivo = filaSeleccionada.Cells["DP686_Activo"].Value;
-
-            if (valorActivo == null || valorActivo == DBNull.Value)
-            {
-                MessageBox.Show("El campo 'Activo' no tiene un valor válido.", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            bool estadoActual = Convert.ToBoolean(valorActivo);
-            filaSeleccionada.Cells["DP686_Activo"].Value = !estadoActual;
-
-            string mensaje = estadoActual ? "Usuario desactivado correctamente." : "Usuario activado correctamente.";
-            MessageBox.Show(mensaje, "Cambio de estado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
 
         private void DP_BTNCancelar_Click(object sender, EventArgs e)
         {
             DP_TXTMessage.Text = "";
-
-            DP_BTNCancelar.Enabled = true;
-            BTNModificar.Enabled=true;
-            DP_BTNDesbloquear.Enabled = true;
-            DP_BTNActivarEliminar.Enabled = true;
-            DP_BTNAplicar.Enabled=false;
+            reestart();
 
         }
 
@@ -364,12 +302,128 @@ namespace AseguraYa
         }
 
         private void DP_BTNAplicar_Click(object sender, EventArgs e)
-        {try
+        {
+            DataGridViewRow filaSeleccionada;
+            if (DP_TXTDni.Text != "" && DP_TXTNombre.Text != "" && DP_TXTApellido.Text != "" && DP_CMBRol.SelectedIndex != -1)
             {
-                _686DPGuardar();
+                try
+                {
+                    switch (modo)
+                    {
+                        case "Creador":
+                            int DNI = int.Parse(DP_TXTDni.Text);
+                            if (_686DP_BLLUsuario.ListaDeEmpleados.Any(emp => emp.DP686_DNI == DNI))
+                            {
+                                MessageBox.Show("Ya existe un empleado con ese DNI.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+
+                            _686DPCriptoManager cm = new _686DPCriptoManager();
+                            string USR = DNI + DP_TXTNombre.Text;
+                            string contra = DP_TXTDni.Text + "." + DP_TXTApellido.Text;
+                            string contraHash = cm._686DPGetSHA256(contra);
+
+                            _686DP_Empleados nuevo = new _686DP_Empleados(
+                                DNI,
+                                DP_TXTNombre.Text,
+                                DP_TXTApellido.Text,
+                                DP_TXTEmail.Text,
+                                DP_CMBRol.SelectedItem.ToString(),
+                                USR,
+                                contraHash,
+                                true,
+                                false,
+                                false
+                            );
+
+                            _686DP_BLLUsuario.ListaDeEmpleados.Add(nuevo);
+                            DP_Datagrid.DataSource = null;
+                            DP_Datagrid.DataSource = _686DP_BLLUsuario.ListaDeEmpleados;
+
+                            MessageBox.Show("Empleado creado exitosamente.");
+                            esModoCrear = false;
+                            break;
+
+                        case "Modificación":
+                            DP_TXTNombre.TextChanged += _686DPActualizarFilaSeleccionada;
+                            DP_TXTApellido.TextChanged += _686DPActualizarFilaSeleccionada;
+                            DP_TXTEmail.TextChanged += _686DPActualizarFilaSeleccionada;
+                            DP_CMBRol.SelectedIndexChanged += _686DPActualizarFilaSeleccionada;
+                            break;
+
+                        case "Bloquear/Desbloquear":
+                            if (DP_Datagrid.SelectedRows.Count == 0)
+                            {
+                                MessageBox.Show("Debés seleccionar un usuario para desbloquearlo.", "Seleccionar fila", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+
+                            filaSeleccionada = DP_Datagrid.SelectedRows[0];
+                            if (!(filaSeleccionada.Cells["DP686_Bloqueado"].Value is bool bloqueado))
+                            {
+                                MessageBox.Show("El campo 'Bloqueado' no tiene un valor válido.", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+
+                            if (!bloqueado)
+                            {
+                                MessageBox.Show("El usuario ya estaba desbloqueado. No se realizaron cambios.", "Sin cambios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return;
+                            }
+
+                            filaSeleccionada.Cells["DP686_Bloqueado"].Value = false;
+
+                            string apellido = filaSeleccionada.Cells["DP686_Apellido"].Value.ToString();
+                            int dni = Convert.ToInt32(filaSeleccionada.Cells["DP686_DNI"].Value);
+                            string nuevaContraseña = dni + "." + apellido;
+                            string contraseñaAnterior = filaSeleccionada.Cells["DP686_Contraseña"].Value.ToString();
+
+                            _686DP_BLLUsuario.GuardarContraseña(contraseñaAnterior, dni);
+
+                            string nuevaHash = new _686DPCriptoManager()._686DPGetSHA256(nuevaContraseña);
+                            filaSeleccionada.Cells["DP686_Contraseña"].Value = nuevaHash;
+
+                            _686DP_BLLUsuario._686DPReestablecerIntentos(dni);
+                            _686DP_BLLUsuario._Cambiarcontraobligatorio(dni);
+
+                            MessageBox.Show("Usuario desbloqueado. Contraseña restablecida a: " + nuevaContraseña, "Desbloqueo exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            break;
+
+                        case "Activar":
+                            if (DP_Datagrid.SelectedRows.Count == 0)
+                            {
+                                MessageBox.Show("Debés seleccionar un usuario para activar o desactivar.", "Seleccionar fila", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+
+                            filaSeleccionada = DP_Datagrid.SelectedRows[0];
+                            if (!(filaSeleccionada.Cells["DP686_Activo"].Value is bool activo))
+                            {
+                                MessageBox.Show("El campo 'Activo' no tiene un valor válido.", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+
+                            filaSeleccionada.Cells["DP686_Activo"].Value = !activo;
+
+                            string mensaje = activo ? "Usuario desactivado correctamente." : "Usuario activado correctamente.";
+                            MessageBox.Show(mensaje, "Cambio de estado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            break;
+                    }
+
+                    _686DPGuardar();
+                    reestart();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
-        catch (Exception ex){ MessageBox.Show(ex.Message); }
+            else
+            {
+                MessageBox.Show("Completar campos");
+            }
         }
+
 
         private void _686DPGuardar()
         {
@@ -452,94 +506,8 @@ namespace AseguraYa
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _686DPCambio();
+            
         }
-
-        private void _686DPCambio()
-        {
-            string modoSeleccionado = comboBox1.SelectedItem?.ToString();
-
-            switch (modoSeleccionado)
-            {
-                case "Modo Creador":
-                    DP_TXTMessage.Text = "Modo Creador";
-                    BTNModificar.Enabled = false;
-                    DP_BTNDesbloquear.Enabled = false;
-                    DP_BTNActivarEliminar.Enabled = false;
-                    DP_BTNCrear.Enabled = true;
-
-                    DP_BTNCancelar.Enabled = true;
-                    DP_BTNAplicar.Enabled = true;
-                    DP_TXTApellido.Enabled = true;
-                    DP_TXTDni.Enabled = true;
-                    DP_TXTEmail.Enabled = true;
-                    DP_TXTNombre.Enabled = true;
-                    DP_CMBRol.Enabled = true;
-
-                    DP_BTNAplicar.Enabled = true;
-                    DP_BTNCancelar.Enabled = true;
-                    break;
-
-                case "Modo edicion":
-                    DP_TXTMessage.Text = "Modo Edición";
-                    DP_BTNCrear.Enabled = false;
-                    BTNModificar.Enabled = true;
-                    DP_BTNDesbloquear.Enabled = false;
-                    DP_BTNActivarEliminar.Enabled = false;
-
-                    DP_BTNCancelar.Enabled = true;
-                    DP_BTNAplicar.Enabled = true;
-                    DP_TXTApellido.Enabled = true;
-                    DP_TXTDni.Enabled = false;
-                    DP_TXTEmail.Enabled = true;
-                    DP_TXTNombre.Enabled = true;
-                    DP_CMBRol.Enabled = true;
-
-                    DP_BTNAplicar.Enabled = true;
-                    DP_BTNCancelar.Enabled = true;
-                    break;
-
-                case "Modo Desbloquear":
-                    DP_TXTMessage.Text = "Modo Desbloquear usuario bloqueado";
-                    DP_BTNCrear.Enabled = false;
-                    BTNModificar.Enabled = false;
-                    DP_BTNDesbloquear.Enabled = true;
-                    DP_BTNActivarEliminar.Enabled = false;
-
-                    DP_BTNCancelar.Enabled = false;
-                    DP_BTNAplicar.Enabled = false;
-                    DP_TXTApellido.Enabled = false;
-                    DP_TXTDni.Enabled = false;
-                    DP_TXTEmail.Enabled = false;
-                    DP_TXTNombre.Enabled = false;
-                    DP_CMBRol.Enabled = false;
-
-                    DP_BTNAplicar.Enabled = true;
-                    DP_BTNCancelar.Enabled = true;
-                    break;
-
-                case "Modo Activar o eliminar":
-                    DP_TXTMessage.Text = "Modo Activar o eliminar (Borrado o recontratación lógica)";
-                    DP_BTNCrear.Enabled = false;
-                    BTNModificar.Enabled = false;
-                    DP_BTNDesbloquear.Enabled = false;
-                    DP_BTNActivarEliminar.Enabled = true;
-
-                    DP_BTNCancelar.Enabled = false;
-                    DP_BTNAplicar.Enabled = false;
-                    DP_TXTApellido.Enabled = false;
-                    DP_TXTDni.Enabled = false;
-                    DP_TXTEmail.Enabled = false;
-                    DP_TXTNombre.Enabled = false;
-                    DP_CMBRol.Enabled = false;
-                    DP_BTNAplicar.Enabled = true;
-                    DP_BTNCancelar.Enabled = true;
-                    break;
-
-                default:
-                    break;
-                }
-            }
 
         private void DP_TXTApellido_TextChanged(object sender, EventArgs e)
         {

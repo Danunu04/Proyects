@@ -79,8 +79,6 @@ namespace AseguraYa
                                         (this.MdiParent as Form1)?.DesactivarTodo();
                                         this.Close();
                                     }
-
-
                                 }
                                 else
                                 {
