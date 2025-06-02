@@ -41,7 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="686DP_Usuarios.cs" />
+    <Compile Include="686DP_Cliente.cs" />
+    <Compile Include="686DP_Cobertura.cs" />
+    <Compile Include="686DP_Empleados.cs" />
+    <Compile Include="686DP_Plan.cs" />
+    <Compile Include="686DP_Poliza.cs" />
+    <Compile Include="686DP_Seguro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -143,11 +143,11 @@ namespace _686DP_BLL
             }
             catch (SqlException ex)
             {
-                throw new Exception("Error SQL al actualizar el empleado: " + ex.Message, ex);
+                throw new Exception("Error SQL al actualizar el Usuario: " + ex.Message, ex);
             }
             catch (Exception ex)
             {
-                throw new Exception("Error inesperado al actualizar el empleado: " + ex.Message, ex);
+                throw new Exception("Error inesperado al actualizar el Usuario: " + ex.Message, ex);
             }
         }
 

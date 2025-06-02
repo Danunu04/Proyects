@@ -25,6 +25,7 @@ namespace AseguraYa
         public _686DPfrmLogIn()
         {
             InitializeComponent();
+            
             _686DP_BLLUsuario = new _686DP_BLLUsuario();
             _686DPCriptoManager = new _686DPCriptoManager();
             _686DP_ExpresionesRegulares = new _686DP_ExpresionesRegulares();
@@ -141,6 +142,8 @@ namespace AseguraYa
         {
             DP_TXTUsuario.BorderStyle = BorderStyle.None;
             DP_TXTContraseña.BorderStyle = BorderStyle.None;
+            DP_TXTContraseña.Text = "46198686.Perelmuter";
+            DP_TXTUsuario.Text = "46198686";
         }
 
         private void DP_TXTUsuario_TextChanged(object sender, EventArgs e)

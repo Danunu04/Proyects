@@ -30,14 +30,15 @@
         {
             this.BTNCancelar = new System.Windows.Forms.Button();
             this.BTNAceptar = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGPlan = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TXTProducto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.DGCoberura = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DGPlan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGCoberura)).BeginInit();
             this.SuspendLayout();
             // 
             // BTNCancelar
@@ -48,7 +49,6 @@
             this.BTNCancelar.TabIndex = 17;
             this.BTNCancelar.Text = "Cancelar";
             this.BTNCancelar.UseVisualStyleBackColor = true;
-            this.BTNCancelar.Click += new System.EventHandler(this.BTNCancelar_Click);
             // 
             // BTNAceptar
             // 
@@ -60,15 +60,6 @@
             this.BTNAceptar.UseVisualStyleBackColor = true;
             this.BTNAceptar.Click += new System.EventHandler(this.BTNAceptar_Click);
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(181, 212);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(462, 199);
-            this.listBox1.TabIndex = 15;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -77,17 +68,16 @@
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 14;
             this.label3.Text = "Planes";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // dataGridView1
+            // DGPlan
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.CadetBlue;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(179, 88);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(465, 102);
-            this.dataGridView1.TabIndex = 13;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.DGPlan.BackgroundColor = System.Drawing.Color.CadetBlue;
+            this.DGPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGPlan.Location = new System.Drawing.Point(179, 88);
+            this.DGPlan.Name = "DGPlan";
+            this.DGPlan.Size = new System.Drawing.Size(465, 128);
+            this.DGPlan.TabIndex = 13;
+            this.DGPlan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGPlan_CellClick);
             // 
             // label2
             // 
@@ -97,15 +87,14 @@
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 12;
             this.label2.Text = "Producto";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox2
+            // TXTProducto
             // 
-            this.textBox2.Location = new System.Drawing.Point(179, 41);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(465, 20);
-            this.textBox2.TabIndex = 11;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.TXTProducto.Location = new System.Drawing.Point(179, 41);
+            this.TXTProducto.Name = "TXTProducto";
+            this.TXTProducto.Size = new System.Drawing.Size(465, 20);
+            this.TXTProducto.TabIndex = 11;
+            this.TXTProducto.MouseLeave += new System.EventHandler(this.TXTProducto_MouseLeave);
             // 
             // label1
             // 
@@ -115,7 +104,6 @@
             this.label1.Size = new System.Drawing.Size(87, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "Numero de polza";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
@@ -124,24 +112,36 @@
             this.textBox1.Size = new System.Drawing.Size(123, 20);
             this.textBox1.TabIndex = 9;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.MouseLeave += new System.EventHandler(this.textBox1_MouseLeave);
+            // 
+            // DGCoberura
+            // 
+            this.DGCoberura.BackgroundColor = System.Drawing.Color.CadetBlue;
+            this.DGCoberura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGCoberura.Location = new System.Drawing.Point(179, 240);
+            this.DGCoberura.Name = "DGCoberura";
+            this.DGCoberura.Size = new System.Drawing.Size(465, 198);
+            this.DGCoberura.TabIndex = 18;
             // 
             // _686DPfrmModificarSeguro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 450);
+            this.Controls.Add(this.DGCoberura);
             this.Controls.Add(this.BTNCancelar);
             this.Controls.Add(this.BTNAceptar);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGPlan);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TXTProducto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "_686DPfrmModificarSeguro";
             this.Text = "_686DPfrmModificarSeguro";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this._686DPfrmModificarSeguro_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DGPlan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGCoberura)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,12 +151,12 @@
 
         private System.Windows.Forms.Button BTNCancelar;
         private System.Windows.Forms.Button BTNAceptar;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGPlan;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TXTProducto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView DGCoberura;
     }
 }

@@ -56,6 +56,7 @@
             this.BTNAceptar.TabIndex = 16;
             this.BTNAceptar.Text = "Cancelar seguro";
             this.BTNAceptar.UseVisualStyleBackColor = true;
+            this.BTNAceptar.Click += new System.EventHandler(this.BTNAceptar_Click);
             // 
             // label3
             // 
@@ -90,6 +91,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(465, 20);
             this.textBox2.TabIndex = 11;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label1
             // 
@@ -106,6 +108,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(123, 20);
             this.textBox1.TabIndex = 9;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.MouseLeave += new System.EventHandler(this.textBox1_MouseLeave);
             // 
             // _686DPfrmCancelarSeguro
             // 

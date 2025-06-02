@@ -10,9 +10,9 @@ D:\Ing. SW\Ing. SW\AseguraYa\686DP_SERVICIOS\obj\Debug\686DP_SERVICIOS.csproj.As
 D:\Ing. SW\Ing. SW\AseguraYa\686DP_SERVICIOS\obj\Debug\686DP_SERVICIOS.csproj.CoreCompileInputs.cache
 D:\Ing. SW\Ing. SW\AseguraYa\686DP_SERVICIOS\obj\Debug\686DP_SERVICIOS.dll
 D:\Ing. SW\Ing. SW\AseguraYa\686DP_SERVICIOS\obj\Debug\686DP_SERVICIOS.pdb
-C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_SERVICIOS\bin\Debug\686DP_SERVICIOS.dll
-C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_SERVICIOS\bin\Debug\686DP_SERVICIOS.pdb
-C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_SERVICIOS\obj\Debug\686DP_SERVICIOS.csproj.AssemblyReference.cache
-C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_SERVICIOS\obj\Debug\686DP_SERVICIOS.csproj.CoreCompileInputs.cache
-C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_SERVICIOS\obj\Debug\686DP_SERVICIOS.dll
-C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_SERVICIOS\obj\Debug\686DP_SERVICIOS.pdb
+C:\Users\Dana Perelmuter\Desktop\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_SERVICIOS\bin\Debug\686DP_SERVICIOS.dll
+C:\Users\Dana Perelmuter\Desktop\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_SERVICIOS\bin\Debug\686DP_SERVICIOS.pdb
+C:\Users\Dana Perelmuter\Desktop\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_SERVICIOS\obj\Debug\686DP_SERVICIOS.csproj.AssemblyReference.cache
+C:\Users\Dana Perelmuter\Desktop\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_SERVICIOS\obj\Debug\686DP_SERVICIOS.csproj.CoreCompileInputs.cache
+C:\Users\Dana Perelmuter\Desktop\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_SERVICIOS\obj\Debug\686DP_SERVICIOS.dll
+C:\Users\Dana Perelmuter\Desktop\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_SERVICIOS\obj\Debug\686DP_SERVICIOS.pdb
