@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="686DPMPPSeguro.cs" />
     <Compile Include="686DPMPPUsuarios.cs" />
+    <Compile Include="686DP_MPPPoliza.cs" />
+    <Compile Include="686MPPClientes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -12,36 +12,40 @@ namespace _686DP_Dal
     public class _686DPDalGeneral
     {
         //public SqlConnection conn = new SqlConnection(@"Data Source=DANAPC;Initial Catalog=AseguraYA;Integrated Security=True");
-        public SqlConnection conn = new SqlConnection(@"Data Source=TECBI004\DBPERSONAL;Initial Catalog=AseguraYA;Integrated Security=True");
+        public SqlConnection conn = new SqlConnection(@"Data Source=TECBI004\FACULTADDB;Initial Catalog=AseguraYA;Integrated Security=True");
         public SqlCommand cmd;
         public DataTable _686DPConsultar(string consulta, ArrayList parametros)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter DA;
-            cmd = new SqlCommand(consulta, conn);
-            cmd.CommandType = CommandType.Text;
 
             try
             {
-                if (parametros != null)
+                using (SqlCommand cmd = new SqlCommand(consulta, conn))
                 {
-                    foreach (SqlParameter dato in parametros)
+                    cmd.CommandType = CommandType.Text;
+
+                    if (parametros != null)
                     {
-                        cmd.Parameters.AddWithValue(dato.ParameterName, dato.Value);
+                        foreach (SqlParameter dato in parametros)
+                        {
+                            cmd.Parameters.AddWithValue(dato.ParameterName, dato.Value ?? DBNull.Value);
+                        }
+                    }
+
+                    if (conn.State != ConnectionState.Open)
+                    {
+                        conn.Open();
+                    }
+
+                    using (SqlDataAdapter DA = new SqlDataAdapter(cmd))
+                    {
+                        DA.Fill(dt);
                     }
                 }
-
-                if (conn.State != ConnectionState.Open)
-                {
-                    conn.Open();
-                }
-
-                DA = new SqlDataAdapter(cmd);
-                DA.Fill(dt);
             }
             catch (SqlException ex)
             {
-                throw new Exception("Error SQL: Hubo un error al realizar la consulta" );
+                throw new Exception("Error SQL: Hubo un error al realizar la consulta");
             }
             catch (Exception ex)
             {
@@ -56,6 +60,88 @@ namespace _686DP_Dal
             }
 
             return dt;
+        }
+
+        public void _686DPEjecutar(string nombreSP, ArrayList parametros)// Store Procedure
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand(nombreSP, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    if (parametros != null)
+                    {
+                        foreach (SqlParameter dato in parametros)
+                        {
+                            cmd.Parameters.AddWithValue(dato.ParameterName, dato.Value ?? DBNull.Value);
+                        }
+                    }
+
+                    if (conn.State != ConnectionState.Open)
+                    {
+                        conn.Open();
+                    }
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("⚠️ Error SQL al ejecutar SP: " + ex.Message, ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("🛑 Error general al ejecutar el SP: " + ex.Message, ex);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        public object _686DPEscalar(string consulta, ArrayList parametros)//para SCOPEIdentity
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand(consulta, conn))
+                {
+                    cmd.CommandType = CommandType.Text;
+
+                    if (parametros != null)
+                    {
+                        foreach (SqlParameter dato in parametros)
+                        {
+                            cmd.Parameters.AddWithValue(dato.ParameterName, dato.Value ?? DBNull.Value);
+                        }
+                    }
+
+                    if (conn.State != ConnectionState.Open)
+                    {
+                        conn.Open();
+                    }
+
+                    return cmd.ExecuteScalar(); 
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("⚠️ Error SQL (escalar): " + ex.Message, ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("🛑 Error general en ExecuteScalar: " + ex.Message, ex);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
         }
 
         public void _686DPEscribir(string consulta, ArrayList parametros)

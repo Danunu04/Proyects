@@ -58,11 +58,23 @@
     <Compile Include="686DPfrmCancelarSeguro.Designer.cs">
       <DependentUpon>686DPfrmCancelarSeguro.cs</DependentUpon>
     </Compile>
+    <Compile Include="686DPfrmDatosExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="686DPfrmDatosExtra.Designer.cs">
+      <DependentUpon>686DPfrmDatosExtra.cs</DependentUpon>
+    </Compile>
     <Compile Include="686DPfrmGenerarContratación.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="686DPfrmGenerarContratación.Designer.cs">
       <DependentUpon>686DPfrmGenerarContratación.cs</DependentUpon>
+    </Compile>
+    <Compile Include="686DPfrmGestionarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="686DPfrmGestionarClientes.Designer.cs">
+      <DependentUpon>686DPfrmGestionarClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="686DPfrmGestionUsuarios.cs">
       <SubType>Form</SubType>
@@ -101,6 +113,12 @@
       <DependentUpon>686DPfrmVerPolizas.cs</DependentUpon>
     </Compile>
     <Compile Include="686DP_ExpresionesRegulares.cs" />
+    <Compile Include="686DP_frmCrearProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="686DP_frmCrearProducto.Designer.cs">
+      <DependentUpon>686DP_frmCrearProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="686DPfrmCambiarContraseña.resx">
@@ -109,8 +127,14 @@
     <EmbeddedResource Include="686DPfrmCancelarSeguro.resx">
       <DependentUpon>686DPfrmCancelarSeguro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="686DPfrmDatosExtra.resx">
+      <DependentUpon>686DPfrmDatosExtra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="686DPfrmGenerarContratación.resx">
       <DependentUpon>686DPfrmGenerarContratación.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="686DPfrmGestionarClientes.resx">
+      <DependentUpon>686DPfrmGestionarClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="686DPfrmGestionUsuarios.resx">
       <DependentUpon>686DPfrmGestionUsuarios.cs</DependentUpon>
@@ -129,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="686DPfrmVerPolizas.resx">
       <DependentUpon>686DPfrmVerPolizas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="686DP_frmCrearProducto.resx">
+      <DependentUpon>686DP_frmCrearProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

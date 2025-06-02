@@ -38,17 +38,17 @@
             this.DP_GestionDePerfiles = new System.Windows.Forms.ToolStripMenuItem();
             this.DP_BitacoraDeEventos = new System.Windows.Forms.ToolStripMenuItem();
             this.DP_GestionDeRespaldo = new System.Windows.Forms.ToolStripMenuItem();
+            this.mestroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DP_Contratacion = new System.Windows.Forms.ToolStripMenuItem();
             this.generarContratacion = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarSeguroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarSeguroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Dp_Siniestros = new System.Windows.Forms.ToolStripMenuItem();
             this.DP_CerrarSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.DP_CambiarIdioma = new System.Windows.Forms.ToolStripMenuItem();
             this.Dp_Ayuda = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarSeguroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarSeguroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mestroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,27 +107,50 @@
             // DP_GestionDeUsuarios
             // 
             this.DP_GestionDeUsuarios.Name = "DP_GestionDeUsuarios";
-            this.DP_GestionDeUsuarios.Size = new System.Drawing.Size(180, 22);
+            this.DP_GestionDeUsuarios.Size = new System.Drawing.Size(178, 22);
             this.DP_GestionDeUsuarios.Text = "Gestion de usuarios";
             this.DP_GestionDeUsuarios.Click += new System.EventHandler(this.DP_GestionDeUsuarios_Click);
             // 
             // DP_GestionDePerfiles
             // 
             this.DP_GestionDePerfiles.Name = "DP_GestionDePerfiles";
-            this.DP_GestionDePerfiles.Size = new System.Drawing.Size(180, 22);
+            this.DP_GestionDePerfiles.Size = new System.Drawing.Size(178, 22);
             this.DP_GestionDePerfiles.Text = "Gestion de perfiles";
             // 
             // DP_BitacoraDeEventos
             // 
             this.DP_BitacoraDeEventos.Name = "DP_BitacoraDeEventos";
-            this.DP_BitacoraDeEventos.Size = new System.Drawing.Size(180, 22);
+            this.DP_BitacoraDeEventos.Size = new System.Drawing.Size(178, 22);
             this.DP_BitacoraDeEventos.Text = "Bitacora de eventos";
             // 
             // DP_GestionDeRespaldo
             // 
             this.DP_GestionDeRespaldo.Name = "DP_GestionDeRespaldo";
-            this.DP_GestionDeRespaldo.Size = new System.Drawing.Size(180, 22);
+            this.DP_GestionDeRespaldo.Size = new System.Drawing.Size(178, 22);
             this.DP_GestionDeRespaldo.Text = "Gestion de respaldo";
+            // 
+            // mestroToolStripMenuItem
+            // 
+            this.mestroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarClienteToolStripMenuItem,
+            this.gestionDeProductosToolStripMenuItem});
+            this.mestroToolStripMenuItem.Name = "mestroToolStripMenuItem";
+            this.mestroToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.mestroToolStripMenuItem.Text = "Mestro";
+            // 
+            // registrarClienteToolStripMenuItem
+            // 
+            this.registrarClienteToolStripMenuItem.Name = "registrarClienteToolStripMenuItem";
+            this.registrarClienteToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.registrarClienteToolStripMenuItem.Text = "Gestion de clientes";
+            this.registrarClienteToolStripMenuItem.Click += new System.EventHandler(this.registrarClienteToolStripMenuItem_Click);
+            // 
+            // gestionDeProductosToolStripMenuItem
+            // 
+            this.gestionDeProductosToolStripMenuItem.Name = "gestionDeProductosToolStripMenuItem";
+            this.gestionDeProductosToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.gestionDeProductosToolStripMenuItem.Text = "Gestion de productos";
+            this.gestionDeProductosToolStripMenuItem.Click += new System.EventHandler(this.gestionDeProductosToolStripMenuItem_Click);
             // 
             // DP_Contratacion
             // 
@@ -145,6 +168,18 @@
             this.generarContratacion.Size = new System.Drawing.Size(187, 22);
             this.generarContratacion.Text = "Generar Contratacion";
             this.generarContratacion.Click += new System.EventHandler(this.generarContratacion_Click);
+            // 
+            // modificarSeguroToolStripMenuItem
+            // 
+            this.modificarSeguroToolStripMenuItem.Name = "modificarSeguroToolStripMenuItem";
+            this.modificarSeguroToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.modificarSeguroToolStripMenuItem.Text = "Modificar seguro";
+            // 
+            // eliminarSeguroToolStripMenuItem
+            // 
+            this.eliminarSeguroToolStripMenuItem.Name = "eliminarSeguroToolStripMenuItem";
+            this.eliminarSeguroToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.eliminarSeguroToolStripMenuItem.Text = "Eliminar Seguro";
             // 
             // Dp_Siniestros
             // 
@@ -173,39 +208,6 @@
             this.Dp_Ayuda.Size = new System.Drawing.Size(53, 20);
             this.Dp_Ayuda.Text = "Ayuda";
             this.Dp_Ayuda.Click += new System.EventHandler(this.Dp_Ayuda_Click);
-            // 
-            // modificarSeguroToolStripMenuItem
-            // 
-            this.modificarSeguroToolStripMenuItem.Name = "modificarSeguroToolStripMenuItem";
-            this.modificarSeguroToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.modificarSeguroToolStripMenuItem.Text = "Modificar seguro";
-            // 
-            // eliminarSeguroToolStripMenuItem
-            // 
-            this.eliminarSeguroToolStripMenuItem.Name = "eliminarSeguroToolStripMenuItem";
-            this.eliminarSeguroToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.eliminarSeguroToolStripMenuItem.Text = "Eliminar Seguro";
-            // 
-            // mestroToolStripMenuItem
-            // 
-            this.mestroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarClienteToolStripMenuItem,
-            this.gestionDeProductosToolStripMenuItem});
-            this.mestroToolStripMenuItem.Name = "mestroToolStripMenuItem";
-            this.mestroToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.mestroToolStripMenuItem.Text = "Mestro";
-            // 
-            // registrarClienteToolStripMenuItem
-            // 
-            this.registrarClienteToolStripMenuItem.Name = "registrarClienteToolStripMenuItem";
-            this.registrarClienteToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.registrarClienteToolStripMenuItem.Text = "Gestion de clientes";
-            // 
-            // gestionDeProductosToolStripMenuItem
-            // 
-            this.gestionDeProductosToolStripMenuItem.Name = "gestionDeProductosToolStripMenuItem";
-            this.gestionDeProductosToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.gestionDeProductosToolStripMenuItem.Text = "Gestion de productos";
             // 
             // Form1
             // 

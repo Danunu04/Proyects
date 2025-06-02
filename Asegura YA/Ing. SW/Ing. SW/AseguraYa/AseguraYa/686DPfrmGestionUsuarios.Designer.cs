@@ -68,6 +68,7 @@
             this.DP_Datagrid.Size = new System.Drawing.Size(987, 318);
             this.DP_Datagrid.TabIndex = 0;
             this.DP_Datagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DP_Datagrid_CellClick_1);
+            this.DP_Datagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DP_Datagrid_CellContentClick);
             // 
             // DP_BTNCrear
             // 

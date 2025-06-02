@@ -338,7 +338,7 @@ END";
         }
 
         public List<_686DP_Usuarios> _686DPTraerTodos()
-        {   
+        {
             try
             {
                 DataTable dt;
@@ -367,8 +367,8 @@ END";
                             bool Bloqueado = Convert.ToBoolean(item[8]);
                             bool cambiarContra = Convert.ToBoolean(item[9]);
 
-                            _686DP_Usuarios empleado = new _686DP_Usuarios(DNI, Nombre, Apellido, Email, Rol, usuario, contraseña, Activo, Bloqueado, cambiarContra);
-                            usuarios.Add(empleado);
+                            _686DP_Usuarios Usuario = new _686DP_Usuarios(DNI, Nombre, Apellido, Email, Rol, usuario, contraseña, Activo, Bloqueado, cambiarContra);
+                            usuarios.Add(Usuario);
                         }
                         catch (Exception exFila)
                         {
@@ -445,7 +445,7 @@ END";
             }
             catch (SqlException ex)
             {
-                throw new Exception("Error al obtener los intentos del empleado.", ex);
+                throw new Exception("Error al obtener los intentos del usuario.", ex);
             }
             catch (Exception ex)
             {
