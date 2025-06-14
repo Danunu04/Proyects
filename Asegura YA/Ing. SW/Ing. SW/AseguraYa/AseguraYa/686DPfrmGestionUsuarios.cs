@@ -498,7 +498,7 @@ namespace AseguraYa
                         usr.DP686_Bloqueado = Convert.ToBoolean(fila.Cells["DP686_Bloqueado"].Value);
 
                         // Actualizar en la BD
-                        bll._686DPActualizarEmpleadoExistente(usr);
+                        bll._686DPActualizarUsuarioExistente(usr);
                     }
                     else
                     {
@@ -515,7 +515,7 @@ namespace AseguraYa
                             Convert.ToBoolean(fila.Cells["DP686_CambiarContraseña"].Value)
                         );
 
-                        bll._686DPActualizarEmpleadoExistente(nuevo);
+                        bll._686DPActualizarUsuarioExistente(nuevo);
                     }
                 }
 

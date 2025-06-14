@@ -22,7 +22,7 @@ namespace AseguraYa
             InitializeComponent();
             this.FormClosing += _686DPfrmDatosExtra_FormClosing;
             this.dni = dNI;
-            cliente = bll.clientes.FirstOrDefault(c => c.DP686_DNI == dni);
+            cliente = bll.TraerCliente(dni);
         }
 
         private void _686DPfrmDatosExtra_Load(object sender, EventArgs e)
@@ -62,9 +62,9 @@ namespace AseguraYa
                 cliente.DP686_Email = TXTEmail.Text;
                 cliente.DP686_Domicilio = TXTDomicilio.Text;
                 cliente.DP686DP_CodigoPostal = Convert.ToInt32(TXTCodigoPostal.Text);
-                cliente.DP686_CuitCuil = Convert.ToInt32(TXTCuil.Text);
+                cliente.DP686_CuitCuil = TXTCuil.Text;
                 cliente.DP686_TitularTarjeta = TXTTitulartarjeta.Text;
-                cliente.DP686_NTarjeta = Convert.ToInt32(TXTNTarjeta.Text);
+                cliente.DP686_NTarjeta =TXTNTarjeta.Text ;
                 cliente.DP686_CondicionIVA = TXTiva.Text;
                 cliente.DP686_medioPago = TXTMedioDePago.Text;
             }

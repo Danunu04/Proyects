@@ -73,7 +73,6 @@ namespace AseguraYa
         {
             if (RBCrearProducto.Checked)
             {
-                
                 TXTDescripcionCobertura.Enabled = false;
                 TXTFranquicia.Enabled = false;
                 TXTProductos.Enabled = true;
@@ -155,25 +154,33 @@ namespace AseguraYa
 
         private void BTNCrearPlan_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(TXTFranquicia.Text))
+            try
             {
-                MessageBox.Show("Ingresá una franquicia para crear el plan.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                if (string.IsNullOrWhiteSpace(TXTFranquicia.Text))
+                {
+                    MessageBox.Show("Ingresá una franquicia para crear el plan.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-            if (cmbProductos.SelectedItem == null)
+                if (cmbProductos.SelectedItem == null)
+                {
+                    MessageBox.Show("Seleccioná un producto antes de crear el plan.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                string producto = cmbProductos.SelectedItem.ToString();
+                decimal franquicia = Convert.ToDecimal(TXTFranquicia.Text);
+                decimal prima = Convert.ToDecimal(TXTPrima.Text);
+
+                bll.CrearPlan(producto, franquicia, prima);
+
+                MessageBox.Show("Plan creado con éxito.");
+                CargarCombo(); 
+            }
+            catch (Exception ex)
             {
-                MessageBox.Show("Seleccioná un producto antes de crear el plan.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                MessageBox.Show("error en la carga de plan: " + ex.Message);
             }
-            string producto = cmbProductos.SelectedItem.ToString();
-            decimal franquicia = Convert.ToDecimal(TXTFranquicia.Text);
-            decimal prima = Convert.ToDecimal(TXTPrima.Text);
-
-            bll.CrearPlan(producto, franquicia, prima);
-
-            MessageBox.Show("✅ Plan creado con éxito.");
-            CargarCombo(); // refresca grillas
+            
         }
 
 
@@ -254,22 +261,12 @@ namespace AseguraYa
 
         private void BTNModificarPlan_Click(object sender, EventArgs e)
         {
+            DGCobertura.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             DGCobertura.DataSource = null;
             List<_686DP_Cobertura> Cobeturas = bll.traerCoberturas();
             DGCobertura.DataSource = Cobeturas;
-            DGCobertura.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            if (codigoPlanSeleccionado == -1)
-            {
-                MessageBox.Show("Seleccioná un plan primero.");
-                return;
-            }
-
-            if (DGCobertura.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Seleccioná una cobertura para agregar.");
-                return;
-            }
 
             int codigoCobertura = Convert.ToInt32(DGCobertura.SelectedRows[0].Cells["CodigoCobertura"].Value);
 
@@ -326,9 +323,9 @@ namespace AseguraYa
                 try
                 {
 
-                    if (!_686DP_ExpresionesRegulares._686DPEsNumero(TXTProductos.Text.ToString()))
+                    if (!_686DP_ExpresionesRegulares. _686DPEsSoloLetras (TXTProductos.Text.ToString()))
                     {
-                        MessageBox.Show("Solo se permiten números", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Solo se permiten letras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         TXTProductos.Clear();
                     }
                 }
@@ -346,9 +343,9 @@ namespace AseguraYa
                 try
                 {
 
-                    if (!_686DP_ExpresionesRegulares._686DPEsNumero(TXTDescripcionCobertura.Text.ToString()))
+                    if (!_686DP_ExpresionesRegulares._686DPEsSoloLetras(TXTDescripcionCobertura.Text.ToString()))
                     {
-                        MessageBox.Show("Solo se permiten números", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Solo se permiten letras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         TXTDescripcionCobertura.Clear();
                     }
                 }
@@ -417,6 +414,39 @@ namespace AseguraYa
                     MessageBox.Show("Error de validación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (codigoPlanSeleccionado == -1)
+            {
+                MessageBox.Show("Seleccioná un plan primero.");
+                return;
+            }
+
+            if (DGCobertura.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccioná al menos una cobertura para aplicar.");
+                return;
+            }
+
+            foreach (DataGridViewRow fila in DGCobertura.SelectedRows)
+            {
+                int codigoCobertura = Convert.ToInt32(fila.Cells["CondigoCobertura"].Value);
+
+                if (!bll.YaExisteRelacionCoberturaPlan(codigoPlanSeleccionado, codigoCobertura))
+                {
+                    bll.AsociarCoberturaAPlan(codigoPlanSeleccionado, codigoCobertura);
+                }
+            }
+
+            MessageBox.Show("Coberturas asociadas con éxito.");
+
+        }
+
+        private void BTNEliminarPlan_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

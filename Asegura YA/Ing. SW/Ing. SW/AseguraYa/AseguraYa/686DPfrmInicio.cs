@@ -141,5 +141,19 @@ namespace AseguraYa
             cp.MdiParent = this;
             cp.Show();
         }
+
+        private void modificarSeguroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _686DPfrmModificarSeguro ms = new _686DPfrmModificarSeguro();
+            ms.MdiParent = this;
+            ms.Show();
+        }
+
+        private void eliminarSeguroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _686DPfrmCancelarSeguro cs = new _686DPfrmCancelarSeguro();
+            cs.MdiParent = this;
+            cs.Show();
+        }
     }
 }

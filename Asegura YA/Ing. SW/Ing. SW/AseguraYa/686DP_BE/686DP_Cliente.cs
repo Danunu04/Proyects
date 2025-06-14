@@ -13,10 +13,10 @@ namespace _686DP_BE
         public string DP686_Nombre { get; set; }
         public string DP686_Apellido { get; set; }
         public string DP686_Email { get; set; }
-        public int? DP686_NTarjeta { get; set; }
+        public string DP686_NTarjeta { get; set; }
         public string DP686_Domicilio { get; set; }
         public int? DP686DP_CodigoPostal { get; set; }
-        public int? DP686_CuitCuil { get; set; }
+        public string DP686_CuitCuil { get; set; }
         public string DP686_CondicionIVA { get; set; }
         public bool? DP686_Estado { get; set; }
         public string DP686_TitularTarjeta { get; set; }

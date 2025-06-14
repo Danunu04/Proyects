@@ -174,12 +174,14 @@
             this.modificarSeguroToolStripMenuItem.Name = "modificarSeguroToolStripMenuItem";
             this.modificarSeguroToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.modificarSeguroToolStripMenuItem.Text = "Modificar seguro";
+            this.modificarSeguroToolStripMenuItem.Click += new System.EventHandler(this.modificarSeguroToolStripMenuItem_Click);
             // 
             // eliminarSeguroToolStripMenuItem
             // 
             this.eliminarSeguroToolStripMenuItem.Name = "eliminarSeguroToolStripMenuItem";
             this.eliminarSeguroToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.eliminarSeguroToolStripMenuItem.Text = "Eliminar Seguro";
+            this.eliminarSeguroToolStripMenuItem.Click += new System.EventHandler(this.eliminarSeguroToolStripMenuItem_Click);
             // 
             // Dp_Siniestros
             // 

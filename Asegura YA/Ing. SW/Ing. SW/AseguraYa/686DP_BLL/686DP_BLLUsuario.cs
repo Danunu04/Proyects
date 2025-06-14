@@ -43,7 +43,7 @@ namespace _686DP_BLL
         {
             try
             {
-                return dal._686DPFiltrarEmpleados(rol, activo, bloqueado);
+                return dal._686DPFiltrarUsuarios(rol, activo, bloqueado);
             }
             catch (SqlException ex)
             {
@@ -135,11 +135,11 @@ namespace _686DP_BLL
             }
         }
 
-        public void _686DPActualizarEmpleadoExistente(_686DP_Usuarios emp)
+        public void _686DPActualizarUsuarioExistente(_686DP_Usuarios emp)
         {
             try
             {
-                dal._686DPActualizarEmpleadoExistente(emp);
+                dal._686DPActualizarUsuarioExistente(emp);
             }
             catch (SqlException ex)
             {

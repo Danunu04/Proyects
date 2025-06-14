@@ -58,43 +58,51 @@ namespace AseguraYa
 
         private void DP_BTNAplicar_Click(object sender, EventArgs e)
         {
-            string contraseñaActual = DP_TXTContraseñaActual.Text;
-            string contraseñaNueva = DP_TXTContraseñaNueva.Text;
-            string confirmacion = DP_TXTConfirmación.Text;
-            int DNI = _686DP_Singleton.Instancia.Usuario._686DPDNI;
-
-            string contraseñaActualHash = _686DPCriptoManager._686DPGetSHA256(contraseñaActual);
-            string contraseñaBD = bll._686DPTraerContraseña(DNI);
-
-            if (contraseñaActualHash != contraseñaBD)
+            try
             {
-                MessageBox.Show("Contraseña actual incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+                string contraseñaActual = DP_TXTContraseñaActual.Text;
+                string contraseñaNueva = DP_TXTContraseñaNueva.Text;
+                string confirmacion = DP_TXTConfirmación.Text;
+                int DNI = _686DP_Singleton.Instancia.Usuario._686DPDNI;
 
-            if (contraseñaNueva != confirmacion)
-            {
-                MessageBox.Show("Las contraseñas no coinciden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+                string contraseñaActualHash = _686DPCriptoManager._686DPGetSHA256(contraseñaActual);
+                string contraseñaBD = bll._686DPTraerContraseña(DNI);
 
-            string contraseñaNuevaHash = _686DPCriptoManager._686DPGetSHA256(contraseñaNueva);
-            bll._686DPVerificarContraseñas(DNI);
-
-            bool ok = bll._686DPCompararContraseñas(contraseñaNuevaHash, contraseñaBD, DNI);
-
-            if (ok)
-            {
-                bll._686DPNuevaContra(contraseñaNuevaHash, DNI);
-                bll._ReestablecerObligatoriedadeContraseña(DNI);
-                MessageBox.Show("Contraseña cambiada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (_686DP_Singleton.Instancia._686DPIsLogged())
+                if (contraseñaActualHash != contraseñaBD)
                 {
-                    _686DP_Singleton.Instancia._686DPLogOut();
-                    MessageBox.Show("Sesión cerrada por cuestiones de seguridad.", "Cerrar sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Contraseña actual incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                this.Close();
+
+                if (contraseñaNueva != confirmacion)
+                {
+                    MessageBox.Show("Las contraseñas no coinciden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string contraseñaNuevaHash = _686DPCriptoManager._686DPGetSHA256(contraseñaNueva);
+                bll._686DPVerificarContraseñas(DNI);
+
+                bool ok = bll._686DPCompararContraseñas(contraseñaNuevaHash, contraseñaBD, DNI);
+
+                if (ok)
+                {
+                    bll._686DPNuevaContra(contraseñaNuevaHash, DNI);
+                    bll._ReestablecerObligatoriedadeContraseña(DNI);
+                    MessageBox.Show("Contraseña cambiada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (_686DP_Singleton.Instancia._686DPIsLogged())
+                    {
+                        _686DP_Singleton.Instancia._686DPLogOut();
+                        MessageBox.Show("Sesión cerrada por cuestiones de seguridad.", "Cerrar sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    this.Close();
+                }
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Hubo un error inesperado en el cambio de contraseña" + ex.Message);
+            }
+            
         }
 
         private void DP_TXTContraseñaActual_TextChanged(object sender, EventArgs e)

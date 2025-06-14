@@ -56,6 +56,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.TXTPrima = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGCobertura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGPlan)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +83,7 @@
             // 
             this.BTNCrearProducto.Location = new System.Drawing.Point(35, 109);
             this.BTNCrearProducto.Name = "BTNCrearProducto";
-            this.BTNCrearProducto.Size = new System.Drawing.Size(108, 36);
+            this.BTNCrearProducto.Size = new System.Drawing.Size(108, 32);
             this.BTNCrearProducto.TabIndex = 9;
             this.BTNCrearProducto.Text = "Crear producto";
             this.BTNCrearProducto.UseVisualStyleBackColor = true;
@@ -177,6 +178,7 @@
             this.BTNEliminarPlan.TabIndex = 25;
             this.BTNEliminarPlan.Text = "Eliminar Plan";
             this.BTNEliminarPlan.UseVisualStyleBackColor = true;
+            this.BTNEliminarPlan.Click += new System.EventHandler(this.BTNEliminarPlan_Click);
             // 
             // BTNModificarPlan
             // 
@@ -318,11 +320,22 @@
             this.TXTPrima.TabIndex = 40;
             this.TXTPrima.TextChanged += new System.EventHandler(this.TXTPrima_TextChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(313, 542);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 34);
+            this.button1.TabIndex = 42;
+            this.button1.Text = "Aplicar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // _686DP_frmCrearProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1071, 604);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TXTPrima);
             this.Controls.Add(this.label11);
@@ -391,5 +404,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TXTPrima;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -140,40 +140,61 @@ namespace AseguraYa
                     MessageBox.Show("Ingresá un DNI válido.", "Falta DNI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+
                 if (codigoPlanSeleccionado == -1)
                 {
                     MessageBox.Show("Debe seleccionar un plan antes de continuar.", "Plan no seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                var cliente = nuevoCliente;
-                if (cliente == null)
-                {
-                    nuevoCliente = bll.TraerCliente(DNI);
-                }
+                var cliente = nuevoCliente ?? bll.TraerCliente(DNI);
 
                 List<string> faltantes = new List<string>();
 
                 if (string.IsNullOrWhiteSpace(cliente.DP686_Email)) faltantes.Add("Email");
                 if (string.IsNullOrWhiteSpace(cliente.DP686_Domicilio)) faltantes.Add("Domicilio");
                 if (cliente.DP686DP_CodigoPostal == 0) faltantes.Add("Código Postal");
-                if (cliente.DP686_CuitCuil == 0) faltantes.Add("Cuit/Cuil");
+                if (string.IsNullOrWhiteSpace(cliente.DP686_CuitCuil)) faltantes.Add("Cuit/Cuil");
                 if (string.IsNullOrWhiteSpace(cliente.DP686_CondicionIVA)) faltantes.Add("Condición IVA");
                 if (string.IsNullOrWhiteSpace(cliente.DP686_TitularTarjeta)) faltantes.Add("Titular de Tarjeta");
                 if (string.IsNullOrWhiteSpace(cliente.DP686_medioPago)) faltantes.Add("Medio de Pago");
-                if (cliente.DP686_NTarjeta == 0) faltantes.Add("N° Tarjeta");
-                if (cliente.DP686_FechaVencimiento == DateTime.MinValue) faltantes.Add("Fecha de Vencimiento");
+                if (string.IsNullOrWhiteSpace(cliente.DP686_NTarjeta)) faltantes.Add("N° Tarjeta");
 
                 if (faltantes.Count > 0)
                 {
                     _686DPfrmDatosExtra datosextra = new _686DPfrmDatosExtra(DNI);
-                    datosextra.Show();
+                    var result = datosextra.ShowDialog(); // espera que se cierre
+
+                    if (result != DialogResult.OK)
+                    {
+                        MessageBox.Show("No se completaron los datos del cliente.", "Proceso cancelado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    // Volver a traer cliente actualizado y revalidar
+                    cliente = bll.TraerCliente(DNI);
+
+                    List<string> faltantesDespues = new List<string>();
+                    if (string.IsNullOrWhiteSpace(cliente.DP686_Email)) faltantesDespues.Add("Email");
+                    if (string.IsNullOrWhiteSpace(cliente.DP686_Domicilio)) faltantesDespues.Add("Domicilio");
+                    if (cliente.DP686DP_CodigoPostal == 0) faltantesDespues.Add("Código Postal");
+                    if (string.IsNullOrWhiteSpace(cliente.DP686_CuitCuil)) faltantesDespues.Add("Cuit/Cuil");
+                    if (string.IsNullOrWhiteSpace(cliente.DP686_CondicionIVA)) faltantesDespues.Add("Condición IVA");
+                    if (string.IsNullOrWhiteSpace(cliente.DP686_TitularTarjeta)) faltantesDespues.Add("Titular de Tarjeta");
+                    if (string.IsNullOrWhiteSpace(cliente.DP686_medioPago)) faltantesDespues.Add("Medio de Pago");
+                    if (string.IsNullOrWhiteSpace(cliente.DP686_NTarjeta)) faltantesDespues.Add("N° Tarjeta");
+                    //if (cliente.DP686_FechaVencimiento == DateTime.MinValue) faltantesDespues.Add("Fecha de Vencimiento");
+
+                    if (faltantesDespues.Count > 0)
+                    {
+                        MessageBox.Show("Los datos del cliente aún están incompletos:\n" + string.Join(", ", faltantesDespues), "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                 }
 
                 int codSeguro = blls.ObtenerCodSeguroPorProducto(CMBProducto.SelectedItem.ToString());
-
-
                 bllp.CrearPoliza(codSeguro, prima, DNI, codigoPlanSeleccionado);
+
                 MessageBox.Show("Póliza generada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }

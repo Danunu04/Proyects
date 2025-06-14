@@ -94,7 +94,7 @@ namespace _686DP_MPP
 
         public void CrearProducto(string nProducto)
         {
-            string consulta = "INSERT INTO [dbo].[686DP_Productos] (DP686_ProductoNombre)   VALUES (@ProductoNombre);";
+            string consulta = "INSERT INTO [dbo].[686DP_Seguro] (DP686_ProductoNombre)   VALUES (@ProductoNombre);";
             ArrayList parametros = new ArrayList
             {
                 new SqlParameter("@ProductoNombre", nProducto)
@@ -310,7 +310,7 @@ namespace _686DP_MPP
             try
             {
                 DataTable dt = new DataTable();
-                string consulta = "SELECT * FROM [dbo].[686DP_Productos]";
+                string consulta = "SELECT * FROM [dbo].[686DP_Seguro]";
                 
                 dt = dal._686DPConsultar(consulta, null);
 
@@ -336,7 +336,7 @@ namespace _686DP_MPP
             {
                 DataTable dt = new DataTable();
                 bool existe = false;
-                string consulta = "SELECT * FROM [dbo].[686DP_Productos]  WHERE DP686_ProductoNombre = @TipoProducto;";
+                string consulta = "SELECT * FROM [dbo].[686DP_Seguro]  WHERE DP686_ProductoNombre = @TipoProducto;";
                 ArrayList parametros = new ArrayList { new SqlParameter("@TipoProducto", nProducto) };
 
                 dt = dal._686DPConsultar(consulta, parametros);

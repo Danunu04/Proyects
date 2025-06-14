@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using _686DP_BE;
 using _686DP_BLL;
+using _686DP_SERVICIOS;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AseguraYa
 {
     public partial class _686DPfrmGestionarClientes : Form
     {
+        private bool estaEncriptado = false;
+
         _686DP_ExpresionesRegulares _686DP_ExpresionesRegulares = new _686DP_ExpresionesRegulares();
         public _686DP_Cliente ClienteCreado { get; private set; }
         _686DP_BLLCLlientes bll = new _686DP_BLLCLlientes();
@@ -115,10 +118,10 @@ namespace AseguraYa
                         fila.Cells["DP686_Nombre"].Value = string.IsNullOrWhiteSpace(cliente.DP686_Nombre) ? "NULL" : cliente.DP686_Nombre;
                         fila.Cells["DP686_Apellido"].Value = string.IsNullOrWhiteSpace(cliente.DP686_Apellido) ? "NULL" : cliente.DP686_Apellido;
                         fila.Cells["DP686_Email"].Value = string.IsNullOrWhiteSpace(cliente.DP686_Email) ? "NULL" : cliente.DP686_Email;
-                        fila.Cells["DP686_NTarjeta"].Value = cliente.DP686_NTarjeta == 0 ? "NULL" : cliente.DP686_NTarjeta.ToString();
+                        fila.Cells["DP686_NTarjeta"].Value = string.IsNullOrWhiteSpace(cliente.DP686_NTarjeta) ? "NULL" : cliente.DP686_NTarjeta;
                         fila.Cells["DP686_Domicilio"].Value = string.IsNullOrWhiteSpace(cliente.DP686_Domicilio) ? "NULL" : cliente.DP686_Domicilio;
                         fila.Cells["DP686DP_CodigoPostal"].Value = cliente.DP686DP_CodigoPostal == 0 ? "NULL" : cliente.DP686DP_CodigoPostal.ToString();
-                        fila.Cells["DP686_CuitCuil"].Value = cliente.DP686_CuitCuil == 0 ? "NULL" : cliente.DP686_CuitCuil.ToString();
+                        fila.Cells["DP686_CuitCuil"].Value = string.IsNullOrWhiteSpace(cliente.DP686_CuitCuil) ? "NULL" : cliente.DP686_CuitCuil;
                         fila.Cells["DP686_CondicionIVA"].Value = string.IsNullOrWhiteSpace(cliente.DP686_CondicionIVA) ? "NULL" : cliente.DP686_CondicionIVA;
                         
                         fila.Cells["DP686_Estado"].Value = cliente.DP686_Estado == null
@@ -231,6 +234,48 @@ namespace AseguraYa
                     MessageBox.Show("Error de validación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            _686DPCriptoManager cripto = new _686DPCriptoManager();
+
+            foreach (DataGridViewRow fila in dataGridView1.Rows)
+            {
+                if (fila.IsNewRow) continue;
+
+                var valorCelda = fila.Cells["DP686_Email"].Value;
+                if (valorCelda == null) continue;
+
+                string contenido = valorCelda.ToString();
+
+                if (!string.IsNullOrWhiteSpace(contenido))
+                {
+                    try
+                    {
+                        if (!estaEncriptado)
+                        {
+                            // Encriptar
+                            string encriptado = cripto._686DPGetAES256(contenido);
+                            fila.Cells["DP686_Email"].Value = encriptado;
+                        }
+                        else
+                        {
+                            // Desencriptar
+                            string desencriptado = cripto._686DPGetAESDecrypt(contenido).ToString();
+                            fila.Cells["DP686_Email"].Value = desencriptado;
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show($"Error al {(estaEncriptado ? "desencriptar" : "encriptar")} el valor: {contenido}");
+                    }
+                }
+            }
+
+            // Invertir el estado
+            estaEncriptado = !estaEncriptado;
         }
     }
 }

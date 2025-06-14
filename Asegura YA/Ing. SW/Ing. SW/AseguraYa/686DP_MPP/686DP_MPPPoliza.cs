@@ -60,23 +60,23 @@ namespace _686DP_MPP
             try
             {
                 string consulta = @"
-                INSERT INTO [686DP_Cliente].[686DP_Poliza]
+                INSERT INTO [dbo].[686DP_Poliza]
                 (DP686_Estado, DP686_valorTotal, DP686_FechaVencimiento, DP686_Endoso, DP686_CodSeguro, DP686_CodPlan)
                 VALUES (@Estado, @ValorTotal, @FechaVencimiento, @Endoso, @CodSeguro, @CodPlan);
                 SELECT CAST(SCOPE_IDENTITY() AS INT);";
 
                 ArrayList parametros = new ArrayList
                 {
-                new SqlParameter("@Estado", estado),
-                new SqlParameter("@ValorTotal", valorfinal),
-                new SqlParameter("@FechaVencimiento", fechaVencimiento),
-                new SqlParameter("@Endoso", endoso),
-                new SqlParameter("@CodSeguro", codSeguro),
-                new SqlParameter("@CodPlan", codigoPlan)
+                    new SqlParameter("@Estado", estado),
+                    new SqlParameter("@ValorTotal", valorfinal),
+                    new SqlParameter("@FechaVencimiento", fechaVencimiento),
+                    new SqlParameter("@Endoso", endoso),
+                    new SqlParameter("@CodSeguro", codSeguro),
+                    new SqlParameter("@CodPlan", codigoPlan)
                 };
 
-                object resultado = dal._686DPEscalar(consulta, parametros);
 
+                object resultado = dal._686DPEscalar(consulta, parametros);
                 return Convert.ToInt32(resultado);
             }
             catch (Exception ex)
@@ -85,29 +85,29 @@ namespace _686DP_MPP
             }
         }
 
-        public void eliminarPoliza(string motivo, _686DP_Poliza poliza)
+        public void eliminarPoliza(string motivo, int npoliza)
         {
             try
             {
                 string actualizar = @"
-                UPDATE [686DP_Cliente].[686DP_Poliza]
+                UPDATE [dbo].[686DP_Poliza]
                 SET DP686_Estado = 0
                 WHERE DP686_NPoliza = @NPoliza";
 
                 ArrayList parametrosUpdate = new ArrayList
                 {
-                    new SqlParameter("@NPoliza", poliza.DP686_NPoliza)
+                    new SqlParameter("@NPoliza", npoliza)
                 };
 
                 dal._686DPEscribir(actualizar, parametrosUpdate);
 
                 string insertar = @"
-                INSERT INTO [dbo].[686DPPolizaCancelacion] (DP686_NPoliza, DP686_MotivoCancelacion)
+                INSERT INTO [dbo].[686DPPolizaCancelacion] (DP686_NPoliza, Motivo)
                 VALUES (@NPoliza, @Motivo)";
 
                 ArrayList parametrosInsert = new ArrayList
                 {
-                    new SqlParameter("@NPoliza", poliza.DP686_NPoliza),
+                    new SqlParameter("@NPoliza",npoliza),
                     new SqlParameter("@Motivo", motivo)
                 };
 
@@ -125,7 +125,7 @@ namespace _686DP_MPP
             try
             {
                 string consulta = @"
-                UPDATE [686DP_Cliente].[686DP_Poliza]
+                UPDATE [dbo].[686DP_Poliza]
                 SET DP686_Estado = @Estado,
                 DP686_valorTotal = @ValorTotal,
                 DP686_FechaVencimiento = @FechaVencimiento,

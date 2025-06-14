@@ -67,7 +67,7 @@ namespace _686DP_MPP
                 parametros.Add(new SqlParameter("@Nombre", cliente.DP686_Nombre));
                 parametros.Add(new SqlParameter("@Apellido", cliente.DP686_Apellido));
                 parametros.Add(new SqlParameter("@Email", string.IsNullOrWhiteSpace(cliente.DP686_Email) ? DBNull.Value : (object)cliente.DP686_Email));
-                parametros.Add(new SqlParameter("@NTarjeta", cliente.DP686_NTarjeta == 0 ? DBNull.Value : (object)cliente.DP686_NTarjeta));
+                parametros.Add(new SqlParameter("@NTarjeta", string.IsNullOrWhiteSpace(cliente.DP686_NTarjeta) ? DBNull.Value : (object)cliente.DP686_NTarjeta));
                 parametros.Add(new SqlParameter("@Domicilio", string.IsNullOrWhiteSpace(cliente.DP686_Domicilio) ? DBNull.Value : (object)cliente.DP686_Domicilio));
                 parametros.Add(new SqlParameter("@CodigoPostal", cliente.DP686DP_CodigoPostal == 0 ? DBNull.Value : (object)cliente.DP686DP_CodigoPostal));
                 parametros.Add(new SqlParameter("@CuitCuil", string.IsNullOrWhiteSpace(cliente.DP686_CuitCuil?.ToString()) ? DBNull.Value : (object)cliente.DP686_CuitCuil));
@@ -75,7 +75,7 @@ namespace _686DP_MPP
                 parametros.Add(new SqlParameter("@Estado", cliente.DP686_Estado == null ? DBNull.Value : (object)cliente.DP686_Estado));
                 parametros.Add(new SqlParameter("@TitularTarjeta", string.IsNullOrWhiteSpace(cliente.DP686_TitularTarjeta) ? DBNull.Value : (object)cliente.DP686_TitularTarjeta));
                 parametros.Add(new SqlParameter("@MedioPago", string.IsNullOrWhiteSpace(cliente.DP686_medioPago) ? DBNull.Value : (object)cliente.DP686_medioPago));
-                parametros.Add(new SqlParameter("@FechaVencimiento", cliente.DP686_FechaVencimiento == DateTime.MinValue ? DBNull.Value : (object)cliente.DP686_FechaVencimiento));
+                //parametros.Add(new SqlParameter("@FechaVencimiento", cliente.DP686_FechaVencimiento == DateTime.MinValue ? DBNull.Value : (object)cliente.DP686_FechaVencimiento));
 
                 dal._686DPEjecutar(storedProcedure, parametros);
             }
@@ -112,7 +112,7 @@ namespace _686DP_MPP
                     cliente.DP686_Email = row["DP686_Email"].ToString();
 
                 if (row["DP686_NTarjeta"] != DBNull.Value)
-                    cliente.DP686_NTarjeta = Convert.ToInt32(row["DP686_NTarjeta"]);
+                    cliente.DP686_NTarjeta = row["DP686_NTarjeta"].ToString();
 
                 if (row["DP686_Domicilio"] != DBNull.Value)
                     cliente.DP686_Domicilio = row["DP686_Domicilio"].ToString();
@@ -121,7 +121,7 @@ namespace _686DP_MPP
                     cliente.DP686DP_CodigoPostal = Convert.ToInt32(row["DP686DP_CodigoPostal"]);
 
                 if (row["DP686_CuitCuil"] != DBNull.Value)
-                    cliente.DP686_CuitCuil = Convert.ToInt32(row["DP686_CuitCuil"]);
+                    cliente.DP686_CuitCuil = row["DP686_CuitCuil"].ToString();
 
                 if (row["DP686_CondicionIVA"] != DBNull.Value)
                     cliente.DP686_CondicionIVA = row["DP686_CondicionIVA"].ToString();
@@ -135,8 +135,6 @@ namespace _686DP_MPP
                 if (row["DP686_medioPago"] != DBNull.Value)
                     cliente.DP686_medioPago = row["DP686_medioPago"].ToString();
 
-                if (row["DP686_FechaVencimineto"] != DBNull.Value)
-                    cliente.DP686_FechaVencimiento = Convert.ToDateTime(row["DP686_FechaVencimineto"]);
 
                 return cliente;
             }
@@ -166,17 +164,15 @@ namespace _686DP_MPP
                     )
                     {
                         DP686_Email = row["DP686_Email"] == DBNull.Value ? null : row["DP686_Email"].ToString(),
-                        DP686_NTarjeta = row["DP686_NTarjeta"] == DBNull.Value ? 0 : Convert.ToInt32(row["DP686_NTarjeta"]),
+                        DP686_NTarjeta = row["DP686_NTarjeta"] == DBNull.Value ? null : row["DP686_NTarjeta"].ToString(),
                         DP686_Domicilio = row["DP686_Domicilio"] == DBNull.Value ? null : row["DP686_Domicilio"].ToString(),
                         DP686DP_CodigoPostal = row["DP686DP_CodigoPostal"] == DBNull.Value ? 0 : Convert.ToInt32(row["DP686DP_CodigoPostal"]),
-                        DP686_CuitCuil = row["DP686_CuitCuil"] == DBNull.Value ? 0 : Convert.ToInt32(row["DP686_CuitCuil"]),
+                        DP686_CuitCuil = row["DP686_CuitCuil"] == DBNull.Value ? null : row["DP686_CuitCuil"].ToString(),
                         DP686_CondicionIVA = row["DP686_CondicionIVA"] == DBNull.Value ? null : row["DP686_CondicionIVA"].ToString(),
                         DP686_Estado = row["DP686_Estado"] != DBNull.Value && Convert.ToBoolean(row["DP686_Estado"]),
                         DP686_TitularTarjeta = row["DP686_TitularTarjeta"] == DBNull.Value ? null : row["DP686_TitularTarjeta"].ToString(),
                         DP686_medioPago = row["DP686_medioPago"] == DBNull.Value ? null : row["DP686_medioPago"].ToString(),
-                        DP686_FechaVencimiento = row["DP686_FechaVencimineto"] == DBNull.Value
-                        ? DateTime.MinValue
-                        : Convert.ToDateTime(row["DP686_FechaVencimineto"])
+                        
                     };
                     lista.Add(c);
                 }

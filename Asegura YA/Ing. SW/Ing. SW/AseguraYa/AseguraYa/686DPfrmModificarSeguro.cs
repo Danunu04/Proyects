@@ -96,11 +96,19 @@ namespace AseguraYa
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(TXTProducto.Text) || codigoPlanSeleccionado == -1)
+                {
+                    MessageBox.Show("Completá todos los campos requeridos.");
+                    return;
+                }
+
                 string producto = TXTProducto.Text;
                 int nPoliza = Convert.ToInt32(textBox1.Text);
+
                 poliza.DP686_CodPlan = codigoPlanSeleccionado;
                 poliza.DP686_CodSeguro = blls.ObtenerCodSeguroPorProducto(producto);
                 poliza.DP686_FechaVencimiento = DateTime.Now.AddMonths(1);
+
                 bll.ModificarPoliza(poliza);
                 MessageBox.Show("Póliza modificada correctamente.");
             }
@@ -108,6 +116,7 @@ namespace AseguraYa
             {
                 MessageBox.Show("Error al modificar la póliza: " + ex.Message);
             }
+
         }
 
         private void _686DPfrmModificarSeguro_Load(object sender, EventArgs e)

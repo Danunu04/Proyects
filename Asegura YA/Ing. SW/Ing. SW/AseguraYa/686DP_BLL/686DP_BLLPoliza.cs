@@ -63,7 +63,8 @@ namespace _686DP_BLL
 
         public void eliminarPoliza(string motivo, _686DP_Poliza poliza)
         {
-            mpp.eliminarPoliza(motivo, poliza);
+            int npoliza = poliza.DP686_NPoliza;
+            mpp.eliminarPoliza(motivo, npoliza);
         }
     }
 }

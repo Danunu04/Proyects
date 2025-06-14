@@ -28,6 +28,10 @@ namespace _686DP_BLL
         {
             int codproducto = mpp.ObtenerCodSeguroPorProducto(producto);
             _686DP_Seguro seguro = mpp.TraerDatosSeguro(codproducto);
+
+            if (seguro == null)
+                return "Producto no encontrado";
+
             return seguro.DP686_TipoProducto;
         }
 
