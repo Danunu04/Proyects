@@ -40,14 +40,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.BTNEliminarPlan = new System.Windows.Forms.Button();
             this.BTNModificarPlan = new System.Windows.Forms.Button();
             this.TXTDescripcionCobertura = new System.Windows.Forms.TextBox();
             this.TXTSumaAsegurada = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.BTNAsociarPlan = new System.Windows.Forms.Button();
-            this.BTNEliminarCobertura = new System.Windows.Forms.Button();
             this.TXTProductos = new System.Windows.Forms.TextBox();
             this.RBCrearProducto = new System.Windows.Forms.RadioButton();
             this.RBAgruparSeguro = new System.Windows.Forms.RadioButton();
@@ -111,6 +109,7 @@
             // 
             // DGCobertura
             // 
+            this.DGCobertura.BackgroundColor = System.Drawing.Color.CadetBlue;
             this.DGCobertura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGCobertura.Location = new System.Drawing.Point(638, 109);
             this.DGCobertura.Name = "DGCobertura";
@@ -129,7 +128,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 159);
+            this.label4.Location = new System.Drawing.Point(31, 172);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 13);
             this.label4.TabIndex = 17;
@@ -164,29 +163,19 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(39, 9);
+            this.label8.Location = new System.Drawing.Point(33, 34);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(98, 13);
             this.label8.TabIndex = 24;
             this.label8.Text = "Gestion de seguros";
             // 
-            // BTNEliminarPlan
-            // 
-            this.BTNEliminarPlan.Location = new System.Drawing.Point(36, 314);
-            this.BTNEliminarPlan.Name = "BTNEliminarPlan";
-            this.BTNEliminarPlan.Size = new System.Drawing.Size(107, 31);
-            this.BTNEliminarPlan.TabIndex = 25;
-            this.BTNEliminarPlan.Text = "Eliminar Plan";
-            this.BTNEliminarPlan.UseVisualStyleBackColor = true;
-            this.BTNEliminarPlan.Click += new System.EventHandler(this.BTNEliminarPlan_Click);
-            // 
             // BTNModificarPlan
             // 
-            this.BTNModificarPlan.Location = new System.Drawing.Point(146, 276);
+            this.BTNModificarPlan.Location = new System.Drawing.Point(36, 334);
             this.BTNModificarPlan.Name = "BTNModificarPlan";
             this.BTNModificarPlan.Size = new System.Drawing.Size(108, 31);
             this.BTNModificarPlan.TabIndex = 26;
-            this.BTNModificarPlan.Text = "Agregar Cobertura";
+            this.BTNModificarPlan.Text = "Asociar Cobertura";
             this.BTNModificarPlan.UseVisualStyleBackColor = true;
             this.BTNModificarPlan.Click += new System.EventHandler(this.BTNModificarPlan_Click);
             // 
@@ -235,15 +224,6 @@
             this.BTNAsociarPlan.UseVisualStyleBackColor = true;
             this.BTNAsociarPlan.Click += new System.EventHandler(this.BTNAsociarPlan_Click);
             // 
-            // BTNEliminarCobertura
-            // 
-            this.BTNEliminarCobertura.Location = new System.Drawing.Point(39, 542);
-            this.BTNEliminarCobertura.Name = "BTNEliminarCobertura";
-            this.BTNEliminarCobertura.Size = new System.Drawing.Size(104, 32);
-            this.BTNEliminarCobertura.TabIndex = 32;
-            this.BTNEliminarCobertura.Text = "Eliminar Cobertura";
-            this.BTNEliminarCobertura.UseVisualStyleBackColor = true;
-            // 
             // TXTProductos
             // 
             this.TXTProductos.Location = new System.Drawing.Point(35, 74);
@@ -287,6 +267,7 @@
             // 
             // DGPlan
             // 
+            this.DGPlan.BackgroundColor = System.Drawing.Color.CadetBlue;
             this.DGPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGPlan.Location = new System.Drawing.Point(313, 109);
             this.DGPlan.Name = "DGPlan";
@@ -322,11 +303,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(313, 542);
+            this.button1.Location = new System.Drawing.Point(150, 334);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 34);
+            this.button1.Size = new System.Drawing.Size(101, 31);
             this.button1.TabIndex = 42;
-            this.button1.Text = "Aplicar";
+            this.button1.Text = "Aplicar asociacion";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -334,6 +315,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(1071, 604);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
@@ -342,14 +324,12 @@
             this.Controls.Add(this.RBAgruparSeguro);
             this.Controls.Add(this.RBCrearProducto);
             this.Controls.Add(this.TXTProductos);
-            this.Controls.Add(this.BTNEliminarCobertura);
             this.Controls.Add(this.BTNAsociarPlan);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.TXTSumaAsegurada);
             this.Controls.Add(this.TXTDescripcionCobertura);
             this.Controls.Add(this.BTNModificarPlan);
-            this.Controls.Add(this.BTNEliminarPlan);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -388,14 +368,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button BTNEliminarPlan;
         private System.Windows.Forms.Button BTNModificarPlan;
         private System.Windows.Forms.TextBox TXTDescripcionCobertura;
         private System.Windows.Forms.TextBox TXTSumaAsegurada;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button BTNAsociarPlan;
-        private System.Windows.Forms.Button BTNEliminarCobertura;
         private System.Windows.Forms.TextBox TXTProductos;
         private System.Windows.Forms.RadioButton RBCrearProducto;
         private System.Windows.Forms.RadioButton RBAgruparSeguro;

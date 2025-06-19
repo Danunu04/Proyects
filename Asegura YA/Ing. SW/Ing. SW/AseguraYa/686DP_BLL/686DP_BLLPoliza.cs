@@ -12,6 +12,7 @@ namespace _686DP_BLL
     {
         _686DP_MPPPoliza mpp = new _686DP_MPPPoliza();
         _686DPMPPSeguro mpps = new _686DPMPPSeguro();
+        _686DP_MPPCobertura mppc = new _686DP_MPPCobertura();
         public List<_686DP_Poliza> polizas = new List<_686DP_Poliza>();
         public void CrearPoliza(int codSeguro, decimal prima, int dNI, int codigoPlan)
         {
@@ -39,7 +40,7 @@ namespace _686DP_BLL
             _686DP_Poliza poliza = mpp.TraerDatosPoliza(numeroDePoliza);
             _686DP_Seguro seguro = TraerSeguro(poliza.DP686_CodSeguro);
             _686DP_Plan Plan = TraerPlan(poliza.DP686_CodPlan);
-            Plan.Coberturas = mpps.TraerCoberturasFiltrado(poliza.DP686_CodPlan);
+            Plan.Coberturas = mppc.TraerCoberturasFiltrado(poliza.DP686_CodPlan);
 
             return poliza;
         }

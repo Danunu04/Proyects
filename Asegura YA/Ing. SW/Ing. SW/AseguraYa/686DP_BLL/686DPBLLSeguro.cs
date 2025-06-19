@@ -13,17 +13,6 @@ namespace _686DP_BLL
         List<string> productos = new List<string>();
         _686DPMPPSeguro mpp = new _686DPMPPSeguro();
 
-
-        public void AsociarCoberturaAPlan(int codigoPlan, int codigoCobertura)
-        {
-            mpp.AsociarCobertura(codigoPlan, codigoCobertura);
-        }
-
-        public void AsociarPlanASeguro(int codigoPlan, int codSeguro)
-        {
-            mpp.AsociarPlanASeguro(codigoPlan, codSeguro);
-        }
-
         public string buscarProducto(string producto)
         {
             int codproducto = mpp.ObtenerCodSeguroPorProducto(producto);
@@ -33,19 +22,6 @@ namespace _686DP_BLL
                 return "Producto no encontrado";
 
             return seguro.DP686_TipoProducto;
-        }
-
-        public int CrearCobertura(string descripcion, decimal suma)
-        {
-            int codCobertura = mpp.CrearCobertura(descripcion, suma);
-            return codCobertura;
-        }
-
-        public void CrearPlan(string producto, decimal franquicia, decimal prima)
-        {
-            int codigoPlan = mpp.CrearPlan(franquicia, prima);
-            int codSeguro = mpp.ObtenerCodSeguroPorProducto(producto);
-            mpp.AsociarPlanASeguro(codigoPlan, codSeguro);
         }
 
         public void CrearProucto(string nProducto)
@@ -62,41 +38,14 @@ namespace _686DP_BLL
             productos.Add(nProducto);
         }
 
-        public bool ExisteCoberturaEnPlan(int codPlan, string descripcion, decimal suma)
-        {
-            return mpp.ExisteCoberturaEnPlan(codPlan, descripcion, suma);
-        }
+       
 
         public int ObtenerCodSeguroPorProducto(string producto)
         {
             return mpp.ObtenerCodSeguroPorProducto(producto);
         }
 
-        public List<_686DP_Cobertura> traerCoberturas()
-        {
-            List<_686DP_Cobertura> coberturas = mpp.TraerCoberturas();
-            return coberturas;
-        }
-
-        public List<_686DP_Cobertura> TraerCoberturasFiltrado(int codigoPlan)
-        {
-            List<_686DP_Cobertura> coberturas = mpp.TraerCoberturasFiltrado(codigoPlan);
-            return coberturas;
-        }
-
-        public List<_686DP_Plan> TraerPlanes()
-        {
-            List<_686DP_Plan> planes = mpp.TraerPlanes();
-            return planes;
-        }
-
-        public List<_686DP_Plan> TraerPlanesFiltrado(string producto)
-        {
-            int codProducto = ObtenerCodSeguroPorProducto(producto);
-            List<_686DP_Plan> planes = mpp.TraerPlanesFiltrados(codProducto);
-            return planes;
-        }
-
+        
         public List<string> TraerProductos()
         {
             productos = mpp.TraerProductos();
@@ -117,14 +66,11 @@ namespace _686DP_BLL
             return existe;
         }
 
-        public bool YaExisteRelacionCoberturaPlan(int codigoPlanSeleccionado, int codigoCobertura)
-        {
-            return mpp.YaExisteRelacionCoberturaPlan(codigoPlanSeleccionado, codigoCobertura);
-        }
-
         public bool YaExisteRelacionSeguroPlan(int codSeguro, int codigoPlan)
         {
             return mpp.YaExisteRelacionSeguroPlan(codSeguro, codigoPlan);
         }
+
+
     }
 }

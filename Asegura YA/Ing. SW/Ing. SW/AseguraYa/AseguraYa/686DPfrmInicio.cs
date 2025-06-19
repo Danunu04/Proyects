@@ -33,6 +33,7 @@ namespace AseguraYa
             DP_CambiarContraseña.Enabled = false;
             DP_CambiarIdioma.Enabled = false;
             Dp_Ayuda.Enabled = false;
+            DP_CerrarSesion.Enabled = false;
         }
 
         private void DP_IniciarSesion_Click(object sender, EventArgs e)
@@ -65,6 +66,7 @@ namespace AseguraYa
             DP_CambiarIdioma.Enabled = true;
             Dp_Ayuda.Enabled = true;
             mestroToolStripMenuItem.Enabled = true;
+            DP_CerrarSesion.Enabled = true;
         }
 
         private void DP_CerrarSesion_Click(object sender, EventArgs e)

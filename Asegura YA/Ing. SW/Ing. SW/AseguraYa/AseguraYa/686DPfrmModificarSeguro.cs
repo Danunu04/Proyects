@@ -20,6 +20,8 @@ namespace AseguraYa
         _686DP_Plan plan = null;
         _686DP_BLLPoliza bll = new _686DP_BLLPoliza();
         _686DPBLLSeguro blls = new _686DPBLLSeguro();
+        _686DP_BLLPlan bLLPlan = new _686DP_BLLPlan();
+        _686DP_BLLCobertura bllc = new _686DP_BLLCobertura();
         public _686DPfrmModificarSeguro()
         {
             InitializeComponent();
@@ -33,6 +35,8 @@ namespace AseguraYa
                 {
                     int numeroDePoliza = Convert.ToInt32(textBox1.Text);
                     bool existe = bll.BuscarPoliza(numeroDePoliza);
+                    _686DP_Seguro seguro = bll.TraerSeguro(numeroDePoliza);
+                    TXTProducto.Text = seguro.DP686_TipoProducto.ToString();
                     if (!existe)
                     {
                         MessageBox.Show("El número de póliza no existe");
@@ -133,7 +137,7 @@ namespace AseguraYa
                 if (product != null)
                 {
                     DGPlan.DataSource = null;
-                    List<_686DP_Plan> planes = blls.TraerPlanesFiltrado(product);
+                    List<_686DP_Plan> planes = bLLPlan.TraerPlanesFiltrado(product);
                     DGPlan.DataSource = planes;
                 }
             }
@@ -151,7 +155,7 @@ namespace AseguraYa
                 {
                     DataGridViewRow fila = DGPlan.Rows[e.RowIndex];
                     codigoPlanSeleccionado = Convert.ToInt32(fila.Cells["DP686_CodigoPlan"].Value);
-                    List<_686DP_Cobertura> coberturasXPLAN = blls.TraerCoberturasFiltrado(codigoPlanSeleccionado);
+                    List<_686DP_Cobertura> coberturasXPLAN = bllc.TraerCoberturasFiltrado(codigoPlanSeleccionado);
                     DGCoberura.DataSource = null;
                     DGCoberura.DataSource = coberturasXPLAN;
                 }

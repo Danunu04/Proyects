@@ -23,6 +23,8 @@ namespace AseguraYa
         _686DP_BLLCLlientes bll = new _686DP_BLLCLlientes();
         _686DPBLLSeguro blls = new _686DPBLLSeguro();
         _686DP_BLLPoliza bllp = new _686DP_BLLPoliza();
+        _686DP_BLLPlan bLLPlan = new _686DP_BLLPlan();
+        _686DP_BLLCobertura bllc = new _686DP_BLLCobertura();
         public _686DPfrmGenerarContratación()
         {
             InitializeComponent();
@@ -78,11 +80,11 @@ namespace AseguraYa
                 CMBProducto.Items.AddRange(productos.ToArray());
 
                 DGCoberturas.DataSource = null;
-                DGCoberturas.DataSource = blls.traerCoberturas();
+                DGCoberturas.DataSource = bllc.traerCoberturas();
                 DGCoberturas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
                 DGPlan.DataSource = null;
-                DGPlan.DataSource = blls.TraerPlanes();
+                DGPlan.DataSource = bLLPlan.TraerPlanes();
                 DGPlan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch (Exception ex)
@@ -97,7 +99,7 @@ namespace AseguraYa
             {
                 string Producto = CMBProducto.SelectedItem.ToString();
 
-                List<_686DP_Plan> planes = blls.TraerPlanesFiltrado(Producto);
+                List<_686DP_Plan> planes = bLLPlan.TraerPlanesFiltrado(Producto);
                 DGPlan.DataSource = null;
                 DGPlan.DataSource = planes;
                 DGPlan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -121,7 +123,7 @@ namespace AseguraYa
                     codigoPlanSeleccionado = Convert.ToInt32(fila.Cells["DP686_CodigoPlan"].Value);
                     prima = Convert.ToDecimal(fila.Cells["DP686_Prima"].Value);
                     DGCoberturas.DataSource = null;
-                    DGCoberturas.DataSource = blls.TraerCoberturasFiltrado(codigoPlanSeleccionado);
+                    DGCoberturas.DataSource = bllc.TraerCoberturasFiltrado(codigoPlanSeleccionado);
                 }
             }
             catch (Exception ex)

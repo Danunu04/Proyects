@@ -25,6 +25,8 @@ namespace AseguraYa
 
         }
         _686DPBLLSeguro bll = new _686DPBLLSeguro();
+        _686DP_BLLPlan bllp = new _686DP_BLLPlan();
+        _686DP_BLLCobertura bllc = new _686DP_BLLCobertura();
 
         private void _686DP_frmCrearProducto_Load(object sender, EventArgs e)
         {
@@ -39,12 +41,10 @@ namespace AseguraYa
             BTNCrearProducto.Enabled = false;
 
             BTNCrearPlan.Enabled = false;
-            BTNEliminarPlan.Enabled = false;
             BTNModificarPlan.Enabled= false;
 
             BTNCrearCobertura.Enabled= false;
             BTNAsociarPlan.Enabled= false;
-            BTNEliminarCobertura.Enabled= false;
 
             cmbProductos.Enabled = false;
 
@@ -59,12 +59,12 @@ namespace AseguraYa
             cmbProductos.Items.AddRange(productos.ToArray());
 
             DGCobertura.DataSource = null;
-            List<_686DP_Cobertura> Cobeturas = bll.traerCoberturas();
+            List<_686DP_Cobertura> Cobeturas = bllc.traerCoberturas();
             DGCobertura.DataSource = Cobeturas;
             DGCobertura.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             DGPlan.DataSource = null;
-            List<_686DP_Plan> Planes = bll.TraerPlanes();
+            List<_686DP_Plan> Planes = bllp.TraerPlanes();
             DGPlan.DataSource = Planes;
             DGPlan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
@@ -81,12 +81,10 @@ namespace AseguraYa
                 BTNCrearProducto.Enabled = true;
 
                 BTNCrearPlan.Enabled = false;
-                BTNEliminarPlan.Enabled = false;
                 BTNModificarPlan.Enabled = false;
 
                 BTNCrearCobertura.Enabled = false;
                 BTNAsociarPlan.Enabled = false;
-                BTNEliminarCobertura.Enabled = false;
 
                 cmbProductos.Enabled = false;
 
@@ -102,12 +100,10 @@ namespace AseguraYa
                 BTNCrearProducto.Enabled = false;
 
                 BTNCrearPlan.Enabled = false;
-                BTNEliminarPlan.Enabled = false;
                 BTNModificarPlan.Enabled = false;
 
                 BTNCrearCobertura.Enabled = false;
                 BTNAsociarPlan.Enabled = false;
-                BTNEliminarCobertura.Enabled = false;
             }
         }
 
@@ -124,12 +120,10 @@ namespace AseguraYa
                 BTNCrearProducto.Enabled = false;
 
                 BTNCrearPlan.Enabled = true;
-                BTNEliminarPlan.Enabled = true;
                 BTNModificarPlan.Enabled = true;
 
                 BTNCrearCobertura.Enabled = true;
                 BTNAsociarPlan.Enabled = true;
-                BTNEliminarCobertura.Enabled = true;
 
                 cmbProductos.Enabled = true;
             }
@@ -171,7 +165,7 @@ namespace AseguraYa
                 decimal franquicia = Convert.ToDecimal(TXTFranquicia.Text);
                 decimal prima = Convert.ToDecimal(TXTPrima.Text);
 
-                bll.CrearPlan(producto, franquicia, prima);
+                bllp.CrearPlan(producto, franquicia, prima);
 
                 MessageBox.Show("Plan creado con éxito.");
                 CargarCombo(); 
@@ -190,7 +184,7 @@ namespace AseguraYa
             {
                 DataGridViewRow fila = DGPlan.Rows[e.RowIndex];
                 codigoPlanSeleccionado = Convert.ToInt32(fila.Cells["DP686_CodigoPlan"].Value);
-                List <_686DP_Cobertura> coberturasXPLAN = bll.TraerCoberturasFiltrado(codigoPlanSeleccionado);
+                List <_686DP_Cobertura> coberturasXPLAN = bllc.TraerCoberturasFiltrado(codigoPlanSeleccionado);
                 DGCobertura.DataSource = null;
                 DGCobertura.DataSource = coberturasXPLAN;
             }
@@ -208,7 +202,7 @@ namespace AseguraYa
                 DataGridViewRow fila = DGPlan.SelectedRows[0];
 
                 DGCobertura.DataSource = null;
-                List<_686DP_Cobertura> Cobeturas = bll.traerCoberturas();
+                List<_686DP_Cobertura> Cobeturas = bllc.traerCoberturas();
                 DGCobertura.DataSource = Cobeturas;
                 DGCobertura.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
@@ -243,15 +237,17 @@ namespace AseguraYa
 
                 //bool yaExiste = bll.ExisteCoberturaEnPlan(codigoPlan, descripcion, suma);
                 // Crear cobertura (devuelve el ID generado)
-                int codigoCobertura = bll.CrearCobertura(descripcion, suma);
+                int codigoCobertura = bllc.CrearCobertura(descripcion, suma);
 
                 // Asociar cobertura al plan
-                bll.AsociarCoberturaAPlan(codigoPlan, codigoCobertura);
+                bllp.AsociarCoberturaAPlan(codigoPlan, codigoCobertura);
 
                 // Refrescar grilla
-                List<_686DP_Cobertura> coberturas = bll.TraerCoberturasFiltrado(codigoPlan);
+                List<_686DP_Cobertura> coberturas = bllc.TraerCoberturasFiltrado(codigoPlan);
                 DGCobertura.DataSource = null;
                 DGCobertura.DataSource = coberturas;
+                limpiar();
+
             }
             else
             {
@@ -259,26 +255,36 @@ namespace AseguraYa
             }
         }
 
+        private void limpiar()
+        {
+            TXTDescripcionCobertura.Text = "";
+            TXTFranquicia.Text = "";
+            TXTPrima.Text = "";
+            TXTSumaAsegurada.Text = "";
+            TXTProductos.Text = "";
+            cmbProductos.SelectedIndex = -1;
+        }
+
         private void BTNModificarPlan_Click(object sender, EventArgs e)
         {
             DGCobertura.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             DGCobertura.DataSource = null;
-            List<_686DP_Cobertura> Cobeturas = bll.traerCoberturas();
+            List<_686DP_Cobertura> Cobeturas = bllc.traerCoberturas();
             DGCobertura.DataSource = Cobeturas;
 
 
             int codigoCobertura = Convert.ToInt32(DGCobertura.SelectedRows[0].Cells["CodigoCobertura"].Value);
 
             // Validar que no esté ya asociada
-            if (bll.YaExisteRelacionCoberturaPlan(codigoPlanSeleccionado, codigoCobertura))
+            if (bllp.YaExisteRelacionCoberturaPlan(codigoPlanSeleccionado, codigoCobertura))
             {
                 MessageBox.Show("Esta cobertura ya está asociada al plan.");
                 return;
             }
 
             // Asociar
-            bll.AsociarCoberturaAPlan(codigoPlanSeleccionado, codigoCobertura);
+            bllp.AsociarCoberturaAPlan(codigoPlanSeleccionado, codigoCobertura);
             MessageBox.Show("Cobertura asociada con éxito.");
 
         }
@@ -307,7 +313,7 @@ namespace AseguraYa
                 return;
             }
 
-            bll.AsociarPlanASeguro(codigoPlan, codSeguro);
+            bllp.AsociarPlanASeguro(codigoPlan, codSeguro);
             MessageBox.Show("Plan asociado al seguro con éxito.");
         }
 
@@ -317,7 +323,7 @@ namespace AseguraYa
             {
                 string Producto = cmbProductos.SelectedItem.ToString();
 
-                List<_686DP_Plan> planes = bll.TraerPlanesFiltrado(Producto);
+                List<_686DP_Plan> planes = bllp.TraerPlanesFiltrado(Producto);
                 DGPlan.DataSource = null;
                 DGPlan.DataSource = planes;
                 DGPlan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -449,18 +455,13 @@ namespace AseguraYa
             {
                 int codigoCobertura = Convert.ToInt32(fila.Cells["CondigoCobertura"].Value);
 
-                if (!bll.YaExisteRelacionCoberturaPlan(codigoPlanSeleccionado, codigoCobertura))
+                if (!bllp.YaExisteRelacionCoberturaPlan(codigoPlanSeleccionado, codigoCobertura))
                 {
-                    bll.AsociarCoberturaAPlan(codigoPlanSeleccionado, codigoCobertura);
+                    bllp.AsociarCoberturaAPlan(codigoPlanSeleccionado, codigoCobertura);
                 }
             }
 
             MessageBox.Show("Coberturas asociadas con éxito.");
-
-        }
-
-        private void BTNEliminarPlan_Click(object sender, EventArgs e)
-        {
 
         }
     }

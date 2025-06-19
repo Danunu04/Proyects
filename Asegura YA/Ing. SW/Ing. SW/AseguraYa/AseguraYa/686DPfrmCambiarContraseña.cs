@@ -81,6 +81,11 @@ namespace AseguraYa
                 }
 
                 string contraseñaNuevaHash = _686DPCriptoManager._686DPGetSHA256(contraseñaNueva);
+                if(contraseñaNuevaHash == contraseñaActualHash)
+                {
+                    MessageBox.Show("La contraseña nueva no puede ser igual a la contraseña actual.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 bll._686DPVerificarContraseñas(DNI);
 
                 bool ok = bll._686DPCompararContraseñas(contraseñaNuevaHash, contraseñaBD, DNI);
