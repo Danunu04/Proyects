@@ -96,13 +96,18 @@ namespace AseguraYa
             try
             {
                 string Producto = CMBProducto.SelectedItem.ToString();
+
+                List<_686DP_Plan> planes = blls.TraerPlanesFiltrado(Producto);
                 DGPlan.DataSource = null;
-                DGPlan.DataSource = blls.TraerPlanesFiltrado(Producto);
+                DGPlan.DataSource = planes;
                 DGPlan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                DGCoberturas.DataSource = null;
+                DGCoberturas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al filtrar planes: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al filtrar planes y coberturas: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -222,6 +227,11 @@ namespace AseguraYa
                     MessageBox.Show("Error de validación: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void CMBProducto_SelectedValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

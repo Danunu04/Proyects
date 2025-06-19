@@ -115,6 +115,7 @@
             this.CMBProducto.Size = new System.Drawing.Size(463, 21);
             this.CMBProducto.TabIndex = 9;
             this.CMBProducto.SelectedIndexChanged += new System.EventHandler(this.CMBProducto_SelectedIndexChanged);
+            this.CMBProducto.SelectedValueChanged += new System.EventHandler(this.CMBProducto_SelectedValueChanged);
             // 
             // DGCoberturas
             // 

@@ -313,7 +313,22 @@ namespace AseguraYa
 
         private void cmbProductos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
+                string Producto = cmbProductos.SelectedItem.ToString();
 
+                List<_686DP_Plan> planes = bll.TraerPlanesFiltrado(Producto);
+                DGPlan.DataSource = null;
+                DGPlan.DataSource = planes;
+                DGPlan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                DGCobertura.DataSource = null;
+                DGCobertura.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al filtrar planes y coberturas: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void TXTProductos_TextChanged(object sender, EventArgs e)
