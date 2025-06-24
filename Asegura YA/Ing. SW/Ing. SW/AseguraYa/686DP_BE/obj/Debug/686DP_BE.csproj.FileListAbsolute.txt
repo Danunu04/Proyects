@@ -1,0 +1,42 @@
+D:\Ing. SW\AseguraYa\686DP_BE\bin\Debug\686DP_BE.dll
+D:\Ing. SW\AseguraYa\686DP_BE\bin\Debug\686DP_BE.pdb
+D:\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.AssemblyReference.cache
+D:\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.CoreCompileInputs.cache
+D:\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.dll
+D:\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.pdb
+D:\Ing. SW\Ing. SW\AseguraYa\686DP_BE\bin\Debug\686DP_BE.dll
+D:\Ing. SW\Ing. SW\AseguraYa\686DP_BE\bin\Debug\686DP_BE.pdb
+D:\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.AssemblyReference.cache
+D:\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.CoreCompileInputs.cache
+D:\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.dll
+D:\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_BE\bin\Debug\686DP_BE.dll
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_BE\bin\Debug\686DP_BE.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.AssemblyReference.cache
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.CoreCompileInputs.cache
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.dll
+C:\Users\Dana Perelmuter\Desktop\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.pdb
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_BE\bin\Debug\686DP_BE.dll
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_BE\bin\Debug\686DP_BE.pdb
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.AssemblyReference.cache
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.CoreCompileInputs.cache
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.dll
+D:\ProyectosDana\Proyects\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.pdb
+C:\Users\Dana Perelmuter\Desktop\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\bin\Debug\686DP_BE.dll
+C:\Users\Dana Perelmuter\Desktop\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\bin\Debug\686DP_BE.pdb
+C:\Users\Dana Perelmuter\Desktop\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.AssemblyReference.cache
+C:\Users\Dana Perelmuter\Desktop\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.CoreCompileInputs.cache
+C:\Users\Dana Perelmuter\Desktop\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.dll
+C:\Users\Dana Perelmuter\Desktop\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\bin\Debug\686DP_BE.dll
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\bin\Debug\686DP_BE.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.AssemblyReference.cache
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.CoreCompileInputs.cache
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.dll
+C:\Users\Dana Perelmuter\Desktop\Proyects\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.pdb
+C:\Users\Navegador\Desktop\Proyects-version_19_06\Proyects-version_19_06\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\bin\Debug\686DP_BE.dll
+C:\Users\Navegador\Desktop\Proyects-version_19_06\Proyects-version_19_06\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\bin\Debug\686DP_BE.pdb
+C:\Users\Navegador\Desktop\Proyects-version_19_06\Proyects-version_19_06\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.AssemblyReference.cache
+C:\Users\Navegador\Desktop\Proyects-version_19_06\Proyects-version_19_06\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.CoreCompileInputs.cache
+C:\Users\Navegador\Desktop\Proyects-version_19_06\Proyects-version_19_06\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.dll
+C:\Users\Navegador\Desktop\Proyects-version_19_06\Proyects-version_19_06\Asegura YA\Ing. SW\Ing. SW\AseguraYa\686DP_BE\obj\Debug\686DP_BE.pdb
