@@ -1,0 +1,7 @@
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Adapter\Adapter\bin\Debug\Adapter.exe.config
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Adapter\Adapter\bin\Debug\Adapter.exe
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Adapter\Adapter\bin\Debug\Adapter.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Adapter\Adapter\obj\Debug\Adapter.csproj.AssemblyReference.cache
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Adapter\Adapter\obj\Debug\Adapter.csproj.CoreCompileInputs.cache
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Adapter\Adapter\obj\Debug\Adapter.exe
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Adapter\Adapter\obj\Debug\Adapter.pdb

@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Iterator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{427C0435-083A-402A-A89D-A7C70C220BD0}|Iterator\\Iterator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\iterator\\iterator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{427C0435-083A-402A-A89D-A7C70C220BD0}|Iterator\\Iterator.csproj|solutionrelative:iterator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{427C0435-083A-402A-A89D-A7C70C220BD0}|Iterator\\Iterator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\iterator\\iterator\\playlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{427C0435-083A-402A-A89D-A7C70C220BD0}|Iterator\\Iterator.csproj|solutionrelative:iterator\\playlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{427C0435-083A-402A-A89D-A7C70C220BD0}|Iterator\\Iterator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\iterator\\iterator\\iteradorcanciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{427C0435-083A-402A-A89D-A7C70C220BD0}|Iterator\\Iterator.csproj|solutionrelative:iterator\\iteradorcanciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{427C0435-083A-402A-A89D-A7C70C220BD0}|Iterator\\Iterator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\iterator\\iterator\\cancion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{427C0435-083A-402A-A89D-A7C70C220BD0}|Iterator\\Iterator.csproj|solutionrelative:iterator\\cancion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{427C0435-083A-402A-A89D-A7C70C220BD0}|Iterator\\Iterator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\iterator\\iterator\\i-iterator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{427C0435-083A-402A-A89D-A7C70C220BD0}|Iterator\\Iterator.csproj|solutionrelative:iterator\\i-iterator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f4e46f1e-cf83-40aa-b568-a627394bc994}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Playlist.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Iterator\\Iterator\\Playlist.cs",
+              "RelativeDocumentMoniker": "Iterator\\Playlist.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Iterator\\Iterator\\Playlist.cs",
+              "RelativeToolTip": "Iterator\\Playlist.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAowBoAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T15:04:53.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IteradorCanciones.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Iterator\\Iterator\\IteradorCanciones.cs",
+              "RelativeDocumentMoniker": "Iterator\\IteradorCanciones.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Iterator\\Iterator\\IteradorCanciones.cs",
+              "RelativeToolTip": "Iterator\\IteradorCanciones.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T15:03:56.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Cancion.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Iterator\\Iterator\\Cancion.cs",
+              "RelativeDocumentMoniker": "Iterator\\Cancion.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Iterator\\Iterator\\Cancion.cs",
+              "RelativeToolTip": "Iterator\\Cancion.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T15:03:00.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "I-iterator.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Iterator\\Iterator\\I-iterator.cs",
+              "RelativeDocumentMoniker": "Iterator\\I-iterator.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Iterator\\Iterator\\I-iterator.cs",
+              "RelativeToolTip": "Iterator\\I-iterator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T15:01:40.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Iterator\\Iterator\\Program.cs",
+              "RelativeDocumentMoniker": "Iterator\\Program.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Iterator\\Iterator\\Program.cs",
+              "RelativeToolTip": "Iterator\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T15:01:16.818Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

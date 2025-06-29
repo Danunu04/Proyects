@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Adapter\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\adapter\\adapter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|solutionrelative:adapter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\adapter\\adapter\\transferenciaadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|solutionrelative:adapter\\transferenciaadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\adapter\\adapter\\trensferencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|solutionrelative:adapter\\trensferencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\adapter\\adapter\\tarjeta de credito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|solutionrelative:adapter\\tarjeta de credito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\adapter\\adapter\\metodopago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|solutionrelative:adapter\\metodopago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f4e46f1e-cf83-40aa-b568-a627394bc994}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Trensferencia.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Adapter\\Adapter\\Trensferencia.cs",
+              "RelativeDocumentMoniker": "Adapter\\Trensferencia.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Adapter\\Adapter\\Trensferencia.cs",
+              "RelativeToolTip": "Adapter\\Trensferencia.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T23:30:47.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TransferenciaAdapter.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Adapter\\Adapter\\TransferenciaAdapter.cs",
+              "RelativeDocumentMoniker": "Adapter\\TransferenciaAdapter.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Adapter\\Adapter\\TransferenciaAdapter.cs",
+              "RelativeToolTip": "Adapter\\TransferenciaAdapter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T23:29:56.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Tarjeta de credito.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Adapter\\Adapter\\Tarjeta de credito.cs",
+              "RelativeDocumentMoniker": "Adapter\\Tarjeta de credito.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Adapter\\Adapter\\Tarjeta de credito.cs",
+              "RelativeToolTip": "Adapter\\Tarjeta de credito.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T23:28:32.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MetodoPago.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Adapter\\Adapter\\MetodoPago.cs",
+              "RelativeDocumentMoniker": "Adapter\\MetodoPago.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Adapter\\Adapter\\MetodoPago.cs",
+              "RelativeToolTip": "Adapter\\MetodoPago.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T23:27:36.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Adapter\\Adapter\\Program.cs",
+              "RelativeDocumentMoniker": "Adapter\\Program.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Adapter\\Adapter\\Program.cs",
+              "RelativeToolTip": "Adapter\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T23:27:10.886Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

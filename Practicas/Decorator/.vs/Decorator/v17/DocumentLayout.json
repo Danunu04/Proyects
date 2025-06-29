@@ -1,0 +1,181 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\decorator\\decorator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|solutionrelative:decorator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\decorator\\decorator\\bacon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|solutionrelative:decorator\\bacon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\decorator\\decorator\\queso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|solutionrelative:decorator\\queso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\decorator\\decorator\\papa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|solutionrelative:decorator\\papa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\decorator\\decorator\\agregado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|solutionrelative:decorator\\agregado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\decorator\\decorator\\hamburguesaamericana.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|solutionrelative:decorator\\hamburguesaamericana.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\decorator\\decorator\\hamburguesacompleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|solutionrelative:decorator\\hamburguesacompleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\decorator\\decorator\\hamburguesaconhuevo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|solutionrelative:decorator\\hamburguesaconhuevo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\decorator\\decorator\\hamburguesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DD04324-890D-494B-83BB-ECCE30DAB44C}|Decorator\\Decorator.csproj|solutionrelative:decorator\\hamburguesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f4e46f1e-cf83-40aa-b568-a627394bc994}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Bacon.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\Bacon.cs",
+              "RelativeDocumentMoniker": "Decorator\\Bacon.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\Bacon.cs",
+              "RelativeToolTip": "Decorator\\Bacon.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T00:40:35.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Queso.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\Queso.cs",
+              "RelativeDocumentMoniker": "Decorator\\Queso.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\Queso.cs",
+              "RelativeToolTip": "Decorator\\Queso.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T00:39:33.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Papa.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\Papa.cs",
+              "RelativeDocumentMoniker": "Decorator\\Papa.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\Papa.cs",
+              "RelativeToolTip": "Decorator\\Papa.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T00:37:01.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Agregado.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\Agregado.cs",
+              "RelativeDocumentMoniker": "Decorator\\Agregado.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\Agregado.cs",
+              "RelativeToolTip": "Decorator\\Agregado.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T00:32:38.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HamburguesaConHuevo.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\HamburguesaConHuevo.cs",
+              "RelativeDocumentMoniker": "Decorator\\HamburguesaConHuevo.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\HamburguesaConHuevo.cs",
+              "RelativeToolTip": "Decorator\\HamburguesaConHuevo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T00:31:33.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HamburguesaAmericana.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\HamburguesaAmericana.cs",
+              "RelativeDocumentMoniker": "Decorator\\HamburguesaAmericana.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\HamburguesaAmericana.cs",
+              "RelativeToolTip": "Decorator\\HamburguesaAmericana.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T00:29:49.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HamburguesaCompleta.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\HamburguesaCompleta.cs",
+              "RelativeDocumentMoniker": "Decorator\\HamburguesaCompleta.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\HamburguesaCompleta.cs",
+              "RelativeToolTip": "Decorator\\HamburguesaCompleta.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T00:25:48.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Hamburguesa.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\Hamburguesa.cs",
+              "RelativeDocumentMoniker": "Decorator\\Hamburguesa.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\Hamburguesa.cs",
+              "RelativeToolTip": "Decorator\\Hamburguesa.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T00:24:31.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\Program.cs",
+              "RelativeDocumentMoniker": "Decorator\\Program.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Decorator\\Decorator\\Program.cs",
+              "RelativeToolTip": "Decorator\\Program.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAgwCAAAACwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T00:24:03.388Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
