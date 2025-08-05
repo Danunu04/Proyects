@@ -1,0 +1,22 @@
+{
+  "Usuario": "Usuario",
+  "IniciarSesion": "Iniciar Sesion",
+  "CambiarContraseña": "Cambiar Contraseña",
+  "Administrador": "Admin",
+  "GestionUsuarios": "Gestion de usuarios",
+  "GestionPerfiles": "Gestion de perdiles",
+  "BitacoraEventos": "Bitacora de eventos",
+  "GestionRespaldo": "Gestion de respaldo",
+  "Mestro": "Maestro",
+  "GestionClientes": "Gestion de clientes",
+  "GestionProductos": "Gestion de productos",
+  "Contratacion": "Contratacion",
+  "GenerarContratacion": "Generar contratacion",
+  "Modificar": "Modificar Seguro",
+  "Eliminar": "Eliminar Seguro",
+  "Siniestros": "Siniestros",
+  "CerrarSesion": "Cerrar Sesion",
+  "CambiarIdioma": "Cambiar Idioma",
+  "Ayuda": "Ayuda",
+  "DP_Polizas":"Polizas"
+}

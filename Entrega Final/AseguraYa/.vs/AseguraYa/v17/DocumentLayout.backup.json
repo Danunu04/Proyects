@@ -1,0 +1,656 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|c:\\users\\dpere\\escritorio\\version9_7\\perelmuter dana\\perelmuter dana\\perelmuter dana\\aseguraya\\aseguraya\\686dp_frmpolizas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dp_frmpolizas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|c:\\users\\dpere\\escritorio\\version9_7\\perelmuter dana\\perelmuter dana\\perelmuter dana\\aseguraya\\aseguraya\\686dp_frmpolizas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dp_frmpolizas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD70163B-4FB8-4693-94DE-144FE11FB574}|686DP_MPP\\686DP_MPP.csproj|c:\\users\\dpere\\escritorio\\version9_7\\perelmuter dana\\perelmuter dana\\perelmuter dana\\aseguraya\\686dp_mpp\\686dp_mpppoliza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD70163B-4FB8-4693-94DE-144FE11FB574}|686DP_MPP\\686DP_MPP.csproj|solutionrelative:686dp_mpp\\686dp_mpppoliza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7379EB-8D9B-4F0F-A0B4-AE3CBA6050F2}|686DP_BLL\\686DP_BLL.csproj|c:\\users\\dpere\\escritorio\\version9_7\\perelmuter dana\\perelmuter dana\\perelmuter dana\\aseguraya\\686dp_bll\\686dp_bllpoliza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7379EB-8D9B-4F0F-A0B4-AE3CBA6050F2}|686DP_BLL\\686DP_BLL.csproj|solutionrelative:686dp_bll\\686dp_bllpoliza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0370561D-7DF9-4A72-870E-397E65EAA97F}|686DP_BE\\686DP_BE.csproj|c:\\users\\dpere\\escritorio\\version9_7\\perelmuter dana\\perelmuter dana\\perelmuter dana\\aseguraya\\686dp_be\\686dp_poliza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0370561D-7DF9-4A72-870E-397E65EAA97F}|686DP_BE\\686DP_BE.csproj|solutionrelative:686dp_be\\686dp_poliza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E424721-9E86-4EE5-A443-7DA7952172C1}|686DP_Dal\\686DP_DAL.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686dp_dal\\686dpdalgeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E424721-9E86-4EE5-A443-7DA7952172C1}|686DP_Dal\\686DP_DAL.csproj|solutionrelative:686dp_dal\\686dpdalgeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmgenerarcontrataci\u00F3n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmgenerarcontrataci\u00F3n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7379EB-8D9B-4F0F-A0B4-AE3CBA6050F2}|686DP_BLL\\686DP_BLL.csproj|c:\\users\\dpere\\escritorio\\version9_7\\perelmuter dana\\perelmuter dana\\perelmuter dana\\aseguraya\\686dp_bll\\686dpbllseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7379EB-8D9B-4F0F-A0B4-AE3CBA6050F2}|686DP_BLL\\686DP_BLL.csproj|solutionrelative:686dp_bll\\686dpbllseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmgenerarcontrataci\u00F3n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmgenerarcontrataci\u00F3n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0370561D-7DF9-4A72-870E-397E65EAA97F}|686DP_BE\\686DP_BE.csproj|c:\\users\\dpere\\escritorio\\version9_7\\perelmuter dana\\perelmuter dana\\perelmuter dana\\aseguraya\\686dp_be\\686dp_seguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0370561D-7DF9-4A72-870E-397E65EAA97F}|686DP_BE\\686DP_BE.csproj|solutionrelative:686dp_be\\686dp_seguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD70163B-4FB8-4693-94DE-144FE11FB574}|686DP_MPP\\686DP_MPP.csproj|c:\\users\\dpere\\escritorio\\version9_7\\perelmuter dana\\perelmuter dana\\perelmuter dana\\aseguraya\\686dp_mpp\\686dpmppseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD70163B-4FB8-4693-94DE-144FE11FB574}|686DP_MPP\\686DP_MPP.csproj|solutionrelative:686dp_mpp\\686dpmppseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|c:\\users\\dpere\\escritorio\\version9_7\\perelmuter dana\\perelmuter dana\\perelmuter dana\\aseguraya\\aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmcancelarseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmcancelarseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmcrearperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmcrearperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2F957F3-0032-4788-915F-F769F8436477}|686DP_SERVICIOS\\686DP_SERVICIOS.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686dp_servicios\\observer\\686dp_languajemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2F957F3-0032-4788-915F-F769F8436477}|686DP_SERVICIOS\\686DP_SERVICIOS.csproj|solutionrelative:686dp_servicios\\observer\\686dp_languajemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dp_frmcrearproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dp_frmcrearproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dp_frmcrearproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dp_frmcrearproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmcancelarseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmcancelarseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmcrearperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmcrearperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmdatosextra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmdatosextra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmdatosextra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmdatosextra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmgestionarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmgestionarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmgestionarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmgestionarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmidioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmidioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmidioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmidioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmmodificarseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmmodificarseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmmodificarseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmmodificarseguro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmregistrarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmregistrarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\aseguraya\\686dpfrmregistrarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmregistrarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD70163B-4FB8-4693-94DE-144FE11FB574}|686DP_MPP\\686DP_MPP.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686dp_mpp\\686mppclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD70163B-4FB8-4693-94DE-144FE11FB574}|686DP_MPP\\686DP_MPP.csproj|solutionrelative:686dp_mpp\\686mppclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7379EB-8D9B-4F0F-A0B4-AE3CBA6050F2}|686DP_BLL\\686DP_BLL.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686dp_bll\\686dp_bllusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7379EB-8D9B-4F0F-A0B4-AE3CBA6050F2}|686DP_BLL\\686DP_BLL.csproj|solutionrelative:686dp_bll\\686dp_bllusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD70163B-4FB8-4693-94DE-144FE11FB574}|686DP_MPP\\686DP_MPP.csproj|C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686dp_mpp\\686dpmppusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD70163B-4FB8-4693-94DE-144FE11FB574}|686DP_MPP\\686DP_MPP.csproj|solutionrelative:686dp_mpp\\686dpmppusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f4e46f1e-cf83-40aa-b568-a627394bc994}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "686DP_frmPolizas.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DP_frmPolizas.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DP_frmPolizas.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DP_frmPolizas.cs",
+              "RelativeToolTip": "AseguraYa\\686DP_frmPolizas.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAADwvysAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T22:44:11.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "686DPDalGeneral.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_Dal\\686DPDalGeneral.cs",
+              "RelativeDocumentMoniker": "686DP_Dal\\686DPDalGeneral.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_Dal\\686DPDalGeneral.cs",
+              "RelativeToolTip": "686DP_Dal\\686DPDalGeneral.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAnwCIAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T19:57:22.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "686DP_Poliza.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_BE\\686DP_Poliza.cs",
+              "RelativeDocumentMoniker": "686DP_BE\\686DP_Poliza.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_BE\\686DP_Poliza.cs",
+              "RelativeToolTip": "686DP_BE\\686DP_Poliza.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T23:55:45.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "686DP_BLLPoliza.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_BLL\\686DP_BLLPoliza.cs",
+              "RelativeDocumentMoniker": "686DP_BLL\\686DP_BLLPoliza.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_BLL\\686DP_BLLPoliza.cs",
+              "RelativeToolTip": "686DP_BLL\\686DP_BLLPoliza.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAcwE0AAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T22:52:34.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "686DP_MPPPoliza.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_MPP\\686DP_MPPPoliza.cs",
+              "RelativeDocumentMoniker": "686DP_MPP\\686DP_MPPPoliza.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_MPP\\686DP_MPPPoliza.cs",
+              "RelativeToolTip": "686DP_MPP\\686DP_MPPPoliza.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAkwKMAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T22:53:07.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "686DPfrmInicio.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmInicio.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs",
+              "RelativeToolTip": "AseguraYa\\686DPfrmInicio.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAowGMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T21:08:06.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "686DPfrmGestionUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmGestionUsuarios.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmGestionUsuarios.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmGestionUsuarios.cs",
+              "RelativeToolTip": "AseguraYa\\686DPfrmGestionUsuarios.cs",
+              "ViewState": "AgIAADkBAAAAAAAAAAAUwEsBAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T16:01:28.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "686DPfrmInicio.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmInicio.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs [Design]",
+              "RelativeToolTip": "AseguraYa\\686DPfrmInicio.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T21:00:30.661Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "686DP_frmPolizas.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DP_frmPolizas.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DP_frmPolizas.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DP_frmPolizas.cs [Design]",
+              "RelativeToolTip": "AseguraYa\\686DP_frmPolizas.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T22:42:53.872Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "686DPfrmGestionUsuarios.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmGestionUsuarios.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmGestionUsuarios.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmGestionUsuarios.cs [Design]",
+              "RelativeToolTip": "AseguraYa\\686DPfrmGestionUsuarios.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T16:01:27.082Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "686DPfrmGenerarContrataci\u00F3n.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmGenerarContrataci\u00F3n.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmGenerarContrataci\u00F3n.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmGenerarContrataci\u00F3n.cs",
+              "RelativeToolTip": "AseguraYa\\686DPfrmGenerarContrataci\u00F3n.cs",
+              "ViewState": "AgIAANEAAAAAAAAAAAAkwO4AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T19:14:33.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "686DPfrmGenerarContrataci\u00F3n.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmGenerarContrataci\u00F3n.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmGenerarContrataci\u00F3n.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmGenerarContrataci\u00F3n.cs [Design]",
+              "RelativeToolTip": "AseguraYa\\686DPfrmGenerarContrataci\u00F3n.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T19:14:30.608Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "686DPBLLSeguro.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_BLL\\686DPBLLSeguro.cs",
+              "RelativeDocumentMoniker": "686DP_BLL\\686DPBLLSeguro.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_BLL\\686DPBLLSeguro.cs",
+              "RelativeToolTip": "686DP_BLL\\686DPBLLSeguro.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwDEAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T22:16:01.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "686DPfrmLogIn.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmLogIn.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmLogIn.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmLogIn.cs",
+              "RelativeToolTip": "AseguraYa\\686DPfrmLogIn.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAmwCEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T15:47:02.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "686DP_Seguro.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_BE\\686DP_Seguro.cs",
+              "RelativeDocumentMoniker": "686DP_BE\\686DP_Seguro.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_BE\\686DP_Seguro.cs",
+              "RelativeToolTip": "686DP_BE\\686DP_Seguro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T22:14:13.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "686DPMPPSeguro.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_MPP\\686DPMPPSeguro.cs",
+              "RelativeDocumentMoniker": "686DP_MPP\\686DPMPPSeguro.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_MPP\\686DPMPPSeguro.cs",
+              "RelativeToolTip": "686DP_MPP\\686DPMPPSeguro.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAkwEIAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T22:17:21.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "686DP_LanguajeManager.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_SERVICIOS\\Observer\\686DP_LanguajeManager.cs",
+              "RelativeDocumentMoniker": "686DP_SERVICIOS\\Observer\\686DP_LanguajeManager.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_SERVICIOS\\Observer\\686DP_LanguajeManager.cs",
+              "RelativeToolTip": "686DP_SERVICIOS\\Observer\\686DP_LanguajeManager.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAvwDsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T19:58:14.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "686DPfrmCrearPerfil.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmCrearPerfil.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmCrearPerfil.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmCrearPerfil.cs",
+              "RelativeToolTip": "AseguraYa\\686DPfrmCrearPerfil.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAswC0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T20:14:24.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "686DPfrmCancelarSeguro.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmCancelarSeguro.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmCancelarSeguro.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmCancelarSeguro.cs [Design]",
+              "RelativeToolTip": "AseguraYa\\686DPfrmCancelarSeguro.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T19:10:42.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "686DPfrmLogIn.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmLogIn.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmLogIn.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmLogIn.cs [Design]",
+              "RelativeToolTip": "AseguraYa\\686DPfrmLogIn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T15:47:01.201Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "686DPfrmCambiarContrase\u00F1a.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmCambiarContrase\u00F1a.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmCambiarContrase\u00F1a.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmCambiarContrase\u00F1a.cs",
+              "RelativeToolTip": "AseguraYa\\686DPfrmCambiarContrase\u00F1a.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAswDcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T21:05:31.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "686DP_frmCrearProducto.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DP_frmCrearProducto.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DP_frmCrearProducto.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DP_frmCrearProducto.cs",
+              "RelativeToolTip": "AseguraYa\\686DP_frmCrearProducto.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAswCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T18:52:41.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "686DP_frmCrearProducto.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DP_frmCrearProducto.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DP_frmCrearProducto.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DP_frmCrearProducto.cs [Design]",
+              "RelativeToolTip": "AseguraYa\\686DP_frmCrearProducto.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T18:52:40.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "686DPfrmCambiarContrase\u00F1a.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmCambiarContrase\u00F1a.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmCambiarContrase\u00F1a.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmCambiarContrase\u00F1a.cs [Design]",
+              "RelativeToolTip": "AseguraYa\\686DPfrmCambiarContrase\u00F1a.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T19:46:31.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "686DPfrmCancelarSeguro.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmCancelarSeguro.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmCancelarSeguro.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmCancelarSeguro.cs",
+              "RelativeToolTip": "AseguraYa\\686DPfrmCancelarSeguro.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAADwv2QAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T19:10:54.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "686DPfrmCrearPerfil.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmCrearPerfil.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmCrearPerfil.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmCrearPerfil.cs [Design]",
+              "RelativeToolTip": "AseguraYa\\686DPfrmCrearPerfil.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T19:48:52.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "686DPfrmDatosExtra.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmDatosExtra.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmDatosExtra.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmDatosExtra.cs",
+              "RelativeToolTip": "AseguraYa\\686DPfrmDatosExtra.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAswCMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T21:07:07.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "686DPfrmDatosExtra.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmDatosExtra.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmDatosExtra.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmDatosExtra.cs [Design]",
+              "RelativeToolTip": "AseguraYa\\686DPfrmDatosExtra.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T20:55:04.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "686DPfrmGestionarClientes.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmGestionarClientes.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmGestionarClientes.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmGestionarClientes.cs",
+              "RelativeToolTip": "AseguraYa\\686DPfrmGestionarClientes.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAkwCUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T18:39:05.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "686DPfrmGestionarClientes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmGestionarClientes.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmGestionarClientes.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmGestionarClientes.cs [Design]",
+              "RelativeToolTip": "AseguraYa\\686DPfrmGestionarClientes.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T18:39:02.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "686DPfrmIdioma.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmIdioma.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmIdioma.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmIdioma.cs",
+              "RelativeToolTip": "AseguraYa\\686DPfrmIdioma.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T21:07:57.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "686DPfrmIdioma.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmIdioma.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmIdioma.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmIdioma.cs [Design]",
+              "RelativeToolTip": "AseguraYa\\686DPfrmIdioma.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T20:54:43.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "686DPfrmModificarSeguro.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmModificarSeguro.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmModificarSeguro.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmModificarSeguro.cs",
+              "RelativeToolTip": "AseguraYa\\686DPfrmModificarSeguro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T19:27:56.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "686DPfrmModificarSeguro.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmModificarSeguro.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmModificarSeguro.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmModificarSeguro.cs [Design]",
+              "RelativeToolTip": "AseguraYa\\686DPfrmModificarSeguro.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T19:27:54.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "686DPfrmRegistrarCliente.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmRegistrarCliente.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmRegistrarCliente.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmRegistrarCliente.cs",
+              "RelativeToolTip": "AseguraYa\\686DPfrmRegistrarCliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T21:04:11.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "686DPfrmRegistrarCliente.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmRegistrarCliente.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmRegistrarCliente.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\AseguraYa\\686DPfrmRegistrarCliente.cs [Design]",
+              "RelativeToolTip": "AseguraYa\\686DPfrmRegistrarCliente.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T21:02:12.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "686MPPClientes.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_MPP\\686MPPClientes.cs",
+              "RelativeDocumentMoniker": "686DP_MPP\\686MPPClientes.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_MPP\\686MPPClientes.cs",
+              "RelativeToolTip": "686DP_MPP\\686MPPClientes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T18:38:55.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "686DPMPPUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_MPP\\686DPMPPUsuarios.cs",
+              "RelativeDocumentMoniker": "686DP_MPP\\686DPMPPUsuarios.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_MPP\\686DPMPPUsuarios.cs",
+              "RelativeToolTip": "686DP_MPP\\686DPMPPUsuarios.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAkwHQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T16:27:55.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "686DP_BLLUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_BLL\\686DP_BLLUsuario.cs",
+              "RelativeDocumentMoniker": "686DP_BLL\\686DP_BLLUsuario.cs",
+              "ToolTip": "C:\\Users\\dpere\\Escritorio\\Version9_7\\Perelmuter Dana\\Perelmuter Dana\\Perelmuter Dana\\AseguraYa\\686DP_BLL\\686DP_BLLUsuario.cs",
+              "RelativeToolTip": "686DP_BLL\\686DP_BLLUsuario.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAiwJgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T16:27:43.236Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

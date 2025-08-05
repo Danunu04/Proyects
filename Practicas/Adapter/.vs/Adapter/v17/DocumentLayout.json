@@ -7,19 +7,19 @@
       "RelativeMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|solutionrelative:adapter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\adapter\\adapter\\transferenciaadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Adapter\\adapter\\transferenciaadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|solutionrelative:adapter\\transferenciaadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\adapter\\adapter\\trensferencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Adapter\\adapter\\trensferencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|solutionrelative:adapter\\trensferencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\adapter\\adapter\\tarjeta de credito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Adapter\\adapter\\tarjeta de credito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|solutionrelative:adapter\\tarjeta de credito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\adapter\\adapter\\metodopago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Adapter\\adapter\\metodopago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC1AA7DA-5586-4BA7-A8E0-FBBEA8BEF683}|Adapter\\Adapter.csproj|solutionrelative:adapter\\metodopago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -50,8 +50,7 @@
               "RelativeToolTip": "Adapter\\Trensferencia.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T23:30:47.498Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T23:30:47.498Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "Adapter\\TransferenciaAdapter.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T23:29:56.126Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T23:29:56.126Z"
             },
             {
               "$type": "Document",
@@ -76,8 +74,7 @@
               "RelativeToolTip": "Adapter\\Tarjeta de credito.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T23:28:32.4Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T23:28:32.4Z"
             },
             {
               "$type": "Document",
@@ -89,8 +86,7 @@
               "RelativeToolTip": "Adapter\\MetodoPago.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T23:27:36.248Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T23:27:36.248Z"
             },
             {
               "$type": "Document",

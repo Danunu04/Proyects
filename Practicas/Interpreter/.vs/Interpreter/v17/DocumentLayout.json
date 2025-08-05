@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Interpreter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1E8CFD2-0FDC-4AC7-A11E-B8B91D07B599}|Interpreter\\Interpreter.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\interpreter\\interpreter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1E8CFD2-0FDC-4AC7-A11E-B8B91D07B599}|Interpreter\\Interpreter.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Interpreter\\interpreter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1E8CFD2-0FDC-4AC7-A11E-B8B91D07B599}|Interpreter\\Interpreter.csproj|solutionrelative:interpreter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,15 +11,19 @@
       "RelativeMoniker": "D:0:0:{E1E8CFD2-0FDC-4AC7-A11E-B8B91D07B599}|Interpreter\\Interpreter.csproj|solutionrelative:interpreter\\andexpression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1E8CFD2-0FDC-4AC7-A11E-B8B91D07B599}|Interpreter\\Interpreter.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\interpreter\\interpreter\\terminarexpression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1E8CFD2-0FDC-4AC7-A11E-B8B91D07B599}|Interpreter\\Interpreter.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\interpreter\\interpreter\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E1E8CFD2-0FDC-4AC7-A11E-B8B91D07B599}|Interpreter\\Interpreter.csproj|solutionrelative:interpreter\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1E8CFD2-0FDC-4AC7-A11E-B8B91D07B599}|Interpreter\\Interpreter.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Interpreter\\interpreter\\terminarexpression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1E8CFD2-0FDC-4AC7-A11E-B8B91D07B599}|Interpreter\\Interpreter.csproj|solutionrelative:interpreter\\terminarexpression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1E8CFD2-0FDC-4AC7-A11E-B8B91D07B599}|Interpreter\\Interpreter.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\interpreter\\interpreter\\iexpression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1E8CFD2-0FDC-4AC7-A11E-B8B91D07B599}|Interpreter\\Interpreter.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Interpreter\\interpreter\\iexpression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1E8CFD2-0FDC-4AC7-A11E-B8B91D07B599}|Interpreter\\Interpreter.csproj|solutionrelative:interpreter\\iexpression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1E8CFD2-0FDC-4AC7-A11E-B8B91D07B599}|Interpreter\\Interpreter.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\interpreter\\interpreter\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1E8CFD2-0FDC-4AC7-A11E-B8B91D07B599}|Interpreter\\Interpreter.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Interpreter\\interpreter\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1E8CFD2-0FDC-4AC7-A11E-B8B91D07B599}|Interpreter\\Interpreter.csproj|solutionrelative:interpreter\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,33 +46,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Interpreter\\Interpreter\\App.config",
+              "RelativeDocumentMoniker": "Interpreter\\App.config",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Interpreter\\Interpreter\\App.config",
+              "RelativeToolTip": "Interpreter\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-06-30T12:50:15.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ANDExpression.cs",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Interpreter\\Interpreter\\ANDExpression.cs",
               "RelativeDocumentMoniker": "Interpreter\\ANDExpression.cs",
               "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Interpreter\\Interpreter\\ANDExpression.cs",
               "RelativeToolTip": "Interpreter\\ANDExpression.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAIwBkAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAIwBkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-29T13:58:52.549Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TerminarExpression.cs",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Interpreter\\Interpreter\\TerminarExpression.cs",
               "RelativeDocumentMoniker": "Interpreter\\TerminarExpression.cs",
               "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Interpreter\\Interpreter\\TerminarExpression.cs",
               "RelativeToolTip": "Interpreter\\TerminarExpression.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAuwBoAAAAdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAIwBoAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-29T13:12:44.353Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Empleado.cs",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Interpreter\\Interpreter\\Empleado.cs",
               "RelativeDocumentMoniker": "Interpreter\\Empleado.cs",
@@ -76,12 +93,11 @@
               "RelativeToolTip": "Interpreter\\Empleado.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T13:11:28.919Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-29T13:11:28.919Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "IExpression.cs",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Interpreter\\Interpreter\\IExpression.cs",
               "RelativeDocumentMoniker": "Interpreter\\IExpression.cs",
@@ -100,7 +116,7 @@
               "RelativeDocumentMoniker": "Interpreter\\Program.cs",
               "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Interpreter\\Interpreter\\Program.cs",
               "RelativeToolTip": "Interpreter\\Program.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAA1wCQAAAANAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwBsAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-29T13:09:17.638Z",
               "EditorCaption": ""
