@@ -1,0 +1,7 @@
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Memento\Memento\bin\Debug\Memento.exe.config
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Memento\Memento\bin\Debug\Memento.exe
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Memento\Memento\bin\Debug\Memento.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Memento\Memento\obj\Debug\Memento.csproj.AssemblyReference.cache
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Memento\Memento\obj\Debug\Memento.csproj.CoreCompileInputs.cache
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Memento\Memento\obj\Debug\Memento.exe
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Memento\Memento\obj\Debug\Memento.pdb

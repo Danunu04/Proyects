@@ -1,0 +1,96 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Mediator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B2460237-84AB-49B0-A4BA-ED348325FFF1}|Mediator\\Mediator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\mediator\\mediator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2460237-84AB-49B0-A4BA-ED348325FFF1}|Mediator\\Mediator.csproj|solutionrelative:mediator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2460237-84AB-49B0-A4BA-ED348325FFF1}|Mediator\\Mediator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\mediator\\mediator\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2460237-84AB-49B0-A4BA-ED348325FFF1}|Mediator\\Mediator.csproj|solutionrelative:mediator\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2460237-84AB-49B0-A4BA-ED348325FFF1}|Mediator\\Mediator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\mediator\\mediator\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2460237-84AB-49B0-A4BA-ED348325FFF1}|Mediator\\Mediator.csproj|solutionrelative:mediator\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2460237-84AB-49B0-A4BA-ED348325FFF1}|Mediator\\Mediator.csproj|c:\\users\\dana perelmuter\\desktop\\proyects\\practicas\\mediator\\mediator\\mediator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2460237-84AB-49B0-A4BA-ED348325FFF1}|Mediator\\Mediator.csproj|solutionrelative:mediator\\mediator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f4e46f1e-cf83-40aa-b568-a627394bc994}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Chat.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Mediator\\Mediator\\Chat.cs",
+              "RelativeDocumentMoniker": "Mediator\\Chat.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Mediator\\Mediator\\Chat.cs",
+              "RelativeToolTip": "Mediator\\Chat.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCYAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T14:47:42.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Mediator\\Mediator\\Usuario.cs",
+              "RelativeDocumentMoniker": "Mediator\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Mediator\\Mediator\\Usuario.cs",
+              "RelativeToolTip": "Mediator\\Usuario.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAxwBQAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T14:42:04.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Mediator.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Mediator\\Mediator\\Mediator.cs",
+              "RelativeDocumentMoniker": "Mediator\\Mediator.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Mediator\\Mediator\\Mediator.cs",
+              "RelativeToolTip": "Mediator\\Mediator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T14:40:40.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Mediator\\Mediator\\Program.cs",
+              "RelativeDocumentMoniker": "Mediator\\Program.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\Proyects\\Practicas\\Mediator\\Mediator\\Program.cs",
+              "RelativeToolTip": "Mediator\\Program.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAwwCUAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T14:33:24.863Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Iterator\Iterator\obj\Debug\Iterator.csproj.AssemblyReference.cache
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Iterator\Iterator\obj\Debug\Iterator.csproj.CoreCompileInputs.cache
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Iterator\Iterator\bin\Debug\Iterator.exe.config
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Iterator\Iterator\bin\Debug\Iterator.exe
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Iterator\Iterator\bin\Debug\Iterator.pdb
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Iterator\Iterator\obj\Debug\Iterator.exe
+C:\Users\Dana Perelmuter\Desktop\Proyects\Practicas\Iterator\Iterator\obj\Debug\Iterator.pdb

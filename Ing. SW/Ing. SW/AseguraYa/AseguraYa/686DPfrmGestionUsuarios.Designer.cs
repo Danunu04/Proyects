@@ -68,6 +68,7 @@
             this.DP_Datagrid.Size = new System.Drawing.Size(987, 318);
             this.DP_Datagrid.TabIndex = 0;
             this.DP_Datagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DP_Datagrid_CellClick_1);
+            this.DP_Datagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DP_Datagrid_CellContentClick);
             // 
             // DP_BTNCrear
             // 
@@ -195,7 +196,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(39, 460);
+            this.label2.Location = new System.Drawing.Point(36, 434);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 15;
@@ -205,7 +206,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(37, 434);
+            this.label3.Location = new System.Drawing.Point(36, 460);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 16);
             this.label3.TabIndex = 16;
