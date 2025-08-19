@@ -15,6 +15,7 @@ namespace AseguraYa
     {
         public Form1()
         {
+            this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
         }
 
@@ -32,7 +33,6 @@ namespace AseguraYa
             DP_CambiarContraseña.Enabled = false;
             DP_CambiarIdioma.Enabled = false;
             Dp_Ayuda.Enabled = false;
-            DP_CerrarSesion.Enabled = false;
         }
 
         private void DP_IniciarSesion_Click(object sender, EventArgs e)
@@ -62,11 +62,9 @@ namespace AseguraYa
             DP_Contratacion.Enabled = true;
             Dp_Siniestros.Enabled = true;
             DP_CambiarContraseña.Enabled = true;
-            mestroToolStripMenuItem.Enabled = false;
-            DP_CambiarContraseña.Enabled = true;
-            DP_CambiarIdioma.Enabled = false;
-            Dp_Ayuda.Enabled = false;
-            DP_CerrarSesion.Enabled = true;
+            DP_CambiarIdioma.Enabled = true;
+            Dp_Ayuda.Enabled = true;
+            mestroToolStripMenuItem.Enabled = true;
         }
 
         private void DP_CerrarSesion_Click(object sender, EventArgs e)
@@ -128,6 +126,20 @@ namespace AseguraYa
         internal void DesactivarTodo()
         {
             throw new NotImplementedException();
+        }
+
+        private void registrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _686DPfrmGestionarClientes rc = new _686DPfrmGestionarClientes();
+            rc.MdiParent = this;
+            rc.Show();
+        }
+
+        private void gestionDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _686DP_frmCrearProducto cp = new _686DP_frmCrearProducto();
+            cp.MdiParent = this;
+            cp.Show();
         }
     }
 }

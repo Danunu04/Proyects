@@ -1,0 +1,191 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _686DP_Dal
+{
+    public class _686DPDalGeneral
+    {
+        //public SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=AseguraYA;Integrated Security=True");
+        public SqlConnection conn = new SqlConnection(@"Data Source=.\FACULTADDB;Initial Catalog=AseguraYA;Integrated Security=True");
+        public SqlCommand cmd;
+
+
+        public DataTable _686DPConsultar(string consulta, ArrayList parametros)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand(consulta, conn))
+                {
+                    cmd.CommandType = CommandType.Text;
+
+                    if (parametros != null)
+                    {
+                        foreach (SqlParameter dato in parametros)
+                        {
+                            cmd.Parameters.AddWithValue(dato.ParameterName, dato.Value ?? DBNull.Value);
+                        }
+                    }
+
+                    if (conn.State != ConnectionState.Open)
+                    {
+                        conn.Open();
+                    }
+
+                    using (SqlDataAdapter DA = new SqlDataAdapter(cmd))
+                    {
+                        DA.Fill(dt);
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Error SQL: Hubo un error al realizar la consulta");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("🛑 Error inesperado en la operación de consulta: " + ex.Message, ex);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+
+            return dt;
+        }
+
+        public void _686DPEjecutar(string nombreSP, ArrayList parametros)// Store Procedure
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand(nombreSP, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    if (parametros != null)
+                    {
+                        foreach (SqlParameter dato in parametros)
+                        {
+                            cmd.Parameters.AddWithValue(dato.ParameterName, dato.Value ?? DBNull.Value);
+                        }
+                    }
+
+                    if (conn.State != ConnectionState.Open)
+                    {
+                        conn.Open();
+                    }
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("⚠️ Error SQL al ejecutar SP: " + ex.Message, ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("🛑 Error general al ejecutar el SP: " + ex.Message, ex);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        public object _686DPEscalar(string consulta, ArrayList parametros)//para SCOPEIdentity
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand(consulta, conn))
+                {
+                    cmd.CommandType = CommandType.Text;
+
+                    if (parametros != null)
+                    {
+                        foreach (SqlParameter dato in parametros)
+                        {
+                            cmd.Parameters.AddWithValue(dato.ParameterName, dato.Value ?? DBNull.Value);
+                        }
+                    }
+
+                    if (conn.State != ConnectionState.Open)
+                    {
+                        conn.Open();
+                    }
+
+                    return cmd.ExecuteScalar(); 
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("⚠️ Error SQL (escalar): " + ex.Message, ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("🛑 Error general en ExecuteScalar: " + ex.Message, ex);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        public void _686DPEscribir(string consulta, ArrayList parametros)
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand(consulta, conn))
+                {
+                    cmd.CommandType = CommandType.Text;
+
+                    if (parametros != null)
+                    {
+                        foreach (SqlParameter dato in parametros)
+                        {
+                            cmd.Parameters.AddWithValue(dato.ParameterName, dato.Value ?? DBNull.Value);
+                        }
+                    }
+
+                    if (conn.State != ConnectionState.Open)
+                    {
+                        conn.Open();
+                    }
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("⚠️ Error SQL: " + ex.Message, ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("🛑 Error general al ejecutar la instrucción SQL: " + ex.Message, ex);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+    }
+}
