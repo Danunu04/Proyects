@@ -251,6 +251,7 @@
             this.button6.Tag = "Serializar";
             this.button6.Text = "Serializar";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -261,6 +262,7 @@
             this.button7.Tag = "Deserializar";
             this.button7.Text = "Deserializar";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // _686DPfrmGestionarClientes
             // 

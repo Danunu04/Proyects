@@ -1,6 +1,7 @@
 ﻿using _686DP_BE;
 using _686DP_BLL;
 using _686DP_SERVICIOS.Observer;
+using _686DP_SERVICIOS.Singleton;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,7 @@ namespace AseguraYa
         string idi = "";
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
+        _686DP_BLLEvento blle = new _686DP_BLLEvento();
         public _686DPfrmCancelarSeguro(string idiomaLocal)
         {
             idi = idiomaLocal;
@@ -64,6 +66,8 @@ namespace AseguraYa
                     string motivo = textBox2.Text;
                     bll.eliminarPoliza(motivo, poliza);
                     MessageBox.Show(LMG.Traducir("PolizaEliminada"));
+                    int dni = _686DP_Singleton.Instancia.Usuario._686DPDNI;
+                    blle.RegistrarEvento(dni, this.Name, "Poliza " + textBox1.Text +" eliminada", 3);
                 }
                 else
                 {

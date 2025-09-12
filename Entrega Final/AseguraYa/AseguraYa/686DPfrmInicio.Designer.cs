@@ -133,6 +133,7 @@
             this.DP_BitacoraDeEventos.Size = new System.Drawing.Size(180, 22);
             this.DP_BitacoraDeEventos.Tag = "BitacoraEventos";
             this.DP_BitacoraDeEventos.Text = "Bitacora de eventos";
+            this.DP_BitacoraDeEventos.Click += new System.EventHandler(this.DP_BitacoraDeEventos_Click);
             // 
             // DP_GestionDeRespaldo
             // 

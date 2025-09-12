@@ -130,3 +130,31 @@ C:\Users\dpere\Escritorio\Version9_7\Perelmuter Dana\Perelmuter Dana\Perelmuter 
 C:\Users\dpere\Escritorio\Version9_7\Perelmuter Dana\Perelmuter Dana\Perelmuter Dana\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.Up2Date
 C:\Users\dpere\Escritorio\Version9_7\Perelmuter Dana\Perelmuter Dana\Perelmuter Dana\AseguraYa\686DP_BE\obj\Debug\686DP_BE.dll
 C:\Users\dpere\Escritorio\Version9_7\Perelmuter Dana\Perelmuter Dana\Perelmuter Dana\AseguraYa\686DP_BE\obj\Debug\686DP_BE.pdb
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\686DP_BE.dll.config
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\686DP_BE.dll
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\686DP_BE.pdb
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Buffers.dll
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.IO.Pipelines.dll
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Memory.dll
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Text.Json.dll
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.ValueTuple.dll
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Buffers.xml
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.IO.Pipelines.xml
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Memory.xml
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Text.Json.xml
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.ValueTuple.xml
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.AssemblyReference.cache
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.CoreCompileInputs.cache
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.Up2Date
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\obj\Debug\686DP_BE.dll
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\obj\Debug\686DP_BE.pdb

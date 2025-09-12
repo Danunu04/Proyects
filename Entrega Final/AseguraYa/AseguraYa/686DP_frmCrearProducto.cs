@@ -11,6 +11,7 @@ using _686DP_BLL;
 using _686DP_BE;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using _686DP_SERVICIOS.Observer;
+using System.Net;
 
 namespace AseguraYa
 {
@@ -33,6 +34,7 @@ namespace AseguraYa
         _686DPBLLSeguro bll = new _686DPBLLSeguro();
         _686DP_BLLPlan bllp = new _686DP_BLLPlan();
         _686DP_BLLCobertura bllc = new _686DP_BLLCobertura();
+        _686DP_BLLEvento blle = new _686DP_BLLEvento();
 
         private void _686DP_frmCrearProducto_Load(object sender, EventArgs e)
         {
@@ -186,6 +188,8 @@ namespace AseguraYa
                         bll.CrearProucto(nProducto);
                         MessageBox.Show(LMG.Traducir("CreacionOk"));
                         cmbProductos.Items.Add(nProducto);
+                        int dniActual = _686DP_SERVICIOS.Singleton._686DP_Singleton.Instancia.Usuario._686DPDNI;
+                        blle.RegistrarEvento(dniActual, this.Name, "Producto creado con exito", 3);
                     }
                 }
                 TXTProductos.Text = "";
@@ -193,6 +197,8 @@ namespace AseguraYa
             catch (Exception ex)
             {
                 MessageBox.Show(LMG.Traducir("Erroralcrearproducto") + ex.Message  );
+                int dniActual = _686DP_SERVICIOS.Singleton._686DP_Singleton.Instancia.Usuario._686DPDNI;
+                blle.RegistrarEvento(dniActual, this.Name, "Error al crear el producto", 3);
             }
         }
 
@@ -225,6 +231,8 @@ namespace AseguraYa
                 }
 
                 MessageBox.Show(LMG.Traducir("PlanOK"));
+                int dniActual = _686DP_SERVICIOS.Singleton._686DP_Singleton.Instancia.Usuario._686DPDNI;
+                blle.RegistrarEvento(dniActual, this.Name, "Plan creado con exito", 3);
                 CargarCombo();
                 DGPlan.DataSource = null;
                 DGPlan.DataSource = bllp.TraerPlanesFiltrado(Producto);
@@ -234,6 +242,8 @@ namespace AseguraYa
             catch (Exception ex)
             {
                 MessageBox.Show(LMG.Traducir("PlanNOOK") + ex.Message);
+                int dniActual = _686DP_SERVICIOS.Singleton._686DP_Singleton.Instancia.Usuario._686DPDNI;
+                blle.RegistrarEvento(dniActual, this.Name, "Error al crear el plan", 3);
             }
             
         }
@@ -322,6 +332,8 @@ namespace AseguraYa
 
                     int codigoCobertura = bllc.CrearCobertura(descripcion, suma);
                     bllp.AsociarCoberturaAPlan(codigoPlan, codigoCobertura);
+                    int dniActual = _686DP_SERVICIOS.Singleton._686DP_Singleton.Instancia.Usuario._686DPDNI;
+                    blle.RegistrarEvento(dniActual, this.Name, "Cobertura creada con exito", 3);
 
                     List<_686DP_Cobertura> coberturas = bllc.TraerCoberturasFiltrado(codigoPlan);
                     DGCobertura.DataSource = null;

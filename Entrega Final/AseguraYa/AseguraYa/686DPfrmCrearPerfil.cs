@@ -15,6 +15,7 @@ using static System.Net.Mime.MediaTypeNames;
 using _686DP_SERVICIOS.Observer;
 using System.Text.RegularExpressions;
 using System.Windows.Forms.DataVisualization.Charting;
+using _686DP_SERVICIOS.Singleton;
 
 namespace AseguraYa
 {
@@ -33,6 +34,7 @@ namespace AseguraYa
         _686DP_BLLFamilia bllf = new _686DP_BLLFamilia();
         List<_686DP_PermisoSimple> permisos = new List<_686DP_PermisoSimple>();
         List<_686DP_Familia> FamiliasSeleccionada = new List<_686DP_Familia>();
+        _686DP_BLLEvento blle = new _686DP_BLLEvento();
         
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
@@ -294,6 +296,7 @@ namespace AseguraYa
                     perfil.AgregarPermiso(familiaSeleccionada);
                     Raiz.Nodes.Add(nodoPerfil);
                     TraducirTreeView(TV_PerfilPorCrear);
+
                 }
                 catch (Exception ex)
                 {
@@ -434,6 +437,8 @@ namespace AseguraYa
                 bllp.CrearPerfil(perfil);
                 TV_PerfilPorCrear.Nodes.Clear();
                 CargarPerfiles();
+                int dni = _686DP_Singleton.Instancia.Usuario._686DPDNI;
+                blle.RegistrarEvento(dni, this.Name, "Se creo un perfil", 1);
             }
             catch (Exception ex)
             {
@@ -474,13 +479,18 @@ namespace AseguraYa
                 {
                     bllp.EliminarPerfil(perfil);
                     MessageBox.Show(LMG.Traducir("PerfilEliminado"), LMG.Traducir("TituloAviso"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int dnipermiso = _686DP_Singleton.Instancia.Usuario._686DPDNI;
+                    blle.RegistrarEvento(dnipermiso, this.Name, "Se eliminó el perfil " + perfil.Nombre + " por falta de componentes", 1);
                 }
                 else
                 {
                     MessageBox.Show(LMG.Traducir("DesasignacionExitosa"), LMG.Traducir("TituloExito"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int dni = _686DP_Singleton.Instancia.Usuario._686DPDNI;
+                    blle.RegistrarEvento(dni, this.Name, "Se desasignó una familia al perfil" + perfil.Nombre, 1);
                 }
 
                 CargarPerfiles();
+                
             }
             catch (Exception ex)
             {
@@ -515,13 +525,18 @@ namespace AseguraYa
                 {
                     bllp.EliminarPerfil(perfil);
                     MessageBox.Show(LMG.Traducir("PerfilEliminado"), LMG.Traducir("TituloAviso"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int dnipermiso = _686DP_Singleton.Instancia.Usuario._686DPDNI;
+                    blle.RegistrarEvento(dnipermiso, this.Name, "Se eliminó el perfil " + perfil.Nombre + " por falta de componentes", 1);
                 }
                 else
                 {
                     MessageBox.Show(LMG.Traducir("DesasignacionExitosa"), LMG.Traducir("TituloExito"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int dni = _686DP_Singleton.Instancia.Usuario._686DPDNI;
+                    blle.RegistrarEvento(dni, this.Name, "Se desasigno un permiso del perfil" + perfil.Nombre, 1);
                 }
 
                 CargarPerfiles();
+                
             }
             catch (Exception ex)
             {

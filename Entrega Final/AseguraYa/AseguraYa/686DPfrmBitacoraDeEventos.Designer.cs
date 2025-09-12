@@ -41,10 +41,11 @@
             this.LBLDNI = new System.Windows.Forms.Label();
             this.BTNFiltrar = new System.Windows.Forms.Button();
             this.BTNLimpiarFiltros = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TXTNombre = new System.Windows.Forms.TextBox();
+            this.TXTApellido = new System.Windows.Forms.TextBox();
             this.LBLNombre = new System.Windows.Forms.Label();
             this.LBLApellido = new System.Windows.Forms.Label();
+            this.BTNImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(586, 264);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // dateTimePicker1
             // 
@@ -125,6 +127,7 @@
             this.LBLModulo.Name = "LBLModulo";
             this.LBLModulo.Size = new System.Drawing.Size(42, 13);
             this.LBLModulo.TabIndex = 8;
+            this.LBLModulo.Tag = "Modulo";
             this.LBLModulo.Text = "Modulo";
             // 
             // LBLCriticidad
@@ -149,44 +152,46 @@
             // 
             // BTNFiltrar
             // 
-            this.BTNFiltrar.Location = new System.Drawing.Point(870, 56);
+            this.BTNFiltrar.Location = new System.Drawing.Point(870, 99);
             this.BTNFiltrar.Name = "BTNFiltrar";
             this.BTNFiltrar.Size = new System.Drawing.Size(124, 20);
             this.BTNFiltrar.TabIndex = 11;
             this.BTNFiltrar.Tag = "BTNFiltrar";
             this.BTNFiltrar.Text = "Filtrar";
             this.BTNFiltrar.UseVisualStyleBackColor = true;
+            this.BTNFiltrar.Click += new System.EventHandler(this.BTNFiltrar_Click);
             // 
             // BTNLimpiarFiltros
             // 
-            this.BTNLimpiarFiltros.Location = new System.Drawing.Point(870, 101);
+            this.BTNLimpiarFiltros.Location = new System.Drawing.Point(870, 144);
             this.BTNLimpiarFiltros.Name = "BTNLimpiarFiltros";
             this.BTNLimpiarFiltros.Size = new System.Drawing.Size(124, 20);
             this.BTNLimpiarFiltros.TabIndex = 12;
             this.BTNLimpiarFiltros.Tag = "BTNLimpiarFiltros";
             this.BTNLimpiarFiltros.Text = "Limpiar Filtro";
             this.BTNLimpiarFiltros.UseVisualStyleBackColor = true;
+            this.BTNLimpiarFiltros.Click += new System.EventHandler(this.BTNLimpiarFiltros_Click);
             // 
-            // textBox1
+            // TXTNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(870, 148);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 20);
-            this.textBox1.TabIndex = 13;
-            this.textBox1.Tag = "TXTDNI";
+            this.TXTNombre.Location = new System.Drawing.Point(870, 192);
+            this.TXTNombre.Name = "TXTNombre";
+            this.TXTNombre.Size = new System.Drawing.Size(124, 20);
+            this.TXTNombre.TabIndex = 13;
+            this.TXTNombre.Tag = "TXTNombre";
             // 
-            // textBox2
+            // TXTApellido
             // 
-            this.textBox2.Location = new System.Drawing.Point(870, 192);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(124, 20);
-            this.textBox2.TabIndex = 14;
-            this.textBox2.Tag = "TXTDNI";
+            this.TXTApellido.Location = new System.Drawing.Point(870, 243);
+            this.TXTApellido.Name = "TXTApellido";
+            this.TXTApellido.Size = new System.Drawing.Size(124, 20);
+            this.TXTApellido.TabIndex = 14;
+            this.TXTApellido.Tag = "TXTApellido";
             // 
             // LBLNombre
             // 
             this.LBLNombre.AutoSize = true;
-            this.LBLNombre.Location = new System.Drawing.Point(867, 131);
+            this.LBLNombre.Location = new System.Drawing.Point(867, 175);
             this.LBLNombre.Name = "LBLNombre";
             this.LBLNombre.Size = new System.Drawing.Size(44, 13);
             this.LBLNombre.TabIndex = 15;
@@ -197,12 +202,23 @@
             // LBLApellido
             // 
             this.LBLApellido.AutoSize = true;
-            this.LBLApellido.Location = new System.Drawing.Point(867, 176);
+            this.LBLApellido.Location = new System.Drawing.Point(867, 227);
             this.LBLApellido.Name = "LBLApellido";
             this.LBLApellido.Size = new System.Drawing.Size(44, 13);
             this.LBLApellido.TabIndex = 16;
             this.LBLApellido.Tag = "LBLApellido";
             this.LBLApellido.Text = "Apellido";
+            // 
+            // BTNImprimir
+            // 
+            this.BTNImprimir.Location = new System.Drawing.Point(870, 56);
+            this.BTNImprimir.Name = "BTNImprimir";
+            this.BTNImprimir.Size = new System.Drawing.Size(124, 20);
+            this.BTNImprimir.TabIndex = 17;
+            this.BTNImprimir.Tag = "BTNImprimir";
+            this.BTNImprimir.Text = "Imprimir";
+            this.BTNImprimir.UseVisualStyleBackColor = true;
+            this.BTNImprimir.Click += new System.EventHandler(this.BTNImprimir_Click);
             // 
             // _686DPfrmBitacoraDeEventos
             // 
@@ -210,10 +226,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1006, 322);
+            this.Controls.Add(this.BTNImprimir);
             this.Controls.Add(this.LBLApellido);
             this.Controls.Add(this.LBLNombre);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TXTApellido);
+            this.Controls.Add(this.TXTNombre);
             this.Controls.Add(this.BTNLimpiarFiltros);
             this.Controls.Add(this.BTNFiltrar);
             this.Controls.Add(this.LBLDNI);
@@ -251,9 +268,10 @@
         private System.Windows.Forms.Label LBLDNI;
         private System.Windows.Forms.Button BTNFiltrar;
         private System.Windows.Forms.Button BTNLimpiarFiltros;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TXTNombre;
+        private System.Windows.Forms.TextBox TXTApellido;
         private System.Windows.Forms.Label LBLNombre;
         private System.Windows.Forms.Label LBLApellido;
+        private System.Windows.Forms.Button BTNImprimir;
     }
 }

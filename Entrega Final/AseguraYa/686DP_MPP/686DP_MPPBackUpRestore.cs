@@ -39,28 +39,30 @@ namespace _686DP_MPP
         {
             try
             {
-                string rutaEscapada = rutaArchivoBackup.Replace(@"\", @"\\");
+                string backup = rutaArchivoBackup;
+                string mdfPath = @"C:\SQLData\AseguraYA.mdf";
+                string ldfPath = @"C:\SQLData\AseguraYA_log.ldf";
 
-                string consulta = $@"
-                   USE master;
-                   GO
-                    RESTORE FILELISTONLY 
-                    FROM DISK = @Ruta;
-                    GO
+                string consulta = @"
+                USE master;
+                ALTER DATABASE AseguraYa SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
 
-                    -- Restaurar la base
-                    RESTORE DATABASE AseguraYa
-                    FROM DISK = @Ruta
-                    WITH 
-                        MOVE 'AseguraYA'     TO @Ruta + 'AseguraYA.mdf',
-                        MOVE 'AseguraYA_log' TO @Ruta + 'AseguraYA_log.ldf',
-                        REPLACE,
-                        STATS = 5;
-                    ";
+                RESTORE DATABASE AseguraYa
+                FROM DISK = @Ruta
+                WITH 
+                    MOVE 'AseguraYA'     TO @Mdf,
+                    MOVE 'AseguraYA_log' TO @Ldf,
+                REPLACE,
+                STATS = 5;
+
+                ALTER DATABASE AseguraYa SET MULTI_USER;
+                ";
 
                 ArrayList parametros = new ArrayList
                 {
-                    new SqlParameter("@Ruta", rutaArchivoBackup)
+                    new SqlParameter("@Ruta", backup),
+                    new SqlParameter("@Mdf", mdfPath),
+                    new SqlParameter("@Ldf", ldfPath)
                 };
 
                 DAL._686DPEscribir(consulta, parametros);

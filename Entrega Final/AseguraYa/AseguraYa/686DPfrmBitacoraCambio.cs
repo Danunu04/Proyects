@@ -21,5 +21,10 @@ namespace AseguraYa
         {
 
         }
+
+        private void _686DPfrmBitacoraCambio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

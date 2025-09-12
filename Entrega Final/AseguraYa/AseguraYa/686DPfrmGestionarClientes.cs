@@ -28,6 +28,7 @@ namespace AseguraYa
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
         _686DPCriptoManager cripto = new _686DPCriptoManager();
+        _686DP_BLLEvento blle = new _686DP_BLLEvento();
         public _686DPfrmGestionarClientes(string idiomaLocal)
         {
             InitializeComponent();
@@ -173,6 +174,8 @@ namespace AseguraYa
                             ClienteCreado.DP686_Domicilio = TXTDomicilio.Text;
                             bll.CrearCompleto(ClienteCreado);
                             MessageBox.Show(LMG.Traducir("ClienteCreado"));
+                            int dniActual = _686DP_SERVICIOS.Singleton._686DP_Singleton.Instancia.Usuario._686DPDNI;
+                            blle.RegistrarEvento(dniActual, this.Name, "Cliente creado con exito", 2);
                             cargarDG();
                         }
                         catch (FormatException)
@@ -213,6 +216,8 @@ namespace AseguraYa
                             cliente.DP686_Estado = true;
                             cliente.DP686_Email = TXTEmail.Text;
                             bll.GrabarCliente(cliente);
+                            int dniActual = _686DP_SERVICIOS.Singleton._686DP_Singleton.Instancia.Usuario._686DPDNI;
+                            blle.RegistrarEvento(dniActual, this.Name, "Cliente modificado con exito", 2);
                         }
                         catch (Exception ex)
                         {
@@ -255,6 +260,8 @@ namespace AseguraYa
 
                             string mensaje = nuevoEstado ? LMG.Traducir("UsuarioActivado") : LMG.Traducir("UsuarioDesactivado");
                             MessageBox.Show(mensaje, LMG.Traducir("CambioEstado"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            int dniActual = _686DP_SERVICIOS.Singleton._686DP_Singleton.Instancia.Usuario._686DPDNI;
+                            blle.RegistrarEvento(dniActual, this.Name, "Cliente eliminado", 2);
                         }
                         catch (Exception ex)
                         {
@@ -461,5 +468,84 @@ namespace AseguraYa
             }
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show(LMG.Traducir("DebeSeleccionarFila"), LMG.Traducir("Titulo_Advertencia"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "XML files (*.xml)|*.xml|All files (*.*)|*.*";
+                saveFileDialog.Title = LMG.Traducir("GuardarArchivo");
+
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    List<_686DP_Cliente> clientesSeleccionados = new List<_686DP_Cliente>();
+
+
+                    foreach (DataGridViewRow fila in dataGridView1.SelectedRows)
+                    {
+                        if (fila.IsNewRow) continue;
+
+
+                        _686DP_Cliente cliente = new _686DP_Cliente (Convert.ToInt32(fila.Cells["DP686_DNI"].Value), fila.Cells["DP686_Nombre"].Value?.ToString(), fila.Cells["DP686_Apellido"].Value?.ToString());
+                        cliente.DP686_Domicilio = fila.Cells["DP686_Domicilio"].Value?.ToString();
+                        cliente.DP686DP_CodigoPostal = fila.Cells["DP686DP_CodigoPostal"].Value != null ? Convert.ToInt32(fila.Cells["DP686DP_CodigoPostal"].Value) : 0;
+                        cliente.DP686_Email = fila.Cells["DP686_Email"].Value?.ToString();
+
+                        clientesSeleccionados.Add(cliente);
+                    }
+
+
+                    System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(List<_686DP_Cliente>));
+                    using (System.IO.FileStream fs = new System.IO.FileStream(saveFileDialog.FileName, System.IO.FileMode.Create))
+                    {
+                        serializer.Serialize(fs, clientesSeleccionados);
+                    }
+
+
+                    MessageBox.Show(LMG.Traducir("SerializacionExitosa"), LMG.Traducir("TituloAviso"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(LMG.Traducir("ErrorSerializar") + ex.Message);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "XML files (*.xml)|*.xml|All files (*.*)|*.*";
+                openFileDialog.Title = LMG.Traducir("AbrirArchivo");
+
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(List<_686DP_Cliente>));
+                    using (System.IO.FileStream fs = new System.IO.FileStream(openFileDialog.FileName, System.IO.FileMode.Open))
+                    {
+                        List<_686DP_Cliente> clientes = (List<_686DP_Cliente>)serializer.Deserialize(fs);
+                        dataGridView2.DataSource = clientes;
+                    }
+
+
+                    MessageBox.Show(LMG.Traducir("DeserializacionExitosa"), LMG.Traducir("TituloAviso"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(LMG.Traducir("ErrorDeserializar") + ex.Message);
+            }
+        }
     }
 }

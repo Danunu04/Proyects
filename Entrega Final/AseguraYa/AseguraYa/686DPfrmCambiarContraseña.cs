@@ -22,6 +22,7 @@ namespace AseguraYa
         string idi = "";
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
+        _686DP_BLLEvento blle = new _686DP_BLLEvento();
         public _686DPfrmCambiarContraseña(string idiomaLocal)
         {
             InitializeComponent();
@@ -93,6 +94,8 @@ namespace AseguraYa
                 if (contraseñaNueva != confirmacion)
                 {
                     MessageBox.Show(LMG.Traducir("ContraseñasNoCoinciden")  );
+                    int dni = _686DP_Singleton.Instancia.Usuario._686DPDNI;
+                    blle.RegistrarEvento(dni, this.Name, "Contraseñas no coinciden", 1);
                     return;
                 }
 
@@ -116,6 +119,8 @@ namespace AseguraYa
                         _686DP_Singleton.Instancia._686DPLogOut();
                         MessageBox.Show(LMG.Traducir("SesionCerrada"), LMG.Traducir("TituloCerrarSesion"), MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+                    int dni = _686DP_Singleton.Instancia.Usuario._686DPDNI;
+                    blle.RegistrarEvento(dni, this.Name, "Contraseña cambiada", 1);
                     this.Close();
                 }
             }

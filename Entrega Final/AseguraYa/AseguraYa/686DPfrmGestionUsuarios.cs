@@ -15,6 +15,7 @@ using System.Text.RegularExpressions;
 using _686DP_SERVICIOS.Observer;
 using System.Reflection;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using _686DP_SERVICIOS.Singleton;
 
 namespace AseguraYa
 {
@@ -23,6 +24,7 @@ namespace AseguraYa
         string modo;
         _686DP_BLLUsuario _686DP_BLLUsuario;
         _686DP_ExpresionesRegulares _686DP_ExpresionesRegulares;
+        _686DP_BLLEvento blle = new _686DP_BLLEvento();
         private bool esModoCrear = false;
         string dni = "";
         string nombre = "";
@@ -514,6 +516,7 @@ namespace AseguraYa
                             {
                                 MessageBox.Show(LMG.Traducir("ErrorCrearUsuario") + ex.Message);
                             }
+                            blle.RegistrarEvento(_686DP_Singleton.Instancia.Usuario._686DPDNI, this.Name, "Se creo el usuario " + usuario, 1);
                             break;
                         }
                     case "desbloqueo":
@@ -562,6 +565,7 @@ namespace AseguraYa
                             _686DPGuardar();
                             MessageBox.Show(LMG.Traducir("DesbloqueoExitoso") + nuevaContraseña);
                             Resetear();
+                            blle.RegistrarEvento(_686DP_Singleton.Instancia.Usuario._686DPDNI, this.Name, "Se bloqueo/ desbloqueo el usuario" + usuario, 1);
                             break;
                         }
                     case "Modificar":
@@ -582,6 +586,7 @@ namespace AseguraYa
 
                             MessageBox.Show(LMG.Traducir("UsuarioModificadoOK"));
                             Resetear();
+                            blle.RegistrarEvento(_686DP_Singleton.Instancia.Usuario._686DPDNI, this.Name, "Se modificó el usuario" + usuario, 1);
                             break;
                         }
                     case "Activar":
@@ -609,6 +614,7 @@ namespace AseguraYa
                             string mensaje = LMG.Traducir(estadoActual ? "UsuarioDesactivado" : "UsuarioActivado");
                             MessageBox.Show(mensaje);
                             Resetear();
+                            blle.RegistrarEvento(_686DP_Singleton.Instancia.Usuario._686DPDNI, this.Name, "Se activo/desactivo el usuario " + usuario, 1);
                             break;
                         }
                 }

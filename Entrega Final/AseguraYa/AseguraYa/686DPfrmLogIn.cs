@@ -25,6 +25,7 @@ namespace AseguraYa
         _686DPCriptoManager _686DPCriptoManager;
         _686DP_ExpresionesRegulares _686DP_ExpresionesRegulares;
         _686DP_BLLPerfil bllp = new _686DP_BLLPerfil();
+        _686DP_BLLEvento blle = new _686DP_BLLEvento();
         
         string idi = "";
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
@@ -74,6 +75,7 @@ namespace AseguraYa
                                     _686DP_Singleton.Instancia._686DPLogIN(usuarioCompleto);
                                     MessageBox.Show(LMG.Traducir("SesionIniciada"));
                                     _686DP_BLLUsuario._686DPReestablecerIntentos(DNI);
+                                    blle.RegistrarEvento(DNI, this.Name, "Sesion iniciada correctamente", 1);
 
                                     foreach (var comp in componentes)
                                     {
@@ -97,10 +99,12 @@ namespace AseguraYa
                                     _686DP_BLLUsuario.RegistrarError(DNI);
                                     int intentos = _686DP_BLLUsuario._686DPTraerIntentos(DNI);
                                     MessageBox.Show(string.Format(LMG.Traducir("ErrorIntentosRestantes"), 3 - intentos), LMG.Traducir("TituloErrorLogin"));
+                                    blle.RegistrarEvento(DNI, this.Name, "Contraseña incorrecta intentos restantes" + (3 - intentos).ToString(), 1);
                                     if (intentos >= 3)
                                     {
                                         _686DP_BLLUsuario._686DPBloquearUsuario(DNI);
                                         MessageBox.Show(LMG.Traducir("UsuarioBloqueado"), LMG.Traducir("TituloErrorLogin"));
+                                        blle.RegistrarEvento(DNI, this.Name, "Usuario bloqueado", 1);
                                     }
                                     return;
                                 }
@@ -108,11 +112,13 @@ namespace AseguraYa
                             else
                             {
                                 MessageBox.Show(LMG.Traducir("CuentaBloqueada"));
+                                blle.RegistrarEvento(DNI, this.Name, "Intento de inicio de sesion en una cuenta bloqueada", 1);
                             }
                         }
                         else
                         {
                             MessageBox.Show(LMG.Traducir("UsuarioDesactivadoALERTA"));
+                            blle.RegistrarEvento(DNI, this.Name, "intento de inicio de sesion de una cuenta desactivada", 1);
                             return;
                         }
                     }
