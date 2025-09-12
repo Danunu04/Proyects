@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using _686DP_BE;
 using _686DP_BLL;
 using _686DP_SERVICIOS.Observer;
+using _686DP_SERVICIOS.Singleton;
 
 namespace AseguraYa
 {
@@ -26,6 +27,7 @@ namespace AseguraYa
         string idi = "";
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
+        _686DP_BLLEvento blle = new _686DP_BLLEvento();
         public _686DPfrmModificarSeguro(string idiomaLocal)
         {
             idi = idiomaLocal;
@@ -123,6 +125,7 @@ namespace AseguraYa
 
                 bll.ModificarPoliza(poliza);
                 MessageBox.Show(LMG.Traducir("ModificacionExitosa"), LMG.Traducir("Exito"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                blle.RegistrarEvento(_686DP_Singleton.Instancia.Usuario._686DPDNI, this.Name, "Se modificó la poliza" , 3);
             }
             catch (Exception ex)
             {

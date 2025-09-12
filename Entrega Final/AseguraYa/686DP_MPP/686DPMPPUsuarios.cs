@@ -650,5 +650,67 @@ namespace _686DP_MPP
                 throw new Exception("Error inesperado al guardar el idioma del usuario: " + ex.Message, ex);
             }
         }
+
+        public _686DP_Usuarios TraerUsuarioCompleto(int dni)
+        {
+            try
+            {
+                string consulta = @"
+                SELECT 
+                    U.DP686_DNI, 
+                    U.DP686_Nombre, 
+                    U.DP686_Apellido, 
+                    U.DP686_Email, 
+                    P.DP686_Nombre AS Rol,
+                    U.DP686_Usuario, 
+                    U.DP686_Contraseña, 
+                    U.DP686_Activo, 
+                    U.DP686_Bloqueado, 
+                    U.DP686_CambiarContraseña,
+                    U.DP686_Idioma
+                FROM [dbo].[686DP_Usuario] U
+                INNER JOIN [dbo].[686DP_Perfil] P ON U.DP686_PerfilID = P.DP686_PerfilID
+                WHERE U.DP686_DNI = @DNI";
+
+                ArrayList parametros = new ArrayList
+                {
+                    new SqlParameter("@DNI", dni)
+                };
+
+                DataTable dt = dal._686DPConsultar(consulta, parametros);
+
+                if (dt.Rows.Count > 0)
+                {
+                    DataRow row = dt.Rows[0];
+                    _686DP_Usuarios usuario = new _686DP_Usuarios(
+                        Convert.ToInt32(row["DP686_DNI"]),
+                        Convert.ToString(row["DP686_Nombre"]),
+                        Convert.ToString(row["DP686_Apellido"]),
+                        Convert.ToString(row["DP686_Email"]),
+                        Convert.ToString(row["Rol"]),
+                        Convert.ToString(row["DP686_Usuario"]),
+                        Convert.ToString(row["DP686_Contraseña"]),
+                        Convert.ToBoolean(row["DP686_Activo"]),
+                        Convert.ToBoolean(row["DP686_Bloqueado"]),
+                        Convert.ToBoolean(row["DP686_CambiarContraseña"])
+                    );
+
+                    usuario.DP686_Idioma = Convert.ToString(row["DP686_Idioma"]);
+                    return usuario;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Error SQL al traer usuario completo: " + ex.Message, ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error inesperado al traer usuario completo: " + ex.Message, ex);
+            }
+        }
     }
 }

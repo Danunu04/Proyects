@@ -13,6 +13,7 @@ using _686DP_SERVICIOS;
 using _686DP_SERVICIOS.Observer;
 using _686DP_SERVICIOS.Singleton;
 using System.Text.Json.Serialization;
+using _686DP_BLL;
 
 namespace AseguraYa
 {
@@ -21,6 +22,7 @@ namespace AseguraYa
         string idi = "";
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
+        _686DP_BLLEvento blle = new _686DP_BLLEvento();
         public _686DPfrmIdioma(string idiomaLocal)
         {
             idi = idiomaLocal;
@@ -61,7 +63,7 @@ namespace AseguraYa
 
                 cambiarIdioma();
                 comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-
+                blle.RegistrarEvento(_686DP_Singleton.Instancia.Usuario._686DPDNI, this.Name, "Se cambio el idioma" + idi, 3);
             }
             catch (Exception ex)
             {

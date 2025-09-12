@@ -16,6 +16,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using _686DP_SERVICIOS.Singleton;
 
 
 namespace AseguraYa
@@ -25,6 +26,7 @@ namespace AseguraYa
         string idi = "";
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
+        _686DP_BLLEvento blle = new _686DP_BLLEvento();
         public _686DP_frmPolizas(string idiomaLocal)
         {
             InitializeComponent();
@@ -251,6 +253,8 @@ namespace AseguraYa
                     pdfDoc.Close();
 
                     MessageBox.Show(LMG.Traducir("PDFExito"));
+                    int dni = _686DP_Singleton.Instancia.Usuario._686DPDNI;
+                    blle.RegistrarEvento(dni, this.Name, "Registros impresos", 3);
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
@@ -276,6 +280,8 @@ namespace AseguraYa
                 List<_686DP_Cobertura> coberturas = bllc.TraerCoberturasFiltrado(poliza.DP686_CodPlan);
                 _686DP_Cliente cliente = bllcli.TraerClienteDePoliza(poliza.DP686_NPoliza);
                 _686DP_GeneradorDePolizas.GenerarPolizaBasica(cliente.DP686_Nombre, cliente.DP686_Apellido, cliente.DP686_DNI, cliente.DP686_Domicilio, cliente.DP686_Email, seguro.DP686_TipoProducto, plan.DP686_Prima, coberturas, idi, LMG, poliza.DP686_NPoliza);
+                int dni = _686DP_Singleton.Instancia.Usuario._686DPDNI;
+                blle.RegistrarEvento(dni, this.Name, "Poliza impresa", 4);
             }
             else
             {

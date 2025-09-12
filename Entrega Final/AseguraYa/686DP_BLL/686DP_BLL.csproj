@@ -76,6 +76,7 @@
     <Compile Include="686DP_BLLBackUpRestore.cs" />
     <Compile Include="686DP_BLLCLlientes.cs" />
     <Compile Include="686DP_BLLCobertura.cs" />
+    <Compile Include="686DP_BLLEvento.cs" />
     <Compile Include="686DP_BLLFamilia.cs" />
     <Compile Include="686DP_BLLPerfil.cs" />
     <Compile Include="686DP_BLLPermisoSimple.cs" />

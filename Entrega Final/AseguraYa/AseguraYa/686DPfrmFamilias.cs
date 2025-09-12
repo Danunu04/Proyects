@@ -12,6 +12,7 @@ using _686DP_BLL;
 using System.Windows.Forms;
 using _686DP_SERVICIOS.Observer;
 using System.Text.RegularExpressions;
+using _686DP_SERVICIOS.Singleton;
 
 namespace AseguraYa
 {
@@ -22,6 +23,7 @@ namespace AseguraYa
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
         _686DP_BLLPerfil bllper = new _686DP_BLLPerfil();
+        _686DP_BLLEvento blle = new _686DP_BLLEvento();
         public _686DPfrmFamilias(_686DPfrmCrearPerfil frmPadre, string idi)
         {
             InitializeComponent();
@@ -76,12 +78,14 @@ namespace AseguraYa
                 TV_FamiliaEnCreacion.Nodes.Clear();
                 Cargar();
                 padre.iniciar();
+                int dni = _686DP_Singleton.Instancia.Usuario._686DPDNI;
+                blle.RegistrarEvento(dni, this.Name, "Se creó la familia " + familia.Nombre, 1);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(LMG.Traducir("Mensaje_ErrorCrearFamilia") + ex.Message, LMG.Traducir("Titulo_Error") );
             }
-        }
+        } 
 
         private void _686DPfrmFamilias_Load(object sender, EventArgs e)
         {
@@ -453,10 +457,14 @@ namespace AseguraYa
                 {
                     bllf.EliminarFamilia(familia);
                     MessageBox.Show(LMG.Traducir("FamiliaEliminada"), LMG.Traducir("TituloAviso"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int dni = _686DP_Singleton.Instancia.Usuario._686DPDNI;
+                    blle.RegistrarEvento(dni, this.Name, "Se la familia " + familia.Nombre + "Por falta de componentes", 1);
                 }
                 else
                 {
                     MessageBox.Show(LMG.Traducir("DesasignacionExitosa"), LMG.Traducir("TituloExito"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int dni = _686DP_Singleton.Instancia.Usuario._686DPDNI;
+                    blle.RegistrarEvento(dni, this.Name, "Se desasigno un permiso de la familia " + familia.Nombre, 1);
                 }
 
                 Cargar();
@@ -542,10 +550,14 @@ namespace AseguraYa
                 {
                     bllf.EliminarFamilia(fam);
                     MessageBox.Show(LMG.Traducir("FamiliaEliminada"), LMG.Traducir("TituloAviso"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int dni = _686DP_Singleton.Instancia.Usuario._686DPDNI;
+                    blle.RegistrarEvento(dni, this.Name, "la familia " + familia.Nombre + " fue eliminada por falta de componentes", 1);
                 }
                 else
                 {
                     MessageBox.Show(LMG.Traducir("DesasignacionExitosa"), LMG.Traducir("TituloExito"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int dni = _686DP_Singleton.Instancia.Usuario._686DPDNI;
+                    blle.RegistrarEvento(dni, this.Name, "Se desasigno una familia de la la familia " + familia.Nombre, 1);
                 }
 
                 Cargar();

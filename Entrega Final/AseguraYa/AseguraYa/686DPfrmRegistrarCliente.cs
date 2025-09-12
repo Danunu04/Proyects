@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using _686DP_BE;
 using _686DP_BLL;
 using _686DP_SERVICIOS.Observer;
+using _686DP_SERVICIOS.Singleton;
 
 namespace AseguraYa
 {
@@ -20,6 +21,7 @@ namespace AseguraYa
         string idioma = "";
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
+        _686DP_BLLEvento blle = new _686DP_BLLEvento();
         int dni; 
         public _686DPfrmRegistrarCliente(string idi, int dNI)
         {
@@ -51,6 +53,7 @@ namespace AseguraYa
                 clientes.crear(ClienteCreado);
                 MessageBox.Show(LMG.Traducir("ClienteCreadoExito"));
                 this.DialogResult = DialogResult.OK;
+                blle.RegistrarEvento(_686DP_Singleton.Instancia.Usuario._686DPDNI, this.Name, "Cliente " + DP_TXTNombre.Text + " creado de forma basica", 2);
                 this.Close();
             }
             catch (FormatException)

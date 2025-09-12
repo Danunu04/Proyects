@@ -362,5 +362,10 @@ namespace _686DP_BLL
         {
             mpp.GuardarIdioma(_686DPIdioma);
         }
+
+        public _686DP_Usuarios TraerUsuarioCompleto(int dni)
+        {
+            return mpp.TraerUsuarioCompleto(dni);
+        }
     }
 }

@@ -1,0 +1,12 @@
+{
+    "FechaDesde":"Fecha desde",
+    "FechaHasta":"Fecha hasta",
+    "Modulo":"Módulo",
+    "LBLCriticidad":"Criticidad",
+    "LBLDNI":"DNI",
+    "LBLNombre":"Nombre",
+    "LBLApellido":"Apellido",
+    "BTNImprimir":"Imprimir",
+    "BTNFiltrar":"Filtrar",
+    "BTNLimpiarFiltros":"Limpiar Filtros"
+}

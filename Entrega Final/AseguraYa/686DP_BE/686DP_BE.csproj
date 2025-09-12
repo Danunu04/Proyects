@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="686DP_Cliente.cs" />
     <Compile Include="686DP_Cobertura.cs" />
+    <Compile Include="686DP_Evento.cs" />
     <Compile Include="686DP_Usuario.cs" />
     <Compile Include="686DP_Plan.cs" />
     <Compile Include="686DP_Poliza.cs" />

@@ -128,6 +128,7 @@
             this.Aplicar.Name = "Aplicar";
             this.Aplicar.Size = new System.Drawing.Size(110, 25);
             this.Aplicar.TabIndex = 9;
+            this.Aplicar.Tag = "Aplicar";
             this.Aplicar.Text = "Aplicar";
             this.Aplicar.UseVisualStyleBackColor = true;
             this.Aplicar.Click += new System.EventHandler(this.Aplicar_Click);
@@ -138,6 +139,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 25);
             this.button2.TabIndex = 10;
+            this.button2.Tag = "Limpiar";
             this.button2.Text = "Limpiar";
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -147,6 +149,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(110, 25);
             this.button3.TabIndex = 11;
+            this.button3.Tag = "Activar";
             this.button3.Text = "Activar";
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -156,6 +159,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(110, 25);
             this.button4.TabIndex = 12;
+            this.button4.Tag = "Salir";
             this.button4.Text = "Salir";
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -167,6 +171,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(207, 25);
             this.label1.TabIndex = 13;
+            this.label1.Tag = "LBLBitacoraDeCambio";
             this.label1.Text = "Bitacora de cambios";
             // 
             // _686DPfrmBitacoraCambio
@@ -191,6 +196,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "_686DPfrmBitacoraCambio";
             this.Text = "_686DPfrmBitacoraCambio";
+            this.Load += new System.EventHandler(this._686DPfrmBitacoraCambio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

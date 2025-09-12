@@ -9,6 +9,10 @@ namespace _686DP_BE
     public class _686DP_Cliente
     {
 
+        public _686DP_Cliente()
+        {
+            
+        }
         public int DP686_DNI { get; set; }
         public string DP686_Nombre { get; set; }
         public string DP686_Apellido { get; set; }

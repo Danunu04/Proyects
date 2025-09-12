@@ -279,9 +279,16 @@ namespace AseguraYa
 
         private void DP_GestionDeRespaldo_Click(object sender, EventArgs e)
         {
-            GestionDeRespaldo gr = new GestionDeRespaldo();
+            GestionDeRespaldo gr = new GestionDeRespaldo(IdiomaLocal);
             gr.MdiParent = this;
             gr.Show();
+        }
+
+        private void DP_BitacoraDeEventos_Click(object sender, EventArgs e)
+        {
+            _686DPfrmBitacoraDeEventos BE = new _686DPfrmBitacoraDeEventos(IdiomaLocal);
+            BE.MdiParent = this;
+            BE.Show();
         }
     }
 }

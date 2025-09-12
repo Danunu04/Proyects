@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using _686DP_BE;
 using _686DP_BLL;
 using _686DP_SERVICIOS.Observer;
+using _686DP_SERVICIOS.Singleton;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AseguraYa
@@ -33,6 +34,7 @@ namespace AseguraYa
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
         List<_686DP_Cobertura> coberurasfinales = new List<_686DP_Cobertura>();
         _686DP_GeneradorDePolizas gp = new _686DP_GeneradorDePolizas();
+        _686DP_BLLEvento blle = new _686DP_BLLEvento();
         public _686DPfrmGenerarContratación(string idiomaLocal)
         {
             idi = idiomaLocal;
@@ -276,6 +278,9 @@ namespace AseguraYa
                 
                 MessageBox.Show(LMG.Traducir("PolizaGenerada"));
                 _686DP_GeneradorDePolizas.GenerarPolizaBasica(cliente.DP686_Nombre, cliente.DP686_Apellido, cliente.DP686_DNI, cliente.DP686_Domicilio, cliente.DP686_Email, traducido, prima, coberurasfinales, idi, LMG, CodPoliza);
+                int dni = _686DP_Singleton.Instancia.Usuario._686DPDNI;
+                blle.RegistrarEvento(dni, this.Name, "Se generó una contratacion de polizas", 3);
+                blle.RegistrarEvento(dni, this.Name, "Se imprimio una poliza", 4);
                 this.Close();
             }
             catch (Exception ex)

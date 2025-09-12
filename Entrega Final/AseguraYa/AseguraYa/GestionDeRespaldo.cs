@@ -1,4 +1,6 @@
 ﻿using _686DP_BLL;
+using _686DP_SERVICIOS.Observer;
+using _686DP_SERVICIOS.Singleton;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +16,11 @@ namespace AseguraYa
     public partial class GestionDeRespaldo : Form
     {
         _686DP_BLLBackUpRestore _686DP_BLLBackUpRestore;
-        public GestionDeRespaldo()
+        _686DP_BLLEvento blle = new _686DP_BLLEvento();
+        string idi = "";
+        _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
+        _686DP_Idioma IdiomaClase = new _686DP_Idioma();
+        public GestionDeRespaldo(string idiomaLocal)
         {
             InitializeComponent();
             _686DP_BLLBackUpRestore = new _686DP_BLLBackUpRestore();
@@ -23,20 +29,26 @@ namespace AseguraYa
         private void button1_Click(object sender, EventArgs e)
         {
             try
-            { ElegirRuta(); }
+            { ElegirRuta();
+                blle.RegistrarEvento(_686DP_Singleton.Instancia.Usuario._686DPDNI, this.Name, "Se realizo un backup de la base de datos", 1);
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            
         }
 
         private void ElegirRuta()
         {
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
-                saveFileDialog.Filter = "Archivos de Backup (*.bak)|*.bak"; 
+                saveFileDialog.Filter = "Archivos de Backup (*.bak)|*.bak";
                 saveFileDialog.Title = "Guardar archivo de Backup";
-                saveFileDialog.DefaultExt = "bak"; 
+                saveFileDialog.DefaultExt = "bak";
+
+                saveFileDialog.FileName = "BCK_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".bak";
+
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string rutaArchivo = saveFileDialog.FileName;
@@ -44,24 +56,28 @@ namespace AseguraYa
                     try
                     {
                         _686DP_BLLBackUpRestore.RealizarBackupBD(rutaArchivo);
-                        MessageBox.Show("Backup realizado exitosamente en: " + rutaArchivo);
+                        MessageBox.Show(LMG.Traducir("BackUPOK") + rutaArchivo);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error al realizar el backup: " + ex.Message);
+                        MessageBox.Show(LMG.Traducir("ErrorBackUP") + ex.Message);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("No se seleccionó ninguna ubicación para guardar el archivo de backup.");
+                    MessageBox.Show(LMG.Traducir("NOSeleccion"));
                 }
             }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             try
-            { Restaurar(); }
+            { Restaurar();
+                MessageBox.Show(LMG.Traducir("RestoreOK"));
+                blle.RegistrarEvento(_686DP_Singleton.Instancia.Usuario._686DPDNI, this.Name, "Se restauró la base de datos", 1);
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -78,15 +94,20 @@ namespace AseguraYa
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string rutaArchivoBackup = openFileDialog.FileName; 
-                    Console.WriteLine("Ruta seleccionada para restaurar: " + rutaArchivoBackup);
+                    Console.WriteLine(LMG.Traducir("RutaSeleccionada") + rutaArchivoBackup);
 
                     _686DP_BLLBackUpRestore.RealizarRestoreBD(rutaArchivoBackup);
                 }
                 else
                 {
-                    MessageBox.Show("No se seleccionó ningún archivo de backup.");
+                    MessageBox.Show(LMG.Traducir("NOSeleccion"));
                 }
             }
+        }
+
+        private void GestionDeRespaldo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
