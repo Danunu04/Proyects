@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,34 +40,48 @@ namespace _686DP_MPP
         public void RealizarRestoreBD(string rutaArchivoBackup)
         {
             try
+
             {
                 string backup = rutaArchivoBackup;
-                string mdfPath = @"C:\SQLData\AseguraYA.mdf";
-                string ldfPath = @"C:\SQLData\AseguraYA_log.ldf";
+                string conultarFileList = "RESTORE FILELISTONLY FROM DISK = @Ruta";
+                ArrayList parametrosFileList = new ArrayList
+                {
+                    new SqlParameter("@Ruta", backup)
+                };
+                DataTable dt = DAL._686DPConsultar(conultarFileList, parametrosFileList);
+                if (dt.Rows.Count < 2)
+                    throw new Exception("El back up no tiene los datos deseados???");
+                string LogicalName = dt.Rows[0]["LogicalName"].ToString();
+                string logicalNameLog = dt.Rows[1]["LogicalName"].ToString();
+                string consultaPath = @"
+                    SELECT SERVERPROPERTY ('InstanceDefaultDataPath') AS DataPath,
+                    SERVERPROPERTY ('InstanceDefaultLogPath') AS LogPath;";
 
-                string consulta = @"
-                USE master;
-                ALTER DATABASE AseguraYa SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-
-                RESTORE DATABASE AseguraYa
-                FROM DISK = @Ruta
-                WITH 
-                    MOVE 'AseguraYA'     TO @Mdf,
-                    MOVE 'AseguraYA_log' TO @Ldf,
-                REPLACE,
-                STATS = 5;
-
-                ALTER DATABASE AseguraYa SET MULTI_USER;
-                ";
-
-                ArrayList parametros = new ArrayList
+                DataTable dtPath = DAL._686DPConsultar(consultaPath, null);
+                string mdfPath = Path.Combine(dtPath.Rows[0]["DataPath"].ToString(), "AseguraYA.mdf");
+                string ldfPath = Path.Combine(dtPath.Rows[0]["LogPath"].ToString(), "AseguraYA_log.ldf");
+                string consultaRestore = @"
+                    USE master;
+                    RESTORE DATABASE AseguraYa
+                    FROM DISK = @Ruta
+                    WITH
+                        MOVE @LogicalData TO @Mdf,
+                        MOVE @LogicalLog TO @Ldf,
+                        REPLACE,
+                        STATS = 5;
+                        ALTER DATABASE AseguraYa SET MULTI_USER;
+                    ";
+                ArrayList parametrosRestore = new ArrayList
                 {
                     new SqlParameter("@Ruta", backup),
+                    new SqlParameter("@LogicalData",LogicalName),
+                    new SqlParameter("@LogicalLog", logicalNameLog),
                     new SqlParameter("@Mdf", mdfPath),
                     new SqlParameter("@Ldf", ldfPath)
                 };
 
-                DAL._686DPEscribir(consulta, parametros);
+                DAL._686DPEscribir(consultaRestore, parametrosRestore);
+
             }
             catch (Exception ex)
             {

@@ -3,15 +3,43 @@
   "WorkspaceRootPath": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6E424721-9E86-4EE5-A443-7DA7952172C1}|686DP_Dal\\686DP_DAL.csproj|c:\\users\\dana perelmuter\\desktop\\git\\proyects\\entrega final\\aseguraya\\686dp_dal\\686dpdalgeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E424721-9E86-4EE5-A443-7DA7952172C1}|686DP_Dal\\686DP_DAL.csproj|solutionrelative:686dp_dal\\686dpdalgeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD70163B-4FB8-4693-94DE-144FE11FB574}|686DP_MPP\\686DP_MPP.csproj|c:\\users\\dana perelmuter\\desktop\\git\\proyects\\entrega final\\aseguraya\\686dp_mpp\\686dp_mppbackuprestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|c:\\users\\dana perelmuter\\desktop\\git\\proyects\\entrega final\\aseguraya\\aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|c:\\users\\dana perelmuter\\desktop\\git\\proyects\\entrega final\\aseguraya\\aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|c:\\users\\dana perelmuter\\desktop\\git\\proyects\\entrega final\\aseguraya\\aseguraya\\686dpfrmgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\aseguraya\\686dpfrmgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\aseguraya\\686dpfrmgestionarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmgestionarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD70163B-4FB8-4693-94DE-144FE11FB574}|686DP_MPP\\686DP_MPP.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\686dp_mpp\\686dp_mppbackuprestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD70163B-4FB8-4693-94DE-144FE11FB574}|686DP_MPP\\686DP_MPP.csproj|solutionrelative:686dp_mpp\\686dp_mppbackuprestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|c:\\users\\dana perelmuter\\desktop\\git\\proyects\\entrega final\\aseguraya\\aseguraya\\686dpfrmbitacoradeeventos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6E424721-9E86-4EE5-A443-7DA7952172C1}|686DP_Dal\\686DP_DAL.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\686dp_dal\\686dpdalgeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E424721-9E86-4EE5-A443-7DA7952172C1}|686DP_Dal\\686DP_DAL.csproj|solutionrelative:686dp_dal\\686dpdalgeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\aseguraya\\686dpfrmbitacoradeeventos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmbitacoradeeventos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -23,32 +51,12 @@
       "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmgestionarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\aseguraya\\686dpfrmgestionarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmgestionarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\aseguraya\\gestionderespaldo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\gestionderespaldo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\aseguraya\\686dpfrmgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\aseguraya\\686dpfrmgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\aseguraya\\686dpfrmbitacoracambio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmbitacoracambio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\aseguraya\\gestionderespaldo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -78,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,7 +98,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "686DPfrmLogIn.cs",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmLogIn.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmLogIn.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmLogIn.cs",
+              "RelativeToolTip": "AseguraYa\\686DPfrmLogIn.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAewDMAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T21:41:57.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "686DPfrmLogIn.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmLogIn.cs",
+              "RelativeDocumentMoniker": "AseguraYa\\686DPfrmLogIn.cs",
+              "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmLogIn.cs [Design]",
+              "RelativeToolTip": "AseguraYa\\686DPfrmLogIn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T21:41:55.304Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "686DPDalGeneral.cs",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\686DP_Dal\\686DPDalGeneral.cs",
               "RelativeDocumentMoniker": "686DP_Dal\\686DPDalGeneral.cs",
@@ -98,25 +131,23 @@
               "RelativeToolTip": "686DP_Dal\\686DPDalGeneral.cs",
               "ViewState": "AQIAAJwAAAAAAAAAAAAwwL8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T13:17:27.872Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T13:17:27.872Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "686DP_MPPBackUpRestore.cs",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\686DP_MPP\\686DP_MPPBackUpRestore.cs",
               "RelativeDocumentMoniker": "686DP_MPP\\686DP_MPPBackUpRestore.cs",
               "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\686DP_MPP\\686DP_MPPBackUpRestore.cs",
               "RelativeToolTip": "686DP_MPP\\686DP_MPPBackUpRestore.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAowEkAAAAJAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAwwFcAAABSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T13:11:14.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T13:11:14.682Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "686DPfrmBitacoraDeEventos.cs",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmBitacoraDeEventos.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmBitacoraDeEventos.cs",
@@ -124,12 +155,11 @@
               "RelativeToolTip": "AseguraYa\\686DPfrmBitacoraDeEventos.cs",
               "ViewState": "AQIAAH4AAAAAAAAAAAAewGcAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T22:05:00.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-31T22:05:00.831Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "686DPfrmGestionarClientes.cs",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmGestionarClientes.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmGestionarClientes.cs",
@@ -141,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "686DPfrmGestionarClientes.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmGestionarClientes.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmGestionarClientes.cs",
@@ -152,42 +182,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "686DPfrmGestionUsuarios.cs",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmGestionUsuarios.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmGestionUsuarios.cs",
               "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmGestionUsuarios.cs",
               "RelativeToolTip": "AseguraYa\\686DPfrmGestionUsuarios.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACUAAAAIAAAA",
+              "ViewState": "AQIAAB0CAAAAAAAAAAAwwDoCAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T21:55:59.595Z"
+              "WhenOpened": "2025-08-31T21:55:59.595Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "686DPfrmInicio.cs",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmInicio.cs",
               "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs",
               "RelativeToolTip": "AseguraYa\\686DPfrmInicio.cs",
-              "ViewState": "AQIAAA4BAAAAAAAAAAAqwBkBAABEAAAA",
+              "ViewState": "AQIAAJYAAAAAAAAAAAA1wKgAAABpAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T21:55:09.134Z"
+              "WhenOpened": "2025-08-31T21:55:09.134Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
               "Title": "686DPfrmInicio.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmInicio.cs",
               "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs [Design]",
               "RelativeToolTip": "AseguraYa\\686DPfrmInicio.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T21:55:07.899Z"
+              "WhenOpened": "2025-08-31T21:55:07.899Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "686DPfrmBitacoraCambio.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmBitacoraCambio.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmBitacoraCambio.cs",
@@ -198,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "GestionDeRespaldo.cs",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\GestionDeRespaldo.cs",
               "RelativeDocumentMoniker": "AseguraYa\\GestionDeRespaldo.cs",
@@ -210,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "GestionDeRespaldo.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\GestionDeRespaldo.cs",
               "RelativeDocumentMoniker": "AseguraYa\\GestionDeRespaldo.cs",
@@ -221,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "686DP_MPPEvento.cs",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\686DP_MPP\\686DP_MPPEvento.cs",
               "RelativeDocumentMoniker": "686DP_MPP\\686DP_MPPEvento.cs",
@@ -233,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "686DPMPPUsuarios.cs",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\686DP_MPP\\686DPMPPUsuarios.cs",
               "RelativeDocumentMoniker": "686DP_MPP\\686DPMPPUsuarios.cs",
@@ -245,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "686DP_BLLUsuario.cs",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\686DP_BLL\\686DP_BLLUsuario.cs",
               "RelativeDocumentMoniker": "686DP_BLL\\686DP_BLLUsuario.cs",
@@ -257,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "686DP_Usuario.cs",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\686DP_BE\\686DP_Usuario.cs",
               "RelativeDocumentMoniker": "686DP_BE\\686DP_Usuario.cs",
@@ -269,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "686DPfrmGestionUsuarios.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmGestionUsuarios.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmGestionUsuarios.cs",
@@ -280,15 +313,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "686DPfrmBitacoraDeEventos.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmBitacoraDeEventos.cs",
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmBitacoraDeEventos.cs",
               "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmBitacoraDeEventos.cs [Design]",
               "RelativeToolTip": "AseguraYa\\686DPfrmBitacoraDeEventos.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T19:58:14.917Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-08-31T19:58:14.917Z"
             }
           ]
         }

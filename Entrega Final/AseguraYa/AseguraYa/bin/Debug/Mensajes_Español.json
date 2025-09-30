@@ -275,5 +275,15 @@
   "Comida no percedera":"Comida no percedera",
   "DP_Polizas":"Poliza",
   "Mensaje_PermisoYaEnPerfilRelacionado": "El permiso ya está en un perfil que contiene esta familia. No se puede agregar.",
-  "Familia existente": "Esa Familia ya existe en la base de datos"
+  "Familia existente": "Esa Familia ya existe en la base de datos",
+  "BackUPOK":"Backup realizado exitosamente en: ",
+  "ErrorBackUP":"Error al realizar el Backup: ",
+  "NOSeleccion":"No se seleccionó ninguna ubicación para guardar el archivo de backup.",
+  "RestoreOK":"Se resatauró la base de datos",
+  "RutaSeleccionada":"Ruta seleccionada para restaurar: ",
+  "GuardarArchivo":"Guardar archivo",
+  "SerializacionExitosa":"Serialización realizada con éxito",
+  "ErrorSerializar":"Error al serializar: ",
+  "DeserializacionExitosa": "Deserialización realizada con éxito",
+  "ErrorDeserializar":"Error al deserializar: ",
 }

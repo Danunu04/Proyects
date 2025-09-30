@@ -18,6 +18,7 @@ namespace AseguraYa
     {
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma idioma = new _686DP_Idioma();
+        _686DP_BLLEvento blle = new _686DP_BLLEvento();
         public string IdiomaLocal;
         public _686DPfrmInicio()
         {
@@ -165,6 +166,7 @@ namespace AseguraYa
                     bllu.GuardarIdioma(_686DP_Singleton.Instancia.Usuario._686DPIdioma);
                     _686DP_Singleton.Instancia._686DPLogOut();
                     MessageBox.Show(LMG.Traducir("SesionCerrada"), LMG.Traducir("TituloCerrarSesion"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    blle.RegistrarEvento(_686DP_Singleton.Instancia.Usuario._686DPDNI, this.Name, "LogOut", 1);
                     _686DP_Desactivar();
                 }
                 else
