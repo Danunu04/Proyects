@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|c:\\users\\dana perelmuter\\desktop\\git\\proyects\\entrega final\\aseguraya\\aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|c:\\users\\dana perelmuter\\desktop\\git\\proyects\\entrega final\\aseguraya\\aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|c:\\users\\dana perelmuter\\desktop\\git\\proyects\\entrega final\\aseguraya\\aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|c:\\users\\dana perelmuter\\desktop\\git\\proyects\\entrega final\\aseguraya\\aseguraya\\686dpfrmgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\aseguraya\\686dpfrmgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AAFDC495-691A-4C30-BEBB-75F6C3FDDA85}|AseguraYa\\686DP_GUI.csproj|solutionrelative:aseguraya\\686dpfrmgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -106,8 +106,7 @@
               "RelativeToolTip": "AseguraYa\\686DPfrmLogIn.cs",
               "ViewState": "AQIAAEMAAAAAAAAAAAAewDMAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T21:41:57.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T21:41:57.124Z"
             },
             {
               "$type": "Document",
@@ -118,8 +117,7 @@
               "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmLogIn.cs [Design]",
               "RelativeToolTip": "AseguraYa\\686DPfrmLogIn.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T21:41:55.304Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-09-30T21:41:55.304Z"
             },
             {
               "$type": "Document",
@@ -190,8 +188,7 @@
               "RelativeToolTip": "AseguraYa\\686DPfrmGestionUsuarios.cs",
               "ViewState": "AQIAAB0CAAAAAAAAAAAwwDoCAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T21:55:59.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-31T21:55:59.595Z"
             },
             {
               "$type": "Document",
@@ -201,7 +198,7 @@
               "RelativeDocumentMoniker": "AseguraYa\\686DPfrmInicio.cs",
               "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs",
               "RelativeToolTip": "AseguraYa\\686DPfrmInicio.cs",
-              "ViewState": "AQIAAJYAAAAAAAAAAAA1wKgAAABpAAAA",
+              "ViewState": "AQIAAJcAAAAAAAAAAAAQwKgAAABpAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-31T21:55:09.134Z",
               "EditorCaption": ""
@@ -215,8 +212,7 @@
               "ToolTip": "C:\\Users\\Dana Perelmuter\\Desktop\\GIT\\Proyects\\Entrega Final\\AseguraYa\\AseguraYa\\686DPfrmInicio.cs [Design]",
               "RelativeToolTip": "AseguraYa\\686DPfrmInicio.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T21:55:07.899Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-08-31T21:55:07.899Z"
             },
             {
               "$type": "Document",
