@@ -64,6 +64,54 @@ namespace _686DP_Dal
             return dt;
         }
 
+        public DataTable _686DPConsultarSP(string nombreSP, ArrayList parametros)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand(nombreSP, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    if (parametros != null)
+                    {
+                        foreach (SqlParameter dato in parametros)
+                        {
+                            cmd.Parameters.AddWithValue(dato.ParameterName, dato.Value ?? DBNull.Value);
+                        }
+                    }
+
+                    if (conn.State != ConnectionState.Open)
+                    {
+                        conn.Open();
+                    }
+
+                    using (SqlDataAdapter DA = new SqlDataAdapter(cmd))
+                    {
+                        DA.Fill(dt);
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("⚠️ Error SQL al ejecutar Stored Procedure: " + ex.Message, ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("🛑 Error general al ejecutar Stored Procedure: " + ex.Message, ex);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+
+            return dt;
+        }
+
         public void _686DPEjecutar(string nombreSP, ArrayList parametros)// Store Procedure
         {
             try

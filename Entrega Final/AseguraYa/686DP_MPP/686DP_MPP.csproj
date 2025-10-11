@@ -82,6 +82,7 @@
     <Compile Include="686DP_MPPPermisoSimple.cs" />
     <Compile Include="686DP_MPPPlan.cs" />
     <Compile Include="686DP_MPPPoliza.cs" />
+    <Compile Include="686DP_MPPSiniestro.cs" />
     <Compile Include="686MPPClientes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

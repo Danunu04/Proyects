@@ -350,26 +350,25 @@ namespace AseguraYa
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if(TV_PerfilPorCrear.Nodes.Count==0)
+            if (TV_PerfilPorCrear.Nodes.Count == 0)
             {
-                MessageBox.Show(LMG.Traducir("NombrePerfilFaltante"));
+                MessageBox.Show(LMG.Traducir("NombrePerfilFaltante"), LMG.Traducir("Titulo_Advertencia"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (LSTPermisos.SelectedItem == null)
             {
-                MessageBox.Show(LMG.Traducir("SeleccionaPermiso"));
+                MessageBox.Show(LMG.Traducir("SeleccionaPermiso"), LMG.Traducir("Titulo_Advertencia"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string nombrePermisoTraducido = LSTPermisos.SelectedItem.ToString();
-            _686DP_PermisoSimple permisoSeleccionado = permisos
-                .FirstOrDefault(p => LMG.Traducir(p.Nombre) == nombrePermisoTraducido);
+            string nombrePermisoSeleccionado = LSTPermisos.SelectedItem.ToString();
 
+            _686DP_PermisoSimple permisoSeleccionado = permisos.FirstOrDefault(p => p.Nombre == nombrePermisoSeleccionado);
 
             if (permisoSeleccionado == null)
             {
-                MessageBox.Show(LMG.Traducir("PermisoNoEncontrado"));
+                MessageBox.Show(LMG.Traducir("PermisoNoEncontrado"), LMG.Traducir("Titulo_Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -378,7 +377,7 @@ namespace AseguraYa
                 if (nodo.Tag is _686DP_PermisoSimple permisoExistente &&
                     permisoExistente.DP686_PermisoSimpleID == permisoSeleccionado.DP686_PermisoSimpleID)
                 {
-                    MessageBox.Show(LMG.Traducir("PermisoYaDirecto"));
+                    MessageBox.Show(LMG.Traducir("PermisoYaDirecto"), LMG.Traducir("Titulo_Advertencia"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
             }
@@ -386,31 +385,23 @@ namespace AseguraYa
             var permisosYaCargados = ObtenerPermisosDelPerfil();
             if (permisosYaCargados.Any(p => p.DP686_PermisoSimpleID == permisoSeleccionado.DP686_PermisoSimpleID))
             {
-                MessageBox.Show(LMG.Traducir("PermisoYaIncluidoFamilia"));
+                MessageBox.Show(LMG.Traducir("PermisoYaIncluidoFamilia"), LMG.Traducir("Titulo_Advertencia"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
-                string nombre = permisoSeleccionado.Nombre;
-                string traducido = LMG.Traducir(nombre);
-                string limpio = traducido.Replace("[", "").Replace("]", "").Trim();
-                TreeNode nodoPermiso;
-                if (nombre == limpio)
+                TreeNode nodoPermiso = new TreeNode(permisoSeleccionado.Nombre)
                 {
-                     nodoPermiso = new TreeNode(limpio);
-                }
-                else
-                {
-                     nodoPermiso = new TreeNode(traducido);
-                }
-                nodoPermiso.Tag = permisoSeleccionado;
+                    Tag = permisoSeleccionado
+                };
+
                 perfil.AgregarPermiso(permisoSeleccionado);
                 Raiz.Nodes.Add(nodoPermiso);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(LMG.Traducir("ErrorAgregarPermiso") + ex.Message);
+                MessageBox.Show(LMG.Traducir("ErrorAgregarPermiso") + ": " + ex.Message, LMG.Traducir("Titulo_Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

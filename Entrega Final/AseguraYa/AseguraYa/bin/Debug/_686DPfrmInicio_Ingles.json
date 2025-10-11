@@ -19,5 +19,8 @@
   "CerrarSesion": "Log Out",
   "CambiarIdioma": "Change Language",
   "Ayuda": "Help",
-  "DP_Polizas":"Policy"
+  "DP_Polizas":"Policy",
+  "RegistrarSiniestro": "Register Claim",
+  "AuditarSiniestro": "Audit Claim",
+  "ReporteSiniestro": "Claim Report"
 }

@@ -286,4 +286,12 @@
   "ErrorSerializar":"Error al serializar: ",
   "DeserializacionExitosa": "Deserialización realizada con éxito",
   "ErrorDeserializar":"Error al deserializar: ",
+  "TextboxVacio": "Complete el cuadro de texto.",
+  "BuscarPrimero": "Busque una poliza primero.",
+  "PagoOk": "Pago realizado con éxito.",
+  "FalstaSeleccion": "Por favor, seleccione un siniestro para aprobar.",
+  "AprobadoOK":"El siniestro califica. Puede proceder con la aprobación.",
+  "AprobadoNOOK":"El siniestro no califica según la evaluación del sistema. No puede aprobarse.",
+  "PolizaOK":"Poliza encontrada",
+  "CargaOK":"Carga realizada con éxito."
 }

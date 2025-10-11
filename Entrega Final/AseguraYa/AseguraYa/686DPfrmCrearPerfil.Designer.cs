@@ -80,7 +80,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(341, 27);
+            this.button2.Location = new System.Drawing.Point(350, 27);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(117, 23);
             this.button2.TabIndex = 12;
@@ -91,7 +91,7 @@
             // 
             // BTNCrearPerfil
             // 
-            this.BTNCrearPerfil.Location = new System.Drawing.Point(252, 27);
+            this.BTNCrearPerfil.Location = new System.Drawing.Point(260, 27);
             this.BTNCrearPerfil.Name = "BTNCrearPerfil";
             this.BTNCrearPerfil.Size = new System.Drawing.Size(75, 23);
             this.BTNCrearPerfil.TabIndex = 11;
@@ -219,10 +219,10 @@
             // 
             this.button4.Location = new System.Drawing.Point(192, 28);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(46, 23);
+            this.button4.Size = new System.Drawing.Size(62, 23);
             this.button4.TabIndex = 25;
-            this.button4.Tag = "Editar";
-            this.button4.Text = "Editar";
+            this.button4.Tag = "Cancelar";
+            this.button4.Text = "Cancelar";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -230,6 +230,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
             this.ClientSize = new System.Drawing.Size(1024, 482);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);

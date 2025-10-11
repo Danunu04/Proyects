@@ -109,9 +109,9 @@ namespace AseguraYa
 
             List<_686DP_Familia> familias = bllf.TraerFamilia();
             CargarTreeViewFamilias(familias);
-            TraducirTreeView(TV_Familia);
-            TraducirTreeView(TV_FamiliaEnCreacion); 
-            TraducirList(LSTPermisos);
+            //TraducirTreeView(TV_Familia);
+            //TraducirTreeView(TV_FamiliaEnCreacion); 
+            //TraducirList(LSTPermisos);
             cambiarIdioma();
         }
 
@@ -211,7 +211,8 @@ namespace AseguraYa
 
         private void AgregarPermiso_Click(object sender, EventArgs e)
         {
-            if(TV_FamiliaEnCreacion.Nodes.Count == 0)
+            
+            if (TV_FamiliaEnCreacion.Nodes.Count == 0)
             {
                 MessageBox.Show(LMG.Traducir("Mensaje_IngreseNombreFamilia"), LMG.Traducir("Titulo_Advertencia"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -222,36 +223,34 @@ namespace AseguraYa
                 MessageBox.Show(LMG.Traducir("Mensaje_SeleccionePermiso"), LMG.Traducir("Titulo_Advertencia"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string nombrePermisoTraducido = LSTPermisos.SelectedItem.ToString();
-            if (familia != null && familia.idFamilia != 0) 
+
+            string nombrePermisoSeleccionado = LSTPermisos.SelectedItem.ToString();
+
+            if (familia != null && familia.idFamilia != 0)
             {
                 List<_686DP_Perfil> perfilesConFamilia = bllper.TraerPerfilesConFamilia(familia.idFamilia);
+
                 foreach (_686DP_Perfil perfil in perfilesConFamilia)
                 {
-                    int codigoPerfil =  bllper.TraerCodigoPerfil(perfil);
+                    int codigoPerfil = bllper.TraerCodigoPerfil(perfil);
                     List<_686DP_PermisoSimple> permisosEnPerfil = bllper.TraerPermisosDelPerfil(codigoPerfil);
-                    foreach (_686DP_PermisoSimple p in permisosEnPerfil)
+
+                    if (permisosEnPerfil.Any(p => p.Nombre == nombrePermisoSeleccionado))
                     {
-                        if (p.Nombre == nombrePermisoTraducido || LMG.Traducir(p.Nombre) == nombrePermisoTraducido)
-                        {
-                            MessageBox.Show(LMG.Traducir("Mensaje_PermisoYaEnPerfilRelacionado"), LMG.Traducir("Titulo_Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            TV_FamiliaEnCreacion.Nodes.Clear();
-                            familia = null;
-                            Raiz = null;
-                            return;
-                        }
+                        MessageBox.Show(LMG.Traducir("Mensaje_PermisoYaEnPerfilRelacionado"), LMG.Traducir("Titulo_Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        TV_FamiliaEnCreacion.Nodes.Clear();
+                        familia = null;
+                        Raiz = null;
+                        return;
                     }
                 }
             }
 
-            
-            _686DP_PermisoSimple permisoSeleccionado = permisos
-                .FirstOrDefault(p => LMG.Traducir(p.Nombre) == nombrePermisoTraducido);
-
+            _686DP_PermisoSimple permisoSeleccionado = permisos.FirstOrDefault(p => p.Nombre == nombrePermisoSeleccionado);
 
             if (permisoSeleccionado == null)
             {
-                MessageBox.Show(LMG.Traducir("Mensaje_PermisoNoEncontrado"), LMG.Traducir("Titulo_Error") );
+                MessageBox.Show(LMG.Traducir("Mensaje_PermisoNoEncontrado"), LMG.Traducir("Titulo_Error"));
                 return;
             }
 
@@ -271,29 +270,19 @@ namespace AseguraYa
                 MessageBox.Show(LMG.Traducir("Mensaje_PermisoIncluidoEnFamilia"), LMG.Traducir("Titulo_Advertencia"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             try
             {
-                string nombre = permisoSeleccionado.Nombre;
-                string traducido = LMG.Traducir(nombre);
-                string limpio = traducido.Replace("[", "").Replace("]", "").Trim();
-                TreeNode nodoPermiso;
-                if (nombre == limpio)
+                TreeNode nodoPermiso = new TreeNode(permisoSeleccionado.Nombre)
                 {
-                    nodoPermiso = new TreeNode(limpio);
-                }
-                else
-                {
-                    nodoPermiso = new TreeNode(traducido);
-                }
-                nodoPermiso.Tag = permisoSeleccionado;
-                familia.Agregar(permisoSeleccionado); 
+                    Tag = permisoSeleccionado
+                };
+
+                familia.Agregar(permisoSeleccionado);
                 Raiz.Nodes.Add(nodoPermiso);
-                TraducirTreeView(TV_FamiliaEnCreacion);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(LMG.Traducir("Mensaje_ErrorAgregarPermiso") + ex.Message, LMG.Traducir("Titulo_Error") );
+                MessageBox.Show(LMG.Traducir("Mensaje_ErrorAgregarPermiso") + ": " + ex.Message, LMG.Traducir("Titulo_Error"));
             }
         }
 

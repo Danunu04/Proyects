@@ -82,6 +82,7 @@
     <Compile Include="686DP_BLLPermisoSimple.cs" />
     <Compile Include="686DP_BLLPlan.cs" />
     <Compile Include="686DP_BLLPoliza.cs" />
+    <Compile Include="686DP_BLLSiniestro.cs" />
     <Compile Include="686DP_BLLUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

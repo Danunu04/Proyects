@@ -94,7 +94,7 @@ namespace AseguraYa
         {
             DP_Admin.Enabled = false;
             DP_Contratacion.Enabled = false;
-            Dp_Siniestros.Enabled = false;
+            Siniestros.Enabled = false;
             DP_Maestro.Enabled = false;
             DP_CambiarContraseña.Enabled = false;
             DP_CambiarIdioma.Enabled = false;
@@ -112,6 +112,7 @@ namespace AseguraYa
             DP_EliminarSeguro.Enabled = false;
             DP_Contratacion.Enabled = false;
             DP_CambiarContraseña.Enabled=false;
+            ReporteSiniestro.Enabled=false;
         }
 
         private void DP_IniciarSesion_Click(object sender, EventArgs e)
@@ -139,7 +140,7 @@ namespace AseguraYa
         {
             DP_Admin.Enabled = true;
             DP_Contratacion.Enabled = true;
-            Dp_Siniestros.Enabled = true;
+            Siniestros.Enabled = true;
             DP_CambiarContraseña.Enabled = true;
             DP_CambiarIdioma.Enabled = true;
             Dp_Ayuda.Enabled = true;
@@ -166,7 +167,7 @@ namespace AseguraYa
                     bllu.GuardarIdioma(_686DP_Singleton.Instancia.Usuario._686DPIdioma);
                     _686DP_Singleton.Instancia._686DPLogOut();
                     MessageBox.Show(LMG.Traducir("SesionCerrada"), LMG.Traducir("TituloCerrarSesion"), MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    blle.RegistrarEvento(_686DP_Singleton.Instancia.Usuario._686DPDNI, this.Name, "LogOut", 1);
+                    //blle.RegistrarEvento(_686DP_Singleton.Instancia.Usuario._686DPDNI, this.Name, "LogOut", 1);
                     _686DP_Desactivar();
                 }
                 else
@@ -192,7 +193,7 @@ namespace AseguraYa
         {
             DP_Admin.Enabled = true;
             DP_Contratacion.Enabled = true;
-            Dp_Siniestros.Enabled = true;
+            Siniestros.Enabled = true;
             DP_CambiarContraseña.Enabled = false;
         }
 
@@ -291,6 +292,32 @@ namespace AseguraYa
             _686DPfrmBitacoraDeEventos BE = new _686DPfrmBitacoraDeEventos(IdiomaLocal);
             BE.MdiParent = this;
             BE.Show();
+        }
+
+        private void Dp_Siniestros_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void RegistrarSiniestro_Click(object sender, EventArgs e)
+        {
+            _686DPfrmRegistrarSiniestro rs = new _686DPfrmRegistrarSiniestro(IdiomaLocal);
+            rs.MdiParent = this;
+            rs.Show();
+        }
+
+        private void auditarSiniestroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _686DPfrmAuditarSiniestro AS = new _686DPfrmAuditarSiniestro(IdiomaLocal);
+            AS.MdiParent = this;
+            AS.Show();
+        }
+
+        private void ReporteSiniestro_Click(object sender, EventArgs e)
+        {
+            _686DP_frmReporteSiniestro rs = new _686DP_frmReporteSiniestro();
+            rs.MdiParent = this;
+            rs.Show();
         }
     }
 }

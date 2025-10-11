@@ -88,6 +88,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="686DPfrmAuditarSiniestro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="686DPfrmAuditarSiniestro.Designer.cs">
+      <DependentUpon>686DPfrmAuditarSiniestro.cs</DependentUpon>
+    </Compile>
     <Compile Include="686DPfrmBitacoraCambio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,11 +178,23 @@
     <Compile Include="686DPfrmModificarSeguro.Designer.cs">
       <DependentUpon>686DPfrmModificarSeguro.cs</DependentUpon>
     </Compile>
+    <Compile Include="686DPfrmPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="686DPfrmPagar.Designer.cs">
+      <DependentUpon>686DPfrmPagar.cs</DependentUpon>
+    </Compile>
     <Compile Include="686DPfrmRegistrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="686DPfrmRegistrarCliente.Designer.cs">
       <DependentUpon>686DPfrmRegistrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="686DPfrmRegistrarSiniestro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="686DPfrmRegistrarSiniestro.Designer.cs">
+      <DependentUpon>686DPfrmRegistrarSiniestro.cs</DependentUpon>
     </Compile>
     <Compile Include="686DP_ExpresionesRegulares.cs" />
     <Compile Include="686DP_frmCrearProducto.cs">
@@ -191,7 +209,14 @@
     <Compile Include="686DP_frmPolizas.Designer.cs">
       <DependentUpon>686DP_frmPolizas.cs</DependentUpon>
     </Compile>
+    <Compile Include="686DP_frmReporteSiniestro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="686DP_frmReporteSiniestro.Designer.cs">
+      <DependentUpon>686DP_frmReporteSiniestro.cs</DependentUpon>
+    </Compile>
     <Compile Include="686DP_GeneradorDePolizas.cs" />
+    <Compile Include="GeneradorDeSiniestro.cs" />
     <Compile Include="GestionDeRespaldo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +225,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="686DPfrmAuditarSiniestro.resx">
+      <DependentUpon>686DPfrmAuditarSiniestro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="686DPfrmBitacoraCambio.resx">
       <DependentUpon>686DPfrmBitacoraCambio.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,14 +270,23 @@
     <EmbeddedResource Include="686DPfrmModificarSeguro.resx">
       <DependentUpon>686DPfrmModificarSeguro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="686DPfrmPagar.resx">
+      <DependentUpon>686DPfrmPagar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="686DPfrmRegistrarCliente.resx">
       <DependentUpon>686DPfrmRegistrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="686DPfrmRegistrarSiniestro.resx">
+      <DependentUpon>686DPfrmRegistrarSiniestro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="686DP_frmCrearProducto.resx">
       <DependentUpon>686DP_frmCrearProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="686DP_frmPolizas.resx">
       <DependentUpon>686DP_frmPolizas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="686DP_frmReporteSiniestro.resx">
+      <DependentUpon>686DP_frmReporteSiniestro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionDeRespaldo.resx">
       <DependentUpon>GestionDeRespaldo.cs</DependentUpon>

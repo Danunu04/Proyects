@@ -18,5 +18,8 @@
   "CerrarSesion": "Cerrar Sesion",
   "CambiarIdioma": "Cambiar Idioma",
   "Ayuda": "Ayuda",
-  "DP_Polizas":"Polizas"
+  "DP_Polizas":"Polizas",
+  "RegistrarSiniestro":"Registrar Siniestro",
+  "AuditarSiniestro":"Auditar Siniestro",
+  "ReporteSiniestro": "Reporte de Siniestro"
 }

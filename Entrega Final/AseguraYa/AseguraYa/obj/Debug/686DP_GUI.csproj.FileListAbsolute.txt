@@ -856,3 +856,7 @@ C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\
 C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.Up2Date
 C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa.exe
 C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa.pdb
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmRegistrarSiniestro.resources
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmAuditarSiniestro.resources
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmPagar.resources
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DP_frmReporteSiniestro.resources
