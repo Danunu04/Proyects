@@ -13,6 +13,7 @@ using _686DP_SERVICIOS.Singleton;
 using _686DP_SERVICIOS.Observer;
 using System.Net.NetworkInformation;
 using _686DP_SERVICIOS.Composite;
+using System.Net;
 
 
 namespace AseguraYa
@@ -30,7 +31,7 @@ namespace AseguraYa
         string idi = "";
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
-
+        _686DP_BLLDigitoVerificador BLLDV = new _686DP_BLLDigitoVerificador();
         public _686DPfrmLogIn(string idiomaLocal)
         {
             InitializeComponent();
@@ -56,70 +57,52 @@ namespace AseguraYa
                 {
                     string Usuario = _686DP_BLLUsuario._686DPTraerUsuario(DNI);
                     if(Usuario != "")
-                    {
-                         string Idioma = _686DP_BLLUsuario.TraerIdiomaUsuario(DNI);
+                    {   string Idioma = _686DP_BLLUsuario.TraerIdiomaUsuario(DNI);
                         cambiarIdioma(Idioma);
-
-                        bool Activo = _686DP_BLLUsuario._686DPTraerEstado(DNI);
-                        if(Activo)
+                        bool BaseIntegra = BLLDV.CalcularTodos();
+                        if(BaseIntegra)
                         {
-                            bool Bloqueado = _686DP_BLLUsuario._686DPCuentaBloqueada(DNI);
-                            if(!Bloqueado)
-                            {
-                                string ContraseñaBD = _686DP_BLLUsuario._686DPTraerContraseña(DNI);
-                                if (ContraseñaHash == ContraseñaBD)
-                                {
-                                    _686DP_Usuario usuarioCompleto = _686DP_BLLUsuario._686DPGenerarUsuarioSingleton(Usuario, ContraseñaHash, DNI, Idioma);
-                                    _686DP_Perfil perfilUsuario = bllp.TraerPerfilDelUsuario(usuarioCompleto._686DPDNI);
-                                    List<_686DP_Composite> componentes = perfilUsuario.ObtenerPermisos();
-                                    _686DP_Singleton.Instancia._686DPLogIN(usuarioCompleto);
-                                    MessageBox.Show(LMG.Traducir("SesionIniciada"));
-                                    _686DP_BLLUsuario._686DPReestablecerIntentos(DNI);
-                                    blle.RegistrarEvento(DNI, this.Name, "Sesion iniciada correctamente", 1);
-
-                                    foreach (var comp in componentes)
-                                    {
-                                        ActivarPermisos(comp);
-                                    }
-                                   
-                                    bool cambiarContraseña = _686DP_BLLUsuario._686DPCambiarContraseña(DNI);
-                                    if (cambiarContraseña)
-                                    {
-                                        _686DPfrmCambiarContraseña cambiarcontra = new _686DPfrmCambiarContraseña(idi);
-                                        cambiarcontra.Show();
-                                        (this.MdiParent as _686DPfrmInicio)?._686DP_Desactivar();
-                                        this.Close();
-                                    }
-
-                                    this.Close();
-                                }
-                                else
-                                {
-                                    
-                                    _686DP_BLLUsuario.RegistrarError(DNI);
-                                    int intentos = _686DP_BLLUsuario._686DPTraerIntentos(DNI);
-                                    MessageBox.Show(string.Format(LMG.Traducir("ErrorIntentosRestantes"), 3 - intentos), LMG.Traducir("TituloErrorLogin"));
-                                    blle.RegistrarEvento(DNI, this.Name, "Contraseña incorrecta intentos restantes" + (3 - intentos).ToString(), 1);
-                                    if (intentos >= 3)
-                                    {
-                                        _686DP_BLLUsuario._686DPBloquearUsuario(DNI);
-                                        MessageBox.Show(LMG.Traducir("UsuarioBloqueado"), LMG.Traducir("TituloErrorLogin"));
-                                        blle.RegistrarEvento(DNI, this.Name, "Usuario bloqueado", 1);
-                                    }
-                                    return;
-                                }
-                            }
-                            else
-                            {
-                                MessageBox.Show(LMG.Traducir("CuentaBloqueada"));
-                                blle.RegistrarEvento(DNI, this.Name, "Intento de inicio de sesion en una cuenta bloqueada", 1);
-                            }
+                            inisioSesion(DNI, Contraseña, ContraseñaHash, Usuario, Idioma);
                         }
                         else
                         {
-                            MessageBox.Show(LMG.Traducir("UsuarioDesactivadoALERTA"));
-                            blle.RegistrarEvento(DNI, this.Name, "intento de inicio de sesion de una cuenta desactivada", 1);
-                            return;
+                            _686DP_Usuario usuarioCompleto = _686DP_BLLUsuario._686DPGenerarUsuarioSingleton(Usuario, ContraseñaHash, DNI, Idioma);
+                            _686DP_Perfil perfilUsuario = bllp.TraerPerfilDelUsuario(usuarioCompleto._686DPDNI);
+                            string ContraseñaBD = _686DP_BLLUsuario._686DPTraerContraseña(DNI);
+                            if (ContraseñaHash == ContraseñaBD)
+                            {
+                                _686DP_Singleton.Instancia._686DPLogIN(usuarioCompleto);
+                                MessageBox.Show(LMG.Traducir("SesionIniciada"));
+                                _686DP_BLLUsuario._686DPReestablecerIntentos(DNI);
+                                blle.RegistrarEvento(DNI, this.Name, "Sesion iniciada correctamente", 1);
+
+                                if (perfilUsuario.Nombre == "Administrador General")
+                                {
+                                    _686DPfrmRepararSistema rs = new _686DPfrmRepararSistema();
+                                    rs.Show();
+                                }
+                                else
+                                {
+                                    MessageBox.Show(LMG.Traducir("ErrorDB"));
+                                }
+
+                                this.Close();
+                            }
+                            else
+                            {
+                                _686DP_BLLUsuario.RegistrarError(DNI);
+                                int intentos = _686DP_BLLUsuario._686DPTraerIntentos(DNI);
+                                MessageBox.Show(string.Format(LMG.Traducir("ErrorIntentosRestantes"), 3 - intentos), LMG.Traducir("TituloErrorLogin"));
+                                blle.RegistrarEvento(DNI, this.Name, "Contraseña incorrecta intentos restantes" + (3 - intentos).ToString(), 1);
+                                if (intentos >= 3)
+                                {
+                                    _686DP_BLLUsuario._686DPBloquearUsuario(DNI);
+                                    MessageBox.Show(LMG.Traducir("UsuarioBloqueado"), LMG.Traducir("TituloErrorLogin"));
+                                    blle.RegistrarEvento(DNI, this.Name, "Usuario bloqueado", 1);
+                                }
+                                return;
+                            }
+                            
                         }
                     }
                     else
@@ -137,6 +120,71 @@ namespace AseguraYa
             catch (Exception ex)
             {
                 MessageBox.Show(LMG.Traducir("ErrorInesperado") + ":\n" + ex.Message);
+            }
+        }
+
+        private void inisioSesion(int DNI, string Contraseña, string ContraseñaHash, string Usuario, string Idioma)
+        {
+            bool Activo = _686DP_BLLUsuario._686DPTraerEstado(DNI);
+            if (Activo)
+            {
+                bool Bloqueado = _686DP_BLLUsuario._686DPCuentaBloqueada(DNI);
+                if (!Bloqueado)
+                {
+                    string ContraseñaBD = _686DP_BLLUsuario._686DPTraerContraseña(DNI);
+                    if (ContraseñaHash == ContraseñaBD)
+                    {
+                        _686DP_Usuario usuarioCompleto = _686DP_BLLUsuario._686DPGenerarUsuarioSingleton(Usuario, ContraseñaHash, DNI, Idioma);
+                        _686DP_Perfil perfilUsuario = bllp.TraerPerfilDelUsuario(usuarioCompleto._686DPDNI);
+                        List<_686DP_Composite> componentes = perfilUsuario.ObtenerPermisos();
+                        _686DP_Singleton.Instancia._686DPLogIN(usuarioCompleto);
+                        MessageBox.Show(LMG.Traducir("SesionIniciada"));
+                        _686DP_BLLUsuario._686DPReestablecerIntentos(DNI);
+                        blle.RegistrarEvento(DNI, this.Name, "Sesion iniciada correctamente", 1);
+
+                        foreach (var comp in componentes)
+                        {
+                            ActivarPermisos(comp);
+                        }
+
+                        bool cambiarContraseña = _686DP_BLLUsuario._686DPCambiarContraseña(DNI);
+                        if (cambiarContraseña)
+                        {
+                            _686DPfrmCambiarContraseña cambiarcontra = new _686DPfrmCambiarContraseña(idi);
+                            cambiarcontra.Show();
+                            (this.MdiParent as _686DPfrmInicio)?._686DP_Desactivar();
+                            this.Close();
+                        }
+
+                        this.Close();
+                    }
+                    else
+                    {
+
+                        _686DP_BLLUsuario.RegistrarError(DNI);
+                        int intentos = _686DP_BLLUsuario._686DPTraerIntentos(DNI);
+                        MessageBox.Show(string.Format(LMG.Traducir("ErrorIntentosRestantes"), 3 - intentos), LMG.Traducir("TituloErrorLogin"));
+                        blle.RegistrarEvento(DNI, this.Name, "Contraseña incorrecta intentos restantes" + (3 - intentos).ToString(), 1);
+                        if (intentos >= 3)
+                        {
+                            _686DP_BLLUsuario._686DPBloquearUsuario(DNI);
+                            MessageBox.Show(LMG.Traducir("UsuarioBloqueado"), LMG.Traducir("TituloErrorLogin"));
+                            blle.RegistrarEvento(DNI, this.Name, "Usuario bloqueado", 1);
+                        }
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(LMG.Traducir("CuentaBloqueada"));
+                    blle.RegistrarEvento(DNI, this.Name, "Intento de inicio de sesion en una cuenta bloqueada", 1);
+                }
+            }
+            else
+            {
+                MessageBox.Show(LMG.Traducir("UsuarioDesactivadoALERTA"));
+                blle.RegistrarEvento(DNI, this.Name, "intento de inicio de sesion de una cuenta desactivada", 1);
+                return;
             }
         }
 

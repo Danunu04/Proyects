@@ -24,6 +24,7 @@ namespace AseguraYa
         _686DP_BLLSiniestro bllsi = new _686DP_BLLSiniestro();
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
+        _686DP_BLLDigitoVerificador BLLDV = new _686DP_BLLDigitoVerificador();
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -111,7 +112,7 @@ namespace AseguraYa
                 int nroPoliza = Convert.ToInt32(fila.Cells["DP686_NPoliza"].Value);
                 string descripcion = fila.Cells["Descripcion"].Value?.ToString();
                 double valor = Convert.ToDouble(fila.Cells["ValorRemunerar"].Value);
-
+                BLLDV.CalcularDigitoVerificador("Siniestro");
                 _686DPfrmPagar pagar = new _686DPfrmPagar(codSiniestro, nroPoliza, descripcion, valor, evaluacion, idi);
                 pagar.ShowDialog();
                 cargar();

@@ -35,6 +35,8 @@ namespace AseguraYa
         List<_686DP_Cobertura> coberurasfinales = new List<_686DP_Cobertura>();
         _686DP_GeneradorDePolizas gp = new _686DP_GeneradorDePolizas();
         _686DP_BLLEvento blle = new _686DP_BLLEvento();
+
+        _686DP_BLLDigitoVerificador BLLDV = new _686DP_BLLDigitoVerificador();
         public _686DPfrmGenerarContratación(string idiomaLocal)
         {
             idi = idiomaLocal;
@@ -275,6 +277,7 @@ namespace AseguraYa
                     codSeguro = blls.ObtenerCodSeguroPorProducto(traducido);
                 }
                 int CodPoliza = bllp.CrearPoliza(codSeguro, prima, DNI, codigoPlanSeleccionado);
+                BLLDV.CalcularDigitoVerificador("Polizas");
                 
                 MessageBox.Show(LMG.Traducir("PolizaGenerada"));
                 _686DP_GeneradorDePolizas.GenerarPolizaBasica(cliente.DP686_Nombre, cliente.DP686_Apellido, cliente.DP686_DNI, cliente.DP686_Domicilio, cliente.DP686_Email, traducido, prima, coberurasfinales, idi, LMG, CodPoliza);

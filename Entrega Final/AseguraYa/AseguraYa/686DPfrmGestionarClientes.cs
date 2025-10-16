@@ -28,6 +28,7 @@ namespace AseguraYa
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
         _686DPCriptoManager cripto = new _686DPCriptoManager();
+        _686DP_BLLDigitoVerificador BLLDV = new _686DP_BLLDigitoVerificador();  
         _686DP_BLLEvento blle = new _686DP_BLLEvento();
         public _686DPfrmGestionarClientes(string idiomaLocal)
         {
@@ -273,7 +274,7 @@ namespace AseguraYa
                         MessageBox.Show(LMG.Traducir("SeleccioneModo"));
                         break;
                 }
-
+                BLLDV.CalcularDigitoVerificador("Cliente");
                 cargarDG();
                 textBox1.Text = LMG.Traducir("SeleccionarModo");
                 limpiar();

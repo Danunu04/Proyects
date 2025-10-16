@@ -29,73 +29,56 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.CMBCodProducto = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.LBLCodigoProducto = new System.Windows.Forms.Label();
+            this.DNI = new System.Windows.Forms.Label();
             this.LBLFechaDesde = new System.Windows.Forms.Label();
             this.LBLFechaHasta = new System.Windows.Forms.Label();
-            this.LBLNombre = new System.Windows.Forms.Label();
-            this.Aplicar = new System.Windows.Forms.Button();
+            this.Filtrar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Desbloquear = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 55);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 60);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(607, 232);
+            this.dataGridView1.Size = new System.Drawing.Size(1095, 232);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // CMBCodProducto
-            // 
-            this.CMBCodProducto.FormattingEnabled = true;
-            this.CMBCodProducto.Location = new System.Drawing.Point(639, 85);
-            this.CMBCodProducto.Name = "CMBCodProducto";
-            this.CMBCodProducto.Size = new System.Drawing.Size(200, 21);
-            this.CMBCodProducto.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(639, 135);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1116, 139);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(639, 188);
+            this.dateTimePicker2.Location = new System.Drawing.Point(1116, 192);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 3;
             // 
-            // textBox1
+            // DNI
             // 
-            this.textBox1.Location = new System.Drawing.Point(639, 244);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 4;
-            // 
-            // LBLCodigoProducto
-            // 
-            this.LBLCodigoProducto.AutoSize = true;
-            this.LBLCodigoProducto.Location = new System.Drawing.Point(641, 63);
-            this.LBLCodigoProducto.Name = "LBLCodigoProducto";
-            this.LBLCodigoProducto.Size = new System.Drawing.Size(85, 13);
-            this.LBLCodigoProducto.TabIndex = 5;
-            this.LBLCodigoProducto.Tag = "LBLCodigoProducto";
-            this.LBLCodigoProducto.Text = "Codigo producto";
+            this.DNI.AutoSize = true;
+            this.DNI.Location = new System.Drawing.Point(1118, 67);
+            this.DNI.Name = "DNI";
+            this.DNI.Size = new System.Drawing.Size(26, 13);
+            this.DNI.TabIndex = 5;
+            this.DNI.Tag = "DNI";
+            this.DNI.Text = "DNI";
             // 
             // LBLFechaDesde
             // 
             this.LBLFechaDesde.AutoSize = true;
-            this.LBLFechaDesde.Location = new System.Drawing.Point(641, 119);
+            this.LBLFechaDesde.Location = new System.Drawing.Point(1118, 123);
             this.LBLFechaDesde.Name = "LBLFechaDesde";
             this.LBLFechaDesde.Size = new System.Drawing.Size(69, 13);
             this.LBLFechaDesde.TabIndex = 6;
@@ -105,63 +88,45 @@
             // LBLFechaHasta
             // 
             this.LBLFechaHasta.AutoSize = true;
-            this.LBLFechaHasta.Location = new System.Drawing.Point(636, 172);
+            this.LBLFechaHasta.Location = new System.Drawing.Point(1113, 176);
             this.LBLFechaHasta.Name = "LBLFechaHasta";
             this.LBLFechaHasta.Size = new System.Drawing.Size(66, 13);
             this.LBLFechaHasta.TabIndex = 7;
             this.LBLFechaHasta.Tag = "LBLFechaHasta";
             this.LBLFechaHasta.Text = "Fecha hasta";
             // 
-            // LBLNombre
+            // Filtrar
             // 
-            this.LBLNombre.AutoSize = true;
-            this.LBLNombre.Location = new System.Drawing.Point(641, 228);
-            this.LBLNombre.Name = "LBLNombre";
-            this.LBLNombre.Size = new System.Drawing.Size(44, 13);
-            this.LBLNombre.TabIndex = 8;
-            this.LBLNombre.Tag = "LBLNombre";
-            this.LBLNombre.Text = "Nombre";
-            // 
-            // Aplicar
-            // 
-            this.Aplicar.Location = new System.Drawing.Point(12, 303);
-            this.Aplicar.Name = "Aplicar";
-            this.Aplicar.Size = new System.Drawing.Size(110, 25);
-            this.Aplicar.TabIndex = 9;
-            this.Aplicar.Tag = "Aplicar";
-            this.Aplicar.Text = "Aplicar";
-            this.Aplicar.UseVisualStyleBackColor = true;
-            this.Aplicar.Click += new System.EventHandler(this.Aplicar_Click);
+            this.Filtrar.Location = new System.Drawing.Point(1113, 232);
+            this.Filtrar.Name = "Filtrar";
+            this.Filtrar.Size = new System.Drawing.Size(90, 25);
+            this.Filtrar.TabIndex = 9;
+            this.Filtrar.Tag = "Filtrar";
+            this.Filtrar.Text = "Filtrar";
+            this.Filtrar.UseVisualStyleBackColor = true;
+            this.Filtrar.Click += new System.EventHandler(this.Aplicar_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(143, 303);
+            this.button2.Location = new System.Drawing.Point(1113, 262);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 25);
+            this.button2.Size = new System.Drawing.Size(90, 25);
             this.button2.TabIndex = 10;
             this.button2.Tag = "Limpiar";
-            this.button2.Text = "Limpiar";
+            this.button2.Text = "Limpiar filtro";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // Desbloquear
             // 
-            this.button3.Location = new System.Drawing.Point(269, 303);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 25);
-            this.button3.TabIndex = 11;
-            this.button3.Tag = "Activar";
-            this.button3.Text = "Activar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(396, 303);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(110, 25);
-            this.button4.TabIndex = 12;
-            this.button4.Tag = "Salir";
-            this.button4.Text = "Salir";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Desbloquear.Location = new System.Drawing.Point(1226, 232);
+            this.Desbloquear.Name = "Desbloquear";
+            this.Desbloquear.Size = new System.Drawing.Size(90, 55);
+            this.Desbloquear.TabIndex = 12;
+            this.Desbloquear.Tag = "Desbloquear";
+            this.Desbloquear.Text = "Volverlo vigente";
+            this.Desbloquear.UseVisualStyleBackColor = true;
+            this.Desbloquear.Click += new System.EventHandler(this.Desbloquear_Click);
             // 
             // label1
             // 
@@ -174,25 +139,29 @@
             this.label1.Tag = "LBLBitacoraDeCambio";
             this.label1.Text = "Bitacora de cambios";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(1116, 83);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(200, 20);
+            this.textBox2.TabIndex = 14;
+            // 
             // _686DPfrmBitacoraCambio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(907, 350);
+            this.ClientSize = new System.Drawing.Size(1328, 304);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.Desbloquear);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.Aplicar);
-            this.Controls.Add(this.LBLNombre);
+            this.Controls.Add(this.Filtrar);
             this.Controls.Add(this.LBLFechaHasta);
             this.Controls.Add(this.LBLFechaDesde);
-            this.Controls.Add(this.LBLCodigoProducto);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.DNI);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.CMBCodProducto);
             this.Controls.Add(this.dataGridView1);
             this.Name = "_686DPfrmBitacoraCambio";
             this.Text = "_686DPfrmBitacoraCambio";
@@ -206,18 +175,15 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox CMBCodProducto;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label LBLCodigoProducto;
+        private System.Windows.Forms.Label DNI;
         private System.Windows.Forms.Label LBLFechaDesde;
         private System.Windows.Forms.Label LBLFechaHasta;
-        private System.Windows.Forms.Label LBLNombre;
-        private System.Windows.Forms.Button Aplicar;
+        private System.Windows.Forms.Button Filtrar;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Desbloquear;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

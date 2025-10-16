@@ -112,6 +112,39 @@ namespace _686DP_MPP
             }
         }
 
+        public void ReemplazarCliente(_686DPCliente_C seleccionado)
+        {
+            try
+            {
+                string consulta = @"
+                    UPDATE [686DP_Cliente].[686DP_Clientes]
+                    SET 
+                        DP686_Estado = @Estado,
+                        DP686_Nombre = @Nombre,
+                        DP686_Apellido = @Apellido,
+                        DP686_Email = @Email,
+                        DP686_Domicilio = @Domicilio,
+                        DP686DP_CodigoPostal = @CodigoPostal
+                    WHERE DP686_DNI = @DNI";
+
+                ArrayList parametros = new ArrayList
+                {
+                    new SqlParameter("@Estado", seleccionado.DP686_Estado),
+                    new SqlParameter("@Nombre", seleccionado.DP686_Nombre),
+                    new SqlParameter("@Apellido", seleccionado.DP686_Apellido),
+                    new SqlParameter("@Email", seleccionado.DP686_Email),
+                    new SqlParameter("@Domicilio", seleccionado.DP686_Domicilio),
+                    new SqlParameter("@CodigoPostal", seleccionado.DP686DP_CodigoPostal),
+                    new SqlParameter("@DNI", seleccionado.DP686_DNI)
+                };
+
+                dal._686DPEscribir(consulta, parametros);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al reemplazar el cliente en 686DP_Clientes: " + ex.Message);
+            }
+        }
 
         public _686DP_Cliente TraerCliente(int dNI)
         {

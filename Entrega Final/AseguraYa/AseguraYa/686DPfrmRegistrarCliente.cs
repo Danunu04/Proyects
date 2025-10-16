@@ -22,6 +22,7 @@ namespace AseguraYa
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
         _686DP_BLLEvento blle = new _686DP_BLLEvento();
+        _686DP_BLLDigitoVerificador BLLDV = new _686DP_BLLDigitoVerificador();
         int dni; 
         public _686DPfrmRegistrarCliente(string idi, int dNI)
         {
@@ -51,6 +52,7 @@ namespace AseguraYa
                 }
                 ClienteCreado = new _686DP_Cliente(dni, DP_TXTNombre.Text, DP_TXTApellido.Text);
                 clientes.crear(ClienteCreado);
+                BLLDV.CalcularDigitoVerificador("Cliente");
                 MessageBox.Show(LMG.Traducir("ClienteCreadoExito"));
                 this.DialogResult = DialogResult.OK;
                 blle.RegistrarEvento(_686DP_Singleton.Instancia.Usuario._686DPDNI, this.Name, "Cliente " + DP_TXTNombre.Text + " creado de forma basica", 2);

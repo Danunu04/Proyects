@@ -28,6 +28,7 @@ namespace AseguraYa
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
         _686DP_BLLEvento blle = new _686DP_BLLEvento();
+        _686DP_BLLDigitoVerificador BLLDV = new _686DP_BLLDigitoVerificador();
         public _686DPfrmModificarSeguro(string idiomaLocal)
         {
             idi = idiomaLocal;
@@ -124,6 +125,7 @@ namespace AseguraYa
                 poliza.DP686_FechaVencimiento = DateTime.Now.AddMonths(1);
 
                 bll.ModificarPoliza(poliza);
+                BLLDV.CalcularDigitoVerificador("Polizas");
                 MessageBox.Show(LMG.Traducir("ModificacionExitosa"), LMG.Traducir("Exito"), MessageBoxButtons.OK, MessageBoxIcon.Information);
                 blle.RegistrarEvento(_686DP_Singleton.Instancia.Usuario._686DPDNI, this.Name, "Se modificó la poliza" , 3);
             }

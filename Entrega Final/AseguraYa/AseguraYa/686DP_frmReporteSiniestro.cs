@@ -19,7 +19,7 @@ namespace AseguraYa
     public partial class _686DP_frmReporteSiniestro : Form
     {
         private List<_686DP_Siniestro> listaSiniestrosOriginal;
-        public _686DP_frmReporteSiniestro()
+        public _686DP_frmReporteSiniestro(string idiomaLocal)
         {
             InitializeComponent();
         }

@@ -53,6 +53,7 @@
             this.Dp_Ayuda = new System.Windows.Forms.ToolStripMenuItem();
             this.DP_Polizas = new System.Windows.Forms.ToolStripMenuItem();
             this.ReporteSiniestro = new System.Windows.Forms.ToolStripMenuItem();
+            this.bitacoraDeCambiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,6 +109,7 @@
             this.DP_Admin.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.DP_GestionDeUsuarios,
             this.DP_GestionDePerfiles,
+            this.bitacoraDeCambiosToolStripMenuItem,
             this.DP_BitacoraDeEventos,
             this.DP_GestionDeRespaldo});
             this.DP_Admin.Name = "DP_Admin";
@@ -118,7 +120,7 @@
             // DP_GestionDeUsuarios
             // 
             this.DP_GestionDeUsuarios.Name = "DP_GestionDeUsuarios";
-            this.DP_GestionDeUsuarios.Size = new System.Drawing.Size(178, 22);
+            this.DP_GestionDeUsuarios.Size = new System.Drawing.Size(181, 22);
             this.DP_GestionDeUsuarios.Tag = "GestionUsuarios";
             this.DP_GestionDeUsuarios.Text = "Gestion de usuarios";
             this.DP_GestionDeUsuarios.Click += new System.EventHandler(this.DP_GestionDeUsuarios_Click);
@@ -126,7 +128,7 @@
             // DP_GestionDePerfiles
             // 
             this.DP_GestionDePerfiles.Name = "DP_GestionDePerfiles";
-            this.DP_GestionDePerfiles.Size = new System.Drawing.Size(178, 22);
+            this.DP_GestionDePerfiles.Size = new System.Drawing.Size(181, 22);
             this.DP_GestionDePerfiles.Tag = "GestionPerfiles";
             this.DP_GestionDePerfiles.Text = "Gestion de perfiles";
             this.DP_GestionDePerfiles.Click += new System.EventHandler(this.DP_GestionDePerfiles_Click);
@@ -134,7 +136,7 @@
             // DP_BitacoraDeEventos
             // 
             this.DP_BitacoraDeEventos.Name = "DP_BitacoraDeEventos";
-            this.DP_BitacoraDeEventos.Size = new System.Drawing.Size(178, 22);
+            this.DP_BitacoraDeEventos.Size = new System.Drawing.Size(181, 22);
             this.DP_BitacoraDeEventos.Tag = "BitacoraEventos";
             this.DP_BitacoraDeEventos.Text = "Bitacora de eventos";
             this.DP_BitacoraDeEventos.Click += new System.EventHandler(this.DP_BitacoraDeEventos_Click);
@@ -142,7 +144,7 @@
             // DP_GestionDeRespaldo
             // 
             this.DP_GestionDeRespaldo.Name = "DP_GestionDeRespaldo";
-            this.DP_GestionDeRespaldo.Size = new System.Drawing.Size(178, 22);
+            this.DP_GestionDeRespaldo.Size = new System.Drawing.Size(181, 22);
             this.DP_GestionDeRespaldo.Tag = "GestionRespaldo";
             this.DP_GestionDeRespaldo.Text = "Gestion de respaldo";
             this.DP_GestionDeRespaldo.Click += new System.EventHandler(this.DP_GestionDeRespaldo_Click);
@@ -222,7 +224,7 @@
             // RegistrarSiniestro
             // 
             this.RegistrarSiniestro.Name = "RegistrarSiniestro";
-            this.RegistrarSiniestro.Size = new System.Drawing.Size(180, 22);
+            this.RegistrarSiniestro.Size = new System.Drawing.Size(167, 22);
             this.RegistrarSiniestro.Tag = "RegistrarSiniestro";
             this.RegistrarSiniestro.Text = "Registrar siniestro";
             this.RegistrarSiniestro.Click += new System.EventHandler(this.RegistrarSiniestro_Click);
@@ -230,7 +232,7 @@
             // AuditarSiniestro
             // 
             this.AuditarSiniestro.Name = "AuditarSiniestro";
-            this.AuditarSiniestro.Size = new System.Drawing.Size(180, 22);
+            this.AuditarSiniestro.Size = new System.Drawing.Size(167, 22);
             this.AuditarSiniestro.Tag = "AuditarSiniestro";
             this.AuditarSiniestro.Text = "Auditar Siniestro";
             this.AuditarSiniestro.Click += new System.EventHandler(this.auditarSiniestroToolStripMenuItem_Click);
@@ -274,6 +276,13 @@
             this.ReporteSiniestro.Tag = "ReporteSiniestro";
             this.ReporteSiniestro.Text = "Reporte Siniestro";
             this.ReporteSiniestro.Click += new System.EventHandler(this.ReporteSiniestro_Click);
+            // 
+            // bitacoraDeCambiosToolStripMenuItem
+            // 
+            this.bitacoraDeCambiosToolStripMenuItem.Name = "bitacoraDeCambiosToolStripMenuItem";
+            this.bitacoraDeCambiosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.bitacoraDeCambiosToolStripMenuItem.Text = "Bitacora de cambios";
+            this.bitacoraDeCambiosToolStripMenuItem.Click += new System.EventHandler(this.bitacoraDeCambiosToolStripMenuItem_Click);
             // 
             // _686DPfrmInicio
             // 
@@ -323,6 +332,7 @@
         private System.Windows.Forms.ToolStripMenuItem RegistrarSiniestro;
         private System.Windows.Forms.ToolStripMenuItem AuditarSiniestro;
         private System.Windows.Forms.ToolStripMenuItem ReporteSiniestro;
+        private System.Windows.Forms.ToolStripMenuItem bitacoraDeCambiosToolStripMenuItem;
     }
 }
 

@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="686DP_Cliente.cs" />
     <Compile Include="686DP_Cobertura.cs" />
+    <Compile Include="686DP_DigitoVerificador.cs" />
     <Compile Include="686DP_Evento.cs" />
     <Compile Include="686DP_Siniestro.cs" />
     <Compile Include="686DP_Usuario.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="686DP_Poliza.cs" />
     <Compile Include="686DP_Seguro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_686DPCliente_C.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

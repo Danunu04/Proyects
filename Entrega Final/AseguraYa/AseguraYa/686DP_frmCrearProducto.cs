@@ -18,6 +18,8 @@ namespace AseguraYa
     public partial class _686DP_frmCrearProducto : Form
     {
         string idi = "";
+
+        _686DP_BLLDigitoVerificador BLLDV = new _686DP_BLLDigitoVerificador();
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
         int seleccion = 0;
@@ -188,6 +190,7 @@ namespace AseguraYa
                         bll.CrearProucto(nProducto);
                         MessageBox.Show(LMG.Traducir("CreacionOk"));
                         cmbProductos.Items.Add(nProducto);
+                        BLLDV.CalcularDigitoVerificador("Seguro");
                         int dniActual = _686DP_SERVICIOS.Singleton._686DP_Singleton.Instancia.Usuario._686DPDNI;
                         blle.RegistrarEvento(dniActual, this.Name, "Producto creado con exito", 3);
                     }
@@ -229,6 +232,7 @@ namespace AseguraYa
                 {
                     bllp.CrearPlan(Producto, franquicia, prima);
                 }
+                BLLDV.CalcularDigitoVerificador("Plan");
 
                 MessageBox.Show(LMG.Traducir("PlanOK"));
                 int dniActual = _686DP_SERVICIOS.Singleton._686DP_Singleton.Instancia.Usuario._686DPDNI;
@@ -338,6 +342,7 @@ namespace AseguraYa
                     List<_686DP_Cobertura> coberturas = bllc.TraerCoberturasFiltrado(codigoPlan);
                     DGCobertura.DataSource = null;
                     DGCobertura.DataSource = coberturas;
+                    BLLDV.CalcularDigitoVerificador("Coberturas");
                     limpiar();
                 }
                 else

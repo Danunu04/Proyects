@@ -860,3 +860,4 @@ C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\
 C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmAuditarSiniestro.resources
 C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmPagar.resources
 C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DP_frmReporteSiniestro.resources
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmRepararSistema.resources

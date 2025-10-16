@@ -16,6 +16,7 @@ namespace AseguraYa
     public partial class _686DPfrmPagar : Form
     {
         _686DP_BLLSiniestro blls = new _686DP_BLLSiniestro();
+        _686DP_BLLDigitoVerificador BLLDV = new _686DP_BLLDigitoVerificador();
         public int CodSiniestro { get; set; }
         public int NroPoliza { get; set; }
         public string Descripcion { get; set; }
@@ -65,6 +66,7 @@ namespace AseguraYa
         {
             blls.Pagar(CodSiniestro);
             Console.WriteLine("PagoOk");
+            BLLDV.CalcularDigitoVerificador("Factura");
             this.Close();
         }
 

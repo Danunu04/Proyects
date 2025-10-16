@@ -22,6 +22,7 @@ namespace AseguraYa
         string idioma = "";
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
+        _686DP_BLLDigitoVerificador BLLDV = new _686DP_BLLDigitoVerificador();
         public _686DPfrmDatosExtra(int dNI, string idi)
         {
             InitializeComponent();
@@ -91,6 +92,7 @@ namespace AseguraYa
                     cliente.DP686DP_CodigoPostal = Convert.ToInt32(TXTCodigoPostal.Text);
 
                     bll.GrabarCliente(cliente);
+                    BLLDV.CalcularDigitoVerificador("Cliente");
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }

@@ -72,10 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="686DPMPPCliente_C.cs" />
     <Compile Include="686DPMPPSeguro.cs" />
     <Compile Include="686DPMPPUsuarios.cs" />
     <Compile Include="686DP_MPPBackUpRestore.cs" />
     <Compile Include="686DP_MPPCobertura.cs" />
+    <Compile Include="686DP_MPPDigitoVerificador.cs" />
     <Compile Include="686DP_MPPEvento.cs" />
     <Compile Include="686DP_MPPFamilia.cs" />
     <Compile Include="686DP_MPPPerfil.cs" />

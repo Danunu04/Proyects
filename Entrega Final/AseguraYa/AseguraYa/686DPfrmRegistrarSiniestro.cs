@@ -18,6 +18,7 @@ namespace AseguraYa
     public partial class _686DPfrmRegistrarSiniestro : Form
     {
         string idi;
+        _686DP_BLLDigitoVerificador BLLDV = new _686DP_BLLDigitoVerificador();
         public _686DPfrmRegistrarSiniestro(string idiomaLocal)
         {
             InitializeComponent();
@@ -120,6 +121,7 @@ namespace AseguraYa
             Console.WriteLine(LMG.Traducir("CargaOK"));
             GeneradorDeSiniestro.GenerarSiniestroBasico(npoliza, fecha, valorBien, VarorReparacion, descripcion, idi, LMG);
             blle.RegistrarEvento(_686DP_Singleton.Instancia.Usuario._686DPDNI, this.Name, "Se registró un siniestro ", 3);
+            BLLDV.CalcularDigitoVerificador("Siniestro");
         }
 
         private void limpiar()

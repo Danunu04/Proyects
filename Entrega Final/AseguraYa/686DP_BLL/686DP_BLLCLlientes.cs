@@ -41,6 +41,11 @@ namespace _686DP_BLL
             mpp.GrabarCliente(cliente);
         }
 
+        public void ReemplazarCliente(_686DPCliente_C seleccionado)
+        {
+            mpp.ReemplazarCliente(seleccionado);
+        }
+
         public _686DP_Cliente TraerCliente(int dNI)
         {
             _686DP_Cliente cliente = mpp.TraerCliente(dNI);

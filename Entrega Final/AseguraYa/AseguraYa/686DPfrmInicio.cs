@@ -11,6 +11,7 @@ using _686DP_SERVICIOS;
 using System.Windows.Forms;
 using _686DP_SERVICIOS.Observer;
 using _686DP_BLL;
+using _686DP_BE;
 
 namespace AseguraYa
 {
@@ -20,11 +21,11 @@ namespace AseguraYa
         _686DP_Idioma idioma = new _686DP_Idioma();
         _686DP_BLLEvento blle = new _686DP_BLLEvento();
         public string IdiomaLocal;
+        _686DP_BLLDigitoVerificador DGV = new _686DP_BLLDigitoVerificador();
         public _686DPfrmInicio()
         {
             this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -167,7 +168,9 @@ namespace AseguraYa
                     bllu.GuardarIdioma(_686DP_Singleton.Instancia.Usuario._686DPIdioma);
                     _686DP_Singleton.Instancia._686DPLogOut();
                     MessageBox.Show(LMG.Traducir("SesionCerrada"), LMG.Traducir("TituloCerrarSesion"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //DGV.grabarTodosDV();
                     //blle.RegistrarEvento(_686DP_Singleton.Instancia.Usuario._686DPDNI, this.Name, "LogOut", 1);
+
                     _686DP_Desactivar();
                 }
                 else
@@ -315,9 +318,32 @@ namespace AseguraYa
 
         private void ReporteSiniestro_Click(object sender, EventArgs e)
         {
-            _686DP_frmReporteSiniestro rs = new _686DP_frmReporteSiniestro();
+            _686DP_frmReporteSiniestro rs = new _686DP_frmReporteSiniestro(IdiomaLocal);
             rs.MdiParent = this;
             rs.Show();
+        }
+
+        private void bitacoraDeCambiosToolStripMenuItem_Click(object sender, EventArgs e)
+        {;
+            _686DPfrmBitacoraCambio bc = new _686DPfrmBitacoraCambio(IdiomaLocal);
+            bc.MdiParent = this;
+            bc.Show();
+        }
+
+        private void _686DPfrmInicio_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                if (_686DP_Singleton.Instancia._686DPIsLogged())
+                {
+                    DGV.grabarTodosDV();
+                    MessageBox.Show(LMG.Traducir("DVActualizados"), "✔️ " + LMG.Traducir("Integridad"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(LMG.Traducir("ErrorDV") + ": " + ex.Message, "❌ " + LMG.Traducir("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
