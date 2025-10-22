@@ -16,6 +16,27 @@ namespace _686DP_MPP
     {
         _686DPCriptoManager cm = new _686DPCriptoManager();
         _686DPDalGeneral dal = new _686DPDalGeneral();
+        public static List<string> erroresFila = new List<string>();
+
+        private string ObtenerPrimaryKey(string nombreTabla)
+        {
+            string query = @"
+        SELECT COLUMN_NAME
+        FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE
+        WHERE TABLE_NAME = @NombreTabla";
+
+            ArrayList parametros = new ArrayList
+    {
+        new SqlParameter("@NombreTabla", nombreTabla)
+    };
+
+            DataTable dt = dal._686DPConsultar(query, parametros);
+
+            if (dt.Rows.Count > 0)
+                return dt.Rows[0]["COLUMN_NAME"].ToString();
+            else
+                return null;
+        }
 
         public _686DP_DigitoVerificador Calcular(string consulta, string nombreTabla)
         {
@@ -32,6 +53,7 @@ namespace _686DP_MPP
                 foreach (var celda in fila.ItemArray)
                 {
                     contenidoFilas += celda?.ToString() ?? "";
+
                 }
             }
 
@@ -45,11 +67,10 @@ namespace _686DP_MPP
 
             string dvh = cm._686DPGetSHA256(contenidoFilas);
             string dvv = cm._686DPGetSHA256(contenidoColumnas);
-
             _686DP_DigitoVerificador resultado = new _686DP_DigitoVerificador(nombreTabla, dvh, dvv);
             return resultado;
         }
-
+        
         public _686DP_DigitoVerificador CalcularDVPolizas()
         {
             string consulta = @"

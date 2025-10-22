@@ -293,5 +293,6 @@
   "AprobadoOK":"El siniestro califica. Puede proceder con la aprobación.",
   "AprobadoNOOK":"El siniestro no califica según la evaluación del sistema. No puede aprobarse.",
   "PolizaOK":"Poliza encontrada",
-  "CargaOK":"Carga realizada con éxito."
+  "CargaOK":"Carga realizada con éxito.",
+  "ErrorBD":"Error de integrida en la base de datos, consultar con el DBA o el Administrador"
 }

@@ -4,7 +4,7 @@
   "CambiarContraseña": "Cambiar Contraseña",
   "Administrador": "Admin",
   "GestionUsuarios": "Gestion de usuarios",
-  "GestionPerfiles": "Gestion de perdiles",
+  "GestionPerfiles": "Gestion de perfiles",
   "BitacoraEventos": "Bitacora de eventos",
   "GestionRespaldo": "Gestion de respaldo",
   "Mestro": "Maestro",
@@ -21,5 +21,8 @@
   "DP_Polizas":"Polizas",
   "RegistrarSiniestro":"Registrar Siniestro",
   "AuditarSiniestro":"Auditar Siniestro",
-  "ReporteSiniestro": "Reporte de Siniestro"
+  "ReporteSiniestro": "Reporte de Siniestro",
+  "BitacoraCambio": "Bitacora de Cambios",
+  "Respaldo": "Respaldo",
+  "Predicciones": "Predicciones"
 }

@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using _686DP_SERVICIOS.Observer;
 using _686DP_BLL;
 using _686DP_BE;
+using System.IO;
 
 namespace AseguraYa
 {
@@ -32,7 +33,7 @@ namespace AseguraYa
         {
             _686DP_Desactivar();
             RegistrarFormularioParaIdioma(this);
-            if(IdiomaLocal != null)
+            if (IdiomaLocal != null)
             {
                 CambiarIdioma(IdiomaLocal);
                 LMG.CargarMensajesGlobales(IdiomaLocal);
@@ -99,7 +100,6 @@ namespace AseguraYa
             DP_Maestro.Enabled = false;
             DP_CambiarContraseña.Enabled = false;
             DP_CambiarIdioma.Enabled = false;
-            Dp_Ayuda.Enabled = false;
             DP_CerrarSesion.Enabled = false;
             DP_Polizas.Enabled = false;
             DP_GestionDeUsuarios.Enabled = false;
@@ -108,12 +108,12 @@ namespace AseguraYa
             DP_GestionDeRespaldo.Enabled = false;
             DP_GestionDeClientes.Enabled = false;
             DP_GestionDeProductos.Enabled = false;
-            DP_GenerarContratacion.Enabled=false;
-            DP_ModificarSeguro.Enabled=false;
+            DP_GenerarContratacion.Enabled = false;
+            DP_ModificarSeguro.Enabled = false;
             DP_EliminarSeguro.Enabled = false;
             DP_Contratacion.Enabled = false;
-            DP_CambiarContraseña.Enabled=false;
-            ReporteSiniestro.Enabled=false;
+            DP_CambiarContraseña.Enabled = false;
+            ReporteSiniestro.Enabled = false;
         }
 
         private void DP_IniciarSesion_Click(object sender, EventArgs e)
@@ -183,13 +183,12 @@ namespace AseguraYa
         private void DP_CambiarIdioma_Click(object sender, EventArgs e)
         {
             _686DPfrmIdioma idioma = new _686DPfrmIdioma(IdiomaLocal);
-            idioma.MdiParent=this;
+            idioma.MdiParent = this;
             idioma.Show();
         }
 
         private void Dp_Ayuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(LMG.Traducir("AyudaPlaceholder"));
         }
 
         internal void ActivarRol()
@@ -207,7 +206,7 @@ namespace AseguraYa
             contratacion.Show();
         }
 
-        
+
 
         private void registrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -247,7 +246,7 @@ namespace AseguraYa
         internal void CambiarIdioma(string idi)
         {
             if (string.IsNullOrWhiteSpace(idi))
-               idi = "Español";
+                idi = "Español";
 
             if (!idioma.ContieneObservador(LMG))
             {
@@ -299,7 +298,7 @@ namespace AseguraYa
 
         private void Dp_Siniestros_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void RegistrarSiniestro_Click(object sender, EventArgs e)
@@ -324,7 +323,8 @@ namespace AseguraYa
         }
 
         private void bitacoraDeCambiosToolStripMenuItem_Click(object sender, EventArgs e)
-        {;
+        {
+            ;
             _686DPfrmBitacoraCambio bc = new _686DPfrmBitacoraCambio(IdiomaLocal);
             bc.MdiParent = this;
             bc.Show();
@@ -343,6 +343,799 @@ namespace AseguraYa
             catch (Exception ex)
             {
                 MessageBox.Show(LMG.Traducir("ErrorDV") + ": " + ex.Message, "❌ " + LMG.Traducir("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //Paginas de ayuda
+        private void maestroDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (IdiomaLocal == "Español")
+            {
+                try
+                {
+                    // Ruta completa del archivo dentro de bin\Debug\Ayuda
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "CrearProducto.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true // Usa el navegador predeterminado
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (IdiomaLocal == "Ingles")
+            {
+                try
+                {
+                    // Ruta completa del archivo dentro de bin\Debug\Ayuda
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "CrearProductoIngles.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true // Usa el navegador predeterminado
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        }
+
+        private void maestroDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (IdiomaLocal == "Español")
+            {
+                try
+                {
+                    // Ruta completa del archivo dentro de bin\Debug\Ayuda
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "GestionarCliente.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true // Usa el navegador predeterminado
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (IdiomaLocal == "Ingles")
+            {
+                try
+                {
+                    // Ruta completa del archivo dentro de bin\Debug\Ayuda
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "GestionarClienteIngles.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true // Usa el navegador predeterminado
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void gestionDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (IdiomaLocal == "Español")
+            {
+                try
+                {
+                    // Ruta completa del archivo dentro de bin\Debug\Ayuda
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "GestionarUsuarios.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true // Usa el navegador predeterminado
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (IdiomaLocal == "Ingles")
+            {
+                try
+                {
+                    // Ruta completa del archivo dentro de bin\Debug\Ayuda
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "GestionarUsuariosIngles.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true // Usa el navegador predeterminado
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void gestionDePerfilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (IdiomaLocal == "Español")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "GestionPerfiles.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (IdiomaLocal == "Ingles")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "GestionPerfilesIngles.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void bitacoraDeCambiosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (IdiomaLocal == "Español")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "BitacoraCambio.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (IdiomaLocal == "Ingles")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "BitacoraCambioIngles.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void bitacoraDeEventosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (IdiomaLocal == "Español")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "BitacoraEvento.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (IdiomaLocal == "Ingles")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "BitacoraEventoIngles.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void respaldoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (IdiomaLocal == "Español")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "Respaldo.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (IdiomaLocal == "Ingles")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "RespaldoIngles.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void generarContratacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (IdiomaLocal == "Español")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "GenerarContratacion.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (IdiomaLocal == "Ingles")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "GenerarContratacionIngles.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void modificarSeguroToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (IdiomaLocal == "Español")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "ModificarSeguro.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (IdiomaLocal == "Ingles")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "ModificarSeguroIngles.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+
+        private void eliminarSeguroToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (IdiomaLocal == "Español")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "CancelarSeguro.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (IdiomaLocal == "Ingles")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "CancelarSeguroIngles.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void registrarSiniestroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (IdiomaLocal == "Español")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "RegistrarSiniestro.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (IdiomaLocal == "Ingles")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "RegistrarSiniestroIngles.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void auditarSiniestroToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (IdiomaLocal == "Español")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "AuditarSiniestro.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (IdiomaLocal == "Ingles")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "AuditarSiniestroIngles.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void polizasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (IdiomaLocal == "Español")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "Polizas.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (IdiomaLocal == "Ingles")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "PolizasIngles.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void reporteSiniestrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (IdiomaLocal == "Español")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "ReporteSiniestro.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (IdiomaLocal == "Ingles")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "ReporteSiniestroIngles.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

@@ -19,6 +19,7 @@ namespace AseguraYa
         private readonly _686DP_BLLBackUpRestore BLLBR = new _686DP_BLLBackUpRestore();
         private readonly _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         private readonly _686DP_BLLDigitoVerificador BLLDV = new _686DP_BLLDigitoVerificador();
+        
 
         public _686DPfrmRepararSistema()
         {
@@ -91,6 +92,12 @@ namespace AseguraYa
         }
 
         private void _686DPfrmRepararSistema_Load(object sender, EventArgs e)
+        {
+            listBox1.DataSource = _686DP_BLLDigitoVerificador.errores;
+            listBox2.DataSource = _686DP_BLLDigitoVerificador.MppErrores;
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

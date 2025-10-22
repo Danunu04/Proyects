@@ -15,6 +15,8 @@ namespace _686DP_BLL
         private static List<_686DP_DigitoVerificador> DVS = new List<_686DP_DigitoVerificador>();
         private static List<_686DP_DigitoVerificador> DVSBD = new List<_686DP_DigitoVerificador>();
         _686DP_MPPDigitoVerificador mpp = new _686DP_MPPDigitoVerificador();
+        public static List<string> MppErrores = new List<string>();
+        public static List<string> errores = new List<string>();
         public void CalcularDigitoVerificador(string NombreTabla)
         {
             _686DP_DigitoVerificador dv = null;
@@ -82,60 +84,62 @@ namespace _686DP_BLL
 
         public bool CalcularTodos()
         {
-            DVS.Clear();
-            DVS.Add(mpp.CalcularDVPolizas());
-            DVS.Add(mpp.CalcularDVPlan());
-            DVS.Add(mpp.CalcularDVCobertura());
-            DVS.Add(mpp.CalcularDVSeguro());
-            DVS.Add(mpp.CalcularDVCliente());
-            DVS.Add(mpp.CalcularDVSiniestro());
-            DVS.Add(mpp.CalcularDVFactura());
-            DVS.Add(mpp.CalcularPlanesCoberturas());
-            DVS.Add(mpp.CalcularSeguroPlan());
-            DVS.Add(mpp.CalcularClientePoliza());
-            DVS.Add(mpp.CalcularPolizaSiniestro());
-            DVS.Add(mpp.CalcularPolizaCancelacion());
+            try
+            {
+                DVS.Clear();
+                DVS.Add(mpp.CalcularDVPolizas());
+                DVS.Add(mpp.CalcularDVPlan());
+                DVS.Add(mpp.CalcularDVCobertura());
+                DVS.Add(mpp.CalcularDVSeguro());
+                DVS.Add(mpp.CalcularDVCliente());
+                DVS.Add(mpp.CalcularDVSiniestro());
+                DVS.Add(mpp.CalcularDVFactura());
+                DVS.Add(mpp.CalcularPlanesCoberturas());
+                DVS.Add(mpp.CalcularSeguroPlan());
+                DVS.Add(mpp.CalcularClientePoliza());
+                DVS.Add(mpp.CalcularPolizaSiniestro());
+                DVS.Add(mpp.CalcularPolizaCancelacion());
 
-            return Comparar();
+                return Comparar();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al calcular/verificar los dígitos verificadores:\n" + ex.Message, ex);
+            }
         }
 
         private bool Comparar()
         {
-            try
+            bool valor = true;
+            DVSBD = mpp.TraerDVs();
+
+            if (DVS == null || DVS.Count == 0)
+                throw new Exception("No hay dígitos verificadores calculados en memoria.");
+
+            if (DVSBD == null || DVSBD.Count == 0)
+                throw new Exception("No hay dígitos verificadores almacenados en la base de datos.");
+
+            foreach (var dvLocal in DVS)
             {
-                DVSBD = mpp.TraerDVs();
+                var dvBD = DVSBD.FirstOrDefault(x => x.DP686NombreTabla == dvLocal.DP686NombreTabla);
 
-                if (DVS == null || DVS.Count == 0)
-                    throw new Exception("No hay dígitos verificadores calculados en memoria.");
-
-                if (DVSBD == null || DVSBD.Count == 0)
-                    throw new Exception("No hay dígitos verificadores almacenados en la base de datos.");
-
-                foreach (var dvLocal in DVS)
+                if (dvBD == null)
                 {
-                    var dvBD = DVSBD.FirstOrDefault(x => x.DP686NombreTabla == dvLocal.DP686NombreTabla);
-
-                    if (dvBD == null)
-                        throw new Exception($"❌ No se encontró en la base el registro de la tabla '{dvLocal.DP686NombreTabla}'.");
-
-                    bool coincideDVH = dvLocal.DP686DVH == dvBD.DP686DVH;
-                    bool coincideDVV = dvLocal.DP686DVV == dvBD.DP686DVV;
-
-                    if (!coincideDVH || !coincideDVV)
-                    {
-                        throw new Exception(
-                            $"⚠️ Inconsistencia detectada en '{dvLocal.DP686NombreTabla}'.\n" +
-                            $"DVH esperado: {dvLocal.DP686DVH}\nDVH BD: {dvBD.DP686DVH}\n" +
-                            $"DVV esperado: {dvLocal.DP686DVV}\nDVV BD: {dvBD.DP686DVV}");
-                    }
+                    throw new Exception($"❌ No se encontró en la base el registro de la tabla '{dvLocal.DP686NombreTabla}'.");
                 }
 
-                return true;
+                bool coincideDVH = dvLocal.DP686DVH == dvBD.DP686DVH;
+                bool coincideDVV = dvLocal.DP686DVV == dvBD.DP686DVV;
+
+                if (!coincideDVH || !coincideDVV)
+                {
+                    errores.Add($"Inconsistencia detectada en '{dvLocal.DP686NombreTabla}'.\n");
+                    
+                    valor = false;
+                }
             }
-            catch (Exception ex)
-            {
-                return false;  
-            }
+
+            return valor;
         }
     }
 }
