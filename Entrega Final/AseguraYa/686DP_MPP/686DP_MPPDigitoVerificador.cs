@@ -9,38 +9,68 @@ using _686DP_Dal;
 using _686DP_SERVICIOS;
 using System.Data.SqlClient;
 using System.Collections;
+using System.Globalization;
+using System.Security.Cryptography;
+
 
 namespace _686DP_MPP
 {
     public class _686DP_MPPDigitoVerificador
     {
+
         _686DPCriptoManager cm = new _686DPCriptoManager();
         _686DPDalGeneral dal = new _686DPDalGeneral();
-        public static List<string> erroresFila = new List<string>();
+        
+        public static List<DVH> DVHDB = new List<DVH>();
+        public static List<DVH> DVH = new List<DVH>();
+
+        private readonly List<string> tablas = new List<string>
+        {
+            // Clientes
+            "686DP_Cliente",
+            "686DPClientePoliza",
+
+            // Pólizas
+            "686DP_Poliza",
+            "686DP_PolizaSiniestro",
+            "686DPPolizaCancelacion",
+
+            // Siniestros
+            "686DP_Siniestro",
+
+            // Facturación
+            "686DP_Factura",
+
+            // Planes y Coberturas
+            "686DP_Plan",
+            "686DP_Cobertura",
+            "686DP_PlanesCoberturas",
+
+            // Seguros
+            "686DP_Seguro",
+            "686DP_SeguroPlan"
+        };
 
         private string ObtenerPrimaryKey(string nombreTabla)
         {
             string query = @"
-        SELECT COLUMN_NAME
-        FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE
-        WHERE TABLE_NAME = @NombreTabla";
-
-            ArrayList parametros = new ArrayList
-    {
-        new SqlParameter("@NombreTabla", nombreTabla)
-    };
+                SELECT COLUMN_NAME
+                FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE
+                WHERE TABLE_NAME = @NombreTabla";
+            ArrayList parametros = new ArrayList { new SqlParameter("@NombreTabla", nombreTabla) };
 
             DataTable dt = dal._686DPConsultar(query, parametros);
-
             if (dt.Rows.Count > 0)
                 return dt.Rows[0]["COLUMN_NAME"].ToString();
             else
                 return null;
         }
 
+
         public _686DP_DigitoVerificador Calcular(string consulta, string nombreTabla)
         {
             DataTable dt = dal._686DPConsultar(consulta, null);
+            string dvhFila = "";
 
             if (dt == null || dt.Rows.Count == 0)
                 throw new Exception($"La tabla {nombreTabla} no contiene registros.");
@@ -50,11 +80,17 @@ namespace _686DP_MPP
 
             foreach (DataRow fila in dt.Rows)
             {
+                dvhFila = "";
                 foreach (var celda in fila.ItemArray)
                 {
                     contenidoFilas += celda?.ToString() ?? "";
+                    dvhFila += celda?.ToString() ?? "";
 
                 }
+                string pkCol = ObtenerPrimaryKey(nombreTabla);
+                string pkValor = fila[pkCol]?.ToString().Trim() ?? ""; 
+                string dvhNuevo = cm._686DPGetSHA256(dvhFila);
+                DVH.Add(new DVH(nombreTabla, pkValor, dvhNuevo));
             }
 
             for (int c = 0; c < dt.Columns.Count; c++)
@@ -70,7 +106,7 @@ namespace _686DP_MPP
             _686DP_DigitoVerificador resultado = new _686DP_DigitoVerificador(nombreTabla, dvh, dvv);
             return resultado;
         }
-        
+
         public _686DP_DigitoVerificador CalcularDVPolizas()
         {
             string consulta = @"
@@ -233,7 +269,7 @@ namespace _686DP_MPP
             SELECT [DP686_CodSeguro]
                   ,[DP686_CodigoPlan]
               FROM [AseguraYA].[dbo].[686DP_SeguroPlan]";
-                    return Calcular(consulta, "686DP_SeguroPlan");
+            return Calcular(consulta, "686DP_SeguroPlan");
         }
 
         public _686DP_DigitoVerificador CalcularClientePoliza()
@@ -262,5 +298,7 @@ namespace _686DP_MPP
               FROM [AseguraYA].[dbo].[686DPPolizaCancelacion]";
             return Calcular(consulta, "686DPPolizaCancelacion");
         }
+
     }
+    
 }

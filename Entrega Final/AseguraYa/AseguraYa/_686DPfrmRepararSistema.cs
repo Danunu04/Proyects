@@ -69,11 +69,11 @@ namespace AseguraYa
                 BLLDV.CalcularTodos();
                 BLLDV.grabarTodosDV();
                 logout();
-                MessageBox.Show(LMG.Traducir("DVRecalculadoOK"), "✔️ " + LMG.Traducir("Integridad"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(LMG.Traducir("DVRecalculadoOK"), "" + LMG.Traducir("Integridad"), MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(LMG.Traducir("ErrorRecalcular") + ": " + ex.Message, "❌ " + LMG.Traducir("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(LMG.Traducir("ErrorRecalcular") + ": " + ex.Message, "" + LMG.Traducir("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             this.Close();
@@ -86,7 +86,7 @@ namespace AseguraYa
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Hasta luego, ojala lo soluciones 💪");
+            Console.WriteLine("Hasta luego, ojala lo soluciones");
             logout();
             this.Close();
         }
@@ -94,7 +94,6 @@ namespace AseguraYa
         private void _686DPfrmRepararSistema_Load(object sender, EventArgs e)
         {
             listBox1.DataSource = _686DP_BLLDigitoVerificador.errores;
-            listBox2.DataSource = _686DP_BLLDigitoVerificador.MppErrores;
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

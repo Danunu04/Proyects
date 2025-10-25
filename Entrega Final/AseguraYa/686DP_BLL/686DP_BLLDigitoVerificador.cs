@@ -17,6 +17,21 @@ namespace _686DP_BLL
         _686DP_MPPDigitoVerificador mpp = new _686DP_MPPDigitoVerificador();
         public static List<string> MppErrores = new List<string>();
         public static List<string> errores = new List<string>();
+        private readonly List<string> tablas = new List<string>
+        {
+            "686DP_Cliente",
+            "686DP_Poliza",
+            "686DP_Siniestro",
+            "686DP_Cobertura",
+            "686DP_Factura",
+            "686DP_Plan",
+            "686DP_Seguro",
+            "686DP_SeguroPlan",
+            "686DP_PlanesCoberturas",
+            "686DPClientePoliza",
+            "686DP_PolizaSiniestro",
+            "686DPPolizaCancelacion"
+        };
         public void CalcularDigitoVerificador(string NombreTabla)
         {
             _686DP_DigitoVerificador dv = null;
@@ -111,7 +126,6 @@ namespace _686DP_BLL
         private bool Comparar()
         {
             bool valor = true;
-            DVSBD = mpp.TraerDVs();
 
             if (DVS == null || DVS.Count == 0)
                 throw new Exception("No hay dígitos verificadores calculados en memoria.");
@@ -134,12 +148,12 @@ namespace _686DP_BLL
                 if (!coincideDVH || !coincideDVV)
                 {
                     errores.Add($"Inconsistencia detectada en '{dvLocal.DP686NombreTabla}'.\n");
-                    
                     valor = false;
                 }
             }
-
             return valor;
         }
+
+
     }
 }

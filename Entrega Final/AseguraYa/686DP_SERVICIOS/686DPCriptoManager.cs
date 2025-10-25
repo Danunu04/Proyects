@@ -22,6 +22,19 @@ namespace _686DP_SERVICIOS
             for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
             return sb.ToString();
         }
+        public string _686DPGetSHA256DVH(string ste)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.Unicode.GetBytes(ste); // 🔹 mismo formato que NVARCHAR
+                byte[] hash = sha256.ComputeHash(bytes);
+                StringBuilder sb = new StringBuilder();
+                foreach (byte b in hash)
+                    sb.AppendFormat("{0:x2}", b);
+                return sb.ToString();
+            }
+        }
+
         public string _686DPGetAES256(string plainText)
         {
             using (AesCryptoServiceProvider aesAlg = new AesCryptoServiceProvider())

@@ -45,6 +45,7 @@ namespace AseguraYa
         {
             try
             {
+                
                 if (_686DP_Singleton.Instancia._686DPIsLogged())
                 {
                     MessageBox.Show(LMG.Traducir("SesionYaActiva"), LMG.Traducir("TituloSesionActiva"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
