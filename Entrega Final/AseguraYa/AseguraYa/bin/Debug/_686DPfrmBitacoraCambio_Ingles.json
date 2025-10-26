@@ -1,11 +1,10 @@
 {
     "_686DPfrmBitacoraCambio": "Change Log",
-    "LBLCodigoProducto": "Product Code",
+    "DNI": "ID",
     "LBLFechaDesde": "Start Date",
     "LBLFechaHasta": "End Date",
-    "LBLNombre": "Name",
+    "Filtrar": "Filter",
     "Aplicar": "Apply",
     "Limpiar": "Clear",
-    "Activar": "Activate",
-    "Salir": "Exit"
+    "Desbloquear": "Activate"
 }

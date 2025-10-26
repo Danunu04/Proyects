@@ -861,3 +861,7 @@ C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\
 C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmPagar.resources
 C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DP_frmReporteSiniestro.resources
 C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmRepararSistema.resources
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\bin\Debug\AseguraYa.exe.manifest
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\bin\Debug\AseguraYa.application
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa.exe.manifest
+C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa.application

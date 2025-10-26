@@ -14,6 +14,7 @@ using _686DP_SERVICIOS.Observer;
 using System.Net.NetworkInformation;
 using _686DP_SERVICIOS.Composite;
 using System.Net;
+using System.IO;
 
 
 namespace AseguraYa
@@ -269,6 +270,62 @@ namespace AseguraYa
         private void DP_TXTContraseña_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (idi == "Español")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "IniciarSesion.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (idi == "Ingles")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "IniciarSesionIngles.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

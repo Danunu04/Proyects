@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using _686DP_BE;
 using _686DP_BLL;
+using _686DP_SERVICIOS.Observer;
 
 namespace AseguraYa
 {
@@ -18,14 +19,18 @@ namespace AseguraYa
         {
             InitializeComponent();
         }
+        _686DP_BLLDigitoVerificador BLLDV = new _686DP_BLLDigitoVerificador();
         
         _686DPBLLClienteC bllcc = new _686DPBLLClienteC();
         List<_686DPCliente_C> clientesC = new List<_686DPCliente_C>();
+
+        _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
+        _686DP_Idioma IdiomaClase = new _686DP_Idioma();
         private void Aplicar_Click(object sender, EventArgs e)
         {
             if (clientesC == null || !clientesC.Any())
             {
-                MessageBox.Show("No hay datos para filtrar.");
+                MessageBox.Show(LMG.Traducir("NoHayFiltro"));
                 return;
             }
 
@@ -39,7 +44,7 @@ namespace AseguraYa
                 }
                 else
                 {
-                    MessageBox.Show("El DNI debe ser numérico.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(LMG.Traducir("SoloNumeros"), "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
             }
@@ -59,11 +64,13 @@ namespace AseguraYa
             dataGridView1.DataSource = filtrada.ToList();
 
             if (!filtrada.Any())
-                MessageBox.Show("No se encontraron registros que coincidan con los filtros aplicados.");
+                MessageBox.Show(LMG.Traducir("NoRegistro"));
         }
 
         private void _686DPfrmBitacoraCambio_Load(object sender, EventArgs e)
         {
+            dateTimePicker1.ShowCheckBox = true;
+            dateTimePicker2.ShowCheckBox = true;
             clientesC = bllcc.TraerCambios();
             dataGridView1.DataSource = clientesC;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -87,7 +94,7 @@ namespace AseguraYa
         {
             if (dataGridView1.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Seleccioná un cliente para desbloquear.");
+                MessageBox.Show(LMG.Traducir("SeleccionarCliente"));
                 return;
             }
 
@@ -116,7 +123,9 @@ namespace AseguraYa
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = clientesC;
 
-            MessageBox.Show("Cliente desbloqueado correctamente.");
+            BLLDV.CalcularDigitoVerificador("Cliente");
+
+            MessageBox.Show(LMG.Traducir("ClienteOK"));
         }
     }
 }

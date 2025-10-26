@@ -44,7 +44,7 @@
             // 
             // txtCodSiniestro
             // 
-            this.txtCodSiniestro.Location = new System.Drawing.Point(138, 221);
+            this.txtCodSiniestro.Location = new System.Drawing.Point(168, 221);
             this.txtCodSiniestro.Name = "txtCodSiniestro";
             this.txtCodSiniestro.ReadOnly = true;
             this.txtCodSiniestro.Size = new System.Drawing.Size(197, 20);
@@ -52,7 +52,7 @@
             // 
             // txtNroPoliza
             // 
-            this.txtNroPoliza.Location = new System.Drawing.Point(138, 259);
+            this.txtNroPoliza.Location = new System.Drawing.Point(168, 259);
             this.txtNroPoliza.Name = "txtNroPoliza";
             this.txtNroPoliza.ReadOnly = true;
             this.txtNroPoliza.Size = new System.Drawing.Size(197, 20);
@@ -60,7 +60,7 @@
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(138, 333);
+            this.txtValor.Location = new System.Drawing.Point(168, 333);
             this.txtValor.Name = "txtValor";
             this.txtValor.ReadOnly = true;
             this.txtValor.Size = new System.Drawing.Size(197, 20);
@@ -68,7 +68,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(138, 295);
+            this.txtDescripcion.Location = new System.Drawing.Point(168, 295);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ReadOnly = true;
             this.txtDescripcion.Size = new System.Drawing.Size(197, 20);
@@ -76,7 +76,7 @@
             // 
             // txtEvaluacion
             // 
-            this.txtEvaluacion.Location = new System.Drawing.Point(138, 369);
+            this.txtEvaluacion.Location = new System.Drawing.Point(168, 369);
             this.txtEvaluacion.Name = "txtEvaluacion";
             this.txtEvaluacion.ReadOnly = true;
             this.txtEvaluacion.Size = new System.Drawing.Size(197, 20);
@@ -86,7 +86,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
-            this.label1.Location = new System.Drawing.Point(40, 224);
+            this.label1.Location = new System.Drawing.Point(12, 224);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 5;
@@ -97,7 +97,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
-            this.label2.Location = new System.Drawing.Point(40, 266);
+            this.label2.Location = new System.Drawing.Point(12, 266);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 13);
             this.label2.TabIndex = 6;
@@ -108,7 +108,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
-            this.label3.Location = new System.Drawing.Point(40, 298);
+            this.label3.Location = new System.Drawing.Point(12, 298);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 7;
@@ -119,7 +119,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
-            this.label4.Location = new System.Drawing.Point(40, 336);
+            this.label4.Location = new System.Drawing.Point(12, 333);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 8;
@@ -131,18 +131,19 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(147)))), ((int)(((byte)(153)))));
-            this.label5.Location = new System.Drawing.Point(40, 372);
+            this.label5.Location = new System.Drawing.Point(12, 372);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 9;
             this.label5.Tag = "Evaluacion";
             this.label5.Text = "Evaluacion";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // BTNPagar
             // 
-            this.BTNPagar.Location = new System.Drawing.Point(43, 429);
+            this.BTNPagar.Location = new System.Drawing.Point(15, 419);
             this.BTNPagar.Name = "BTNPagar";
-            this.BTNPagar.Size = new System.Drawing.Size(292, 23);
+            this.BTNPagar.Size = new System.Drawing.Size(350, 33);
             this.BTNPagar.TabIndex = 10;
             this.BTNPagar.Text = "Pagar";
             this.BTNPagar.UseVisualStyleBackColor = true;
@@ -154,7 +155,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(377, 531);
+            this.ClientSize = new System.Drawing.Size(377, 480);
             this.Controls.Add(this.BTNPagar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);

@@ -1,12 +1,10 @@
 {
-    "FechaDesde":"Fecha desde",
-    "FechaHasta":"Fecha hasta",
-    "Modulo":"Módulo",
-    "LBLCriticidad":"Criticidad",
-    "LBLDNI":"DNI",
-    "LBLNombre":"Nombre",
-    "LBLApellido":"Apellido",
-    "BTNImprimir":"Imprimir",
-    "BTNFiltrar":"Filtrar",
-    "BTNLimpiarFiltros":"Limpiar Filtros"
+    "_686DPfrmBitacoraCambio": "Bitácora de Cambios",
+    "DNI": "DNI",
+    "LBLFechaDesde": "Fecha Desde",
+    "LBLFechaHasta": "Fecha Hasta",
+    "Filtrar": "Filtrar",
+    "Aplicar": "Aplicar",
+    "Limpiar": "Limpiar",
+    "Desbloquear": "Desbloquear"
 }

@@ -133,10 +133,10 @@ namespace AseguraYa
                 }
 
                 int filaIndex = dataGridView1.Rows.Count - 2;
-                if (filaIndex >= 0 && fechaVencimiento.Date < DateTime.Today)
-                {
-                    dataGridView1.Rows[filaIndex].DefaultCellStyle.BackColor = Color.Red;
-                }
+                //if (filaIndex >= 0 && fechaVencimiento.Date < DateTime.Today)
+                //{
+                //    dataGridView1.Rows[filaIndex].DefaultCellStyle.BackColor = Color.Red;
+                //}
                 string estadoTraducido = LMG.Traducir(poliza.DP686_Estado.ToString());
                 if (!CMBEstado.Items.Contains(estadoTraducido))
                     CMBEstado.Items.Add(estadoTraducido);

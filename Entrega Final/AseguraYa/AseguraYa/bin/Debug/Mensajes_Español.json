@@ -294,5 +294,12 @@
   "AprobadoNOOK":"El siniestro no califica según la evaluación del sistema. No puede aprobarse.",
   "PolizaOK":"Poliza encontrada",
   "CargaOK":"Carga realizada con éxito.",
-  "ErrorBD":"Error de integrida en la base de datos, consultar con el DBA o el Administrador"
+  "ErrorBD":"Error de integrida en la base de datos, consultar con el DBA o el Administrador",
+  "NoHayFiltro":"No hay datos para filtrar.",
+  "NoRegistro":"No se encontraron registros que coincidan con los filtros aplicados.",
+  "SeleccionarCliente":"Seleccioná un cliente para desbloquear.",
+  "ClienteOK":"Cliente desbloqueado correctamente.",
+  "PagoRequerido":"Debe completar el pago antes de cerrar esta ventana.\n\n¿Desea realizar el pago ahora?",
+  "Requerido":"Pago requerido",
+  "ErrorPago":"Error al procesar el pago: "
 }

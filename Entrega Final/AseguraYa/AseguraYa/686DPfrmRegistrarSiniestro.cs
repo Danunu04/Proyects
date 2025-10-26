@@ -48,8 +48,7 @@ namespace AseguraYa
         {
             if (!System.Text.RegularExpressions.Regex.IsMatch(TXTNpoliza.Text, @"^\d*$"))
             {
-                MessageBox.Show("Solo se permiten números.");
-                // elimina cualquier carácter no numérico
+                MessageBox.Show(LMG.Traducir("SoloNumeros"));
                 TXTNpoliza.Text = System.Text.RegularExpressions.Regex.Replace(TXTNpoliza.Text, @"[^\d]", "");
                 TXTNpoliza.SelectionStart = TXTNpoliza.Text.Length;
             }
@@ -122,6 +121,7 @@ namespace AseguraYa
             GeneradorDeSiniestro.GenerarSiniestroBasico(npoliza, fecha, valorBien, VarorReparacion, descripcion, idi, LMG);
             blle.RegistrarEvento(_686DP_Singleton.Instancia.Usuario._686DPDNI, this.Name, "Se registró un siniestro ", 3);
             BLLDV.CalcularDigitoVerificador("Siniestro");
+            this.Close();
         }
 
         private void limpiar()
@@ -148,7 +148,7 @@ namespace AseguraYa
 
             if (!System.Text.RegularExpressions.Regex.IsMatch(texto, @"^\d*\.?\d*$"))
             {
-                MessageBox.Show("Solo se permiten números decimales (por ejemplo: 123.45)");
+                MessageBox.Show(LMG.Traducir("SoloNumeros"));
 
                 textBox1.Text = System.Text.RegularExpressions.Regex.Replace(texto, @"[^0-9.,]", "");
                 textBox1.SelectionStart = textBox1.Text.Length;
@@ -166,7 +166,7 @@ namespace AseguraYa
 
             if (!System.Text.RegularExpressions.Regex.IsMatch(texto, @"^\d*\.?\d*$"))
             {
-                MessageBox.Show("Solo se permiten números decimales (por ejemplo: 123.45)");
+                MessageBox.Show(LMG.Traducir("SoloNumeros"));
 
                 textBox2.Text = System.Text.RegularExpressions.Regex.Replace(texto, @"[^0-9.,]", "");
                 textBox2.SelectionStart = textBox2.Text.Length;

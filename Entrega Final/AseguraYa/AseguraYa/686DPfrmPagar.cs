@@ -27,6 +27,8 @@ namespace AseguraYa
 
         _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
+
+        private bool pagoRealizado = false;
         public _686DPfrmPagar(int codSiniestro, int nroPoliza, string descripcion, double valor, string evaluacion, string idi)
         {
             InitializeComponent();
@@ -50,7 +52,39 @@ namespace AseguraYa
         public _686DPfrmPagar()
         {
             InitializeComponent();
+            this.FormClosing += _686DPfrmPagar_FormClosing;
         }
+
+        private void _686DPfrmPagar_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (pagoRealizado) return;
+
+            e.Cancel = true;
+
+            var result = MessageBox.Show(
+                LMG.Traducir("PagoRequerido"),
+                LMG.Traducir("Requerido"),
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning,
+                MessageBoxDefaultButton.Button1);
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    BTNPagar.PerformClick();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(LMG.Traducir("ErrorPago")+ ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+            }
+        }
+
+
 
         private void _686DPfrmPagar_Load(object sender, EventArgs e)
         {
@@ -65,7 +99,7 @@ namespace AseguraYa
         private void BTNPagar_Click(object sender, EventArgs e)
         {
             blls.Pagar(CodSiniestro);
-            Console.WriteLine("PagoOk");
+            Console.WriteLine(LMG.Traducir("PagoOk"));
             BLLDV.CalcularDigitoVerificador("Factura");
             this.Close();
         }
@@ -76,6 +110,11 @@ namespace AseguraYa
             LMG.RegistrarForm(fi);
             IdiomaClase.AgregarObsevador(LMG);
             IdiomaClase.CambiarIdioma(idioma);
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
