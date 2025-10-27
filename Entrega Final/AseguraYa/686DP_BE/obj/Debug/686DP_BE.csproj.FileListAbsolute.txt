@@ -158,3 +158,31 @@ C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\o
 C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.Up2Date
 C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\obj\Debug\686DP_BE.dll
 C:\Users\Dana Perelmuter\Desktop\GIT\Proyects\Entrega Final\AseguraYa\686DP_BE\obj\Debug\686DP_BE.pdb
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\686DP_BE.dll.config
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\686DP_BE.dll
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\686DP_BE.pdb
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Buffers.dll
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.IO.Pipelines.dll
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Memory.dll
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Numerics.Vectors.dll
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Text.Encodings.Web.dll
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Text.Json.dll
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.ValueTuple.dll
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Buffers.xml
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.IO.Pipelines.xml
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Memory.xml
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Numerics.Vectors.xml
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Text.Encodings.Web.xml
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Text.Json.xml
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\bin\Debug\System.ValueTuple.xml
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.AssemblyReference.cache
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.CoreCompileInputs.cache
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\obj\Debug\686DP_BE.csproj.Up2Date
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\obj\Debug\686DP_BE.dll
+D:\Proyects\Entrega Final\AseguraYa\686DP_BE\obj\Debug\686DP_BE.pdb

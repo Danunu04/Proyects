@@ -342,7 +342,7 @@ namespace AseguraYa
                     List<_686DP_Cobertura> coberturas = bllc.TraerCoberturasFiltrado(codigoPlan);
                     DGCobertura.DataSource = null;
                     DGCobertura.DataSource = coberturas;
-                    BLLDV.CalcularDigitoVerificador("Coberturas");
+                    BLLDV.CalcularDigitoVerificador("Cobertura");
                     limpiar();
                 }
                 else

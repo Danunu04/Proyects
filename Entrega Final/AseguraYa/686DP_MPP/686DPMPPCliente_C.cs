@@ -41,45 +41,48 @@ namespace _686DP_MPP
 
         public List<_686DPCliente_C> TraerCambios()
         {
-            string consulta = @"
-                 SELECT 
-                    ID,
-                    DP686_Estado,
-                    DP686_DNI,
-                    DP686_Nombre,
-                    DP686_Apellido,
-                    DP686_Email,
-                    DP686_Domicilio,
-                    DP686DP_CodigoPostal,
-                    DP686_Fecha,
-                    DP686_Activo
-                FROM [686DP_Cliente].[686DP_Clienctes_C]
-                ORDER BY DP686_Fecha DESC";
+            const string consulta = @"
+            SELECT 
+                ID,
+                DP686_Estado,
+                DP686_DNI,
+                DP686_Nombre,
+                DP686_Apellido,
+                DP686_Email,
+                DP686_Domicilio,
+                DP686DP_CodigoPostal,
+                DP686_Fecha,
+                DP686_Activo
+            FROM [686DP_Cliente].[686DP_Clienctes_C]
+            ORDER BY DP686_Fecha DESC";
 
-            ArrayList parametros = new ArrayList();
-            DataTable dt = dal._686DPConsultar(consulta, parametros);
-
-            List<_686DPCliente_C> listaClientes = new List<_686DPCliente_C>();
+            var dt = dal._686DPConsultar(consulta, new ArrayList());
+            var lista = new List<_686DPCliente_C>();
 
             foreach (DataRow fila in dt.Rows)
             {
-                _686DPCliente_C cliente = new _686DPCliente_C(
-                    Convert.ToInt32(fila["ID"]),
-                    Convert.ToBoolean(fila["DP686_Estado"]),
-                    Convert.ToInt32(fila["DP686_DNI"]),
-                    fila["DP686_Nombre"].ToString(),
-                    fila["DP686_Apellido"].ToString(),
-                    fila["DP686_Email"].ToString(),
-                    fila["DP686_Domicilio"].ToString(),
-                    Convert.ToInt32(fila["DP686DP_CodigoPostal"]),
-                    Convert.ToDateTime(fila["DP686_Fecha"]),
-                    Convert.ToBoolean(fila["DP686_Activo"])
+                int ToInt(object v) { return v == DBNull.Value ? 0 : Convert.ToInt32(v); }
+                bool ToBool(object v) { return v == DBNull.Value ? false : Convert.ToBoolean(v); }
+                DateTime ToDate(object v) { return v == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(v); }
+                string ToStr(object v) { return v == DBNull.Value ? string.Empty : v.ToString(); }
+
+                var cliente = new _686DPCliente_C(
+                    ToInt(fila["ID"]),
+                    ToBool(fila["DP686_Estado"]),
+                    ToInt(fila["DP686_DNI"]),
+                    ToStr(fila["DP686_Nombre"]),
+                    ToStr(fila["DP686_Apellido"]),
+                    ToStr(fila["DP686_Email"]),
+                    ToStr(fila["DP686_Domicilio"]),
+                    ToInt(fila["DP686DP_CodigoPostal"]),
+                    ToDate(fila["DP686_Fecha"]),
+                    ToBool(fila["DP686_Activo"])
                 );
 
-                listaClientes.Add(cliente);
+                lista.Add(cliente);
             }
 
-            return listaClientes;
+            return lista;
         }
     }
 }

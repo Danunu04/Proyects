@@ -22,8 +22,22 @@ namespace AseguraYa
         {
             try
             {
+                string T(string key)
+                    => string.IsNullOrWhiteSpace(key) ? string.Empty
+                       : (LMG?.Traducir(key) ?? key);
+
+                if (nombre == null) nombre = string.Empty;
+                if (apellido == null) apellido = string.Empty;
+                if (domicilio == null) domicilio = string.Empty;
+                if (email == null) email = string.Empty;
+
+                string seguroTexto = string.IsNullOrWhiteSpace(seguro) ? T("SeguroNoInformado") : T(seguro);
+
                 Document doc = new Document(PageSize.A4, 40, 40, 40, 40);
-                string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"Poliza_{apellido}_{dni}.pdf");
+                string path = Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
+                    $"Poliza_{(apellido ?? "SinApellido")}_{dni}.pdf");
+
                 PdfWriter.GetInstance(doc, new FileStream(path, FileMode.Create));
                 doc.Open();
 
@@ -31,79 +45,68 @@ namespace AseguraYa
                 var subTitleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 14);
                 var normalFont = FontFactory.GetFont(FontFactory.HELVETICA, 12);
 
-                Paragraph titulo = new Paragraph("Asegura YA", titleFont);
-                titulo.Alignment = Element.ALIGN_CENTER;
-                titulo.SpacingAfter = 20;
+                var titulo = new Paragraph("Asegura YA", titleFont) { Alignment = Element.ALIGN_CENTER, SpacingAfter = 20 };
                 doc.Add(titulo);
 
-                doc.Add(new Paragraph($"{LMG.Traducir("Asegurado")}: {nombre} {apellido}", normalFont));
+                doc.Add(new Paragraph($"{T("Asegurado")}: {nombre} {apellido}", normalFont));
                 doc.Add(new Paragraph($"DNI: {dni}", normalFont));
-                doc.Add(new Paragraph($"{LMG.Traducir("NumeroPoliza")}: {numeroPoliza.ToString()}", normalFont));
-                doc.Add(new Paragraph($"{LMG.Traducir("Domicilio")}: {domicilio}", normalFont));
-                doc.Add(new Paragraph($"{LMG.Traducir("Email")}: {email}", normalFont));
-                doc.Add(new Paragraph($"{LMG.Traducir("SeguroContratado")}: {LMG.Traducir(seguro)}", normalFont));
-                doc.Add(new Paragraph($"{LMG.Traducir("Prima")}: ${prima:N2}", normalFont));
-                doc.Add(new Paragraph($"{LMG.Traducir("FechaEmision")}: {DateTime.Now:dd/MM/yyyy}", normalFont));
+                doc.Add(new Paragraph($"{T("NumeroPoliza")}: {numeroPoliza}", normalFont));
+                doc.Add(new Paragraph($"{T("Domicilio")}: {domicilio}", normalFont));
+                doc.Add(new Paragraph($"{T("Email")}: {email}", normalFont));
+                doc.Add(new Paragraph($"{T("SeguroContratado")}: {seguroTexto}", normalFont));
+                doc.Add(new Paragraph($"{T("Prima")}: ${prima:N2}", normalFont));
+                doc.Add(new Paragraph($"{T("FechaEmision")}: {DateTime.Now:dd/MM/yyyy}", normalFont));
                 doc.Add(new Paragraph(" "));
 
                 if (coberturas != null && coberturas.Count > 0)
                 {
-                    Paragraph subtitulo = new Paragraph(LMG.Traducir("CoberturasIncluidas"), subTitleFont);
-                    subtitulo.SpacingAfter = 10;
+                    var subtitulo = new Paragraph(T("CoberturasIncluidas"), subTitleFont) { SpacingAfter = 10 };
                     doc.Add(subtitulo);
 
-                    PdfPTable table = new PdfPTable(2);
-                    table.WidthPercentage = 100;
+                    PdfPTable table = new PdfPTable(2) { WidthPercentage = 100 };
                     table.SetWidths(new float[] { 2f, 1f });
 
                     var headerFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12, BaseColor.WHITE);
-                    var headerBgColor = new BaseColor(0, 102, 204); 
-                    var cellBgColor = new BaseColor(245, 245, 245);
+                    var headerBg = new BaseColor(0, 102, 204);
+                    var cellBg = new BaseColor(245, 245, 245);
 
-                    PdfPCell h1 = new PdfPCell(new Phrase(LMG.Traducir("Cobertura"), headerFont));
-                    h1.BackgroundColor = headerBgColor;
-                    h1.Padding = 5;
-                    PdfPCell h2 = new PdfPCell(new Phrase(LMG.Traducir("SumaAsegurada"), headerFont));
-                    h2.BackgroundColor = headerBgColor;
-                    h2.Padding = 5;
-
-                    table.AddCell(h1);
-                    table.AddCell(h2);
+                    var h1 = new PdfPCell(new Phrase(T("Cobertura"), headerFont)) { BackgroundColor = headerBg, Padding = 5 };
+                    var h2 = new PdfPCell(new Phrase(T("SumaAsegurada"), headerFont)) { BackgroundColor = headerBg, Padding = 5 };
+                    table.AddCell(h1); table.AddCell(h2);
 
                     foreach (var c in coberturas)
                     {
-                        string descripcion = LMG.Traducir(c.DP686_Descripcion ?? "SinDescripcion");
-                        string suma = $"${c.DP686_SumaAsegurada:N2}";
+                        string descripcion = T(c?.DP686_Descripcion ?? "SinDescripcion");
+                        decimal sumaDec = c?.DP686_SumaAsegurada ?? 0m;
 
-                        PdfPCell cell1 = new PdfPCell(new Phrase(descripcion, normalFont));
-                        cell1.BackgroundColor = cellBgColor;
-                        cell1.Padding = 5;
-                        PdfPCell cell2 = new PdfPCell(new Phrase(suma, normalFont));
-                        cell2.BackgroundColor = cellBgColor;
-                        cell2.Padding = 5;
-
-                        table.AddCell(cell1);
-                        table.AddCell(cell2);
+                        var cell1 = new PdfPCell(new Phrase(descripcion, normalFont)) { BackgroundColor = cellBg, Padding = 5 };
+                        var cell2 = new PdfPCell(new Phrase($"${sumaDec:N2}", normalFont)) { BackgroundColor = cellBg, Padding = 5 };
+                        table.AddCell(cell1); table.AddCell(cell2);
                     }
 
                     doc.Add(table);
                 }
                 else
                 {
-                    doc.Add(new Paragraph(LMG.Traducir("SinCoberturas"), normalFont));
+                    doc.Add(new Paragraph(T("SinCoberturas"), normalFont));
                 }
 
-                doc.Add(new Paragraph("\n" + LMG.Traducir("LeyendaPoliza"), normalFont));
+                doc.Add(new Paragraph("\n" + T("LeyendaPoliza"), normalFont));
                 doc.Close();
 
-                MessageBox.Show(LMG.Traducir("PolizaGeneradaOK") + $"\n{path}", LMG.Traducir("TituloPDFGenerado"));
-                System.Diagnostics.Process.Start(path); // Abre el PDF automáticamente
+                MessageBox.Show(T("PolizaGeneradaOK") + $"\n{path}", T("TituloPDFGenerado"));
+                System.Diagnostics.Process.Start(path);
+            }
+            catch (ArgumentNullException ane) when (ane.ParamName == "key")
+            {
+                MessageBox.Show("Error al generar PDF: se intentó traducir con una clave nula (seguro o descripción).", "Error");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al generar PDF: " + ex.Message, "Error");
             }
         }
+
 
     }
 }

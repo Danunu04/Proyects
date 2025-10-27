@@ -1,20 +1,27 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace _686DP_Dal
 {
     public class _686DPDalGeneral
     {
-        //public SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=AseguraYA;Integrated Security=True");
-        public SqlConnection conn = new SqlConnection(@"Data Source=.\FACULTADDB;Initial Catalog=AseguraYA;Integrated Security=True");
+
+        public string cadenaConexion = ConfigurationManager.ConnectionStrings["cadena_Conexion"].ConnectionString;
+        public SqlConnection conn;
         public SqlCommand cmd;
 
+        public _686DPDalGeneral()
+        {
+            conn = new SqlConnection(cadenaConexion);
+        }
 
         public DataTable _686DPConsultar(string consulta, ArrayList parametros)
         {

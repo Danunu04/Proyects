@@ -130,7 +130,7 @@ namespace _686DP_MPP
             try
             {
                 string consulta = @"SELECT [DP686_PerfilID], [DP686_Nombre] 
-                            FROM [AseguraYA].[dbo].[686DP_Perfil]";
+                            FROM [dbo].[686DP_Perfil]";
 
                 DataTable dtPerfiles = dal._686DPConsultar(consulta, new ArrayList());
 

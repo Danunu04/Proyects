@@ -40,10 +40,16 @@ namespace _686DP_MPP
 
         public _686DP_DigitoVerificador Calcular(string consulta, string nombreTabla)
         {
+            string dvh = "";
+            string dvv = "";
             DataTable dt = dal._686DPConsultar(consulta, null);
 
             if (dt == null || dt.Rows.Count == 0)
-                throw new Exception($"La tabla {nombreTabla} no contiene registros.");
+            {
+                dvh = cm._686DPGetSHA256($"{nombreTabla}_SIN_REGISTROS");
+                dvv = cm._686DPGetSHA256($"{nombreTabla}_SIN_REGISTROS");
+                return new _686DP_DigitoVerificador(nombreTabla, dvh, dvv);
+            }
 
             string contenidoFilas = "";
             string contenidoColumnas = "";
@@ -65,8 +71,8 @@ namespace _686DP_MPP
                 }
             }
 
-            string dvh = cm._686DPGetSHA256(contenidoFilas);
-            string dvv = cm._686DPGetSHA256(contenidoColumnas);
+             dvh = cm._686DPGetSHA256(contenidoFilas);
+             dvv = cm._686DPGetSHA256(contenidoColumnas);
             _686DP_DigitoVerificador resultado = new _686DP_DigitoVerificador(nombreTabla, dvh, dvv);
             return resultado;
         }
@@ -81,7 +87,7 @@ namespace _686DP_MPP
                        [DP686_Endoso],
                        [DP686_CodSeguro],
                        [DP686_CodPlan]
-                FROM [AseguraYA].[dbo].[686DP_Poliza]";
+                FROM [dbo].[686DP_Poliza]";
             return Calcular(consulta, "686DP_Poliza");
         }
 
@@ -95,7 +101,7 @@ namespace _686DP_MPP
                        [DP686_Domicilio],
                        [DP686DP_CodigoPostal],
                        [DP686_Estado]
-                FROM [AseguraYA].[686DP_Cliente].[686DP_Clientes]";
+                FROM [686DP_Cliente].[686DP_Clientes]";
             return Calcular(consulta, "686DP_Clientes");
         }
 
@@ -105,7 +111,7 @@ namespace _686DP_MPP
                 SELECT [DP686_Descripcion],
                        [DP686_SumaAsegurada],
                        [CodigoCobertura]
-                FROM [AseguraYA].[dbo].[686DP_Cobertura]";
+                FROM [dbo].[686DP_Cobertura]";
             return Calcular(consulta, "686DP_Cobertura");
         }
 
@@ -115,7 +121,7 @@ namespace _686DP_MPP
                 SELECT [DP686_CodigoPlan],
                        [DP686_Franquicia],
                        [DP686_Prima]
-                FROM [AseguraYA].[dbo].[686DP_Plan]";
+                FROM [dbo].[686DP_Plan]";
             return Calcular(consulta, "686DP_Plan");
         }
 
@@ -124,7 +130,7 @@ namespace _686DP_MPP
             string consulta = @"
                 SELECT [DP686_CodSeguro],
                        [DP686_ProductoNombre]
-                FROM [AseguraYA].[dbo].[686DP_Seguro]";
+                FROM [dbo].[686DP_Seguro]";
             return Calcular(consulta, "686DP_Seguro");
         }
 
@@ -138,7 +144,7 @@ namespace _686DP_MPP
                        [ValorDelBien],
                        [Estado],
                        [Descripcion]
-                FROM [AseguraYA].[dbo].[686DP_Siniestro]";
+                FROM [dbo].[686DP_Siniestro]";
             return Calcular(consulta, "686DP_Siniestro");
         }
 
@@ -148,7 +154,7 @@ namespace _686DP_MPP
                 SELECT [CodFactura],
                        [CodSiniestro],
                        [Fecha]
-                FROM [AseguraYA].[dbo].[686DP_Factura]";
+                FROM [dbo].[686DP_Factura]";
             return Calcular(consulta, "686DP_Factura");
         }
 
@@ -157,13 +163,13 @@ namespace _686DP_MPP
             try
             {
                 string query = @"
-                    IF EXISTS (SELECT 1 FROM [AseguraYA].[dbo].[686DP_DigitoVerificador] WHERE DP686NombreTabla = @NombreTabla)
-                        UPDATE [AseguraYA].[dbo].[686DP_DigitoVerificador]
+                    IF EXISTS (SELECT 1 FROM [dbo].[686DP_DigitoVerificador] WHERE DP686NombreTabla = @NombreTabla)
+                        UPDATE [dbo].[686DP_DigitoVerificador]
                         SET DP686DVH = @DVH,
                             DP686DVV = @DVV
                         WHERE DP686NombreTabla = @NombreTabla;
                     ELSE
-                        INSERT INTO [AseguraYA].[dbo].[686DP_DigitoVerificador]
+                        INSERT INTO [dbo].[686DP_DigitoVerificador]
                             (DP686NombreTabla, DP686DVH, DP686DVV)
                         VALUES (@NombreTabla, @DVH, @DVV);";
 
@@ -192,7 +198,7 @@ namespace _686DP_MPP
                 SELECT [DP686NombreTabla],
                        [DP686DVH],
                        [DP686DVV]
-                FROM [AseguraYA].[dbo].[686DP_DigitoVerificador]";
+                FROM [dbo].[686DP_DigitoVerificador]";
 
                 DataTable dt = dal._686DPConsultar(consulta, null);
 
@@ -222,7 +228,7 @@ namespace _686DP_MPP
             string consulta = @"
                SELECT [DP686_CodigoPlan]
                     ,[CodigoCobertura]
-              FROM [AseguraYA].[dbo].[686DP_PlanesCoberturas]
+              FROM [dbo].[686DP_PlanesCoberturas]
 ";
             return Calcular(consulta, "686DP_PlanesCoberturas");
         }
@@ -232,7 +238,7 @@ namespace _686DP_MPP
             string consulta = @"
             SELECT [DP686_CodSeguro]
                   ,[DP686_CodigoPlan]
-              FROM [AseguraYA].[dbo].[686DP_SeguroPlan]";
+              FROM [dbo].[686DP_SeguroPlan]";
                     return Calcular(consulta, "686DP_SeguroPlan");
         }
 
@@ -241,7 +247,7 @@ namespace _686DP_MPP
             string consulta = @"
             SELECT [DP686_NPoliza]
                   ,[DP686_DNICliente]
-              FROM [AseguraYA].[dbo].[686DPClientePoliza]";
+              FROM [dbo].[686DPClientePoliza]";
             return Calcular(consulta, "686DPClientePoliza");
         }
 
@@ -250,7 +256,7 @@ namespace _686DP_MPP
             string consulta = @"
             SELECT [CodSiniestro]
                   ,[DP686_NPoliza]
-              FROM [AseguraYA].[dbo].[686DP_PolizaSiniestro]";
+              FROM [dbo].[686DP_PolizaSiniestro]";
             return Calcular(consulta, "686DP_PolizaSiniestro");
         }
 
@@ -259,7 +265,7 @@ namespace _686DP_MPP
             string consulta = @"
             SELECT [DP686_NPoliza]
                   ,[Motivo]
-              FROM [AseguraYA].[dbo].[686DPPolizaCancelacion]";
+              FROM [dbo].[686DPPolizaCancelacion]";
             return Calcular(consulta, "686DPPolizaCancelacion");
         }
     }

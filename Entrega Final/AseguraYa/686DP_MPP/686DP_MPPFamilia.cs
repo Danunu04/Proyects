@@ -200,7 +200,7 @@ namespace _686DP_MPP
                 SELECT [DP686_FamiliaID]
                 ,[DP686_Nombre]
                 ,[DP686_Profundidad]
-                FROM [AseguraYA].[dbo].[686DP_Familia]";
+                FROM [dbo].[686DP_Familia]";
 
                 ArrayList parametros = new ArrayList();
 

@@ -15,16 +15,16 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
-          UAC Manifest Options
-          If you want to change the Windows User Account Control level replace the
-          requestedExecutionLevel node with one of the following.
+          Opciones del manifiesto de Control de cuentas de usuario
+          Si quiere cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el
+          nodo requestedExecutionLevel por alguno de los siguientes.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         If you want to utilize File and Registry Virtualization for backward
-         compatibility then delete the requestedExecutionLevel node.
+         Si desea usar la virtualización de archivos y del Registro para la
+         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -50,19 +50,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7QPdNg8/igknt7PZjVe78SSlk7eBHqSgUjNzu2itpIs=</dsig:DigestValue>
+        <dsig:DigestValue>WocQQsDHVa2ff+uHYH+8fR1n7V5cneC67VC1j4xvFbk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="686DP_BLL.dll" size="30208">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="686DP_BLL.dll" size="29696">
       <assemblyIdentity name="686DP_BLL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bZUHHoIH5m1HPV4rrQFqBDnq4wPms3Wj1i+A2XiXHOI=</dsig:DigestValue>
+        <dsig:DigestValue>7tOVFwW9EWPeAjg1i26FvcLjFI4HlsOW8pzV4ShYtHQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ay/NJ4gVWQG8AcIoqMhOB+lPUZ5iuOCE+2RWC9aq+/k=</dsig:DigestValue>
+        <dsig:DigestValue>b5vGA7BSQwYZ8/43ejrA4hNBAUgs+QccIbNEawmPj+k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tGgaLtbF5O32ThecNNmzSESwx6o6WzrjsQfG+KSgd0o=</dsig:DigestValue>
+        <dsig:DigestValue>Enq1xkUodtVk5gY0INdxwNPhqjQ9kuiCKSJNOSrCfRM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,19 +98,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pMEhZMIyiAgp78LtpbK2jAyvcUVePelySIpouUQzVy4=</dsig:DigestValue>
+        <dsig:DigestValue>YADoBl8aaJOJQ6r25om74wU73s0DH6HdurMvnYnJwIM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AseguraYa.exe" size="1418224">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AseguraYa.exe" size="1419248">
       <assemblyIdentity name="AseguraYa" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1lFCCwksBNos/ec2NoA3al/Si27R4twZ2UJVKDT86KM=</dsig:DigestValue>
+        <dsig:DigestValue>tXEIwKOvNHnRrZhsuDny0nnJLwaGRAlSGbHnsdwVddU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -270,13 +270,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="AseguraYa.exe.config" size="184">
+  <file name="AseguraYa.exe.config" size="936">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>X+GtgC9o18R9u9jmAWK6iKuu0WLaXTgchdPkk1MRli4=</dsig:DigestValue>
+      <dsig:DigestValue>zazTxwl2BXDMxj5lq3+kjRM3hJJgleuSBt6ztsRDA3g=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Creme Rosa Pastell Kreativ Organisch Sport Badminton Verein Logo.ico" size="270398">

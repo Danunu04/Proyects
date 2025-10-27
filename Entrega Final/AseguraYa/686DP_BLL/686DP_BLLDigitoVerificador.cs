@@ -117,7 +117,7 @@ namespace _686DP_BLL
                 throw new Exception("No hay dígitos verificadores calculados en memoria.");
 
             if (DVSBD == null || DVSBD.Count == 0)
-                throw new Exception("No hay dígitos verificadores almacenados en la base de datos.");
+                grabarTodosDV();
 
             foreach (var dvLocal in DVS)
             {
