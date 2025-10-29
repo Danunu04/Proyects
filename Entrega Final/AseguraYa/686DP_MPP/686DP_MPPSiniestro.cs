@@ -29,6 +29,20 @@ namespace _686DP_MPP
             dal._686DPEscribir(consulta, parametros);
         }
 
+        public void DenegarSiniestro(object codSiniestro)
+        {
+            string consulta = @"UPDATE [dbo].[686DP_Siniestro]
+                        SET Estado = 0
+                        WHERE CodSiniestro = @CodSiniestro";
+
+            ArrayList parametros = new ArrayList
+            {
+                new SqlParameter("@CodSiniestro", codSiniestro)
+            };
+
+            dal._686DPEscribir(consulta, parametros);
+        }
+
         public void Pagar(int codSiniestro, DateTime dia)
         {
             string consulta = @"
@@ -85,7 +99,7 @@ namespace _686DP_MPP
         public object TraerDatosVista()
         {
             string consulta = "[dbo].[upEvaluarYActualizarSiniestros_686DP]";
-            ArrayList parametros = new ArrayList(); // sin parámetros
+            ArrayList parametros = new ArrayList(); 
 
             return dal._686DPConsultarSP(consulta, parametros);
         }
@@ -106,10 +120,8 @@ namespace _686DP_MPP
 
             ArrayList parametros = new ArrayList();
 
-            // Ejecutamos el query y obtenemos un DataTable
             DataTable dt = dal._686DPConsultar(consulta, parametros);
 
-            // Convertimos el resultado a una lista de objetos
             List<_686DP_Siniestro> lista = new List<_686DP_Siniestro>();
 
             foreach (DataRow row in dt.Rows)

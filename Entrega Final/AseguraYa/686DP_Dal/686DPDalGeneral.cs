@@ -14,7 +14,7 @@ namespace _686DP_Dal
     public class _686DPDalGeneral
     {
 
-        public string cadenaConexion = ConfigurationManager.ConnectionStrings["cadena_Conexion"].ConnectionString;
+        public string cadenaConexion = "Data Source=.;Initial Catalog=DBAseguraYADemo;Integrated Security=True";
         public SqlConnection conn;
         public SqlCommand cmd;
 
@@ -119,7 +119,7 @@ namespace _686DP_Dal
             return dt;
         }
 
-        public void _686DPEjecutar(string nombreSP, ArrayList parametros)// Store Procedure
+        public void _686DPEjecutar(string nombreSP, ArrayList parametros)
         {
             try
             {
@@ -160,7 +160,7 @@ namespace _686DP_Dal
             }
         }
 
-        public object _686DPEscalar(string consulta, ArrayList parametros)//para SCOPEIdentity
+        public object _686DPEscalar(string consulta, ArrayList parametros)
         {
             try
             {

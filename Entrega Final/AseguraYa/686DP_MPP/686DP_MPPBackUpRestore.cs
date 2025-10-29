@@ -21,7 +21,7 @@ namespace _686DP_MPP
                 string rutaEscapada = rutaArchivo.Replace(@"\", @"\\");
 
                 string consulta = $@"
-                    BACKUP DATABASE [AseguraYa]
+                    BACKUP DATABASE [DBAseguraYADemo]
                     TO DISK = @Ruta
                     WITH INIT;"; 
 
@@ -58,18 +58,18 @@ namespace _686DP_MPP
                     SERVERPROPERTY ('InstanceDefaultLogPath') AS LogPath;";
 
                 DataTable dtPath = DAL._686DPConsultar(consultaPath, null);
-                string mdfPath = Path.Combine(dtPath.Rows[0]["DataPath"].ToString(), "AseguraYA.mdf");
-                string ldfPath = Path.Combine(dtPath.Rows[0]["LogPath"].ToString(), "AseguraYA_log.ldf");
+                string mdfPath = Path.Combine(dtPath.Rows[0]["DataPath"].ToString(), "DBAseguraYADemo.mdf");
+                string ldfPath = Path.Combine(dtPath.Rows[0]["LogPath"].ToString(), "DBAseguraYADemo.ldf");
                 string consultaRestore = @"
                     USE master;
-                    RESTORE DATABASE AseguraYa
+                    RESTORE DATABASE DBAseguraYADemo
                     FROM DISK = @Ruta
                     WITH
                         MOVE @LogicalData TO @Mdf,
                         MOVE @LogicalLog TO @Ldf,
                         REPLACE,
                         STATS = 5;
-                        ALTER DATABASE AseguraYa SET MULTI_USER;
+                        ALTER DATABASE DBAseguraYADemo SET MULTI_USER;
                     ";
                 ArrayList parametrosRestore = new ArrayList
                 {

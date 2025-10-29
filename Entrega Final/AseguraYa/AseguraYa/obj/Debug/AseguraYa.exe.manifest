@@ -15,16 +15,16 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
-          Opciones del manifiesto de Control de cuentas de usuario
-          Si quiere cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el
-          nodo requestedExecutionLevel por alguno de los siguientes.
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         Si desea usar la virtualización de archivos y del Registro para la
-         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7tOVFwW9EWPeAjg1i26FvcLjFI4HlsOW8pzV4ShYtHQ=</dsig:DigestValue>
+        <dsig:DigestValue>VcEa9/xZMXJmmzbC/gvk/Guf4ymt87p7TK0xb2e5DlE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,19 +74,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>b5vGA7BSQwYZ8/43ejrA4hNBAUgs+QccIbNEawmPj+k=</dsig:DigestValue>
+        <dsig:DigestValue>kpDuNnKnmAAytHWPtmu68qfXncghQRYa2AlodvnJAq4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="686DP_MPP.dll" size="97792">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="686DP_MPP.dll" size="98304">
       <assemblyIdentity name="686DP_MPP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Enq1xkUodtVk5gY0INdxwNPhqjQ9kuiCKSJNOSrCfRM=</dsig:DigestValue>
+        <dsig:DigestValue>/coEOKdyo5MZaKFU8H9tWNS1o3QGkBoLVWrsJz3wfHU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AseguraYa.exe" size="1419248">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AseguraYa.exe" size="1420784">
       <assemblyIdentity name="AseguraYa" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tXEIwKOvNHnRrZhsuDny0nnJLwaGRAlSGbHnsdwVddU=</dsig:DigestValue>
+        <dsig:DigestValue>uOlkHZyfUD60egVyWFnMo+cInLq/EmhjZWE5IJYEaPE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -270,13 +270,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="AseguraYa.exe.config" size="936">
+  <file name="AseguraYa.exe.config" size="534">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>zazTxwl2BXDMxj5lq3+kjRM3hJJgleuSBt6ztsRDA3g=</dsig:DigestValue>
+      <dsig:DigestValue>0f8J5We54GD2/6PHJq9B0+AUlTlEFxLTXJoSBIaHhfs=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Creme Rosa Pastell Kreativ Organisch Sport Badminton Verein Logo.ico" size="270398">

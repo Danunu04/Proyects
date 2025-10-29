@@ -17,6 +17,11 @@ namespace _686DP_BLL
             mpps.AprobarSiniestro(codSiniestro);
         }
 
+        public void DenegarSiniestro(object codSiniestro)
+        {
+            mpps.DenegarSiniestro(codSiniestro);
+        }
+
         public void Pagar(int codSiniestro)
         {
             DateTime dia = DateTime.Now;

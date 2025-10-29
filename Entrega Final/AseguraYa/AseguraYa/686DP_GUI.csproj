@@ -265,9 +265,11 @@
     </Compile>
     <EmbeddedResource Include="686DPfrmAuditarSiniestro.resx">
       <DependentUpon>686DPfrmAuditarSiniestro.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="686DPfrmBitacoraCambio.resx">
       <DependentUpon>686DPfrmBitacoraCambio.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="686DPfrmBitacoraDeEventos.resx">
       <DependentUpon>686DPfrmBitacoraDeEventos.cs</DependentUpon>

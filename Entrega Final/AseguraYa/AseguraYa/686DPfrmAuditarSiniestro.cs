@@ -144,7 +144,6 @@ namespace AseguraYa
             }
             else
             {
-                // Mostrar todo
                 foreach (DataGridViewRow fila in dataGridView1.Rows)
                 {
                     fila.Visible = true;
