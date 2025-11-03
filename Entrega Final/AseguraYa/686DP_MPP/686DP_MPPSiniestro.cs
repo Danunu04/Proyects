@@ -136,5 +136,38 @@ namespace _686DP_MPP
 
             return lista;
         }
+
+        public object traerSiniestrosMayoresA5()
+        {
+            string consulta = @"
+            SELECT 
+            c.DP686_DNI,
+            c.DP686_Nombre,
+            c.DP686_Apellido,
+            p.DP686_NPoliza,
+            p.DP686_valorTotal AS 'Couta Mensual',
+             COUNT(s.CodSiniestro) AS 'Cantidad de siniestros'
+
+            FROM [dbo].[686DP_Siniestro] AS s
+            INNER JOIN [dbo].[686DP_PolizaSiniestro] AS ps
+	            ON ps.CodSiniestro = s.CodSiniestro
+            INNER JOIN [dbo].[686DP_Poliza] AS p
+	            ON p.DP686_NPoliza = ps.DP686_NPoliza
+            INNER JOIN [dbo].[686DPClientePoliza] AS cp
+	            ON p.DP686_NPoliza = cp.DP686_NPoliza
+            INNER JOIN [686DP_Cliente].[686DP_Clientes] AS c
+	            ON c.DP686_DNI = cp.DP686_DNICliente
+
+            GROUP BY
+            c.DP686_DNI,
+            c.DP686_Nombre,
+            c.DP686_Apellido,
+            p.DP686_NPoliza,
+            p.DP686_valorTotal
+
+            HAVING COUNT(s.CodSiniestro) >= 5
+            ";
+            return dal._686DPConsultar(consulta, null);
+        }
     }
 }

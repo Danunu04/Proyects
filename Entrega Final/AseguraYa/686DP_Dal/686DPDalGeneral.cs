@@ -14,7 +14,7 @@ namespace _686DP_Dal
     public class _686DPDalGeneral
     {
 
-        public string cadenaConexion = "Data Source=.;Initial Catalog=DBAseguraYADemo;Integrated Security=True";
+        public string cadenaConexion = "Data Source=.;Initial Catalog=AseguraYA;Integrated Security=True";
         public SqlConnection conn;
         public SqlCommand cmd;
 

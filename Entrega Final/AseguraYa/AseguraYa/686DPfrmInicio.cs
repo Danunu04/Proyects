@@ -1138,5 +1138,12 @@ namespace AseguraYa
                 }
             }
         }
+
+        private void recomendaciónDeAumentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _686DPfrmRecomendacionDeAumento rda = new _686DPfrmRecomendacionDeAumento(IdiomaLocal);
+            rda.MdiParent = this;
+            rda.Show();
+        }
     }
 }

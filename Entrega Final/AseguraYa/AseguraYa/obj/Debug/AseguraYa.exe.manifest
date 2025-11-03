@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="686DP_BLL.dll" size="29696">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="686DP_BLL.dll" size="30208">
       <assemblyIdentity name="686DP_BLL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VcEa9/xZMXJmmzbC/gvk/Guf4ymt87p7TK0xb2e5DlE=</dsig:DigestValue>
+        <dsig:DigestValue>iAaBwheonDuiftQCyar8NSjuJsUOX1NHFnWo3oo562U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,19 +74,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kpDuNnKnmAAytHWPtmu68qfXncghQRYa2AlodvnJAq4=</dsig:DigestValue>
+        <dsig:DigestValue>J0ns6JNyQHkTya+2Dlh8Kj88QhKZJLcomCIQobcY/Ms=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="686DP_MPP.dll" size="98304">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="686DP_MPP.dll" size="100352">
       <assemblyIdentity name="686DP_MPP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/coEOKdyo5MZaKFU8H9tWNS1o3QGkBoLVWrsJz3wfHU=</dsig:DigestValue>
+        <dsig:DigestValue>PEcYamfK3UXuRFgMOYntbizsEmjYq02d5pwJLTBNOjE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AseguraYa.exe" size="1420784">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AseguraYa.exe" size="1423856">
       <assemblyIdentity name="AseguraYa" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uOlkHZyfUD60egVyWFnMo+cInLq/EmhjZWE5IJYEaPE=</dsig:DigestValue>
+        <dsig:DigestValue>ee/MF3LRISYgNhgq0QKaOqD8WhpXYIPE8rXnA7FjXak=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -44,5 +44,10 @@ namespace _686DP_BLL
         {
             return mpps.TraerSiniestros();
         }
+
+        public object traerSiniestrosMayoresA5()
+        {
+            return mpps.traerSiniestrosMayoresA5();
+        }
     }
 }

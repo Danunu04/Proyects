@@ -944,3 +944,5 @@ D:\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa.application
 D:\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\686DP_GUI.csproj.Up2Date
 D:\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa.exe
 D:\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa.pdb
+D:\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa._686DPfrmRecomendacionDeAumento.resources
+D:\Proyects\Entrega Final\AseguraYa\AseguraYa\obj\Debug\AseguraYa.frmInputBox.resources
