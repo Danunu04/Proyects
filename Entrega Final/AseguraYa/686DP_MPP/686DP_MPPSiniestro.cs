@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using _686DP_Dal;
 using System.Data;
+using System.Dynamic;
 
 namespace _686DP_MPP
 {
@@ -169,5 +170,86 @@ namespace _686DP_MPP
             ";
             return dal._686DPConsultar(consulta, null);
         }
+
+        public object TraerSiniestrosFiltrado(
+            int? cantidadMinima,
+            double? cuotaDesde,
+            double? cuotaHasta,
+            int? dni)
+                {
+            ArrayList parametros = new ArrayList();
+
+            string query = @"
+                            SELECT 
+                                c.DP686_DNI,
+                                c.DP686_Nombre,
+                                c.DP686_Apellido,
+                                p.DP686_NPoliza,
+                                p.DP686_valorTotal AS 'Cuota Mensual',
+                                COUNT(s.CodSiniestro) AS 'Cantidad de siniestros'
+                            FROM [dbo].[686DP_Siniestro] AS s
+                                INNER JOIN [dbo].[686DP_PolizaSiniestro] AS ps
+                                    ON ps.CodSiniestro = s.CodSiniestro
+                                INNER JOIN [dbo].[686DP_Poliza] AS p
+                                    ON p.DP686_NPoliza = ps.DP686_NPoliza
+                                INNER JOIN [dbo].[686DPClientePoliza] AS cp
+                                    ON p.DP686_NPoliza = cp.DP686_NPoliza
+                                INNER JOIN [686DP_Cliente].[686DP_Clientes] AS c
+                                    ON c.DP686_DNI = cp.DP686_DNICliente
+                            WHERE 1=1
+                            ";
+            if (dni.HasValue)
+            {
+                query += " AND c.DP686_DNI = @DNI";
+                parametros.Add(new SqlParameter("@DNI", dni.Value));
+            }
+
+            if (cuotaDesde.HasValue)
+            {
+                query += " AND p.DP686_valorTotal >= @CuotaDesde";
+                parametros.Add(new SqlParameter("@CuotaDesde", cuotaDesde.Value));
+            }
+
+            if (cuotaHasta.HasValue)
+            {
+                query += " AND p.DP686_valorTotal <= @CuotaHasta";
+                parametros.Add(new SqlParameter("@CuotaHasta", cuotaHasta.Value));
+            }
+
+            query += @"
+                    GROUP BY
+                        c.DP686_DNI,
+                        c.DP686_Nombre,
+                        c.DP686_Apellido,
+                        p.DP686_NPoliza,
+                        p.DP686_valorTotal
+                    ";
+
+            if (cantidadMinima.HasValue)
+            {
+                query += " HAVING COUNT(s.CodSiniestro) >= @CantMin";
+                parametros.Add(new SqlParameter("@CantMin", cantidadMinima.Value));
+            }
+
+            return dal._686DPConsultar(query, parametros);
+        }
+
+        public void CambiarCuota(int poliza, double nuevaCuota)
+        {
+            string query = @"
+                UPDATE [dbo].[686DP_Poliza]
+                SET DP686_valorTotal = @NuevaCuota
+                WHERE DP686_NPoliza = @Poliza;
+            ";
+
+            ArrayList parametros = new ArrayList
+            {
+                new SqlParameter("@NuevaCuota", nuevaCuota),
+                new SqlParameter("@Poliza", poliza)
+            };
+
+            dal._686DPEscribir(query, parametros);
+        }
+
     }
 }

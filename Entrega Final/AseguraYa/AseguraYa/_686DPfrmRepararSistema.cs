@@ -24,6 +24,7 @@ namespace AseguraYa
         public _686DPfrmRepararSistema()
         {
             InitializeComponent();
+            this.FormClosing += _686DPfrmRepararSistema_FormClosing;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,7 +87,7 @@ namespace AseguraYa
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Hasta luego, ojala lo soluciones 💪");
+            Console.WriteLine("Hasta luego, ojala lo soluciones");
             logout();
             this.Close();
         }
@@ -98,6 +99,16 @@ namespace AseguraYa
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void _686DPfrmRepararSistema_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            logout();
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

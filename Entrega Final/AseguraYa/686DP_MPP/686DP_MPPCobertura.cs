@@ -20,7 +20,7 @@ namespace _686DP_MPP
             try
             {
                 DataTable dt = new DataTable();
-                string consulta = "SELECT * FROM [dbo].[686DP_Cobertura]";
+                string consulta = "SELECT [DP686_Descripcion]\r\n      ,[DP686_SumaAsegurada]\r\n      ,[CodigoCobertura]\r\n  FROM [DBAseguraYADemo].[dbo].[686DP_Cobertura]";
 
                 dt = dal._686DPConsultar(consulta, null);
 
@@ -50,7 +50,7 @@ namespace _686DP_MPP
             try
             {
                 DataTable dt = new DataTable();
-                string consulta = "SELECT C.*\r\nFROM [dbo].[686DP_Cobertura] C\r\nINNER JOIN [dbo].[686DP_PlanesCoberturas] PC ON C.CodigoCobertura = PC.CodigoCobertura\r\nWHERE PC.DP686_CodigoPlan = @CodigoPlan;\r\n";
+                string consulta = "SELECT C.[DP686_Descripcion]\r\n      ,C.[DP686_SumaAsegurada]\r\n      ,C.[CodigoCobertura]\r\nFROM [dbo].[686DP_Cobertura] C\r\nINNER JOIN [dbo].[686DP_PlanesCoberturas] PC ON C.CodigoCobertura = PC.CodigoCobertura\r\nWHERE PC.DP686_CodigoPlan = @CodigoPlan;\r\n";
 
                 ArrayList parametros = new ArrayList
                 {

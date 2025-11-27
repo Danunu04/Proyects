@@ -31,6 +31,7 @@ namespace AseguraYa
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            RecomendacionAumento.Visible= false;
             _686DP_Desactivar();
             RegistrarFormularioParaIdioma(this);
             if (IdiomaLocal != null)
@@ -94,6 +95,7 @@ namespace AseguraYa
 
         public void _686DP_Desactivar()
         {
+            RecomendacionAumento.Enabled = false;
             DP_Admin.Enabled = false;
             DP_Contratacion.Enabled = false;
             Siniestros.Enabled = false;
@@ -324,7 +326,6 @@ namespace AseguraYa
 
         private void bitacoraDeCambiosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ;
             _686DPfrmBitacoraCambio bc = new _686DPfrmBitacoraCambio(IdiomaLocal);
             bc.MdiParent = this;
             bc.Show();
@@ -1144,6 +1145,62 @@ namespace AseguraYa
             _686DPfrmRecomendacionDeAumento rda = new _686DPfrmRecomendacionDeAumento(IdiomaLocal);
             rda.MdiParent = this;
             rda.Show();
+        }
+
+        private void prediccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (IdiomaLocal == "Español")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "ReporteInteligente.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (IdiomaLocal == "Ingles")
+            {
+                try
+                {
+                    string ruta = Path.Combine(Application.StartupPath, "Ayuda", "ReporteInteligenteIngles.html");
+
+                    if (File.Exists(ruta))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = ruta,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el archivo de ayuda en: " + ruta,
+                                        "Archivo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar abrir la ayuda: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

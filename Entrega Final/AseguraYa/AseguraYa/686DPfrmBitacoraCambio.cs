@@ -15,9 +15,11 @@ namespace AseguraYa
 {
     public partial class _686DPfrmBitacoraCambio : Form
     {
-        public _686DPfrmBitacoraCambio(object idiomaLocal)
+        string idioma;
+        public _686DPfrmBitacoraCambio(string idiomaLocal)
         {
             InitializeComponent();
+            idioma = idiomaLocal;
         }
         _686DP_BLLDigitoVerificador BLLDV = new _686DP_BLLDigitoVerificador();
         
@@ -69,6 +71,7 @@ namespace AseguraYa
 
         private void _686DPfrmBitacoraCambio_Load(object sender, EventArgs e)
         {
+            LMG.CargarMensajesGlobales(idioma);
             dateTimePicker1.ShowCheckBox = true;
             dateTimePicker2.ShowCheckBox = true;
             clientesC = bllcc.TraerCambios();

@@ -32,14 +32,11 @@ CREATE TABLE [686DP_Cliente].[686DP_Clienctes_C](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [686DP_Cliente].[686DP_Clientes]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [686DP_Cliente].[686DP_Clientes]    Script Date: 15/11/2025 16:36:07 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [686DP_Cliente].[686DP_Clientes](
 	[DP686_DNI] [int] NOT NULL,
 	[DP686_Nombre] [varchar](100) NOT NULL,
@@ -48,51 +45,44 @@ CREATE TABLE [686DP_Cliente].[686DP_Clientes](
 	[DP686_Domicilio] [varchar](100) NULL,
 	[DP686DP_CodigoPostal] [int] NULL,
 	[DP686_Estado] [bit] NULL,
+	[DP686_DVH] [varchar](255) NULL,
  CONSTRAINT [PK_686DP_Clientes] PRIMARY KEY CLUSTERED 
 (
 	[DP686_DNI] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP UsuarioContraseñas]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP UsuarioContraseñas]    Script Date: 15/11/2025 16:36:07 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP UsuarioContraseñas](
 	[DP686_DNI] [int] NOT NULL,
 	[DP686_Contraseña] [varchar](256) NOT NULL
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_Cobertura]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_Cobertura]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_Cobertura](
 	[DP686_Descripcion] [varchar](100) NOT NULL,
 	[DP686_SumaAsegurada] [money] NOT NULL,
 	[CodigoCobertura] [int] IDENTITY(1,1) NOT NULL,
+	[DP686_DVH] [varchar](255) NULL,
  CONSTRAINT [PK_686DP_Cobertura] PRIMARY KEY CLUSTERED 
 (
 	[CodigoCobertura] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_DigitoVerificador]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_DigitoVerificador]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_DigitoVerificador](
 	[DP686NombreTabla] [varchar](50) NOT NULL,
 	[DP686DVH] [varchar](200) NOT NULL,
@@ -103,14 +93,11 @@ CREATE TABLE [dbo].[686DP_DigitoVerificador](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_Eventos]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_Eventos]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_Eventos](
 	[DP686_DNI] [int] NOT NULL,
 	[DP686_CodEvento] [varchar](100) NOT NULL,
@@ -124,32 +111,27 @@ CREATE TABLE [dbo].[686DP_Eventos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_Factura]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_Factura]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_Factura](
 	[CodFactura] [int] IDENTITY(1,1) NOT NULL,
 	[CodSiniestro] [int] NOT NULL,
 	[Fecha] [datetime] NOT NULL,
+	[DP686_DVH] [varchar](255) NULL,
  CONSTRAINT [PK_686DP_Factura] PRIMARY KEY CLUSTERED 
 (
 	[CodFactura] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_Familia]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_Familia]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_Familia](
 	[DP686_FamiliaID] [int] IDENTITY(1,1) NOT NULL,
 	[DP686_Nombre] [varchar](100) NOT NULL,
@@ -160,27 +142,21 @@ CREATE TABLE [dbo].[686DP_Familia](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_FamiliaPermiso]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_FamiliaPermiso]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_FamiliaPermiso](
 	[DP686_FamiliaID] [int] NOT NULL,
 	[DP686_PermisoID] [int] NOT NULL
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_Perfil]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_Perfil]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_Perfil](
 	[DP686_PerfilID] [int] IDENTITY(1,1) NOT NULL,
 	[DP686_Nombre] [varchar](100) NOT NULL,
@@ -190,40 +166,31 @@ CREATE TABLE [dbo].[686DP_Perfil](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_PerfilFamilia]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_PerfilFamilia]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_PerfilFamilia](
 	[DP686_FamiliaID] [int] NOT NULL,
 	[DP686_PerfilID] [int] NOT NULL
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_PerfilPermiso]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_PerfilPermiso]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_PerfilPermiso](
 	[DP686_PerfilID] [int] NOT NULL,
 	[DP686_PermisoID] [int] NOT NULL
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_PermisoSimple]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_PermisoSimple]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_PermisoSimple](
 	[DP686_PermisoID] [int] IDENTITY(1,1) NOT NULL,
 	[DP686_Nombre] [varchar](100) NOT NULL,
@@ -233,45 +200,38 @@ CREATE TABLE [dbo].[686DP_PermisoSimple](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_Plan]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_Plan]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_Plan](
 	[DP686_CodigoPlan] [int] IDENTITY(1,1) NOT NULL,
 	[DP686_Franquicia] [money] NOT NULL,
 	[DP686_Prima] [money] NOT NULL,
+	[DP686_DVH] [varchar](255) NULL,
  CONSTRAINT [PK_686DP_Plan] PRIMARY KEY CLUSTERED 
 (
 	[DP686_CodigoPlan] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_PlanesCoberturas]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_PlanesCoberturas]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_PlanesCoberturas](
 	[DP686_CodigoPlan] [int] NOT NULL,
-	[CodigoCobertura] [int] NOT NULL
+	[CodigoCobertura] [int] NOT NULL,
+	[DP686_DVH] [varchar](255) NULL
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_Poliza]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_Poliza]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_Poliza](
 	[DP686_NPoliza] [int] IDENTITY(1,1) NOT NULL,
 	[DP686_Estado] [bit] NOT NULL,
@@ -280,47 +240,42 @@ CREATE TABLE [dbo].[686DP_Poliza](
 	[DP686_Endoso] [int] NOT NULL,
 	[DP686_CodSeguro] [int] NOT NULL,
 	[DP686_CodPlan] [int] NOT NULL,
+	[DP686_DVH] [varchar](255) NULL,
  CONSTRAINT [PK_686DP_Poliza] PRIMARY KEY CLUSTERED 
 (
 	[DP686_NPoliza] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_PolizaSeguro]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_PolizaSeguro]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_PolizaSeguro](
 	[DP686_NPoliza] [int] NOT NULL,
-	[DP686_CodSeguro] [int] NOT NULL
+	[DP686_CodSeguro] [int] NOT NULL,
+	[DP686_DVH] [varchar](255) NULL
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_PolizaSiniestro]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_PolizaSiniestro]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_PolizaSiniestro](
 	[CodSiniestro] [int] NOT NULL,
-	[DP686_NPoliza] [int] NOT NULL
+	[DP686_NPoliza] [int] NOT NULL,
+	[DP686_DVH] [varchar](255) NULL
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_Seguro]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_Seguro]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_Seguro](
+	[DP686_DVH] [varchar](255) NULL,
 	[DP686_CodSeguro] [int] IDENTITY(1,1) NOT NULL,
 	[DP686_ProductoNombre] [varchar](50) NOT NULL,
  CONSTRAINT [PK_686DP_Seguro] PRIMARY KEY CLUSTERED 
@@ -329,27 +284,22 @@ CREATE TABLE [dbo].[686DP_Seguro](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_SeguroPlan]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_SeguroPlan]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_SeguroPlan](
 	[DP686_CodSeguro] [int] NOT NULL,
-	[DP686_CodigoPlan] [int] NOT NULL
+	[DP686_CodigoPlan] [int] NOT NULL,
+	[DP686_DVH] [varchar](255) NULL
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_Siniestro]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_Siniestro]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_Siniestro](
 	[CodSiniestro] [int] IDENTITY(1,1) NOT NULL,
 	[Fecha] [datetime] NOT NULL,
@@ -358,20 +308,18 @@ CREATE TABLE [dbo].[686DP_Siniestro](
 	[ValorDelBien] [money] NOT NULL,
 	[Estado] [bit] NOT NULL,
 	[Descripcion] [varchar](100) NOT NULL,
+	[DP686_DVH] [varchar](255) NULL,
  CONSTRAINT [PK_686DP_Siniestro] PRIMARY KEY CLUSTERED 
 (
 	[CodSiniestro] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_Usuario]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_Usuario]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_Usuario](
 	[DP686_DNI] [int] NOT NULL,
 	[DP686_Nombre] [varchar](100) NOT NULL,
@@ -390,59 +338,48 @@ CREATE TABLE [dbo].[686DP_Usuario](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DP_UsuarioIntentos]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DP_UsuarioIntentos]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DP_UsuarioIntentos](
 	[DP686_DNI] [int] NOT NULL,
 	[DP686_intentos] [tinyint] NOT NULL
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DPClientePoliza]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DPClientePoliza]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DPClientePoliza](
 	[DP686_NPoliza] [int] NOT NULL,
-	[DP686_DNICliente] [int] NOT NULL
+	[DP686_DNICliente] [int] NOT NULL,
+	[DP686_DVH] [varchar](255) NULL
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686DPPolizaCancelacion]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686DPPolizaCancelacion]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686DPPolizaCancelacion](
 	[DP686_NPoliza] [int] NOT NULL,
-	[Motivo] [varchar](100) NOT NULL
+	[Motivo] [varchar](100) NOT NULL,
+	[DP686_DVH] [varchar](255) NULL
 ) ON [PRIMARY]
 GO
-
-/****** Object:  Table [dbo].[686FP_FamiliaFamilia]    Script Date: 10/27/2025 9:41:37 AM ******/
+/****** Object:  Table [dbo].[686FP_FamiliaFamilia]    Script Date: 15/11/2025 16:36:08 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[686FP_FamiliaFamilia](
 	[DP686_FamiliaPadre] [int] NOT NULL,
 	[DP686_Componentes] [int] NOT NULL
 ) ON [PRIMARY]
 GO
-
 PRINT 'Creando claves primarias y foráneas...';
 GO
 

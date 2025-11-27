@@ -74,7 +74,7 @@ namespace _686DP_MPP
         public _686DP_Seguro TraerDatosSeguro(int dP686_CodSeguro)
         {
 
-            string consulta = "SELECT * FROM [dbo].[686DP_Seguro] WHERE DP686_CodSeguro = @CodSeguro";
+            string consulta = "SELECT [DP686_CodSeguro]\r\n      ,[DP686_ProductoNombre]\r\n FROM [dbo].[686DP_Seguro] WHERE DP686_CodSeguro = @CodSeguro";
             ArrayList parametros = new ArrayList { new SqlParameter("@CodSeguro", dP686_CodSeguro) };
 
             DataTable dt = dal._686DPConsultar(consulta, parametros);
@@ -89,7 +89,7 @@ namespace _686DP_MPP
 
         public _686DP_Plan TraerPlan(int dP686_CodPlan)
         {
-            string consulta = "SELECT * FROM [dbo].[686DP_Plan] WHERE DP686_CodigoPlan = @CodPlan";
+            string consulta = "SELECT [DP686_CodigoPlan]\r\n      ,[DP686_Franquicia]\r\n      ,[DP686_Prima]\r\n FROM [dbo].[686DP_Plan] WHERE DP686_CodigoPlan = @CodPlan";
             ArrayList parametros = new ArrayList { new SqlParameter("@CodPlan", dP686_CodPlan) };
 
             DataTable dt = dal._686DPConsultar(consulta, parametros);
@@ -109,7 +109,7 @@ namespace _686DP_MPP
             try
             {
                 DataTable dt = new DataTable();
-                string consulta = "SELECT * FROM [dbo].[686DP_Seguro]";
+                string consulta = "SELECT [DP686_CodSeguro]\r\n      ,[DP686_ProductoNombre]\r\n FROM [dbo].[686DP_Seguro]";
 
                 dt = dal._686DPConsultar(consulta, null);
 
@@ -135,7 +135,7 @@ namespace _686DP_MPP
             {
                 DataTable dt = new DataTable();
                 bool existe = false;
-                string consulta = "SELECT * FROM [dbo].[686DP_Seguro]  WHERE DP686_ProductoNombre = @TipoProducto;";
+                string consulta = "SELECT [DP686_CodSeguro]\r\n      ,[DP686_ProductoNombre]\r\n FROM [dbo].[686DP_Seguro]  WHERE DP686_ProductoNombre = @TipoProducto;";
                 ArrayList parametros = new ArrayList { new SqlParameter("@TipoProducto", nProducto) };
 
                 dt = dal._686DPConsultar(consulta, parametros);

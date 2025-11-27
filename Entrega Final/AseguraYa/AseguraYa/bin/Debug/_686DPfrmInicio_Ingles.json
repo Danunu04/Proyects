@@ -22,5 +22,6 @@
   "DP_Polizas":"Policy",
   "RegistrarSiniestro": "Register Claim",
   "AuditarSiniestro": "Audit Claim",
-  "ReporteSiniestro": "Claim Report"
+  "ReporteSiniestro": "Claim Report",
+  "RecomendacionAumento": "Increase Recommendation"
 }

@@ -13,16 +13,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text.pdf.parser;
+using _686DP_SERVICIOS.Observer;
 
 namespace AseguraYa
 {
     public partial class _686DP_frmReporteSiniestro : Form
     {
         private List<_686DP_Siniestro> listaSiniestrosOriginal;
+        _686DP_LanguajeManager LMG = new _686DP_LanguajeManager();
+        _686DP_Idioma IdiomaClase = new _686DP_Idioma();
+        public string idi = "";
         public _686DP_frmReporteSiniestro(string idiomaLocal)
         {
+            LMG.CargarMensajesGlobales(idi);
             InitializeComponent();
+            idi = idiomaLocal;
+            cambiarIdioma();
         }
+
+        private void cambiarIdioma()
+        {
+            Form fi = this;
+            LMG.RegistrarForm(fi);
+            IdiomaClase.AgregarObsevador(LMG);
+            IdiomaClase.CambiarIdioma(idi);
+        }
+
         _686DP_BLLSiniestro blls = new _686DP_BLLSiniestro();
         private void _686DP_frmReporteSiniestro_Load(object sender, EventArgs e)
         {
@@ -150,18 +167,24 @@ namespace AseguraYa
 
                     pdfDoc.Close();
 
-                    MessageBox.Show("📄 Reporte exportado correctamente a PDF.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(LMG.Traducir("PDFOK"), "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // 🔹 Registrar evento
                     int dni = _686DP_Singleton.Instancia.Usuario._686DPDNI;
                     _686DP_BLLEvento blle = new _686DP_BLLEvento();
                     blle.RegistrarEvento(dni, this.Name, "Se generó el reporte de siniestros", 3);
+                    System.Diagnostics.Process.Start(filepath);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error al generar el PDF: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

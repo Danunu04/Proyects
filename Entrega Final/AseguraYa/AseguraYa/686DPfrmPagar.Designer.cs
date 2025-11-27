@@ -44,6 +44,7 @@
             // 
             // txtCodSiniestro
             // 
+            this.txtCodSiniestro.Enabled = false;
             this.txtCodSiniestro.Location = new System.Drawing.Point(168, 221);
             this.txtCodSiniestro.Name = "txtCodSiniestro";
             this.txtCodSiniestro.ReadOnly = true;
@@ -52,6 +53,7 @@
             // 
             // txtNroPoliza
             // 
+            this.txtNroPoliza.Enabled = false;
             this.txtNroPoliza.Location = new System.Drawing.Point(168, 259);
             this.txtNroPoliza.Name = "txtNroPoliza";
             this.txtNroPoliza.ReadOnly = true;
@@ -60,6 +62,7 @@
             // 
             // txtValor
             // 
+            this.txtValor.Enabled = false;
             this.txtValor.Location = new System.Drawing.Point(168, 333);
             this.txtValor.Name = "txtValor";
             this.txtValor.ReadOnly = true;
@@ -68,6 +71,7 @@
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.Enabled = false;
             this.txtDescripcion.Location = new System.Drawing.Point(168, 295);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ReadOnly = true;
@@ -76,6 +80,7 @@
             // 
             // txtEvaluacion
             // 
+            this.txtEvaluacion.Enabled = false;
             this.txtEvaluacion.Location = new System.Drawing.Point(168, 369);
             this.txtEvaluacion.Name = "txtEvaluacion";
             this.txtEvaluacion.ReadOnly = true;

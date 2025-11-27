@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.parser;
 
 namespace AseguraYa
 {
@@ -123,12 +124,16 @@ namespace AseguraYa
         {
             try
             {
-                string carpeta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "AseguraYa_Pagos");
+                string carpeta = System.IO.Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                "AseguraYa_Pagos"
+                );
+
                 if (!Directory.Exists(carpeta))
                     Directory.CreateDirectory(carpeta);
 
                 string nombreArchivo = $"Pago_Siniestro_{CodSiniestro}_{DateTime.Now:yyyyMMdd_HHmmss}.pdf";
-                string rutaCompleta = Path.Combine(carpeta, nombreArchivo);
+                string rutaCompleta = System.IO.Path.Combine(carpeta, nombreArchivo);
 
                 using (FileStream fs = new FileStream(rutaCompleta, FileMode.Create, FileAccess.Write, FileShare.None))
                 {
@@ -161,12 +166,13 @@ namespace AseguraYa
 
                     doc.Add(new Paragraph("\n"));
                     doc.Add(new Paragraph("El siniestro ha sido procesado y pagado exitosamente."));
-
                     doc.Close();
                     writer.Close();
+                    
                 }
 
                 MessageBox.Show($"Comprobante generado correctamente en:\n{rutaCompleta}", "PDF generado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                System.Diagnostics.Process.Start(rutaCompleta);
             }
             catch (Exception ex)
             {

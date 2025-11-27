@@ -22,45 +22,55 @@ namespace AseguraYa
         {
             try
             {
-                string T(string key)
-                    => string.IsNullOrWhiteSpace(key) ? string.Empty
-                       : (LMG?.Traducir(key) ?? key);
-
-                if (nombre == null) nombre = string.Empty;
-                if (apellido == null) apellido = string.Empty;
-                if (domicilio == null) domicilio = string.Empty;
-                if (email == null) email = string.Empty;
-
-                string seguroTexto = string.IsNullOrWhiteSpace(seguro) ? T("SeguroNoInformado") : T(seguro);
+                // Normalización de strings
+                nombre = nombre ?? string.Empty;
+                apellido = apellido ?? string.Empty;
+                domicilio = domicilio ?? string.Empty;
+                email = email ?? string.Empty;
+                seguro = string.IsNullOrWhiteSpace(seguro) ? "Seguro no informado" : seguro;
 
                 Document doc = new Document(PageSize.A4, 40, 40, 40, 40);
-                string path = Path.Combine(
+
+                // USAR System.IO.Path
+                string path = System.IO.Path.Combine(
                     Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
-                    $"Poliza_{(apellido ?? "SinApellido")}_{dni}.pdf");
+                    $"Poliza_{(apellido ?? "SinApellido")}_{dni}.pdf"
+                );
 
                 PdfWriter.GetInstance(doc, new FileStream(path, FileMode.Create));
                 doc.Open();
 
+                // Estilos
                 var titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 20, BaseColor.BLUE);
                 var subTitleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 14);
                 var normalFont = FontFactory.GetFont(FontFactory.HELVETICA, 12);
 
-                var titulo = new Paragraph("Asegura YA", titleFont) { Alignment = Element.ALIGN_CENTER, SpacingAfter = 20 };
+                // Título
+                var titulo = new Paragraph("Asegura YA", titleFont)
+                {
+                    Alignment = Element.ALIGN_CENTER,
+                    SpacingAfter = 20
+                };
                 doc.Add(titulo);
 
-                doc.Add(new Paragraph($"{T("Asegurado")}: {nombre} {apellido}", normalFont));
+                // Datos principales
+                doc.Add(new Paragraph($"Asegurado: {nombre} {apellido}", normalFont));
                 doc.Add(new Paragraph($"DNI: {dni}", normalFont));
-                doc.Add(new Paragraph($"{T("NumeroPoliza")}: {numeroPoliza}", normalFont));
-                doc.Add(new Paragraph($"{T("Domicilio")}: {domicilio}", normalFont));
-                doc.Add(new Paragraph($"{T("Email")}: {email}", normalFont));
-                doc.Add(new Paragraph($"{T("SeguroContratado")}: {seguroTexto}", normalFont));
-                doc.Add(new Paragraph($"{T("Prima")}: ${prima:N2}", normalFont));
-                doc.Add(new Paragraph($"{T("FechaEmision")}: {DateTime.Now:dd/MM/yyyy}", normalFont));
+                doc.Add(new Paragraph($"Número de Póliza: {numeroPoliza}", normalFont));
+                doc.Add(new Paragraph($"Domicilio: {domicilio}", normalFont));
+                doc.Add(new Paragraph($"Email: {email}", normalFont));
+                doc.Add(new Paragraph($"Seguro Contratado: {seguro}", normalFont));
+                doc.Add(new Paragraph($"Prima: ${prima:N2}", normalFont));
+                doc.Add(new Paragraph($"Fecha de Emisión: {DateTime.Now:dd/MM/yyyy}", normalFont));
                 doc.Add(new Paragraph(" "));
 
+                // Coberturas
                 if (coberturas != null && coberturas.Count > 0)
                 {
-                    var subtitulo = new Paragraph(T("CoberturasIncluidas"), subTitleFont) { SpacingAfter = 10 };
+                    var subtitulo = new Paragraph("Coberturas Incluidas", subTitleFont)
+                    {
+                        SpacingAfter = 10
+                    };
                     doc.Add(subtitulo);
 
                     PdfPTable table = new PdfPTable(2) { WidthPercentage = 100 };
@@ -70,36 +80,41 @@ namespace AseguraYa
                     var headerBg = new BaseColor(0, 102, 204);
                     var cellBg = new BaseColor(245, 245, 245);
 
-                    var h1 = new PdfPCell(new Phrase(T("Cobertura"), headerFont)) { BackgroundColor = headerBg, Padding = 5 };
-                    var h2 = new PdfPCell(new Phrase(T("SumaAsegurada"), headerFont)) { BackgroundColor = headerBg, Padding = 5 };
-                    table.AddCell(h1); table.AddCell(h2);
+                    // Encabezados
+                    table.AddCell(new PdfPCell(new Phrase("Cobertura", headerFont)) { BackgroundColor = headerBg, Padding = 5 });
+                    table.AddCell(new PdfPCell(new Phrase("Suma Asegurada", headerFont)) { BackgroundColor = headerBg, Padding = 5 });
 
+                    // Filas
                     foreach (var c in coberturas)
                     {
-                        string descripcion = T(c?.DP686_Descripcion ?? "SinDescripcion");
-                        decimal sumaDec = c?.DP686_SumaAsegurada ?? 0m;
+                        string descripcion = c?.DP686_Descripcion ?? "Sin descripción";
+                        decimal suma = c?.DP686_SumaAsegurada ?? 0m;
 
-                        var cell1 = new PdfPCell(new Phrase(descripcion, normalFont)) { BackgroundColor = cellBg, Padding = 5 };
-                        var cell2 = new PdfPCell(new Phrase($"${sumaDec:N2}", normalFont)) { BackgroundColor = cellBg, Padding = 5 };
-                        table.AddCell(cell1); table.AddCell(cell2);
+                        table.AddCell(new PdfPCell(new Phrase(descripcion, normalFont)) { BackgroundColor = cellBg, Padding = 5 });
+                        table.AddCell(new PdfPCell(new Phrase($"${suma:N2}", normalFont)) { BackgroundColor = cellBg, Padding = 5 });
                     }
 
                     doc.Add(table);
                 }
                 else
                 {
-                    doc.Add(new Paragraph(T("SinCoberturas"), normalFont));
+                    doc.Add(new Paragraph("Sin coberturas registradas.", normalFont));
                 }
 
-                doc.Add(new Paragraph("\n" + T("LeyendaPoliza"), normalFont));
+                // Leyenda final
+                doc.Add(new Paragraph("\nEsta póliza certifica la contratación del seguro seleccionado.", normalFont));
+
                 doc.Close();
 
-                MessageBox.Show(T("PolizaGeneradaOK") + $"\n{path}", T("TituloPDFGenerado"));
-                System.Diagnostics.Process.Start(path);
-            }
-            catch (ArgumentNullException ane) when (ane.ParamName == "key")
-            {
-                MessageBox.Show("Error al generar PDF: se intentó traducir con una clave nula (seguro o descripción).", "Error");
+                // Abrir archivo
+                MessageBox.Show($"Póliza generada correctamente:\n{path}", "PDF generado");
+
+                var psi = new System.Diagnostics.ProcessStartInfo()
+                {
+                    FileName = path,
+                    UseShellExecute = true
+                };
+                System.Diagnostics.Process.Start(psi);
             }
             catch (Exception ex)
             {

@@ -14,13 +14,29 @@ namespace _686DP_Dal
     public class _686DPDalGeneral
     {
 
-        public string cadenaConexion = "Data Source=.;Initial Catalog=AseguraYA;Integrated Security=True";
+        private string cadenaConexion;
+        
         public SqlConnection conn;
         public SqlCommand cmd;
 
         public _686DPDalGeneral()
         {
+            string server = Environment.GetEnvironmentVariable("DB_SERVER");
+            string database = Environment.GetEnvironmentVariable("DB_DATABASE");
+            string user = Environment.GetEnvironmentVariable("DB_USER");
+            string password = Environment.GetEnvironmentVariable("DB_PASSWORD");
+            string auth = Environment.GetEnvironmentVariable("DB_AUTH");
+
+            cadenaConexion = ConstruirConnectionString(server, database, user, password, auth);
+            
             conn = new SqlConnection(cadenaConexion);
+        }
+
+        private string ConstruirConnectionString(string server, string database, string user, string password, string auth)
+        {
+            bool windowsAuth = !string.IsNullOrEmpty(auth) && auth == "1";
+
+                return $"Data Source={server};Initial Catalog={database};Integrated Security=True;";
         }
 
         public DataTable _686DPConsultar(string consulta, ArrayList parametros)

@@ -17,6 +17,11 @@ namespace _686DP_BLL
             mpps.AprobarSiniestro(codSiniestro);
         }
 
+        public void CambiarCuota(int poliza, double nuevaCuota)
+        {
+            mpps.CambiarCuota(poliza, nuevaCuota);
+        }
+
         public void DenegarSiniestro(object codSiniestro)
         {
             mpps.DenegarSiniestro(codSiniestro);
@@ -43,6 +48,11 @@ namespace _686DP_BLL
         public List<_686DP_Siniestro> traerSiniestros()
         {
             return mpps.TraerSiniestros();
+        }
+
+        public object traerSiniestrosFiltrados(int? v1, double? v2, double? v3, int? CantidadSiniestros)
+        {
+            return mpps.TraerSiniestrosFiltrado(CantidadSiniestros, v2, v3, v1);
         }
 
         public object traerSiniestrosMayoresA5()

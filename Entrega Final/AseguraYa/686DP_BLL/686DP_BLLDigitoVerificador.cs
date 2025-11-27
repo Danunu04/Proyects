@@ -23,30 +23,37 @@ namespace _686DP_BLL
             if(NombreTabla == "Polizas")
             {
                 dv = mpp.CalcularDVPolizas();
+                mpp.ActualizarDVHFilaPorTabla("686DP_Poliza");
             }
             else if(NombreTabla == "Plan")
             {
                 dv = mpp.CalcularDVPlan();
+                mpp.ActualizarDVHFilaPorTabla("686DP_Plan");
             }
             else if( NombreTabla =="Cobertura")
             {
                 dv = mpp.CalcularDVCobertura();
+                mpp.ActualizarDVHFilaPorTabla("686DP_Cobertura");
             }
             else if (NombreTabla == "Seguro")
             {
                 dv = mpp.CalcularDVSeguro();
+                mpp.ActualizarDVHFilaPorTabla("686DP_Seguro");
             }
             else if (NombreTabla == "Cliente")
             {
                 dv = mpp.CalcularDVCliente();
+                mpp.ActualizarDVHFilaPorTabla("[686DP_Cliente].[686DP_Clientes]");
             }
             else if(NombreTabla == "Siniestro")
             {
                 dv = mpp.CalcularDVSiniestro();
+                mpp.ActualizarDVHFilaPorTabla("686DP_Siniestro");
             }
             else if(NombreTabla == "Factura")
             {
                 dv = mpp.CalcularDVFactura();
+                mpp.ActualizarDVHFilaPorTabla("686DP_Factura");
             }
             else
             {
@@ -58,6 +65,11 @@ namespace _686DP_BLL
             DVS.Add(mpp.CalcularClientePoliza());
             DVS.Add(mpp.CalcularPolizaSiniestro());
             DVS.Add(mpp.CalcularPolizaCancelacion());
+            mpp.ActualizarDVHFilaPorTabla("686DP_PlanesCoberturas");
+            mpp.ActualizarDVHFilaPorTabla("686DP_SeguroPlan");
+            mpp.ActualizarDVHFilaPorTabla("686DPClientePoliza");
+            mpp.ActualizarDVHFilaPorTabla("686DP_PolizaSiniestro");
+            mpp.ActualizarDVHFilaPorTabla("686DPPolizaCancelacion");
 
 
             //Carga
@@ -99,6 +111,7 @@ namespace _686DP_BLL
                 DVS.Add(mpp.CalcularClientePoliza());
                 DVS.Add(mpp.CalcularPolizaSiniestro());
                 DVS.Add(mpp.CalcularPolizaCancelacion());
+                mpp.RepararDVHDeTodasLasTablas();
 
                 return Comparar();
             }
@@ -110,6 +123,7 @@ namespace _686DP_BLL
 
         private bool Comparar()
         {
+            MppErrores.Clear();
             bool valor = true;
             DVSBD = mpp.TraerDVs();
 
@@ -130,12 +144,20 @@ namespace _686DP_BLL
 
                 bool coincideDVH = dvLocal.DP686DVH == dvBD.DP686DVH;
                 bool coincideDVV = dvLocal.DP686DVV == dvBD.DP686DVV;
+                List<string> erorTabla = new List<string>();
+                erorTabla.Clear();
 
                 if (!coincideDVH || !coincideDVV)
                 {
-                    errores.Add($"Inconsistencia detectada en '{dvLocal.DP686NombreTabla}'.\n");
                     
+                    errores.Add($"Inconsistencia detectada en '{dvLocal.DP686NombreTabla}'.\n");
+
+                    erorTabla = mpp.VerificarFilaPorTabla(dvLocal.DP686NombreTabla);
                     valor = false;
+                }
+                foreach(string item in  erorTabla)
+                {
+                    MppErrores.Add(item);
                 }
             }
 

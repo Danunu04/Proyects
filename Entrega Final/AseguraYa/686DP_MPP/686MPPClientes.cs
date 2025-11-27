@@ -151,7 +151,15 @@ namespace _686DP_MPP
             try
             {
                 string consulta = @"
-                SELECT * FROM [686DP_Cliente].[686DP_Clientes]
+                SELECT [DP686_DNI]
+                      ,[DP686_Nombre]
+                      ,[DP686_Apellido]
+                      ,[DP686_Email]
+                      ,[DP686_Domicilio]
+                      ,[DP686DP_CodigoPostal]
+                      ,[DP686_Estado]
+                  FROM [DBAseguraYADemo].[686DP_Cliente].[686DP_Clientes]
+
                 WHERE DP686_DNI = @DNI";
 
                 ArrayList parametros = new ArrayList
@@ -190,10 +198,17 @@ namespace _686DP_MPP
 
         public _686DP_Cliente TraerClientePoliza(int dP686_NPoliza)
         {
-            string query = @"SELECT C.* 
-                     FROM [686DP_Cliente].[686DP_Clientes] AS C
-                     INNER JOIN [dbo].[686DPClientePoliza] AS CP ON C.DP686_DNI = CP.DP686_DNICliente
-                     WHERE CP.DP686_NPoliza  = @Poliza";
+            string query = @"SELECT C.[DP686_DNI]
+                ,C.[DP686_Nombre]
+                ,C.[DP686_Apellido]
+                ,C.[DP686_Email]
+                ,C.[DP686_Domicilio]
+                ,C.[DP686DP_CodigoPostal]
+                ,C.[DP686_Estado]
+            FROM [DBAseguraYADemo].[686DP_Cliente].[686DP_Clientes] AS C
+
+            INNER JOIN [dbo].[686DPClientePoliza] AS CP ON C.DP686_DNI = CP.DP686_DNICliente
+            WHERE CP.DP686_NPoliza  = @Poliza";
 
             ArrayList parametros = new ArrayList
             {
@@ -220,7 +235,7 @@ namespace _686DP_MPP
         public List<_686DP_Cliente> TraerClientes()
         {
             List<_686DP_Cliente> lista = new List<_686DP_Cliente>();
-            string consulta = "SELECT * FROM [686DP_Cliente].[686DP_Clientes]";
+            string consulta = "SELECT [DP686_DNI]\r\n      ,[DP686_Nombre]\r\n      ,[DP686_Apellido]\r\n      ,[DP686_Email]\r\n      ,[DP686_Domicilio]\r\n      ,[DP686DP_CodigoPostal]\r\n      ,[DP686_Estado]\r\n  FROM [686DP_Cliente].[686DP_Clientes]\r\n";
 
             try
             {

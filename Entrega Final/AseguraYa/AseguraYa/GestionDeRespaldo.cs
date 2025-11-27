@@ -22,6 +22,7 @@ namespace AseguraYa
         _686DP_Idioma IdiomaClase = new _686DP_Idioma();
         public GestionDeRespaldo(string idiomaLocal)
         {
+            LMG.CargarMensajesGlobales(idi);
             InitializeComponent();
             _686DP_BLLBackUpRestore = new _686DP_BLLBackUpRestore();
         }

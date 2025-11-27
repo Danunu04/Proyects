@@ -104,7 +104,7 @@ namespace _686DP_MPP
             try
             {
                 DataTable dt = new DataTable();
-                string consulta = "SELECT * FROM [dbo].[686DP_Plan]";
+                string consulta = "SELECT [DP686_CodigoPlan]\r\n      ,[DP686_Franquicia]\r\n      ,[DP686_Prima]\r\n  FROM [dbo].[686DP_Plan]";
 
                 dt = dal._686DPConsultar(consulta, null);
 

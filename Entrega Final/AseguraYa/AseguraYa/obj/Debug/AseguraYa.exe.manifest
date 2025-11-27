@@ -50,43 +50,43 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WocQQsDHVa2ff+uHYH+8fR1n7V5cneC67VC1j4xvFbk=</dsig:DigestValue>
+        <dsig:DigestValue>qMtlLCHgNdIeT4WL68gstLodlxhhEQHPMgZ3k81/yTQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="686DP_BLL.dll" size="30208">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="686DP_BLL.dll" size="31232">
       <assemblyIdentity name="686DP_BLL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>iAaBwheonDuiftQCyar8NSjuJsUOX1NHFnWo3oo562U=</dsig:DigestValue>
+        <dsig:DigestValue>k7ic44wxJF/+K8VhkNTtNJLFMjNv4mUJaC3wnzF+3XQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="686DP_Dal.dll" size="8192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="686DP_Dal.dll" size="8704">
       <assemblyIdentity name="686DP_Dal" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>J0ns6JNyQHkTya+2Dlh8Kj88QhKZJLcomCIQobcY/Ms=</dsig:DigestValue>
+        <dsig:DigestValue>qf6nsvzSM1NqZZ4pJE7DynqFl3PakDgvLetS/ADa66o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="686DP_MPP.dll" size="100352">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="686DP_MPP.dll" size="110592">
       <assemblyIdentity name="686DP_MPP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PEcYamfK3UXuRFgMOYntbizsEmjYq02d5pwJLTBNOjE=</dsig:DigestValue>
+        <dsig:DigestValue>5AJbPpAT/0nH5BuTvk+9bgNOzsIo1LDlcomWFTbSxlc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,19 +98,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YADoBl8aaJOJQ6r25om74wU73s0DH6HdurMvnYnJwIM=</dsig:DigestValue>
+        <dsig:DigestValue>WKbTk3m2A0iadJHx8Jvft93IQwkoHZZ1cdcV8Fup4yo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AseguraYa.exe" size="1423856">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AseguraYa.exe" size="1431024">
       <assemblyIdentity name="AseguraYa" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ee/MF3LRISYgNhgq0QKaOqD8WhpXYIPE8rXnA7FjXak=</dsig:DigestValue>
+        <dsig:DigestValue>k8vcoI+4yjhZ0TWlaaX+XPalw2kjZHY13Fsv/hdXFAM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

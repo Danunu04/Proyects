@@ -42,7 +42,7 @@ namespace _686DP_MPP
         {
             bool existe = false;
             DataTable dt = new DataTable();
-            string consulta = "SELECT * FROM [dbo].[686DP_Poliza] WHERE [DP686_NPoliza] = @Poliza";
+            string consulta = "SELECT [DP686_NPoliza]\r\n      ,[DP686_Estado]\r\n      ,[DP686_valorTotal]\r\n      ,[DP686_FechaVencimiento]\r\n      ,[DP686_Endoso]\r\n      ,[DP686_CodSeguro]\r\n      ,[DP686_CodPlan]\r\n FROM [dbo].[686DP_Poliza] WHERE [DP686_NPoliza] = @Poliza";
             ArrayList parametros = new ArrayList
             {
                 new SqlParameter("@Poliza", numeroDePoliza)
@@ -225,7 +225,7 @@ namespace _686DP_MPP
         {
             _686DP_Poliza poliza = null;
             DataTable dt = new DataTable();
-            string consulta = "SELECT * FROM [dbo].[686DP_Poliza] WHERE [DP686_NPoliza] = @Poliza";
+            string consulta = "SELECT [DP686_NPoliza]\r\n      ,[DP686_Estado]\r\n      ,[DP686_valorTotal]\r\n      ,[DP686_FechaVencimiento]\r\n      ,[DP686_Endoso]\r\n      ,[DP686_CodSeguro]\r\n      ,[DP686_CodPlan]\r\n  \r\n FROM [dbo].[686DP_Poliza] WHERE [DP686_NPoliza] = @Poliza";
             ArrayList parametros = new ArrayList
                 {
                 new SqlParameter("@Poliza", numeroDePoliza)
@@ -251,7 +251,7 @@ namespace _686DP_MPP
         public List<_686DP_Poliza> TraerPolizas()
         {
             List<_686DP_Poliza> lista = new List<_686DP_Poliza>();
-            string consulta = "SELECT * FROM [dbo].[686DP_Poliza]";
+            string consulta = "SELECT [DP686_NPoliza]\r\n      ,[DP686_Estado]\r\n      ,[DP686_valorTotal]\r\n      ,[DP686_FechaVencimiento]\r\n      ,[DP686_Endoso]\r\n      ,[DP686_CodSeguro]\r\n      ,[DP686_CodPlan]\r\n  FROM [dbo].[686DP_Poliza]";
             ArrayList parametros = new ArrayList();
             DataTable dt = dal._686DPConsultar(consulta, parametros);
 

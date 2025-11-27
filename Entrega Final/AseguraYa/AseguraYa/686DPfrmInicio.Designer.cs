@@ -73,7 +73,7 @@
             this.prediccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DP_Polizas = new System.Windows.Forms.ToolStripMenuItem();
             this.ReporteSiniestro = new System.Windows.Forms.ToolStripMenuItem();
-            this.recomendaciónDeAumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RecomendacionAumento = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,7 +90,7 @@
             this.Dp_Ayuda,
             this.DP_Polizas,
             this.ReporteSiniestro,
-            this.recomendaciónDeAumentoToolStripMenuItem});
+            this.RecomendacionAumento});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1184, 24);
@@ -303,7 +303,7 @@
             this.maestroDeProductosToolStripMenuItem,
             this.maestroDeClientesToolStripMenuItem});
             this.maestrosToolStripMenuItem.Name = "maestrosToolStripMenuItem";
-            this.maestrosToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.maestrosToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.maestrosToolStripMenuItem.Tag = "Mestro";
             this.maestrosToolStripMenuItem.Text = "Maestros";
             // 
@@ -332,7 +332,7 @@
             this.bitacoraDeEventosToolStripMenuItem,
             this.respaldoToolStripMenuItem});
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.adminToolStripMenuItem.Tag = "Administrador";
             this.adminToolStripMenuItem.Text = "Admin";
             // 
@@ -383,7 +383,7 @@
             this.modificarSeguroToolStripMenuItem,
             this.eliminarSeguroToolStripMenuItem});
             this.contratacionToolStripMenuItem.Name = "contratacionToolStripMenuItem";
-            this.contratacionToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.contratacionToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.contratacionToolStripMenuItem.Tag = "Contratacion";
             this.contratacionToolStripMenuItem.Text = "Contratacion";
             // 
@@ -417,7 +417,7 @@
             this.registrarSiniestroToolStripMenuItem,
             this.auditarSiniestroToolStripMenuItem});
             this.siniestrosToolStripMenuItem.Name = "siniestrosToolStripMenuItem";
-            this.siniestrosToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.siniestrosToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.siniestrosToolStripMenuItem.Tag = "Siniestros";
             this.siniestrosToolStripMenuItem.Text = "Siniestros";
             // 
@@ -440,7 +440,7 @@
             // polizasToolStripMenuItem
             // 
             this.polizasToolStripMenuItem.Name = "polizasToolStripMenuItem";
-            this.polizasToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.polizasToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.polizasToolStripMenuItem.Tag = "DP_Polizas";
             this.polizasToolStripMenuItem.Text = "Polizas";
             this.polizasToolStripMenuItem.Click += new System.EventHandler(this.polizasToolStripMenuItem_Click_1);
@@ -448,7 +448,7 @@
             // reporteSiniestrosToolStripMenuItem
             // 
             this.reporteSiniestrosToolStripMenuItem.Name = "reporteSiniestrosToolStripMenuItem";
-            this.reporteSiniestrosToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.reporteSiniestrosToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.reporteSiniestrosToolStripMenuItem.Tag = "ReporteSiniestro";
             this.reporteSiniestrosToolStripMenuItem.Text = "Reporte siniestros";
             this.reporteSiniestrosToolStripMenuItem.Click += new System.EventHandler(this.reporteSiniestrosToolStripMenuItem_Click);
@@ -456,12 +456,14 @@
             // prediccionesToolStripMenuItem
             // 
             this.prediccionesToolStripMenuItem.Name = "prediccionesToolStripMenuItem";
-            this.prediccionesToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-            this.prediccionesToolStripMenuItem.Tag = "Predicciones";
-            this.prediccionesToolStripMenuItem.Text = "Predicciones";
+            this.prediccionesToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.prediccionesToolStripMenuItem.Tag = "RecomendacionAumento";
+            this.prediccionesToolStripMenuItem.Text = "Recomendacion de Aumento";
+            this.prediccionesToolStripMenuItem.Click += new System.EventHandler(this.prediccionesToolStripMenuItem_Click);
             // 
             // DP_Polizas
             // 
+            this.DP_Polizas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DP_Polizas.Name = "DP_Polizas";
             this.DP_Polizas.Size = new System.Drawing.Size(55, 20);
             this.DP_Polizas.Tag = "DP_Polizas";
@@ -470,18 +472,21 @@
             // 
             // ReporteSiniestro
             // 
+            this.ReporteSiniestro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ReporteSiniestro.Name = "ReporteSiniestro";
             this.ReporteSiniestro.Size = new System.Drawing.Size(108, 20);
             this.ReporteSiniestro.Tag = "ReporteSiniestro";
             this.ReporteSiniestro.Text = "Reporte Siniestro";
             this.ReporteSiniestro.Click += new System.EventHandler(this.ReporteSiniestro_Click);
             // 
-            // recomendaciónDeAumentoToolStripMenuItem
+            // RecomendacionAumento
             // 
-            this.recomendaciónDeAumentoToolStripMenuItem.Name = "recomendaciónDeAumentoToolStripMenuItem";
-            this.recomendaciónDeAumentoToolStripMenuItem.Size = new System.Drawing.Size(172, 20);
-            this.recomendaciónDeAumentoToolStripMenuItem.Text = "Recomendación de aumento";
-            this.recomendaciónDeAumentoToolStripMenuItem.Click += new System.EventHandler(this.recomendaciónDeAumentoToolStripMenuItem_Click);
+            this.RecomendacionAumento.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.RecomendacionAumento.Name = "RecomendacionAumento";
+            this.RecomendacionAumento.Size = new System.Drawing.Size(172, 20);
+            this.RecomendacionAumento.Tag = "RecomendacionAumento";
+            this.RecomendacionAumento.Text = "Recomendación de aumento";
+            this.RecomendacionAumento.Click += new System.EventHandler(this.recomendaciónDeAumentoToolStripMenuItem_Click);
             // 
             // _686DPfrmInicio
             // 
@@ -491,6 +496,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 636);
             this.Controls.Add(this.menuStrip1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -551,7 +557,7 @@
         private System.Windows.Forms.ToolStripMenuItem eliminarSeguroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarSiniestroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem auditarSiniestroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem recomendaciónDeAumentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RecomendacionAumento;
     }
 }
 
