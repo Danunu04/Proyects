@@ -1,3 +1,4 @@
+# Version Final: Rama E3
 # 🛡️ AseguraYa
 
 **AseguraYa** es un sistema de gestión para aseguradoras diseñado como un **MVP modular, escalable y a medida**, pensado para digitalizar y optimizar los procesos clave del negocio asegurador sin complejidad innecesaria.
